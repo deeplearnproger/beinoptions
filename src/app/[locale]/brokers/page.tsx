@@ -9,6 +9,20 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
 
   const brokers = [
     {
+      name: 'Libertex',
+      regulation: 'CySEC',
+      fees: locale === 'de' ? 'Nur Kommission, Zero-Spread' : 'Commission only, Zero-Spread',
+      minDeposit: '100 €',
+      options: locale === 'de' ? 'Ja, über 300 CFDs' : 'Yes, over 300 CFDs',
+      rating: 4.9,
+      pros: locale === 'de'
+        ? ['Zero-Spread Trading', 'Sehr schnelle Ausführung', 'Benutzerfreundliche Plattform', 'Über 350 Instrumente', 'MT4/MT5 + eigene Plattform', 'Social Trading', '40+ internationale Auszeichnungen']
+        : ['Zero-Spread Trading', 'Fast execution', 'User-friendly platform', 'Over 350 instruments', 'MT4/MT5 + proprietary platform', 'Social Trading', '40+ international awards'],
+      cons: locale === 'de'
+        ? ['Keine BaFin-Regulierung', 'Hauptsächlich CFD-Handel']
+        : ['No BaFin regulation', 'Mainly CFD trading'],
+    },
+    {
       name: 'Interactive Brokers',
       regulation: 'BaFin, SEC, FCA',
       fees: locale === 'de' ? 'ab 0,65 € pro Kontrakt' : 'from €0.65 per contract',
@@ -204,7 +218,22 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
             <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">
               {locale === 'de' ? 'So wählen Sie den richtigen Broker' : 'How to Choose the Right Broker'}
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white rounded-xl p-6">
+                <div className="text-4xl mb-3">⭐</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {locale === 'de' ? 'Top-Empfehlung' : 'Top Recommendation'}
+                </h3>
+                <p className="text-sm text-gray-700 mb-3">
+                  {locale === 'de'
+                    ? 'Zero-Spread Trading, schnelle Ausführung und moderne Plattform mit über 350 Instrumenten. Ideal für alle Trader-Level.'
+                    : 'Zero-Spread Trading, fast execution and modern platform with over 350 instruments. Ideal for all trader levels.'}
+                </p>
+                <p className="text-sm font-medium text-primary-600">
+                  → Libertex
+                </p>
+              </div>
+
               <div className="bg-white rounded-xl p-6">
                 <div className="text-4xl mb-3">🎯</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -231,7 +260,7 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
                     : 'Low fees, professional tools and wide product range are crucial.'}
                 </p>
                 <p className="text-sm font-medium text-primary-600">
-                  → Interactive Brokers, LYNX
+                  → Libertex, Interactive Brokers, LYNX
                 </p>
               </div>
 

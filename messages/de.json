@@ -180,5 +180,26 @@
     "phone": "+49 30 12345678",
     "register": "Handelsregister: HRB 12345 B, Amtsgericht Berlin",
     "vat": "USt-IdNr.: DE123456789"
+  },
+  "libertexBanner": {
+    "badge": "Top-Broker 2025",
+    "banner1": {
+      "title": "Libertex - Ihr Tor zu den Finanzmärkten",
+      "subtitle": "Zero-Spread Trading • Über 350 Instrumente • Blitzschnelle Ausführung • 40+ Internationale Auszeichnungen"
+    },
+    "banner2": {
+      "title": "Traden Sie mit dem besten Broker 2025",
+      "subtitle": "25+ Jahre Erfahrung • 3 Mio. Nutzer weltweit • MT4/MT5 + Eigene Plattform • Social Trading Features"
+    },
+    "banner3": {
+      "title": "Starten Sie Ihre Trading-Reise mit Libertex",
+      "subtitle": "Nur 100€ Mindesteinlage • Professionelle Tools • CySEC reguliert • Demo-Konto mit 50.000$ verfügbar"
+    },
+    "cta": "Jetzt traden",
+    "close": "Schließen",
+    "feature1": "Zero-Spread Trading",
+    "feature2": "Blitzschnelle Ausführung",
+    "feature3": "Nur 100€ Mindesteinlage",
+    "feature4": "CySEC Reguliert"
   }
 }

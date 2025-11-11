@@ -180,5 +180,26 @@
     "phone": "+49 30 12345678",
     "register": "Commercial Register: HRB 12345 B, District Court Berlin",
     "vat": "VAT ID: DE123456789"
+  },
+  "libertexBanner": {
+    "badge": "Top Broker 2025",
+    "banner1": {
+      "title": "Libertex - Your Gateway to Financial Markets",
+      "subtitle": "Zero-Spread Trading • Over 350 Instruments • Lightning-Fast Execution • 40+ International Awards"
+    },
+    "banner2": {
+      "title": "Trade with the Best Broker of 2025",
+      "subtitle": "25+ Years Experience • 3M Users Worldwide • MT4/MT5 + Proprietary Platform • Social Trading Features"
+    },
+    "banner3": {
+      "title": "Start Your Trading Journey with Libertex",
+      "subtitle": "Only €100 Minimum Deposit • Professional Tools • CySEC Regulated • Demo Account with $50,000 Available"
+    },
+    "cta": "Start Trading",
+    "close": "Close",
+    "feature1": "Zero-Spread Trading",
+    "feature2": "Lightning-Fast Execution",
+    "feature3": "Only €100 Min. Deposit",
+    "feature4": "CySEC Regulated"
   }
 }

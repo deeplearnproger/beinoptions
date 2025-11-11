@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { generateMetadata as genMeta } from '@/components/seo/SEOHead';
+import LibertexBanner from '@/components/LibertexBanner';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   return genMeta({
@@ -78,6 +79,9 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
 
   return (
     <>
+      {/* Libertex Banner */}
+      <LibertexBanner locale={locale} />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-50 via-white to-primary-50 py-20">
         <div className="container-custom">
