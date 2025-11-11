@@ -1,4 +1,4 @@
-# BeInOption - Options Trading Platform
+# BeInOptions - Options Trading Platform
 
 A complete bilingual (German/English) website about options trading in Germany, built with Next.js 14, TypeScript, and Tailwind CSS. Features comprehensive educational content, SEO optimization, and WordPress headless CMS integration.
 
@@ -16,7 +16,7 @@ A complete bilingual (German/English) website about options trading in Germany, 
 ## Project Structure
 
 ```
-BeInOption/
+BeInOptions/
 ├── src/
 │   ├── app/
 │   │   ├── [locale]/          # Internationalized routes
@@ -71,7 +71,7 @@ BeInOption/
 1. **Clone the repository** (or use the generated code):
 
 ```bash
-cd BeInOption
+cd BeInOptions
 ```
 
 2. **Install dependencies**:
@@ -94,7 +94,7 @@ WORDPRESS_API_URL=https://your-wordpress-site.com/wp-json/wp/v2
 
 # Site Configuration
 NEXT_PUBLIC_SITE_URL=https://beinoption.de
-NEXT_PUBLIC_SITE_NAME=BeInOption
+NEXT_PUBLIC_SITE_NAME=BeInOptions
 ```
 
 4. **Run the development server**:

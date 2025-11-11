@@ -40,8 +40,8 @@ export default function DisclaimerPage({ params: { locale } }: { params: { local
             </h2>
             <p className="text-gray-700 mb-4">
               {locale === 'de'
-                ? 'Die Informationen auf dieser Website stellen keine Anlageberatung, Finanzberatung, Handelsberatung oder sonstige Art von Beratung dar und sollten nicht als solche interpretiert werden. BeInOption empfiehlt nicht, dass irgendwelche Wertpapiere gekauft, verkauft oder gehalten werden sollten.'
-                : 'The information on this website does not constitute investment advice, financial advice, trading advice or any other kind of advice and should not be interpreted as such. BeInOption does not recommend that any securities should be bought, sold or held.'}
+                ? 'Die Informationen auf dieser Website stellen keine Anlageberatung, Finanzberatung, Handelsberatung oder sonstige Art von Beratung dar und sollten nicht als solche interpretiert werden. BeInOptions empfiehlt nicht, dass irgendwelche Wertpapiere gekauft, verkauft oder gehalten werden sollten.'
+                : 'The information on this website does not constitute investment advice, financial advice, trading advice or any other kind of advice and should not be interpreted as such. BeInOptions does not recommend that any securities should be bought, sold or held.'}
             </p>
             <p className="text-gray-700 mb-4">
               {locale === 'de'
@@ -132,8 +132,8 @@ export default function DisclaimerPage({ params: { locale } }: { params: { local
             </h2>
             <p className="text-gray-700 mb-4">
               {locale === 'de'
-                ? 'Die auf dieser Website aufgeführten Broker dienen rein informativen Zwecken. BeInOption erhält möglicherweise Provisionen von Brokern, was unsere Objektivität beeinflussen kann. Wir empfehlen Ihnen, eigene Recherchen durchzuführen und mehrere Broker zu vergleichen.'
-                : 'The brokers listed on this website are for informational purposes only. BeInOption may receive commissions from brokers, which may affect our objectivity. We recommend that you conduct your own research and compare multiple brokers.'}
+                ? 'Die auf dieser Website aufgeführten Broker dienen rein informativen Zwecken. BeInOptions erhält möglicherweise Provisionen von Brokern, was unsere Objektivität beeinflussen kann. Wir empfehlen Ihnen, eigene Recherchen durchzuführen und mehrere Broker zu vergleichen.'
+                : 'The brokers listed on this website are for informational purposes only. BeInOptions may receive commissions from brokers, which may affect our objectivity. We recommend that you conduct your own research and compare multiple brokers.'}
             </p>
           </section>
 
@@ -154,8 +154,8 @@ export default function DisclaimerPage({ params: { locale } }: { params: { local
             </h2>
             <p className="text-gray-700 mb-4">
               {locale === 'de'
-                ? 'BeInOption haftet nicht für direkte oder indirekte Schäden, die durch die Nutzung oder Nichtnutzung der auf dieser Website bereitgestellten Informationen entstehen. Dies schließt entgangene Gewinne, Datenverluste oder andere wirtschaftliche Schäden ein.'
-                : 'BeInOption is not liable for direct or indirect damages arising from the use or non-use of the information provided on this website. This includes lost profits, data loss or other economic damages.'}
+                ? 'BeInOptions haftet nicht für direkte oder indirekte Schäden, die durch die Nutzung oder Nichtnutzung der auf dieser Website bereitgestellten Informationen entstehen. Dies schließt entgangene Gewinne, Datenverluste oder andere wirtschaftliche Schäden ein.'
+                : 'BeInOptions is not liable for direct or indirect damages arising from the use or non-use of the information provided on this website. This includes lost profits, data loss or other economic damages.'}
             </p>
           </section>
 

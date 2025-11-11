@@ -57,7 +57,7 @@ export default function BasicsPage({ params: { locale } }: { params: { locale: s
       <ArticleSchema
         headline={t('title')}
         description={t('what_are_options_desc')}
-        author="BeInOption"
+        author="BeInOptions"
         datePublished="2025-01-01"
         url={`https://beinoption.de/${locale}/basics`}
       />

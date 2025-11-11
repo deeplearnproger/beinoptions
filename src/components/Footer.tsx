@@ -30,7 +30,7 @@ export default function Footer() {
                 <span className="text-white font-bold text-xl">B</span>
               </div>
               <span className="font-heading font-bold text-xl text-white">
-                BeInOption
+                BeInOptions
               </span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">

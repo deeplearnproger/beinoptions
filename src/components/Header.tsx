@@ -34,7 +34,7 @@ export default function Header() {
               <span className="text-white font-bold text-xl">B</span>
             </div>
             <span className="font-heading font-bold text-xl text-gray-900">
-              BeInOption
+              BeInOptions
             </span>
           </Link>
 

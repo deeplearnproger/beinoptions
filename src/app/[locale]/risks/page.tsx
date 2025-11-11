@@ -61,7 +61,7 @@ export default function RisksPage({ params: { locale } }: { params: { locale: st
       <ArticleSchema
         headline={t('title')}
         description={t('leverage_desc')}
-        author="BeInOption"
+        author="BeInOptions"
         datePublished="2025-01-01"
         url={`https://beinoption.de/${locale}/risks`}
       />

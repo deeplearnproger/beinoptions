@@ -81,7 +81,7 @@ export default function StrategiesPage({ params: { locale } }: { params: { local
       <ArticleSchema
         headline={t('title')}
         description={t('covered_call_desc')}
-        author="BeInOption"
+        author="BeInOptions"
         datePublished="2025-01-01"
         url={`https://beinoption.de/${locale}/strategies`}
       />

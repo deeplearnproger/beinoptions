@@ -18,19 +18,19 @@ export function generateMetadata({
   noindex = false,
 }: SEOHeadProps): Metadata {
   return {
-    title: `${title} | BeInOption`,
+    title: `${title} | BeInOptions`,
     description: description,
     keywords: keywords?.join(', '),
     ...(canonical && { alternates: { canonical } }),
     openGraph: {
-      title: `${title} | BeInOption`,
+      title: `${title} | BeInOptions`,
       description: description,
       type: 'website',
       ...(ogImage && { images: [ogImage] }),
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} | BeInOption`,
+      title: `${title} | BeInOptions`,
       description: description,
       ...(ogImage && { images: [ogImage] }),
     },

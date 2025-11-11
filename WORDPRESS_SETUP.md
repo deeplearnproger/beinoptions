@@ -1,6 +1,6 @@
 # WordPress Headless CMS Setup Guide
 
-This guide will help you set up WordPress as a headless CMS for BeInOption.
+This guide will help you set up WordPress as a headless CMS for BeInOptions.
 
 ## Prerequisites
 

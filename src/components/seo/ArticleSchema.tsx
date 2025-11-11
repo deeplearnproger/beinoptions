@@ -28,7 +28,7 @@ export default function ArticleSchema({
     },
     publisher: {
       '@type': 'Organization',
-      name: 'BeInOption',
+      name: 'BeInOptions',
       logo: {
         '@type': 'ImageObject',
         url: 'https://beinoption.de/logo.png',
