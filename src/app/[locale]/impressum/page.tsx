@@ -20,43 +20,10 @@ export default function ImpressumPage({ params: { locale } }: { params: { locale
         <div className="prose prose-lg max-w-none">
           <section className="mb-8">
             <h2 className="text-2xl font-heading font-bold text-gray-900 mb-4">
-              {t('responsible')}
+              {locale === 'de' ? 'Kontakt' : 'Contact'}
             </h2>
             <p className="text-gray-700">
-              <strong>{t('company')}</strong><br />
-              {t('address')}<br />
-              <br />
-              <strong>E-Mail:</strong> {t('email')}<br />
-              <strong>Telefon:</strong> {t('phone')}
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-heading font-bold text-gray-900 mb-4">
-              {locale === 'de' ? 'Handelsregister' : 'Commercial Register'}
-            </h2>
-            <p className="text-gray-700">
-              {t('register')}<br />
-              {t('vat')}
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-heading font-bold text-gray-900 mb-4">
-              {locale === 'de' ? 'Geschäftsführer' : 'Managing Director'}
-            </h2>
-            <p className="text-gray-700">
-              {locale === 'de' ? 'Max Mustermann' : 'Max Mustermann'}
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-heading font-bold text-gray-900 mb-4">
-              {locale === 'de' ? 'Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV' : 'Responsible for Content'}
-            </h2>
-            <p className="text-gray-700">
-              {locale === 'de' ? 'Max Mustermann' : 'Max Mustermann'}<br />
-              {t('address')}
+              <strong>E-Mail:</strong> info@beinoptions.de
             </p>
           </section>
 

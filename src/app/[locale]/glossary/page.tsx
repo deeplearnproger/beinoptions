@@ -100,42 +100,48 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
         embedId: 'jZRa8gW_TWs',
         description: locale === 'de'
           ? 'Der ultimative Einstieg in den Optionshandel: Alles was Sie wissen müssen, um zu starten'
-          : 'The ultimate introduction to options trading: Everything you need to know to get started'
+          : 'The ultimate introduction to options trading: Everything you need to know to get started',
+        thumbnail: undefined
       },
       {
         title: locale === 'de' ? 'Call und Put Optionen verstehen' : 'Understanding Call and Put Options',
         embedId: '5bmbaxa82QU',
         description: locale === 'de'
           ? 'Lernen Sie den Unterschied zwischen Calls und Puts und wann Sie welche verwenden'
-          : 'Learn the difference between calls and puts and when to use each'
+          : 'Learn the difference between calls and puts and when to use each',
+        thumbnail: undefined
       },
       {
         title: locale === 'de' ? 'Optionshandel: So funktioniert es wirklich' : 'Options Trading: How It Really Works',
         embedId: 'noUSD-8FzmU',
         description: locale === 'de'
           ? 'Praktische Beispiele und Strategien für den erfolgreichen Optionshandel'
-          : 'Practical examples and strategies for successful options trading'
+          : 'Practical examples and strategies for successful options trading',
+        thumbnail: undefined
       },
       {
         title: locale === 'de' ? 'Wie funktionieren Optionen? Tutorial' : 'How Do Options Work? Tutorial',
         embedId: 'EfmTWu2yn5Q',
         description: locale === 'de'
           ? 'Verstehen Sie die Grundlagen: Strike-Preise, Verfallsdaten und Prämien'
-          : 'Understand the basics: Strike prices, expiration dates and premiums'
+          : 'Understand the basics: Strike prices, expiration dates and premiums',
+        thumbnail: 'custom' // Force custom thumbnail for this video
       },
       {
         title: locale === 'de' ? 'Optionsstrategien für Einsteiger' : 'Options Strategies for Beginners',
         embedId: 'RJkvPXf_LW0',
         description: locale === 'de'
           ? 'Die besten Einstiegsstrategien für den Optionshandel - Schritt für Schritt erklärt'
-          : 'The best starter strategies for options trading - explained step by step'
+          : 'The best starter strategies for options trading - explained step by step',
+        thumbnail: undefined
       },
       {
         title: locale === 'de' ? 'Fortgeschrittene Options Trading Strategien' : 'Advanced Options Trading Strategies',
         embedId: '7PM4rNDr4oI',
         description: locale === 'de'
           ? 'Komplexe Strategien und Techniken für erfahrene Trader'
-          : 'Complex strategies and techniques for experienced traders'
+          : 'Complex strategies and techniques for experienced traders',
+        thumbnail: undefined
       }
     ]
   };
@@ -254,6 +260,7 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
                       videoId={video.embedId}
                       title={video.title}
                       description={video.description}
+                      thumbnail={video.thumbnail}
                     />
                   </div>
                 ))}

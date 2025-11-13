@@ -11,12 +11,23 @@ interface VideoPlayerProps {
 
 export default function VideoPlayer({ videoId, title, description, thumbnail }: VideoPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [thumbnailError, setThumbnailError] = useState(thumbnail === 'custom');
 
   const defaultThumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-  const thumbnailUrl = thumbnail || defaultThumbnail;
+  const thumbnailUrl = thumbnail && thumbnail !== 'custom' ? thumbnail : defaultThumbnail;
 
   const handlePlay = () => {
     setIsPlaying(true);
+  };
+
+  const handleThumbnailError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    // Try fallback to hqdefault
+    if (!thumbnailError && e.currentTarget.src.includes('maxresdefault')) {
+      e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    } else {
+      // If both YouTube thumbnails fail, show custom placeholder
+      setThumbnailError(true);
+    }
   };
 
   return (
@@ -29,19 +40,42 @@ export default function VideoPlayer({ videoId, title, description, thumbnail }: 
               className="absolute inset-0 cursor-pointer"
               onClick={handlePlay}
             >
-              {/* Thumbnail Image */}
-              <img
-                src={thumbnailUrl}
-                alt={title}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                onError={(e) => {
-                  // Fallback to default quality if maxres not available
-                  e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-                }}
-              />
+              {/* Thumbnail Image or Custom Placeholder */}
+              {!thumbnailError ? (
+                <img
+                  src={thumbnailUrl}
+                  alt={title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  onError={handleThumbnailError}
+                />
+              ) : (
+                /* Custom Gradient Placeholder */
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-blue-800">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10">
+                    {/* Large Play Icon */}
+                    <div className="mb-4">
+                      <svg className="w-20 h-20 text-white/30" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                    {/* Title on Placeholder */}
+                    <h4 className="text-white font-bold text-lg mb-2 line-clamp-2 max-w-xs px-4">
+                      {title}
+                    </h4>
+                    <p className="text-white/90 text-xs line-clamp-2 max-w-xs px-4">
+                      {description}
+                    </p>
+                  </div>
+                  {/* Decorative Elements */}
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32" />
+                  <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-24 -translate-x-24" />
+                </div>
+              )}
 
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300" />
+              {/* Dark Overlay - only for YouTube thumbnails */}
+              {!thumbnailError && (
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300" />
+              )}
 
               {/* Custom Play Button */}
               <div className="absolute inset-0 flex items-center justify-center">

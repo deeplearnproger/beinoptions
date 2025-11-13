@@ -227,7 +227,7 @@ export default function TaxesPage({ params: { locale } }: { params: { locale: st
               <span className="text-3xl mr-4">⚠️</span>
               <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {locale === 'de' ? 'Hinweis zum Steuerberater' : 'Tax Advisor Notice'}
+                  {locale === 'de' ? 'Wichtiger Hinweis' : 'Important Notice'}
                 </h3>
                 <p className="text-gray-700 mb-3">
                   {locale === 'de'
