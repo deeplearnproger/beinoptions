@@ -211,8 +211,14 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
 
           {/* Educational Videos Section with Carousel */}
           <div className="mb-16">
-            <h2 className="text-3xl font-heading font-bold text-gray-900 mb-2 text-center">
-              {locale === 'de' ? '🎥 Lernvideos zum Optionshandel' : '🎥 Options Trading Educational Videos'}
+            <h2 className="text-3xl font-heading font-bold text-gray-900 mb-2 text-center flex items-center justify-center gap-3">
+              <span className="w-10 h-10 bg-gradient-to-br from-red-50 to-rose-100 rounded-lg flex items-center justify-center inline-flex flex-shrink-0">
+                <svg className="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              {locale === 'de' ? 'Lernvideos zum Optionshandel' : 'Options Trading Educational Videos'}
             </h2>
             <p className="text-center text-gray-600 mb-4">
               {locale === 'de'
@@ -292,8 +298,13 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
 
           {/* Quick Tips from TikTok Style Section */}
           <div className="mb-16 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8">
-            <h2 className="text-3xl font-heading font-bold text-gray-900 mb-2 text-center">
-              {locale === 'de' ? '💡 Schnelle Trading-Tipps' : '💡 Quick Trading Tips'}
+            <h2 className="text-3xl font-heading font-bold text-gray-900 mb-2 text-center flex items-center justify-center gap-3">
+              <span className="w-10 h-10 bg-gradient-to-br from-yellow-50 to-amber-100 rounded-lg flex items-center justify-center inline-flex flex-shrink-0">
+                <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </span>
+              {locale === 'de' ? 'Schnelle Trading-Tipps' : 'Quick Trading Tips'}
             </h2>
             <p className="text-center text-gray-600 mb-8">
               {locale === 'de'
@@ -303,7 +314,11 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-3">⚡</div>
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-50 to-amber-100 rounded-lg flex items-center justify-center mb-3">
+                  <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
                 <h3 className="font-bold text-lg mb-2 text-gray-900">
                   {locale === 'de' ? 'Tipp #1: Volatilität' : 'Tip #1: Volatility'}
                 </h3>
@@ -315,7 +330,11 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-3">📊</div>
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg flex items-center justify-center mb-3">
+                  <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
                 <h3 className="font-bold text-lg mb-2 text-gray-900">
                   {locale === 'de' ? 'Tipp #2: Zeitverfall' : 'Tip #2: Time Decay'}
                 </h3>
@@ -327,7 +346,11 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-3">🎯</div>
+                <div className="w-12 h-12 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg flex items-center justify-center mb-3">
+                  <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
                 <h3 className="font-bold text-lg mb-2 text-gray-900">
                   {locale === 'de' ? 'Tipp #3: Delta-Neutral' : 'Tip #3: Delta-Neutral'}
                 </h3>
@@ -339,7 +362,11 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
               </div>
 
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-3">🛡️</div>
+                <div className="w-12 h-12 bg-gradient-to-br from-red-50 to-rose-100 rounded-lg flex items-center justify-center mb-3">
+                  <svg className="w-6 h-6 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
                 <h3 className="font-bold text-lg mb-2 text-gray-900">
                   {locale === 'de' ? 'Tipp #4: Risikomanagement' : 'Tip #4: Risk Management'}
                 </h3>
@@ -354,8 +381,13 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
 
           {/* Glossary Terms */}
           <div className="space-y-6">
-            <h2 className="text-3xl font-heading font-bold text-gray-900 mb-8 text-center">
-              {locale === 'de' ? '📖 Vollständiges Glossar' : '📖 Complete Glossary'}
+            <h2 className="text-3xl font-heading font-bold text-gray-900 mb-8 text-center flex items-center justify-center gap-3">
+              <span className="w-10 h-10 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg flex items-center justify-center inline-flex flex-shrink-0">
+                <svg className="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </span>
+              {locale === 'de' ? 'Vollständiges Glossar' : 'Complete Glossary'}
             </h2>
 
             {filteredTerms.map((item, index) => (
@@ -377,7 +409,11 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
 
           {filteredTerms.length === 0 && (
             <div className="text-center py-12">
-              <div className="text-6xl mb-4">🔍</div>
+              <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
               <p className="text-xl text-gray-600">
                 {locale === 'de'
                   ? 'Keine Begriffe gefunden. Versuchen Sie eine andere Suche oder Kategorie.'
@@ -388,7 +424,13 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
 
           {/* Interactive Quiz Teaser */}
           <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-            <div className="text-5xl mb-4">🎓</div>
+            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+              </svg>
+            </div>
             <h2 className="text-3xl font-heading font-bold mb-4">
               {locale === 'de' ? 'Teste dein Wissen!' : 'Test Your Knowledge!'}
             </h2>
@@ -415,14 +457,23 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
 
           {/* Info Box */}
           <div className="mt-12 bg-blue-50 border-l-4 border-primary-600 rounded-lg p-6">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              {locale === 'de' ? '💬 Begriffe fehlen?' : '💬 Terms missing?'}
-            </h3>
-            <p className="text-gray-700">
-              {locale === 'de'
-                ? 'Wir erweitern unser Glossar kontinuierlich. Wenn Sie einen wichtigen Begriff vermissen, kontaktieren Sie uns gerne über info@beinoptions.de'
-                : 'We continuously expand our glossary. If you miss an important term, please contact us at info@beinoptions.de'}
-            </p>
+            <div className="flex items-start">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                  {locale === 'de' ? 'Begriffe fehlen?' : 'Terms missing?'}
+                </h3>
+                <p className="text-gray-700">
+                  {locale === 'de'
+                    ? 'Wir erweitern unser Glossar kontinuierlich. Wenn Sie einen wichtigen Begriff vermissen, kontaktieren Sie uns gerne über info@beinoptions.de'
+                    : 'We continuously expand our glossary. If you miss an important term, please contact us at info@beinoptions.de'}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

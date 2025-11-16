@@ -113,56 +113,72 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
 
   const features = [
     {
-      icon: '🏦',
+      iconBg: 'from-blue-50 to-indigo-100',
+      iconColor: 'text-indigo-600',
+      iconPath: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
       title: locale === 'de' ? 'Deutsche Bank' : 'German Bank',
       description: locale === 'de'
         ? 'Etablierte deutsche Traditionsbank mit BaFin-Regulierung'
         : 'Established traditional German bank with BaFin regulation',
     },
     {
-      icon: '🛡️',
+      iconBg: 'from-green-50 to-emerald-100',
+      iconColor: 'text-emerald-600',
+      iconPath: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
       title: locale === 'de' ? 'Maximale Sicherheit' : 'Maximum Security',
       description: locale === 'de'
         ? 'Einlagensicherung und segregierte Kundengelder'
         : 'Deposit insurance and segregated client funds',
     },
     {
-      icon: '🎓',
+      iconBg: 'from-purple-50 to-violet-100',
+      iconColor: 'text-purple-600',
+      iconPath: 'M12 14l9-5-9-5-9 5 9 5z M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222',
       title: locale === 'de' ? 'Umfangreiche Bildung' : 'Extensive Education',
       description: locale === 'de'
         ? 'Webinare, Seminare und persönliche Schulungen'
         : 'Webinars, seminars and personal training',
     },
     {
-      icon: '📞',
+      iconBg: 'from-cyan-50 to-sky-100',
+      iconColor: 'text-sky-600',
+      iconPath: 'M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z',
       title: locale === 'de' ? 'Persönlicher Support' : 'Personal Support',
       description: locale === 'de'
         ? 'Kompetente Beratung auf Deutsch per Telefon'
         : 'Competent advice in German by phone',
     },
     {
-      icon: '📊',
+      iconBg: 'from-orange-50 to-amber-100',
+      iconColor: 'text-orange-600',
+      iconPath: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
       title: locale === 'de' ? 'Gute Options-Auswahl' : 'Good Options Selection',
       description: locale === 'de'
         ? 'Umfangreiche Auswahl an Optionen und Derivaten'
         : 'Extensive selection of options and derivatives',
     },
     {
-      icon: '💳',
+      iconBg: 'from-green-50 to-emerald-100',
+      iconColor: 'text-emerald-600',
+      iconPath: 'M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z',
       title: locale === 'de' ? 'Keine Mindesteinlage' : 'No Minimum Deposit',
       description: locale === 'de'
         ? 'Starten Sie bereits ab 0€'
         : 'Start from €0',
     },
     {
-      icon: '🖥️',
+      iconBg: 'from-blue-50 to-indigo-100',
+      iconColor: 'text-indigo-600',
+      iconPath: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z',
       title: locale === 'de' ? 'Stabile Plattform' : 'Stable Platform',
       description: locale === 'de'
         ? 'Zuverlässige und bewährte Trading-Software'
         : 'Reliable and proven trading software',
     },
     {
-      icon: '📈',
+      iconBg: 'from-green-50 to-emerald-100',
+      iconColor: 'text-emerald-600',
+      iconPath: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
       title: locale === 'de' ? 'Depot & Girokonto' : 'Depot & Checking Account',
       description: locale === 'de'
         ? 'Alles aus einer Hand - Banking und Trading'
@@ -249,12 +265,18 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
                   href="https://www.consorsbank.de"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full px-6 py-4 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white rounded-xl font-bold text-center hover:from-indigo-700 hover:to-indigo-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  className="block w-full px-6 py-4 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white rounded-xl font-bold text-center hover:from-indigo-700 hover:to-indigo-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
                 >
-                  {locale === 'de' ? '🚀 Jetzt Konto eröffnen' : '🚀 Open Account Now'}
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                  {locale === 'de' ? 'Jetzt Konto eröffnen' : 'Open Account Now'}
                 </a>
-                <p className="text-xs text-gray-500 text-center mt-3">
-                  {locale === 'de' ? '⚡ 0€ Mindesteinlage' : '⚡ €0 minimum deposit'}
+                <p className="text-xs text-gray-500 text-center mt-3 flex items-center justify-center gap-1">
+                  <svg className="w-4 h-4 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                  {locale === 'de' ? '0€ Mindesteinlage' : '€0 minimum deposit'}
                 </p>
               </div>
             </div>
@@ -267,21 +289,23 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
         <div className="container-custom">
           <div className="flex gap-1 overflow-x-auto">
             {[
-              { id: 'overview', label: locale === 'de' ? 'Übersicht' : 'Overview', icon: '📊' },
-              { id: 'fees', label: locale === 'de' ? 'Gebühren' : 'Fees', icon: '💰' },
-              { id: 'platform', label: locale === 'de' ? 'Plattform' : 'Platform', icon: '🖥️' },
-              { id: 'reviews', label: locale === 'de' ? 'Bewertungen' : 'Reviews', icon: '⭐' },
+              { id: 'overview', label: locale === 'de' ? 'Übersicht' : 'Overview', iconPath: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' },
+              { id: 'fees', label: locale === 'de' ? 'Gebühren' : 'Fees', iconPath: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
+              { id: 'platform', label: locale === 'de' ? 'Plattform' : 'Platform', iconPath: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' },
+              { id: 'reviews', label: locale === 'de' ? 'Bewertungen' : 'Reviews', iconPath: 'M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z' },
             ].map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setSelectedTab(tab.id as any)}
-                className={`px-6 py-4 font-semibold whitespace-nowrap transition-all ${
+                className={`px-6 py-4 font-semibold whitespace-nowrap transition-all flex items-center ${
                   selectedTab === tab.id
                     ? 'text-indigo-600 border-b-2 border-indigo-600 bg-indigo-50'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`}
               >
-                <span className="mr-2">{tab.icon}</span>
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={tab.iconPath} />
+                </svg>
                 {tab.label}
               </button>
             ))}
@@ -298,22 +322,38 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
               {/* Quick Stats */}
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div className="card text-center">
-                  <div className="text-4xl mb-3">💵</div>
+                  <div className="w-14 h-14 bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">0€</div>
                   <div className="text-sm text-gray-600">{locale === 'de' ? 'Mindesteinzahlung' : 'Min. Deposit'}</div>
                 </div>
                 <div className="card text-center">
-                  <div className="text-4xl mb-3">🎓</div>
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                    </svg>
+                  </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">50+</div>
                   <div className="text-sm text-gray-600">{locale === 'de' ? 'Webinare/Jahr' : 'Webinars/Year'}</div>
                 </div>
                 <div className="card text-center">
-                  <div className="text-4xl mb-3">📞</div>
+                  <div className="w-14 h-14 bg-gradient-to-br from-cyan-50 to-sky-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-7 h-7 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">24/5</div>
                   <div className="text-sm text-gray-600">{locale === 'de' ? 'Telefon-Support' : 'Phone Support'}</div>
                 </div>
                 <div className="card text-center">
-                  <div className="text-4xl mb-3">🏦</div>
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <svg className="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">100%</div>
                   <div className="text-sm text-gray-600">{locale === 'de' ? 'BaFin Sicherheit' : 'BaFin Security'}</div>
                 </div>
@@ -327,7 +367,11 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {features.map((feature, index) => (
                     <div key={index} className="card hover:shadow-lg transition-shadow">
-                      <div className="text-5xl mb-4">{feature.icon}</div>
+                      <div className={`w-14 h-14 bg-gradient-to-br ${feature.iconBg} rounded-xl flex items-center justify-center mb-4`}>
+                        <svg className={`w-7 h-7 ${feature.iconColor}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.iconPath} />
+                        </svg>
+                      </div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                       <p className="text-gray-600 text-sm">{feature.description}</p>
                     </div>
@@ -343,8 +387,10 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white rounded-lg p-6 shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center text-2xl">
-                        🏦
+                      <div className="w-12 h-12 bg-indigo-500 text-white rounded-full flex items-center justify-center">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
                       </div>
                       <h3 className="text-xl font-bold text-gray-900">
                         {locale === 'de' ? 'Sicherheit & Vertrauen' : 'Security & Trust'}
@@ -359,8 +405,10 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
 
                   <div className="bg-white rounded-lg p-6 shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center text-2xl">
-                        🎓
+                      <div className="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                        </svg>
                       </div>
                       <h3 className="text-xl font-bold text-gray-900">
                         {locale === 'de' ? 'Erstklassige Bildung' : 'First-Class Education'}
@@ -375,8 +423,10 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
 
                   <div className="bg-white rounded-lg p-6 shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl">
-                        📞
+                      <div className="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
                       </div>
                       <h3 className="text-xl font-bold text-gray-900">
                         {locale === 'de' ? 'Persönlicher Support' : 'Personal Support'}
@@ -391,8 +441,10 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
 
                   <div className="bg-white rounded-lg p-6 shadow-sm">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center text-2xl">
-                        💳
+                      <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-emerald-200 rounded-full flex items-center justify-center">
+                        <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                        </svg>
                       </div>
                       <h3 className="text-xl font-bold text-gray-900">
                         {locale === 'de' ? 'Alles aus einer Hand' : 'All in One'}
@@ -410,8 +462,12 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
               {/* Pros & Cons */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="card bg-gradient-to-br from-green-50 to-white border-2 border-green-200">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    <span className="text-3xl">✅</span>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                    <span className="w-10 h-10 bg-gradient-to-br from-green-100 to-emerald-200 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </span>
                     {locale === 'de' ? 'Vorteile' : 'Advantages'}
                   </h3>
                   <ul className="space-y-3">
@@ -430,8 +486,12 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
                 </div>
 
                 <div className="card bg-gradient-to-br from-orange-50 to-white border-2 border-orange-200">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    <span className="text-3xl">⚠️</span>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                    <span className="w-10 h-10 bg-gradient-to-br from-yellow-100 to-amber-200 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                      </svg>
+                    </span>
                     {locale === 'de' ? 'Nachteile' : 'Disadvantages'}
                   </h3>
                   <ul className="space-y-3">
@@ -452,7 +512,11 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
 
               {/* CTA */}
               <div className="card bg-gradient-to-br from-indigo-600 to-purple-700 text-white text-center">
-                <div className="text-5xl mb-4">🎯</div>
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
                 <h3 className="text-3xl font-bold mb-4">
                   {locale === 'de' ? 'Bereit für Consorsbank?' : 'Ready for Consorsbank?'}
                 </h3>
@@ -465,9 +529,12 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
                   href="https://www.consorsbank.de"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-10 py-5 bg-white text-indigo-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
+                  className="inline-flex items-center gap-2 px-10 py-5 bg-white text-indigo-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
                 >
-                  {locale === 'de' ? '✨ Jetzt kostenloses Konto eröffnen' : '✨ Open Free Account Now'}
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                  {locale === 'de' ? 'Jetzt kostenloses Konto eröffnen' : 'Open Free Account Now'}
                 </a>
               </div>
             </div>
@@ -519,7 +586,11 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
 
                   <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-500 rounded-lg p-6">
                     <div className="flex items-start gap-3">
-                      <div className="text-3xl">💡</div>
+                      <div className="w-10 h-10 bg-gradient-to-br from-yellow-50 to-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                      </div>
                       <div>
                         <h4 className="font-bold text-gray-900 mb-2">{locale === 'de' ? 'Service rechtfertigt Kosten' : 'Service Justifies Costs'}</h4>
                         <p className="text-gray-700">
@@ -545,7 +616,11 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   <div className="bg-gradient-to-br from-indigo-50 to-white border-2 border-indigo-200 rounded-xl p-6">
-                    <div className="text-5xl mb-4">🖥️</div>
+                    <div className="w-14 h-14 bg-gradient-to-br from-indigo-100 to-purple-200 rounded-xl flex items-center justify-center mb-4">
+                      <svg className="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">ActiveTrader</h3>
                     <p className="text-gray-600 mb-4">{locale === 'de' ? 'Professionelle Desktop-Plattform' : 'Professional desktop platform'}</p>
                     <ul className="space-y-2 text-sm text-gray-700">
@@ -565,7 +640,11 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
                   </div>
 
                   <div className="bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200 rounded-xl p-6">
-                    <div className="text-5xl mb-4">📱</div>
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-indigo-200 rounded-xl flex items-center justify-center mb-4">
+                      <svg className="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">Consorsbank App</h3>
                     <p className="text-gray-600 mb-4">{locale === 'de' ? 'Banking & Trading unterwegs' : 'Banking & trading on the go'}</p>
                     <ul className="space-y-2 text-sm text-gray-700">
@@ -710,12 +789,28 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
             href="https://www.consorsbank.de"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-10 py-5 bg-white text-indigo-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
+            className="inline-flex items-center gap-2 px-10 py-5 bg-white text-indigo-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
           >
-            {locale === 'de' ? '🚀 Jetzt kostenloses Konto eröffnen' : '🚀 Open Free Account Now'}
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            {locale === 'de' ? 'Jetzt kostenloses Konto eröffnen' : 'Open Free Account Now'}
           </a>
-          <p className="text-indigo-200 text-sm mt-4">
-            {locale === 'de' ? '⚡ 0€ Mindesteinlage | 💯 BaFin Sicherheit | 🎓 50+ Webinare/Jahr' : '⚡ €0 minimum deposit | 💯 BaFin security | 🎓 50+ webinars/year'}
+          <p className="text-indigo-200 text-sm mt-4 flex items-center justify-center gap-2">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            {locale === 'de' ? '0€ Mindesteinlage' : '€0 minimum deposit'}
+            <span className="mx-1">|</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {locale === 'de' ? 'BaFin Sicherheit' : 'BaFin security'}
+            <span className="mx-1">|</span>
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+            </svg>
+            {locale === 'de' ? '50+ Webinare/Jahr' : '50+ webinars/year'}
           </p>
         </div>
       </div>

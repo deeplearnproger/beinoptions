@@ -18,22 +18,38 @@ export default function TaxesPage({ params: { locale } }: { params: { locale: st
     {
       title: t('capital_gains_tax'),
       description: t('capital_gains_tax_desc'),
-      icon: '📊',
+      icon: (
+        <svg className="w-8 h-8 text-financial-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      ),
     },
     {
       title: t('allowance'),
       description: t('allowance_desc'),
-      icon: '💶',
+      icon: (
+        <svg className="w-8 h-8 text-financial-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
     },
     {
       title: t('loss_offset'),
       description: t('loss_offset_desc'),
-      icon: '📉',
+      icon: (
+        <svg className="w-8 h-8 text-financial-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
+        </svg>
+      ),
     },
     {
       title: t('reporting'),
       description: t('reporting_desc'),
-      icon: '📝',
+      icon: (
+        <svg className="w-8 h-8 text-financial-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+      ),
     },
   ];
 
@@ -65,8 +81,10 @@ export default function TaxesPage({ params: { locale } }: { params: { locale: st
           {/* Tax Concepts */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {taxConcepts.map((concept, index) => (
-              <div key={index} className="card border-l-4 border-financial-green">
-                <div className="text-5xl mb-4">{concept.icon}</div>
+              <div key={index} className="card border-l-4 border-financial-green hover:shadow-xl transition-all">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl flex items-center justify-center mb-4 shadow-sm">
+                  {concept.icon}
+                </div>
                 <h2 className="text-2xl font-heading font-bold text-gray-900 mb-3">
                   {concept.title}
                 </h2>
@@ -135,9 +153,13 @@ export default function TaxesPage({ params: { locale } }: { params: { locale: st
               {locale === 'de' ? 'Steueroptimierung' : 'Tax Optimization'}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="card">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
-                  <span className="text-2xl mr-2">💡</span>
+              <div className="card hover:shadow-xl transition-all">
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-50 to-amber-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {locale === 'de' ? 'Freistellungsauftrag nutzen' : 'Use Exemption Order'}
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -147,9 +169,13 @@ export default function TaxesPage({ params: { locale } }: { params: { locale: st
                 </p>
               </div>
 
-              <div className="card">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
-                  <span className="text-2xl mr-2">📅</span>
+              <div className="card hover:shadow-xl transition-all">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {locale === 'de' ? 'Verluste vortragen' : 'Carry Forward Losses'}
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -159,9 +185,13 @@ export default function TaxesPage({ params: { locale } }: { params: { locale: st
                 </p>
               </div>
 
-              <div className="card">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
-                  <span className="text-2xl mr-2">⚖️</span>
+              <div className="card hover:shadow-xl transition-all">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {locale === 'de' ? 'Verlustverrechnung optimieren' : 'Optimize Loss Offsetting'}
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -171,9 +201,13 @@ export default function TaxesPage({ params: { locale } }: { params: { locale: st
                 </p>
               </div>
 
-              <div className="card">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
-                  <span className="text-2xl mr-2">🏦</span>
+              <div className="card hover:shadow-xl transition-all">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                  <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {locale === 'de' ? 'Mehrere Broker nutzen' : 'Use Multiple Brokers'}
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -192,7 +226,11 @@ export default function TaxesPage({ params: { locale } }: { params: { locale: st
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <div className="text-4xl mb-2">📅</div>
+                <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-3">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
                 <h3 className="text-lg font-semibold mb-2">31. {locale === 'de' ? 'Dezember' : 'December'}</h3>
                 <p className="text-gray-300 text-sm">
                   {locale === 'de'
@@ -201,7 +239,11 @@ export default function TaxesPage({ params: { locale } }: { params: { locale: st
                 </p>
               </div>
               <div>
-                <div className="text-4xl mb-2">📋</div>
+                <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-3">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
                 <h3 className="text-lg font-semibold mb-2">31. {locale === 'de' ? 'Mai' : 'May'}</h3>
                 <p className="text-gray-300 text-sm">
                   {locale === 'de'
@@ -210,7 +252,11 @@ export default function TaxesPage({ params: { locale } }: { params: { locale: st
                 </p>
               </div>
               <div>
-                <div className="text-4xl mb-2">🎯</div>
+                <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-3">
+                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  </svg>
+                </div>
                 <h3 className="text-lg font-semibold mb-2">{locale === 'de' ? 'Jährlich' : 'Annually'}</h3>
                 <p className="text-gray-300 text-sm">
                   {locale === 'de'
@@ -224,7 +270,11 @@ export default function TaxesPage({ params: { locale } }: { params: { locale: st
           {/* Tax Advisor Recommendation */}
           <div className="bg-yellow-50 border-l-4 border-financial-gold rounded-lg p-6">
             <div className="flex items-start">
-              <span className="text-3xl mr-4">⚠️</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-100 to-yellow-200 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
               <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                   {locale === 'de' ? 'Wichtiger Hinweis' : 'Important Notice'}

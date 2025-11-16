@@ -58,7 +58,11 @@ export default function FAQPage({ params: { locale } }: { params: { locale: stri
 
           {/* Contact Section */}
           <div className="mt-12 bg-gradient-to-br from-primary-600 to-primary-700 text-white rounded-2xl p-8 text-center">
-            <div className="text-5xl mb-4">💬</div>
+            <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+            </div>
             <h2 className="text-2xl font-heading font-bold mb-3">
               {locale === 'de' ? 'Ihre Frage ist nicht dabei?' : 'Your question is not listed?'}
             </h2>

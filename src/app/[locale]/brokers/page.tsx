@@ -162,12 +162,12 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
           </div>
 
           {/* Broker Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12 items-stretch">
             {sortedBrokers.map((broker, index) => (
               <Link
                 key={index}
                 href={broker.slug ? `/${locale}/brokers/${broker.slug}` : '#'}
-                className={`card hover:shadow-xl transition-all transform hover:-translate-y-1 ${
+                className={`card hover:shadow-xl transition-all transform hover:-translate-y-1 flex flex-col ${
                   broker.slug ? 'cursor-pointer' : 'cursor-default'
                 }`}
               >
@@ -223,7 +223,7 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-gray-200">
+                <div className="pt-4 border-t border-gray-200 flex-grow">
                   <div className="mb-3">
                     <h4 className="text-sm font-semibold text-financial-green mb-2">
                       {locale === 'de' ? 'Vorteile:' : 'Pros:'}
@@ -253,7 +253,7 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
                 </div>
 
                 {broker.slug && (
-                  <div className="mt-6 pt-4 border-t border-gray-200">
+                  <div className="mt-auto pt-4 border-t border-gray-200">
                     <div className="flex items-center justify-center gap-2 text-primary-600 font-semibold group-hover:gap-3 transition-all">
                       <span>{locale === 'de' ? 'Details ansehen' : 'View Details'}</span>
                       <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -272,8 +272,12 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
               {locale === 'de' ? 'So wählen Sie den richtigen Broker' : 'How to Choose the Right Broker'}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white rounded-xl p-6">
-                <div className="text-4xl mb-3">⭐</div>
+              <div className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-50 to-amber-100 rounded-lg flex items-center justify-center mb-3">
+                  <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {locale === 'de' ? 'Top-Empfehlung' : 'Top Recommendation'}
                 </h3>
@@ -287,8 +291,12 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
                 </p>
               </div>
 
-              <div className="bg-white rounded-xl p-6">
-                <div className="text-4xl mb-3">🎯</div>
+              <div className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg flex items-center justify-center mb-3">
+                  <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {locale === 'de' ? 'Für Anfänger' : 'For Beginners'}
                 </h3>
@@ -302,8 +310,12 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
                 </p>
               </div>
 
-              <div className="bg-white rounded-xl p-6">
-                <div className="text-4xl mb-3">⚡</div>
+              <div className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg flex items-center justify-center mb-3">
+                  <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {locale === 'de' ? 'Für Aktive Trader' : 'For Active Traders'}
                 </h3>
@@ -317,8 +329,12 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
                 </p>
               </div>
 
-              <div className="bg-white rounded-xl p-6">
-                <div className="text-4xl mb-3">🛡️</div>
+              <div className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg flex items-center justify-center mb-3">
+                  <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
                   {locale === 'de' ? 'Für Sicherheitsbewusste' : 'For Security-Conscious'}
                 </h3>
