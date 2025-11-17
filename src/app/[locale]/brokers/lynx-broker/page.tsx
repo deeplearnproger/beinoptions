@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useState } from 'react';
+import { trackBrokerClick, useScrollDepthTracking, useEngagementTimeTracking } from '@/hooks/useAnalytics';
 
 export default function LynxBrokerPage({ params: { locale } }: { params: { locale: string } }) {
   const [selectedTab, setSelectedTab] = useState<'overview' | 'fees' | 'reviews' | 'platform'>('overview');
@@ -203,6 +204,15 @@ export default function LynxBrokerPage({ params: { locale } }: { params: { local
     );
   };
 
+  // Track scroll depth and engagement time
+  useScrollDepthTracking('LYNX Broker Page');
+  useEngagementTimeTracking('LYNX Broker Page');
+
+  // Handler for broker signup clicks
+  const handleSignupClick = (location: string) => {
+    trackBrokerClick('LYNX Broker', 'signup');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
@@ -222,8 +232,8 @@ export default function LynxBrokerPage({ params: { locale } }: { params: { local
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl">
-                    <span className="text-3xl font-bold text-green-600">LX</span>
+                  <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl p-3">
+                    <img src="/logos/lynx.svg" alt="LYNX Broker Logo" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <h1 className="text-4xl md:text-5xl font-heading font-bold mb-2">LYNX Broker</h1>
@@ -265,6 +275,7 @@ export default function LynxBrokerPage({ params: { locale } }: { params: { local
                   href="https://www.lynxbroker.de"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleSignupClick('Hero Sidebar')}
                   className="block w-full px-6 py-4 bg-gradient-to-r from-green-600 to-green-700 text-white rounded-xl font-bold text-center hover:from-green-700 hover:to-green-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -529,6 +540,7 @@ export default function LynxBrokerPage({ params: { locale } }: { params: { local
                   href="https://www.lynxbroker.de"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleSignupClick('Middle CTA')}
                   className="inline-flex items-center gap-2 px-10 py-5 bg-white text-green-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -790,6 +802,7 @@ export default function LynxBrokerPage({ params: { locale } }: { params: { local
             href="https://www.lynxbroker.de"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => handleSignupClick('Bottom CTA')}
             className="inline-flex items-center gap-2 px-10 py-5 bg-white text-green-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

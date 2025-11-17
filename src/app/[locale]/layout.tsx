@@ -3,6 +3,7 @@ import { getMessages } from 'next-intl/server';
 import { Inter, Poppins } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import '../globals.css';
 
 const inter = Inter({
@@ -29,6 +30,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${inter.variable} ${poppins.variable}`}>
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body className="font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
           <Header />

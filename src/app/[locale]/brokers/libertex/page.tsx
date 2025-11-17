@@ -2,7 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { trackBrokerClick, useScrollDepthTracking, useEngagementTimeTracking } from '@/hooks/useAnalytics';
 
 export default function LibertexPage({ params: { locale } }: { params: { locale: string } }) {
   const [selectedTab, setSelectedTab] = useState<'overview' | 'fees' | 'reviews' | 'platform'>('overview');
@@ -203,6 +204,15 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
     );
   };
 
+  // Track scroll depth and engagement time
+  useScrollDepthTracking('Libertex Broker Page');
+  useEngagementTimeTracking('Libertex Broker Page');
+
+  // Handler for broker signup clicks
+  const handleSignupClick = (location: string) => {
+    trackBrokerClick('Libertex', 'signup');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
@@ -222,8 +232,8 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl">
-                    <span className="text-4xl font-bold text-primary-600">L</span>
+                  <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl p-3">
+                    <img src="/logos/libertex.svg" alt="Libertex Logo" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <h1 className="text-4xl md:text-5xl font-heading font-bold mb-2">Libertex</h1>
@@ -265,6 +275,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
                   href="https://libertex.com/de/signup"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleSignupClick('Hero Sidebar')}
                   className="block w-full px-6 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-bold text-center hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -443,6 +454,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
                   href="https://libertex.com/de/signup"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleSignupClick('Middle CTA')}
                   className="inline-flex items-center gap-2 px-10 py-5 bg-white text-primary-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -733,6 +745,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
                   href="https://libertex.com/de/signup"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => handleSignupClick('Write Review CTA')}
                   className="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 text-white rounded-xl font-bold hover:bg-primary-700 transition-all shadow-lg"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -761,6 +774,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
             href="https://libertex.com/de/signup"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => handleSignupClick('Bottom CTA')}
             className="inline-flex items-center gap-2 px-10 py-5 bg-white text-primary-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -3,11 +3,21 @@
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useState } from 'react';
+import { trackBrokerClick, useScrollDepthTracking, useEngagementTimeTracking } from '@/hooks/useAnalytics';
 
 export default function DEGIROPage() {
   const locale = useLocale();
   const t = useTranslations('brokers');
   const [activeTab, setActiveTab] = useState('overview');
+
+  // Track scroll depth and engagement time
+  useScrollDepthTracking('DEGIRO Page');
+  useEngagementTimeTracking('DEGIRO Page');
+
+  // Handler for broker signup clicks
+  const handleSignupClick = (location: string) => {
+    trackBrokerClick('DEGIRO', 'signup');
+  };
 
   const stats = {
     totalReviews: 1456,
@@ -132,8 +142,8 @@ export default function DEGIROPage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <div className="flex-1">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-3xl font-bold text-blue-700">DG</span>
+                <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-lg p-3">
+                  <img src="/logos/degiro.svg" alt="DEGIRO Logo" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">DEGIRO</h1>
@@ -474,6 +484,7 @@ export default function DEGIROPage() {
                 href="https://www.degiro.de"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => handleSignupClick('Middle CTA')}
                 className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 {locale === 'de' ? 'Depot eröffnen' : 'Open Depot'}
@@ -798,6 +809,7 @@ export default function DEGIROPage() {
                 href="https://www.degiro.de"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => handleSignupClick('Bottom CTA')}
                 className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 {locale === 'de' ? 'Jetzt starten' : 'Get Started'}
