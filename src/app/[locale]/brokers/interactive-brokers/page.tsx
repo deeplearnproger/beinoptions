@@ -216,12 +216,12 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20">
+      <div className="bg-gradient-to-br from-red-600 via-red-700 to-red-800 text-white py-20">
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <Link
               href={`/${locale}/brokers`}
-              className="inline-flex items-center text-blue-100 hover:text-white mb-6 transition-colors"
+              className="inline-flex items-center text-red-100 hover:text-white mb-6 transition-colors"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -233,18 +233,18 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl p-3">
-                    <img src="/logos/interactive-brokers.svg" alt="Interactive Brokers Logo" className="w-full h-full object-contain" />
+                    <img src="/logos/interactive-brokers.webp" alt="Interactive Brokers Logo" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <h1 className="text-4xl md:text-5xl font-heading font-bold mb-2">Interactive Brokers</h1>
                     <div className="flex items-center gap-3">
                       {renderStars(5)}
                       <span className="text-2xl font-bold">{stats.averageRating}</span>
-                      <span className="text-blue-200">({stats.totalReviews.toLocaleString()} {locale === 'de' ? 'Bewertungen' : 'reviews'})</span>
+                      <span className="text-red-200">({stats.totalReviews.toLocaleString()} {locale === 'de' ? 'Bewertungen' : 'reviews'})</span>
                     </div>
                   </div>
                 </div>
-                <p className="text-xl text-blue-100 mb-6">
+                <p className="text-xl text-red-100 mb-6">
                   {locale === 'de'
                     ? 'Der weltweit führende Broker für professionelle Trader mit niedrigsten Gebühren und Zugang zu 150+ Märkten'
                     : 'The world\'s leading broker for professional traders with lowest fees and access to 150+ markets'}
@@ -256,10 +256,10 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
                     </svg>
                     {locale === 'de' ? 'Verifiziert' : 'Verified'}
                   </span>
-                  <span className="px-4 py-2 bg-blue-500/30 backdrop-blur-sm text-white rounded-full font-semibold">
+                  <span className="px-4 py-2 bg-red-500/30 backdrop-blur-sm text-white rounded-full font-semibold">
                     BaFin, SEC, FCA
                   </span>
-                  <span className="px-4 py-2 bg-blue-500/30 backdrop-blur-sm text-white rounded-full font-semibold">
+                  <span className="px-4 py-2 bg-red-500/30 backdrop-blur-sm text-white rounded-full font-semibold">
                     {locale === 'de' ? 'Seit 1978' : 'Since 1978'}
                   </span>
                 </div>
@@ -267,7 +267,7 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
 
               <div className="bg-white text-gray-900 rounded-2xl p-8 shadow-2xl min-w-[300px]">
                 <div className="text-center mb-6">
-                  <div className="text-6xl font-bold text-blue-600 mb-2">{stats.trustScore}</div>
+                  <div className="text-6xl font-bold text-red-600 mb-2">{stats.trustScore}</div>
                   <div className="text-lg font-semibold text-gray-700">Trust Score</div>
                   <div className="text-sm text-gray-500">{locale === 'de' ? 'Hervorragend' : 'Excellent'}</div>
                 </div>
@@ -276,7 +276,7 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => handleSignupClick('Hero Sidebar')}
-                  className="block w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl font-bold text-center hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
+                  className="block w-full px-6 py-4 bg-gradient-to-r from-red-600 to-red-700 text-white rounded-xl font-bold text-center hover:from-red-700 hover:to-red-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -310,7 +310,7 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
                 onClick={() => setSelectedTab(tab.id as any)}
                 className={`px-6 py-4 font-semibold whitespace-nowrap transition-all flex items-center ${
                   selectedTab === tab.id
-                    ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50'
+                    ? 'text-red-600 border-b-2 border-red-600 bg-red-50'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`}
               >
@@ -442,7 +442,7 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
               </div>
 
               {/* CTA */}
-              <div className="card bg-gradient-to-br from-blue-600 to-indigo-700 text-white text-center">
+              <div className="card bg-gradient-to-br from-red-600 to-red-700 text-white text-center">
                 <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -451,7 +451,7 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
                 <h3 className="text-3xl font-bold mb-4">
                   {locale === 'de' ? 'Bereit für professionelles Trading?' : 'Ready for Professional Trading?'}
                 </h3>
-                <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
                   {locale === 'de'
                     ? 'Eröffnen Sie Ihr Konto bei Interactive Brokers und profitieren Sie von niedrigsten Gebühren!'
                     : 'Open your account at Interactive Brokers and benefit from the lowest fees!'}
@@ -461,7 +461,7 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => handleSignupClick('Middle CTA')}
-                  className="inline-flex items-center gap-2 px-10 py-5 bg-white text-blue-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
+                  className="inline-flex items-center gap-2 px-10 py-5 bg-white text-red-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -517,7 +517,7 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
                     </div>
                   </div>
 
-                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 rounded-lg p-6">
+                  <div className="bg-gradient-to-r from-red-50 to-red-100 border-l-4 border-red-500 rounded-lg p-6">
                     <div className="flex items-start gap-3">
                       <div className="w-10 h-10 bg-gradient-to-br from-yellow-50 to-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
                         <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -548,9 +548,9 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  <div className="bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200 rounded-xl p-6">
-                    <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mb-4">
-                      <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="bg-gradient-to-br from-red-50 to-white border-2 border-red-200 rounded-xl p-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center mb-4">
+                      <svg className="w-7 h-7 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
@@ -601,7 +601,7 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
                   <h3 className="text-2xl font-bold mb-4">{locale === 'de' ? 'API & Automatisierung' : 'API & Automation'}</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h4 className="font-bold mb-3 text-blue-300">API Support</h4>
+                      <h4 className="font-bold mb-3 text-red-300">API Support</h4>
                       <ul className="space-y-2 text-gray-300">
                         <li>• Python, Java, C++, C#</li>
                         <li>• {locale === 'de' ? 'Vollständige API-Dokumentation' : 'Complete API documentation'}</li>
@@ -609,7 +609,7 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-bold mb-3 text-blue-300">{locale === 'de' ? 'Algorithmic Trading' : 'Algorithmic Trading'}</h4>
+                      <h4 className="font-bold mb-3 text-red-300">{locale === 'de' ? 'Algorithmic Trading' : 'Algorithmic Trading'}</h4>
                       <ul className="space-y-2 text-gray-300">
                         <li>• {locale === 'de' ? 'Automatisierte Strategien' : 'Automated strategies'}</li>
                         <li>• {locale === 'de' ? 'Low-Latency-Verbindungen' : 'Low-latency connections'}</li>
@@ -629,7 +629,7 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
               <div className="card">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="text-center">
-                    <div className="text-7xl font-bold text-blue-600 mb-2">{stats.averageRating}</div>
+                    <div className="text-7xl font-bold text-red-600 mb-2">{stats.averageRating}</div>
                     <div className="mb-4">{renderStars(5)}</div>
                     <div className="text-gray-600">
                       {locale === 'de' ? 'Basierend auf' : 'Based on'} {stats.totalReviews.toLocaleString()} {locale === 'de' ? 'Bewertungen' : 'reviews'}
@@ -668,7 +668,7 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
                     <div key={index} className="card hover:shadow-lg transition-shadow">
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                          <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                             {review.author.charAt(0)}
                           </div>
                           <div>
@@ -691,7 +691,7 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
                       <p className="text-gray-700 mb-4 leading-relaxed">{review.text}</p>
 
                       <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                        <button className="text-gray-600 hover:text-blue-600 transition-colors flex items-center gap-2">
+                        <button className="text-gray-600 hover:text-red-600 transition-colors flex items-center gap-2">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
                           </svg>
@@ -708,12 +708,12 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
       </div>
 
       {/* Bottom CTA */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 py-16">
+      <div className="bg-gradient-to-r from-red-600 to-red-700 py-16">
         <div className="container-custom text-center text-white">
           <h2 className="text-4xl font-bold mb-4">
             {locale === 'de' ? 'Bereit für Interactive Brokers?' : 'Ready for Interactive Brokers?'}
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
             {locale === 'de'
               ? 'Schließen Sie sich 2.5 Millionen Tradern weltweit an und profitieren Sie von niedrigsten Gebühren!'
               : 'Join 2.5 million traders worldwide and benefit from the lowest fees!'}
@@ -723,14 +723,14 @@ export default function InteractiveBrokersPage({ params: { locale } }: { params:
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => handleSignupClick('Bottom CTA')}
-            className="inline-flex items-center gap-2 px-10 py-5 bg-white text-blue-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
+            className="inline-flex items-center gap-2 px-10 py-5 bg-white text-red-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
             {locale === 'de' ? 'Jetzt kostenloses Konto eröffnen' : 'Open Free Account Now'}
           </a>
-          <p className="text-blue-200 text-sm mt-4 flex items-center justify-center gap-2">
+          <p className="text-red-200 text-sm mt-4 flex items-center justify-center gap-2">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>

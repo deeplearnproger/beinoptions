@@ -126,7 +126,7 @@ export default function TradeRepublicPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-r from-orange-600 via-red-600 to-pink-700 text-white py-16 overflow-hidden">
+      <div className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-black text-white py-16 overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <Link
@@ -143,7 +143,7 @@ export default function TradeRepublicPage() {
             <div className="flex-1">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-lg p-3">
-                  <img src="/logos/traderepublic.svg" alt="Trade Republic Logo" className="w-full h-full object-contain" />
+                  <img src="/logos/traderepublic.png" alt="Trade Republic Logo" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">TradeRepublic</h1>
@@ -181,7 +181,7 @@ export default function TradeRepublicPage() {
                   <div className="text-sm text-white/80">Trust Score</div>
                 </div>
               </div>
-              <span className="px-4 py-2 bg-orange-500/30 backdrop-blur-sm text-white rounded-full text-center font-semibold">
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-center font-semibold">
                 BaFin {locale === 'de' ? 'Reguliert' : 'Regulated'}
               </span>
             </div>
@@ -199,8 +199,8 @@ export default function TradeRepublicPage() {
                 onClick={() => setActiveTab(tab)}
                 className={`py-4 px-2 font-semibold transition-colors border-b-2 ${
                   activeTab === tab
-                    ? 'border-orange-600 text-orange-600'
-                    : 'border-transparent text-gray-600 hover:text-orange-600'
+                    ? 'border-gray-900 text-gray-900'
+                    : 'border-transparent text-gray-600 hover:text-gray-900'
                 }`}
               >
                 {locale === 'de'
@@ -218,20 +218,20 @@ export default function TradeRepublicPage() {
           <div className="space-y-12">
             {/* Quick Stats */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-100">
-                <div className="text-3xl font-bold text-orange-600 mb-2">1€</div>
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border border-gray-200">
+                <div className="text-3xl font-bold text-gray-900 mb-2">1€</div>
                 <div className="text-gray-700 font-medium">{locale === 'de' ? 'Pro Trade' : 'Per Trade'}</div>
               </div>
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-100">
-                <div className="text-3xl font-bold text-orange-600 mb-2">0€</div>
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border border-gray-200">
+                <div className="text-3xl font-bold text-gray-900 mb-2">0€</div>
                 <div className="text-gray-700 font-medium">{locale === 'de' ? 'Depotgebühr' : 'Custody Fee'}</div>
               </div>
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-100">
-                <div className="text-3xl font-bold text-orange-600 mb-2">4%</div>
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border border-gray-200">
+                <div className="text-3xl font-bold text-gray-900 mb-2">4%</div>
                 <div className="text-gray-700 font-medium">{locale === 'de' ? 'Zinsen p.a.' : 'Interest p.a.'}</div>
               </div>
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-100">
-                <div className="text-3xl font-bold text-orange-600 mb-2">2M+</div>
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border border-gray-200">
+                <div className="text-3xl font-bold text-gray-900 mb-2">2M+</div>
                 <div className="text-gray-700 font-medium">{locale === 'de' ? 'Kunden' : 'Customers'}</div>
               </div>
             </div>
@@ -242,9 +242,9 @@ export default function TradeRepublicPage() {
                 {locale === 'de' ? 'Hauptmerkmale' : 'Key Features'}
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-orange-300 transition-colors">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-400 transition-colors">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
@@ -258,9 +258,9 @@ export default function TradeRepublicPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-orange-300 transition-colors">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-400 transition-colors">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                     </svg>
                   </div>
@@ -274,9 +274,9 @@ export default function TradeRepublicPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-orange-300 transition-colors">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-400 transition-colors">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
@@ -290,9 +290,9 @@ export default function TradeRepublicPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-orange-300 transition-colors">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-400 transition-colors">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                     </svg>
                   </div>
@@ -306,9 +306,9 @@ export default function TradeRepublicPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-orange-300 transition-colors">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-400 transition-colors">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
@@ -322,9 +322,9 @@ export default function TradeRepublicPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-orange-300 transition-colors">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-400 transition-colors">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                     </svg>
                   </div>
@@ -338,9 +338,9 @@ export default function TradeRepublicPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-orange-300 transition-colors">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-400 transition-colors">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
                   </div>
@@ -354,9 +354,9 @@ export default function TradeRepublicPage() {
                   </p>
                 </div>
 
-                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-orange-300 transition-colors">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-400 transition-colors">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                     </svg>
                   </div>
@@ -373,13 +373,13 @@ export default function TradeRepublicPage() {
             </div>
 
             {/* Why TradeRepublic */}
-            <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 border border-orange-100">
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 border border-gray-200">
               <h2 className="text-3xl font-bold mb-6">
                 {locale === 'de' ? 'Warum TradeRepublic?' : 'Why TradeRepublic?'}
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-bold mb-3 text-orange-700">
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">
                     {locale === 'de' ? 'Perfekt für Einsteiger' : 'Perfect for Beginners'}
                   </h3>
                   <p className="text-gray-700 mb-4">
@@ -389,7 +389,7 @@ export default function TradeRepublicPage() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-3 text-orange-700">
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">
                     {locale === 'de' ? 'Kostenlose Sparpläne' : 'Free Savings Plans'}
                   </h3>
                   <p className="text-gray-700 mb-4">
@@ -399,7 +399,7 @@ export default function TradeRepublicPage() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-3 text-orange-700">
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">
                     {locale === 'de' ? 'Deutsche Bank-Lizenz' : 'German Banking License'}
                   </h3>
                   <p className="text-gray-700 mb-4">
@@ -409,7 +409,7 @@ export default function TradeRepublicPage() {
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-3 text-orange-700">
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">
                     {locale === 'de' ? 'Zinsen auf Guthaben' : 'Interest on Balance'}
                   </h3>
                   <p className="text-gray-700">
@@ -471,7 +471,7 @@ export default function TradeRepublicPage() {
             </div>
 
             {/* CTA */}
-            <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-8 text-white text-center">
+            <div className="bg-gradient-to-r from-gray-900 to-black rounded-2xl p-8 text-white text-center">
               <h3 className="text-2xl font-bold mb-4">
                 {locale === 'de' ? 'Jetzt mit TradeRepublic starten' : 'Start with TradeRepublic Now'}
               </h3>
@@ -485,7 +485,7 @@ export default function TradeRepublicPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => handleSignupClick('Middle CTA')}
-                className="inline-block bg-white text-orange-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 {locale === 'de' ? 'Depot eröffnen' : 'Open Depot'}
               </a>
@@ -512,7 +512,7 @@ export default function TradeRepublicPage() {
                   <tbody className="divide-y divide-gray-200">
                     <tr>
                       <td className="px-6 py-4">{locale === 'de' ? 'Aktien & ETF Kauf/Verkauf' : 'Stock & ETF Buy/Sell'}</td>
-                      <td className="px-6 py-4 text-right font-semibold text-orange-600">1€</td>
+                      <td className="px-6 py-4 text-right font-semibold text-gray-900">1€</td>
                     </tr>
                     <tr>
                       <td className="px-6 py-4">{locale === 'de' ? 'Sparplan-Ausführung' : 'Savings Plan Execution'}</td>
@@ -559,11 +559,11 @@ export default function TradeRepublicPage() {
               </div>
             </div>
 
-            <div className="bg-orange-50 rounded-xl p-6 border border-orange-200">
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
               <h3 className="font-bold text-lg mb-2">{locale === 'de' ? 'Wichtige Hinweise' : 'Important Notes'}</h3>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
-                  <span className="text-orange-600 mr-2">•</span>
+                  <span className="text-gray-900 mr-2">•</span>
                   <span>
                     {locale === 'de'
                       ? 'Handel nur über LS Exchange möglich (7:30-23:00 Uhr)'
@@ -571,7 +571,7 @@ export default function TradeRepublicPage() {
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-orange-600 mr-2">•</span>
+                  <span className="text-gray-900 mr-2">•</span>
                   <span>
                     {locale === 'de'
                       ? 'Mindestordervolumen: 1€'
@@ -579,7 +579,7 @@ export default function TradeRepublicPage() {
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-orange-600 mr-2">•</span>
+                  <span className="text-gray-900 mr-2">•</span>
                   <span>
                     {locale === 'de'
                       ? 'Keine Gebühren für Limit-Orders oder Orderänderungen'
@@ -604,25 +604,25 @@ export default function TradeRepublicPage() {
                   <h3 className="text-xl font-bold mb-4">{locale === 'de' ? 'Mobile App' : 'Mobile App'}</h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start">
-                      <svg className="w-5 h-5 text-orange-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-gray-900 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {locale === 'de' ? 'iOS und Android App' : 'iOS and Android app'}
                     </li>
                     <li className="flex items-start">
-                      <svg className="w-5 h-5 text-orange-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-gray-900 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {locale === 'de' ? 'Intuitive Benutzeroberfläche' : 'Intuitive user interface'}
                     </li>
                     <li className="flex items-start">
-                      <svg className="w-5 h-5 text-orange-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-gray-900 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {locale === 'de' ? 'Echtzeit-Kurse' : 'Real-time quotes'}
                     </li>
                     <li className="flex items-start">
-                      <svg className="w-5 h-5 text-orange-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-gray-900 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {locale === 'de' ? 'Push-Benachrichtigungen' : 'Push notifications'}
@@ -634,25 +634,25 @@ export default function TradeRepublicPage() {
                   <h3 className="text-xl font-bold mb-4">{locale === 'de' ? 'Charting & Analyse' : 'Charting & Analysis'}</h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start">
-                      <svg className="w-5 h-5 text-orange-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-gray-900 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {locale === 'de' ? 'Interaktive Charts' : 'Interactive charts'}
                     </li>
                     <li className="flex items-start">
-                      <svg className="w-5 h-5 text-orange-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-gray-900 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {locale === 'de' ? 'Mehrere Zeitebenen' : 'Multiple timeframes'}
                     </li>
                     <li className="flex items-start">
-                      <svg className="w-5 h-5 text-orange-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-gray-900 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {locale === 'de' ? 'Technische Indikatoren' : 'Technical indicators'}
                     </li>
                     <li className="flex items-start">
-                      <svg className="w-5 h-5 text-orange-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-gray-900 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {locale === 'de' ? 'Watchlisten' : 'Watchlists'}
@@ -661,7 +661,7 @@ export default function TradeRepublicPage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-100">
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border border-gray-200">
                 <h3 className="text-xl font-bold mb-4">
                   {locale === 'de' ? 'Handelszeiten' : 'Trading Hours'}
                 </h3>
@@ -682,7 +682,7 @@ export default function TradeRepublicPage() {
             <div className="bg-white rounded-xl p-8 border border-gray-200">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="text-center">
-                  <div className="text-6xl font-bold text-orange-600 mb-2">{stats.averageRating}</div>
+                  <div className="text-6xl font-bold text-gray-900 mb-2">{stats.averageRating}</div>
                   <div className="flex items-center justify-center mb-2">
                     {[...Array(5)].map((_, i) => (
                       <svg
@@ -707,7 +707,7 @@ export default function TradeRepublicPage() {
                       <span className="text-sm font-medium w-12">{rating} {locale === 'de' ? 'Sterne' : 'stars'}</span>
                       <div className="flex-1 bg-gray-200 rounded-full h-3">
                         <div
-                          className="bg-orange-600 h-3 rounded-full transition-all"
+                          className="bg-gray-900 h-3 rounded-full transition-all"
                           style={{ width: `${stats.distribution[rating as keyof typeof stats.distribution]}%` }}
                         ></div>
                       </div>
@@ -723,7 +723,7 @@ export default function TradeRepublicPage() {
             {/* Individual Reviews */}
             <div className="space-y-6">
               {reviews.map((review, idx) => (
-                <div key={idx} className="bg-white rounded-xl p-6 border border-gray-200 hover:border-orange-300 transition-colors">
+                <div key={idx} className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-400 transition-colors">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <div className="flex items-center gap-2 mb-1">
@@ -754,7 +754,7 @@ export default function TradeRepublicPage() {
                   <h4 className="font-bold mb-2">{review.title}</h4>
                   <p className="text-gray-700 mb-4">{review.text}</p>
                   <div className="flex items-center gap-4 text-sm text-gray-500">
-                    <button className="flex items-center gap-1 hover:text-orange-600 transition-colors">
+                    <button className="flex items-center gap-1 hover:text-gray-900 transition-colors">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
                       </svg>
@@ -766,7 +766,7 @@ export default function TradeRepublicPage() {
             </div>
 
             {/* CTA */}
-            <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-8 text-white text-center">
+            <div className="bg-gradient-to-r from-gray-900 to-black rounded-2xl p-8 text-white text-center">
               <h3 className="text-2xl font-bold mb-4">
                 {locale === 'de' ? 'Überzeugt?' : 'Convinced?'}
               </h3>
@@ -780,7 +780,7 @@ export default function TradeRepublicPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => handleSignupClick('Bottom CTA')}
-                className="inline-block bg-white text-orange-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 {locale === 'de' ? 'Jetzt starten' : 'Get Started'}
               </a>

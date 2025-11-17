@@ -216,12 +216,12 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-primary-600 via-primary-700 to-indigo-800 text-white py-20">
+      <div className="bg-gradient-to-br from-orange-500 via-orange-600 to-red-700 text-white py-20">
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <Link
               href={`/${locale}/brokers`}
-              className="inline-flex items-center text-primary-100 hover:text-white mb-6 transition-colors"
+              className="inline-flex items-center text-orange-100 hover:text-white mb-6 transition-colors"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -233,7 +233,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl p-3">
-                    <img src="/logos/libertex.svg" alt="Libertex Logo" className="w-full h-full object-contain" />
+                    <img src="/logos/libertex.png" alt="Libertex Logo" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <h1 className="text-4xl md:text-5xl font-heading font-bold mb-2">Libertex</h1>
@@ -256,10 +256,10 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
                     </svg>
                     {locale === 'de' ? 'Verifiziert' : 'Verified'}
                   </span>
-                  <span className="px-4 py-2 bg-primary-500/30 backdrop-blur-sm text-white rounded-full font-semibold">
+                  <span className="px-4 py-2 bg-orange-500/30 backdrop-blur-sm text-white rounded-full font-semibold">
                     CySEC {locale === 'de' ? 'Reguliert' : 'Regulated'}
                   </span>
-                  <span className="px-4 py-2 bg-primary-500/30 backdrop-blur-sm text-white rounded-full font-semibold">
+                  <span className="px-4 py-2 bg-orange-500/30 backdrop-blur-sm text-white rounded-full font-semibold">
                     {locale === 'de' ? 'Seit 1997' : 'Since 1997'}
                   </span>
                 </div>
@@ -267,7 +267,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
 
               <div className="bg-white text-gray-900 rounded-2xl p-8 shadow-2xl min-w-[300px]">
                 <div className="text-center mb-6">
-                  <div className="text-6xl font-bold text-primary-600 mb-2">{stats.trustScore}</div>
+                  <div className="text-6xl font-bold text-orange-600 mb-2">{stats.trustScore}</div>
                   <div className="text-lg font-semibold text-gray-700">Trust Score</div>
                   <div className="text-sm text-gray-500">{locale === 'de' ? 'Hervorragend' : 'Excellent'}</div>
                 </div>
@@ -276,7 +276,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => handleSignupClick('Hero Sidebar')}
-                  className="block w-full px-6 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-bold text-center hover:from-primary-700 hover:to-primary-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
+                  className="block w-full px-6 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl font-bold text-center hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -310,7 +310,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
                 onClick={() => setSelectedTab(tab.id as any)}
                 className={`px-6 py-4 font-semibold whitespace-nowrap transition-all flex items-center ${
                   selectedTab === tab.id
-                    ? 'text-primary-600 border-b-2 border-primary-600 bg-primary-50'
+                    ? 'text-orange-600 border-b-2 border-orange-600 bg-orange-50'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`}
               >
@@ -436,7 +436,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
               </div>
 
               {/* CTA */}
-              <div className="card bg-gradient-to-br from-primary-600 to-indigo-700 text-white text-center">
+              <div className="card bg-gradient-to-br from-orange-500 to-red-600 text-white text-center">
                 <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -455,7 +455,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => handleSignupClick('Middle CTA')}
-                  className="inline-flex items-center gap-2 px-10 py-5 bg-white text-primary-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
+                  className="inline-flex items-center gap-2 px-10 py-5 bg-white text-orange-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -554,7 +554,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   <div className="bg-gradient-to-br from-primary-50 to-white border-2 border-primary-200 rounded-xl p-6">
                     <div className="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-200 rounded-xl flex items-center justify-center mb-4">
-                      <svg className="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                       </svg>
                     </div>
@@ -657,7 +657,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
               <div className="card">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   <div className="text-center">
-                    <div className="text-7xl font-bold text-primary-600 mb-2">{stats.averageRating}</div>
+                    <div className="text-7xl font-bold text-orange-600 mb-2">{stats.averageRating}</div>
                     <div className="mb-4">{renderStars(5)}</div>
                     <div className="text-gray-600">
                       {locale === 'de' ? 'Basierend auf' : 'Based on'} {stats.totalReviews.toLocaleString()} {locale === 'de' ? 'Bewertungen' : 'reviews'}
@@ -719,7 +719,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
                       <p className="text-gray-700 mb-4 leading-relaxed">{review.text}</p>
 
                       <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                        <button className="text-gray-600 hover:text-primary-600 transition-colors flex items-center gap-2">
+                        <button className="text-gray-600 hover:text-orange-600 transition-colors flex items-center gap-2">
                           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
                           </svg>
@@ -746,7 +746,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => handleSignupClick('Write Review CTA')}
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 text-white rounded-xl font-bold hover:bg-primary-700 transition-all shadow-lg"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-orange-500 text-white rounded-xl font-bold hover:bg-orange-600 transition-all shadow-lg"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
@@ -760,7 +760,7 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
       </div>
 
       {/* Bottom CTA */}
-      <div className="bg-gradient-to-r from-primary-600 to-indigo-700 py-16">
+      <div className="bg-gradient-to-r from-orange-500 to-red-600 py-16">
         <div className="container-custom text-center text-white">
           <h2 className="text-4xl font-bold mb-4">
             {locale === 'de' ? 'Bereit, mit Libertex zu traden?' : 'Ready to Trade with Libertex?'}
@@ -775,14 +775,14 @@ export default function LibertexPage({ params: { locale } }: { params: { locale:
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => handleSignupClick('Bottom CTA')}
-            className="inline-flex items-center gap-2 px-10 py-5 bg-white text-primary-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
+            className="inline-flex items-center gap-2 px-10 py-5 bg-white text-orange-700 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl transform hover:-translate-y-1"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
             {locale === 'de' ? 'Jetzt kostenloses Konto eröffnen' : 'Open Free Account Now'}
           </a>
-          <p className="text-primary-200 text-sm mt-4 flex items-center justify-center gap-2">
+          <p className="text-orange-200 text-sm mt-4 flex items-center justify-center gap-2">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>

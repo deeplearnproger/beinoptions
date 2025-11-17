@@ -233,7 +233,7 @@ export default function LynxBrokerPage({ params: { locale } }: { params: { local
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl p-3">
-                    <img src="/logos/lynx.svg" alt="LYNX Broker Logo" className="w-full h-full object-contain" />
+                    <img src="/logos/lynx.jpeg" alt="LYNX Broker Logo" className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <h1 className="text-4xl md:text-5xl font-heading font-bold mb-2">LYNX Broker</h1>
