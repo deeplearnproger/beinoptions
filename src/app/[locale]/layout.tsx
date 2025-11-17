@@ -4,6 +4,7 @@ import { Inter, Poppins } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import GlossaryProvider from '@/components/GlossaryProvider';
 import '../globals.css';
 
 const inter = Inter({
@@ -35,6 +36,7 @@ export default async function LocaleLayout({
       </head>
       <body className="font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
+          <GlossaryProvider />
           <Header />
           <main className="min-h-screen">
             {children}

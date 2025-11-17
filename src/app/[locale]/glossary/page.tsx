@@ -407,7 +407,7 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
             </h2>
 
             {filteredTerms.map((item, index) => (
-              <div key={index} className="card hover:shadow-lg transition-all hover:scale-[1.01]">
+              <div key={index} id={item.id} className="card hover:shadow-lg transition-all hover:scale-[1.01] scroll-mt-24">
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-2xl font-heading font-bold text-gray-900">
                     {item.term}
