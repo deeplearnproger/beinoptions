@@ -71,6 +71,12 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
     { term: t('breakeven'), definition: t('breakeven_def'), category: 'risk', id: 'breakeven' },
     { term: t('margin'), definition: t('margin_def'), category: 'risk', id: 'margin' },
     { term: t('naked_option'), definition: t('naked_option_def'), category: 'risk', id: 'naked' },
+
+    // Regulators
+    { term: t('cysec'), definition: t('cysec_def'), category: 'regulation', id: 'cysec' },
+    { term: t('sec'), definition: t('sec_def'), category: 'regulation', id: 'sec' },
+    { term: t('fca'), definition: t('fca_def'), category: 'regulation', id: 'fca' },
+    { term: t('afm'), definition: t('afm_def'), category: 'regulation', id: 'afm' },
   ];
 
   const filteredTerms = glossaryTerms.filter((item) => {
@@ -90,6 +96,7 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
     trading: locale === 'de' ? 'Trading-Aktionen' : 'Trading Actions',
     strategies: locale === 'de' ? 'Strategien' : 'Strategies',
     risk: locale === 'de' ? 'Risikomanagement' : 'Risk Management',
+    regulation: locale === 'de' ? 'Regulierungsbehörden' : 'Regulators',
   };
 
   // Educational videos - using verified working YouTube videos
@@ -192,7 +199,16 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
             {Object.entries(categories).map(([key, label]) => (
               <button
                 key={key}
-                onClick={() => setSelectedCategory(key)}
+                onClick={() => {
+                  setSelectedCategory(key);
+                  // Scroll to terms section after a small delay to allow state update
+                  setTimeout(() => {
+                    const termsSection = document.getElementById('glossary-terms');
+                    if (termsSection) {
+                      termsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }, 100);
+                }}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === key
                     ? 'bg-primary-600 text-white shadow-lg'
@@ -380,7 +396,7 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
           </div>
 
           {/* Glossary Terms */}
-          <div className="space-y-6">
+          <div id="glossary-terms" className="space-y-6 scroll-mt-8">
             <h2 className="text-3xl font-heading font-bold text-gray-900 mb-8 text-center flex items-center justify-center gap-3">
               <span className="w-10 h-10 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg flex items-center justify-center inline-flex flex-shrink-0">
                 <svg className="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">

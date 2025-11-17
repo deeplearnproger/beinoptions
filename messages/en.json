@@ -197,7 +197,15 @@
     "margin": "Margin",
     "margin_def": "The amount of money you must deposit as collateral to trade certain options strategies (especially short positions).",
     "naked_option": "Naked Option (Uncovered Option)",
-    "naked_option_def": "Selling an option without owning the underlying asset. High risk as theoretically unlimited losses are possible."
+    "naked_option_def": "Selling an option without owning the underlying asset. High risk as theoretically unlimited losses are possible.",
+    "cysec": "CySEC (Cyprus Securities and Exchange Commission)",
+    "cysec_def": "The Cypriot financial regulatory authority that oversees financial services companies in Cyprus. Counts as EU regulation and allows companies to offer services throughout the EU.",
+    "sec": "SEC (Securities and Exchange Commission)",
+    "sec_def": "The U.S. securities regulator responsible for overseeing the securities markets in the United States. One of the most important financial regulatory authorities worldwide.",
+    "fca": "FCA (Financial Conduct Authority)",
+    "fca_def": "The British financial regulatory authority that oversees financial services companies in the United Kingdom. Known for strict consumer protection standards.",
+    "afm": "AFM (Autoriteit Financiële Markten)",
+    "afm_def": "The Dutch financial markets authority, responsible for regulating financial institutions and protecting consumers in the Netherlands."
   },
   "tutorials": {
     "title": "Step-by-Step Tutorials",

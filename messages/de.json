@@ -197,7 +197,15 @@
     "margin": "Margin (Sicherheitsleistung)",
     "margin_def": "Der Geldbetrag, den Sie als Sicherheit hinterlegen müssen, um bestimmte Optionsstrategien (besonders Short-Positionen) zu handeln.",
     "naked_option": "Naked Option (Ungedeckte Option)",
-    "naked_option_def": "Verkauf einer Option ohne den zugrunde liegenden Basiswert zu besitzen. Hohes Risiko, da theoretisch unbegrenzte Verluste möglich sind."
+    "naked_option_def": "Verkauf einer Option ohne den zugrunde liegenden Basiswert zu besitzen. Hohes Risiko, da theoretisch unbegrenzte Verluste möglich sind.",
+    "cysec": "CySEC (Cyprus Securities and Exchange Commission)",
+    "cysec_def": "Die zypriotische Finanzaufsichtsbehörde, die Finanzdienstleistungsunternehmen in Zypern reguliert. Gilt als EU-Regulierung und erlaubt Unternehmen, Dienstleistungen in der gesamten EU anzubieten.",
+    "sec": "SEC (Securities and Exchange Commission)",
+    "sec_def": "Die US-amerikanische Börsenaufsichtsbehörde, die für die Regulierung der Wertpapiermärkte in den USA verantwortlich ist. Eine der wichtigsten Finanzaufsichtsbehörden weltweit.",
+    "fca": "FCA (Financial Conduct Authority)",
+    "fca_def": "Die britische Finanzaufsichtsbehörde, die Finanzdienstleistungsunternehmen in Großbritannien reguliert. Bekannt für strenge Verbraucherschutzstandards.",
+    "afm": "AFM (Autoriteit Financiële Markten)",
+    "afm_def": "Die niederländische Finanzmarktaufsicht, zuständig für die Regulierung von Finanzinstituten und den Schutz von Verbrauchern in den Niederlanden."
   },
   "tutorials": {
     "title": "Schritt-für-Schritt Anleitungen",
