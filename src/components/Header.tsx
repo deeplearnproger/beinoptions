@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
 import { useState } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
+import AnimatedLogo from './AnimatedLogo';
 
 export default function Header() {
   const t = useTranslations('nav');
@@ -29,13 +30,8 @@ export default function Header() {
       <nav className="container-custom">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">B</span>
-            </div>
-            <span className="font-heading font-bold text-xl text-gray-900">
-              BeInOptions
-            </span>
+          <Link href={`/${locale}`} className="group">
+            <AnimatedLogo />
           </Link>
 
           {/* Desktop Navigation */}
