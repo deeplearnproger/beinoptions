@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { trackBrokerClick, useScrollDepthTracking, useEngagementTimeTracking } from '@/hooks/useAnalytics';
 
-export { generateMetadata } from './metadata';
-
 export default function TradeRepublicPage() {
   const locale = useLocale();
   const t = useTranslations('brokers');
