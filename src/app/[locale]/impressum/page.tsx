@@ -23,7 +23,7 @@ export default function ImpressumPage({ params: { locale } }: { params: { locale
               {locale === 'de' ? 'Kontakt' : 'Contact'}
             </h2>
             <p className="text-gray-700">
-              <strong>E-Mail:</strong> info@beinoptions.de
+              <strong>E-Mail:</strong> info@beinoptions.com
             </p>
           </section>
 

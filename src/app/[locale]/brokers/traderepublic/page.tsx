@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { trackBrokerClick, useScrollDepthTracking, useEngagementTimeTracking } from '@/hooks/useAnalytics';
 
+export { generateMetadata } from './metadata';
+
 export default function TradeRepublicPage() {
   const locale = useLocale();
   const t = useTranslations('brokers');
@@ -143,7 +145,13 @@ export default function TradeRepublicPage() {
             <div className="flex-1">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-lg p-3">
-                  <img src="/logos/traderepublic.png" alt="Trade Republic Logo" className="w-full h-full object-contain" />
+                  <img
+                    src="/logos/traderepublic.png"
+                    alt="Trade Republic Logo - Mobiler Broker für Aktien und ETFs"
+                    className="w-full h-full object-contain"
+                    width="80"
+                    height="80"
+                  />
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold mb-2">TradeRepublic</h1>

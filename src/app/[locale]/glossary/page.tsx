@@ -485,8 +485,8 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
                 </h3>
                 <p className="text-gray-700">
                   {locale === 'de'
-                    ? 'Wir erweitern unser Glossar kontinuierlich. Wenn Sie einen wichtigen Begriff vermissen, kontaktieren Sie uns gerne über info@beinoptions.de'
-                    : 'We continuously expand our glossary. If you miss an important term, please contact us at info@beinoptions.de'}
+                    ? 'Wir erweitern unser Glossar kontinuierlich. Wenn Sie einen wichtigen Begriff vermissen, kontaktieren Sie uns gerne über info@beinoptions.com'
+                    : 'We continuously expand our glossary. If you miss an important term, please contact us at info@beinoptions.com'}
                 </p>
               </div>
             </div>

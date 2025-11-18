@@ -115,7 +115,7 @@ export default function PrivacyPage({ params: { locale } }: { params: { locale: 
                 : 'If you have any questions about data protection, please contact us:'}
             </p>
             <p className="text-gray-700 mt-2">
-              <strong>E-Mail:</strong> info@beinoptions.de
+              <strong>E-Mail:</strong> info@beinoptions.com
             </p>
           </section>
 

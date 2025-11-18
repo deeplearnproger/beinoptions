@@ -29,9 +29,14 @@ export default function Footer() {
               <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-xl">B</span>
               </div>
-              <span className="font-heading font-bold text-xl text-white">
-                BeInOptions
-              </span>
+              <div className="font-heading font-bold text-xl text-white flex items-baseline">
+                <span>Be</span>
+                <span className="mx-1 relative">
+                  In
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary-400 to-primary-600 rounded-full"></span>
+                </span>
+                <span>Options</span>
+              </div>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
               {t('about_text')}
