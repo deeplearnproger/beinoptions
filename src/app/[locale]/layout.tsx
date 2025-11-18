@@ -6,7 +6,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import GlossaryProvider from '@/components/GlossaryProvider';
-import { OrganizationSchema, WebsiteSchema } from '@/components/seo/StructuredData';
 import '../globals.css';
 
 const inter = Inter({
@@ -78,12 +77,43 @@ export default async function LocaleLayout({
 }) {
   const messages = await getMessages();
 
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'BeInOptions',
+    url: 'https://beinoptions.com',
+    logo: 'https://beinoptions.com/logo.png',
+    description:
+      locale === 'de'
+        ? 'Ihr umfassender Leitfaden für erfolgreiches Options-Trading in Deutschland. Strategien, Steuern, Broker und mehr.'
+        : 'Your comprehensive guide to successful options trading in Germany. Strategies, taxes, brokers and more.',
+    sameAs: [],
+  };
+
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'BeInOptions',
+    url: 'https://beinoptions.com',
+    description:
+      locale === 'de'
+        ? 'Ihr umfassender Leitfaden für erfolgreiches Options-Trading in Deutschland.'
+        : 'Your comprehensive guide to successful options trading in Germany.',
+    inLanguage: locale === 'de' ? 'de-DE' : 'en-US',
+  };
+
   return (
     <html lang={locale} className={`${inter.variable} ${poppins.variable}`}>
       <head>
         <GoogleAnalytics />
-        <OrganizationSchema locale={locale} />
-        <WebsiteSchema locale={locale} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
       </head>
       <body className="font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
