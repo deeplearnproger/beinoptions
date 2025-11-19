@@ -14,18 +14,9 @@ export default function GlossaryProvider() {
     const createGlossaryLink = (term: string, termId: string): HTMLElement => {
       const link = document.createElement('a');
       link.href = `/${locale}/glossary#${termId}`;
-      link.className = 'inline-flex items-center gap-1 hover:opacity-80 transition-opacity cursor-pointer';
+      link.className = 'text-primary-600 underline decoration-primary-600 hover:text-primary-700 hover:decoration-primary-700 transition-colors cursor-pointer';
       link.title = locale === 'de' ? `Begriff im Glossar ansehen: ${term}` : `View in glossary: ${term}`;
-
-      const textSpan = document.createElement('span');
-      textSpan.textContent = term;
-
-      const infoIcon = document.createElement('span');
-      infoIcon.className = 'inline-flex items-center justify-center w-4 h-4 bg-white/90 text-primary-600 rounded-full text-[10px] font-bold border border-primary-300 shrink-0';
-      infoIcon.textContent = 'i';
-
-      link.appendChild(textSpan);
-      link.appendChild(infoIcon);
+      link.textContent = term;
 
       return link;
     };

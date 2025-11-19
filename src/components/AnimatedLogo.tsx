@@ -9,7 +9,6 @@ interface AnimatedLogoProps {
 
 export default function AnimatedLogo({ className = '', showIcon = true }: AnimatedLogoProps) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [hoveredPart, setHoveredPart] = useState<string | null>(null);
 
   useEffect(() => {
     // Trigger animation on mount with slight delay for smoother effect
@@ -53,108 +52,47 @@ export default function AnimatedLogo({ className = '', showIcon = true }: Animat
 
       {/* Animated Text Logo */}
       <div className="font-heading font-bold text-xl text-gray-900 flex items-baseline select-none">
-        {/* "Be" - First word */}
+        {/* "Be" */}
         <span
           className={`
-            inline-block transition-all duration-500 ease-[cubic-bezier(0.7,0,0.3,1)]
-            cursor-pointer relative
+            inline-block transition-all duration-500
             ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}
-            ${hoveredPart === 'be' ? 'text-primary-600 scale-105' : ''}
           `}
-          style={{
-            transitionDelay: '100ms',
-          }}
-          onMouseEnter={() => setHoveredPart('be')}
-          onMouseLeave={() => setHoveredPart(null)}
+          style={{ transitionDelay: '100ms' }}
         >
           Be
-          {/* Animated dot accent */}
+        </span>
+
+        {/* "In" with underline */}
+        <span
+          className={`
+            inline-block mx-1.5 relative
+            transition-all duration-500
+            ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}
+          `}
+          style={{ transitionDelay: '200ms' }}
+        >
+          In
+          {/* Underline */}
           <span
-            className={`
-              absolute -top-1 -right-1 w-1.5 h-1.5 rounded-full bg-primary-500
-              transition-all duration-300
-              ${hoveredPart === 'be' ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}
-            `}
+            className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-500 to-primary-700 rounded-full"
+            style={{
+              width: isLoaded ? '100%' : '0%',
+              transition: 'width 500ms ease-out',
+              transitionDelay: '400ms',
+            }}
           />
         </span>
 
-        {/* "In" - Second word with accent */}
+        {/* "Options" */}
         <span
           className={`
-            inline-block mx-1.5 relative cursor-pointer
-            transition-all duration-500 ease-[cubic-bezier(0.7,0,0.3,1)]
+            inline-block transition-all duration-500
             ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}
-            ${hoveredPart === 'in' ? 'scale-110' : ''}
           `}
-          style={{
-            transitionDelay: '200ms',
-          }}
-          onMouseEnter={() => setHoveredPart('in')}
-          onMouseLeave={() => setHoveredPart(null)}
-        >
-          <span className="relative">
-            <span
-              className={`
-                bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text
-                transition-all duration-300
-                ${hoveredPart === 'in' ? 'text-transparent' : 'text-gray-900'}
-              `}
-            >
-              In
-            </span>
-
-            {/* Animated underline */}
-            <span
-              className={`
-                absolute -bottom-1 left-0 h-0.5 rounded-full
-                bg-gradient-to-r from-primary-500 to-primary-700
-                transition-all duration-500 ease-[cubic-bezier(0.7,0,0.3,1)]
-                ${hoveredPart === 'in' ? 'shadow-lg shadow-primary-500/50' : ''}
-              `}
-              style={{
-                width: isLoaded ? '100%' : '0%',
-                transitionDelay: '600ms',
-              }}
-            />
-
-            {/* Glow effect on hover */}
-            <span
-              className={`
-                absolute inset-0 blur-sm -z-10
-                bg-gradient-to-r from-primary-400 to-primary-600
-                transition-opacity duration-300
-                ${hoveredPart === 'in' ? 'opacity-30' : 'opacity-0'}
-              `}
-            >
-              In
-            </span>
-          </span>
-        </span>
-
-        {/* "Options" - Third word */}
-        <span
-          className={`
-            inline-block transition-all duration-500 ease-[cubic-bezier(0.7,0,0.3,1)]
-            cursor-pointer relative
-            ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}
-            ${hoveredPart === 'options' ? 'text-primary-600 scale-105' : ''}
-          `}
-          style={{
-            transitionDelay: '300ms',
-          }}
-          onMouseEnter={() => setHoveredPart('options')}
-          onMouseLeave={() => setHoveredPart(null)}
+          style={{ transitionDelay: '300ms' }}
         >
           Options
-
-          {/* Sliding underline on hover */}
-          <span
-            className={`
-              absolute -bottom-0.5 left-0 h-0.5 bg-primary-600 rounded-full
-              transition-all duration-300 ease-out
-              ${hoveredPart === 'options' ? 'w-full opacity-100' : 'w-0 opacity-0'}
-            `}
-          />
         </span>
       </div>
 
