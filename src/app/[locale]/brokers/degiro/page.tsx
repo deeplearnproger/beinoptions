@@ -477,8 +477,8 @@ export default function DEGIROPage() {
               </h3>
               <p className="text-white/90 mb-6 max-w-2xl mx-auto">
                 {locale === 'de'
-                  ? 'Eröffnen Sie Ihr kostenloses Depot und handeln Sie weltweit zu günstigen Konditionen!'
-                  : 'Open your free depot and trade worldwide at favorable conditions!'}
+                  ? 'Eröffnen Sie Ihr kostenloses Konto und handeln Sie weltweit zu besten Konditionen!'
+                  : 'Open your free account and trade worldwide on favorable terms!'}
               </p>
               <a
                 href="https://www.degiro.de"
@@ -487,7 +487,7 @@ export default function DEGIROPage() {
                 onClick={() => handleSignupClick('Middle CTA')}
                 className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
-                {locale === 'de' ? 'Depot eröffnen' : 'Open Depot'}
+                {locale === 'de' ? 'Konto eröffnen' : 'Open Account'}
               </a>
             </div>
           </div>
