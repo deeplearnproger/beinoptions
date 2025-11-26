@@ -26,6 +26,38 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
         : ['No BaFin regulation', 'Mainly CFD trading'],
     },
     {
+      name: 'AvaTrade',
+      slug: 'avatrade',
+      regulation: 'CBI, ASIC, FSA, FSCA',
+      fees: locale === 'de' ? 'Variable Spreads, keine Kommission' : 'Variable spreads, no commission',
+      minDeposit: '100 €',
+      options: locale === 'de' ? 'Ja, AvaOptions Plattform' : 'Yes, AvaOptions platform',
+      rating: 4.7,
+      reviews: 1534,
+      pros: locale === 'de'
+        ? ['Dedizierte AvaOptions Plattform', 'MT4/MT5 + AvaTradeGO', 'Multi-reguliert weltweit', 'Umfangreiche Bildungsressourcen', 'Copy Trading verfügbar', 'Deutscher Kundenservice']
+        : ['Dedicated AvaOptions platform', 'MT4/MT5 + AvaTradeGO', 'Multi-regulated globally', 'Comprehensive educational resources', 'Copy trading available', 'German customer service'],
+      cons: locale === 'de'
+        ? ['Inaktivitätsgebühr nach 3 Monaten', 'Keine BaFin-Regulierung', 'Spreads höher als bei ECN-Brokern']
+        : ['Inactivity fee after 3 months', 'No BaFin regulation', 'Spreads higher than ECN brokers'],
+    },
+    {
+      name: 'Plus500',
+      slug: 'plus500',
+      regulation: 'FCA, CySEC, ASIC, FMA',
+      fees: locale === 'de' ? 'Spread-basiert, keine Kommission' : 'Spread-based, no commission',
+      minDeposit: '100 €',
+      options: locale === 'de' ? 'Ja, Options CFDs' : 'Yes, Options CFDs',
+      rating: 4.5,
+      reviews: 2156,
+      pros: locale === 'de'
+        ? ['Sehr benutzerfreundliche Plattform', 'Börsennotiertes Unternehmen', 'Keine Kommissionen', 'Gute mobile App', 'Schnelle Kontoeröffnung', 'Deutscher Support']
+        : ['Very user-friendly platform', 'Publicly traded company', 'No commissions', 'Good mobile app', 'Fast account opening', 'German support'],
+      cons: locale === 'de'
+        ? ['Nur CFD-Handel', 'Keine MT4/MT5', 'Inaktivitätsgebühr', 'Begrenzte Research-Tools']
+        : ['CFD trading only', 'No MT4/MT5', 'Inactivity fee', 'Limited research tools'],
+    },
+    {
       name: 'Interactive Brokers',
       slug: 'interactive-brokers',
       regulation: 'BaFin, SEC, FCA',
