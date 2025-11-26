@@ -16,6 +16,76 @@ export default function BlogPage({ params: { locale } }: { params: { locale: str
 
   const blogPosts = [
     {
+      title: locale === 'de' ? 'Zero-Day-Options werden zum Trend: Warum kurzfristige Strategien den Markt bewegen' : 'Zero-Day Options Are Booming: Why Short-Term Strategies Move the Market',
+      excerpt: locale === 'de'
+        ? 'An den US-Märkten steigt die Popularität von Optionen mit extrem kurzer Laufzeit – sogenannten Zero-Day-Options (0DTE). Diese Instrumente ermöglichen schnelle Reaktionen auf Marktbewegungen.'
+        : 'U.S. markets are seeing a major rise in ultra-short-term contracts called zero-day options (0DTE). These tools allow traders to profit from intraday moves.',
+      category: t('news'),
+      date: '2025-11-26',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '8 Min.' : '8 min',
+      iconBg: 'from-orange-50 to-red-100',
+      iconColor: 'text-orange-600',
+      iconPath: 'M13 10V3L4 14h7v7l9-11h-7z',
+      slug: 'zero-day-options-0dte',
+    },
+    {
+      title: locale === 'de' ? 'Cboe startet neue Futures und Optionen auf den "Magnificent 10"-Index' : 'Cboe Launches New Futures and Options on the "Magnificent 10" Index',
+      excerpt: locale === 'de'
+        ? 'Die Cboe Global Markets kündigt den Start neuer cash-settled Futures und Optionen auf den beliebten Magnificent-10-Technologieindex für den 8. Dezember an.'
+        : 'Cboe Global Markets will launch new cash-settled futures and options on the Magnificent 10 technology index on December 8.',
+      category: t('news'),
+      date: '2025-11-26',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '7 Min.' : '7 min',
+      iconBg: 'from-purple-50 to-indigo-100',
+      iconColor: 'text-purple-600',
+      iconPath: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
+      slug: 'cboe-magnificent-10-optionen',
+    },
+    {
+      title: locale === 'de' ? 'Neue Strategien für regelmäßiges Einkommen durch Optionen' : 'New Approaches to Earning Regular Income with Options',
+      excerpt: locale === 'de'
+        ? 'Finanzen.net präsentiert einen neuen Live-Webinaransatz, der zeigt, wie Anleger mit geringem Zeitaufwand regelmäßige Renditen durch Optionen erzielen können.'
+        : 'Finanzen.net published details from a webinar showing how investors can generate steady income using options.',
+      category: t('strategy_guides'),
+      date: '2025-11-26',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '9 Min.' : '9 min',
+      iconBg: 'from-green-50 to-emerald-100',
+      iconColor: 'text-green-600',
+      iconPath: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+      slug: 'optionen-einnahmen-strategien',
+    },
+    {
+      title: locale === 'de' ? 'Bitcoin unter Druck: Optionen verstärken die Volatilität am Kryptomarkt' : 'Bitcoin Under Pressure: Options Trading Increases Crypto Volatility',
+      excerpt: locale === 'de'
+        ? 'Der Kryptomarkt erlebt erneut starke Bewegungen. Bitcoin fiel unter 90.000 USD; Optionsaktivitäten verstärken laut Analysten die Volatilität.'
+        : 'Bitcoin fell below $90,000 as crypto options amplified market volatility.',
+      category: t('news'),
+      date: '2025-11-26',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '8 Min.' : '8 min',
+      iconBg: 'from-orange-50 to-amber-100',
+      iconColor: 'text-orange-600',
+      iconPath: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+      slug: 'bitcoin-optionen-volatilitaet',
+    },
+    {
+      title: locale === 'de' ? 'Hoffnung auf Zinssenkung der Fed: Was bedeutet das für den Optionsmarkt?' : 'Markets Rally on Expectations of a Fed Rate Cut: Impact on Options Trading',
+      excerpt: locale === 'de'
+        ? 'Die globalen Börsen stiegen zuletzt deutlich, da Anleger hoffen, dass die US-Notenbank Federal Reserve die Zinsen im Dezember senken könnte.'
+        : 'Global markets rose as investors expect the Federal Reserve to cut rates in December.',
+      category: t('market_analysis'),
+      date: '2025-11-26',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '9 Min.' : '9 min',
+      iconBg: 'from-blue-50 to-cyan-100',
+      iconColor: 'text-blue-600',
+      iconPath: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
+      slug: 'fed-zinssenkung-optionen',
+    },
+    {
       title: locale === 'de' ? 'Put vs Call Optionen: Der ultimative Vergleich' : 'Put vs Call Options: The Ultimate Comparison',
       excerpt: locale === 'de'
         ? 'Verstehen Sie den fundamentalen Unterschied zwischen Put- und Call-Optionen. Mit praktischen Beispielen und Strategien für jeden Markt. Starten Sie noch heute mit Libertex!'
@@ -172,10 +242,10 @@ export default function BlogPage({ params: { locale } }: { params: { locale: str
   ];
 
   const categories = [
-    { name: t('strategy_guides'), count: 7 },
-    { name: t('market_analysis'), count: 2 },
+    { name: t('strategy_guides'), count: 8 },
+    { name: t('market_analysis'), count: 3 },
     { name: t('trader_stories'), count: 1 },
-    { name: t('news'), count: 1 },
+    { name: t('news'), count: 4 },
   ];
 
   return (
