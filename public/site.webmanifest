@@ -1,0 +1,17 @@
+{
+  "name": "BeInOptions - Options Trading in Deutschland",
+  "short_name": "BeInOptions",
+  "description": "Ihr umfassender Leitfaden für erfolgreiches Options-Trading in Deutschland",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#4F46E5",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
