@@ -92,7 +92,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   return (
     <>
       {/* Libertex Banner */}
-      <LibertexBanner locale={locale} />
+      {/* <LibertexBanner locale={locale} /> */}
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-50 via-white to-primary-50 py-20">
