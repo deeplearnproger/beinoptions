@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "BeInOptions",
+  "name_for_human": "BeInOptions - Options Trading Guide",
+  "description_for_model": "BeInOptions is a comprehensive resource for options trading in Germany. It provides educational content about options trading strategies, broker comparisons, tax information, and market analysis. The site covers topics like Call/Put options, covered calls, iron condors, zero-day options (0DTE), volatility trading, and German-specific regulatory information (BaFin, MiFID II). Users can learn about options trading basics, find suitable brokers, understand tax implications, and explore advanced strategies. The content is available in German and English.",
+  "description_for_human": "Learn options trading with comprehensive guides, strategies, broker comparisons, and market analysis for German traders.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://beinoptions.com"
+  },
+  "logo_url": "https://beinoptions.com/favicon.svg",
+  "contact_email": "info@beinoptions.com",
+  "legal_info_url": "https://beinoptions.com/de/impressum"
+}

@@ -71,6 +71,39 @@ export async function generateMetadata({
       ],
     },
     manifest: '/site.webmanifest',
+    openGraph: {
+      type: 'website',
+      locale: locale === 'de' ? 'de_DE' : 'en_US',
+      url: 'https://beinoptions.com',
+      siteName: 'BeInOptions',
+      title: locale === 'de' ? 'Optionshandel in Deutschland' : 'Options Trading in Germany',
+      description: locale === 'de'
+        ? 'Umfassender Leitfaden für Options-Trading: Strategien, Broker-Vergleiche, Steuern und Regulierung in Deutschland.'
+        : 'Comprehensive guide to options trading: Strategies, broker comparisons, taxes and regulation in Germany.',
+      images: [
+        {
+          url: 'https://beinoptions.com/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'BeInOptions - Options Trading Guide',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: locale === 'de' ? 'Optionshandel in Deutschland' : 'Options Trading in Germany',
+      description: locale === 'de'
+        ? 'Umfassender Leitfaden für Options-Trading'
+        : 'Comprehensive guide to options trading',
+      images: ['https://beinoptions.com/og-image.png'],
+    },
+    alternates: {
+      canonical: `https://beinoptions.com/${locale}`,
+      languages: {
+        'de': 'https://beinoptions.com/de',
+        'en': 'https://beinoptions.com/en',
+      },
+    },
   };
 }
 

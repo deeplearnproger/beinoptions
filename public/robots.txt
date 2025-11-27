@@ -1,4 +1,29 @@
 User-agent: *
 Allow: /
 
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemaps
 Sitemap: https://beinoptions.com/sitemap.xml
+
+# AI Resources
+# AI agents can find helpful context at:
+# - /README-AI.md (Overview for AI assistants)
+# - /ai-plugin.json (Plugin metadata)

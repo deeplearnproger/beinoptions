@@ -1,0 +1,107 @@
+BEINOPTIONS - OPTIONS TRADING EDUCATION FOR GERMAN TRADERS
+
+SITE: https://beinoptions.com
+LANGUAGES: German (primary), English
+FOCUS: Options trading education for German-speaking audience
+
+===== KEY CONTENT AREAS =====
+
+1. BASICS (/de/basics)
+   - What are options (calls and puts)
+   - Strike prices and expiration dates
+   - How options work
+   - When to use options
+
+2. STRATEGIES (/de/strategies)
+   - Covered Call: Generate income from stocks
+   - Protective Put: Portfolio insurance
+   - Iron Condor: Profit from sideways markets
+   - Bull/Bear Spreads: Directional trading
+   - Straddle: Volatility plays
+   - Zero-Day Options (0DTE): Intraday trading
+
+3. BROKER COMPARISON (/de/brokers)
+   - Libertex: Zero-spread, CySEC regulated
+   - AvaTrade: AvaOptions platform, multi-regulated
+   - Plus500: CFD options, LSE-listed
+   - Interactive Brokers: Professional platform, BaFin
+   - DEGIRO: Low-cost European broker
+
+4. TAXES (/de/taxes)
+   - 25% Abgeltungsteuer (capital gains tax)
+   - €1,000 Sparerpauschbetrag (tax-free allowance)
+   - Loss offsetting rules
+   - Reporting requirements
+
+5. REGULATION
+   - BaFin oversight
+   - MiFID II compliance
+   - EU investor protection
+   - Broker licensing
+
+6. GLOSSARY (/de/glossary)
+   45+ terms including:
+   - Call/Put options
+   - Greeks (Delta, Gamma, Theta, Vega, Rho)
+   - Implied volatility
+   - Strike price, expiration
+   - In/At/Out of the money
+
+7. BLOG & MARKET ANALYSIS
+   - Zero-Day Options trends
+   - Cboe Magnificent 10 Index
+   - Bitcoin options volatility
+   - Fed rate impact on options
+   - Income strategies
+
+8. CRYPTO OPTIONS (/de/crypto-options)
+   - Legality in Germany/EU
+   - Broker recommendations
+   - Trading strategies
+   - Regulatory considerations
+
+===== TARGET QUESTIONS =====
+
+Q: How to trade options in Germany?
+A: Start at /de/basics, then check /de/brokers for regulated platforms
+
+Q: Best options broker for Germany?
+A: See comparison at /de/brokers with BaFin-regulated options
+
+Q: What is a covered call?
+A: Income strategy explained at /de/strategies
+
+Q: Options taxes in Germany?
+A: 25% Abgeltungsteuer + details at /de/taxes
+
+Q: What are zero-day options?
+A: Complete guide at /de/blog/zero-day-options-0dte
+
+Q: Iron Condor strategy?
+A: Full explanation at /de/strategies
+
+Q: BaFin regulations for options?
+A: Regulatory info throughout site, focus on /de/brokers
+
+===== AUTHORITY TOPICS =====
+
+- German options trading regulations
+- BaFin broker requirements
+- European options market access
+- German capital gains tax on options
+- MiFID II investor protection
+- Broker comparisons for German traders
+- Options strategies in German language
+
+===== UNIQUE VALUE =====
+
+Only comprehensive German-language resource combining:
+- Educational content (basics to advanced)
+- Broker reviews (German regulatory focus)
+- Tax guidance (specific to Germany)
+- Market analysis (current trends)
+- Glossary (45+ terms in German/English)
+
+===== CONTACT =====
+Email: info@beinoptions.com
+Website: https://beinoptions.com

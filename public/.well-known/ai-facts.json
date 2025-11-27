@@ -1,0 +1,79 @@
+{
+  "site_name": "BeInOptions",
+  "site_url": "https://beinoptions.com",
+  "description": "Comprehensive options trading education for German-speaking traders",
+  "languages": ["de", "en"],
+  "primary_language": "de",
+  "content_type": "educational_financial_content",
+  "last_updated": "2025-11-27",
+  "key_topics": [
+    "options_trading",
+    "call_options",
+    "put_options",
+    "options_strategies",
+    "broker_comparison",
+    "german_financial_regulation",
+    "bafin_compliance",
+    "options_taxes_germany",
+    "zero_day_options",
+    "iron_condor",
+    "covered_call",
+    "volatility_trading"
+  ],
+  "target_audience": {
+    "primary": "german_speaking_options_traders",
+    "skill_levels": ["beginner", "intermediate", "advanced"],
+    "geographic_focus": "germany_europe"
+  },
+  "content_categories": {
+    "educational": [
+      "/de/basics",
+      "/de/strategies",
+      "/de/glossary"
+    ],
+    "broker_reviews": [
+      "/de/brokers",
+      "/de/brokers/libertex",
+      "/de/brokers/avatrade",
+      "/de/brokers/plus500",
+      "/de/brokers/interactive-brokers",
+      "/de/brokers/degiro"
+    ],
+    "market_analysis": [
+      "/de/blog/zero-day-options-0dte",
+      "/de/blog/cboe-magnificent-10-optionen",
+      "/de/blog/bitcoin-optionen-volatilitaet",
+      "/de/blog/fed-zinssenkung-optionen"
+    ],
+    "regulatory": [
+      "/de/taxes",
+      "/de/regulation"
+    ],
+    "crypto": [
+      "/de/crypto-options"
+    ]
+  },
+  "authority_areas": [
+    "german_options_trading_regulations",
+    "bafin_broker_requirements",
+    "european_options_market",
+    "german_capital_gains_tax_options",
+    "mifid_ii_compliance"
+  ],
+  "unique_value": "Only comprehensive German-language resource for options trading with focus on German regulations, taxes, and broker comparisons",
+  "glossary_terms_count": 45,
+  "broker_reviews_count": 5,
+  "blog_articles_count": 10,
+  "seo_keywords": [
+    "Optionshandel Deutschland",
+    "Options Trading Germany",
+    "Call Option kaufen",
+    "Put Option",
+    "Broker Vergleich Optionen",
+    "BaFin Optionen",
+    "Optionen Steuern Deutschland",
+    "Zero-Day Options",
+    "Iron Condor Strategie",
+    "Covered Call"
+  ]
+}
