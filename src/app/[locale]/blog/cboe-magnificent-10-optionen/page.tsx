@@ -37,10 +37,15 @@ export default function CboeMagnificent10Post({ params: { locale } }: { params: 
             </div>
 
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-6 text-white mb-8">
-              <p className="text-xl leading-relaxed">
-                {locale === 'de'
-                  ? '🚀 Die Cboe Global Markets kündigt den Start neuer cash-settled Futures und Optionen auf den beliebten Magnificent-10-Technologieindex für den 8. Dezember an.'
-                  : '🚀 Cboe Global Markets will launch new cash-settled futures and options on the Magnificent 10 technology index on December 8.'}
+              <p className="text-xl leading-relaxed flex items-start gap-3">
+                <svg className="w-8 h-8 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span>
+                  {locale === 'de'
+                    ? 'Die Cboe Global Markets kündigt den Start neuer cash-settled Futures und Optionen auf den beliebten Magnificent-10-Technologieindex für den 8. Dezember an.'
+                    : 'Cboe Global Markets will launch new cash-settled futures and options on the Magnificent 10 technology index on December 8.'}
+                </span>
               </p>
             </div>
           </div>
@@ -55,7 +60,10 @@ export default function CboeMagnificent10Post({ params: { locale } }: { params: 
             {/* Introduction */}
             <div className="card mb-8">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-3xl">💼</span>
+                <svg className="w-10 h-10 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clipRule="evenodd" />
+                  <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                </svg>
                 <h2 className="text-3xl font-heading font-bold text-gray-900 mb-0">
                   {locale === 'de' ? 'Was steckt hinter dem Magnificent-10-Index?' : 'What is the Magnificent 10 Index?'}
                 </h2>
@@ -74,8 +82,11 @@ export default function CboeMagnificent10Post({ params: { locale } }: { params: 
 
             {/* Key Companies */}
             <div className="card mb-8 border-l-4 border-blue-500">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                🏆 {locale === 'de' ? 'Die Tech-Giganten im Index' : 'The Tech Giants in the Index'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                {locale === 'de' ? 'Die Tech-Giganten im Index' : 'The Tech Giants in the Index'}
               </h2>
               <p className="text-gray-700 leading-relaxed text-lg mb-4">
                 {locale === 'de'
@@ -124,8 +135,11 @@ export default function CboeMagnificent10Post({ params: { locale } }: { params: 
 
             {/* Why Important */}
             <div className="card mb-8 border-l-4 border-green-500">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                📊 {locale === 'de' ? 'Warum ist das wichtig?' : 'Why Does It Matter?'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                {locale === 'de' ? 'Warum ist das wichtig?' : 'Why Does It Matter?'}
               </h2>
 
               <div className="space-y-4">
@@ -169,8 +183,11 @@ export default function CboeMagnificent10Post({ params: { locale } }: { params: 
 
             {/* For German Traders */}
             <div className="card mb-8 bg-blue-50 border-2 border-blue-300">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                🇩🇪 {locale === 'de' ? 'Vorteile für deutsche Options-Trader' : 'Advantages for German Options Traders'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {locale === 'de' ? 'Vorteile für deutsche Options-Trader' : 'Advantages for German Options Traders'}
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">
@@ -196,7 +213,11 @@ export default function CboeMagnificent10Post({ params: { locale } }: { params: 
 
             {/* CTA Section */}
             <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white mb-8 text-center">
-              <div className="text-5xl mb-4">🚀</div>
+              <div className="flex justify-center mb-4">
+                <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
               <h3 className="text-3xl font-heading font-bold mb-4">
                 {locale === 'de' ? 'Bereit für Index-Options-Trading?' : 'Ready for Index Options Trading?'}
               </h3>
@@ -246,8 +267,11 @@ export default function CboeMagnificent10Post({ params: { locale } }: { params: 
 
             {/* Trading Strategies */}
             <div className="card mb-8">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                💡 {locale === 'de' ? 'Trading-Strategien mit dem Magnificent-10-Index' : 'Trading Strategies with the Magnificent-10 Index'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                </svg>
+                {locale === 'de' ? 'Trading-Strategien mit dem Magnificent-10-Index' : 'Trading Strategies with the Magnificent-10 Index'}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="border-2 border-purple-200 rounded-lg p-5 bg-purple-50">

@@ -37,10 +37,15 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
             </div>
 
             <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-6 text-white mb-8">
-              <p className="text-xl leading-relaxed">
-                {locale === 'de'
-                  ? '⚡ Der Kryptomarkt erlebt erneut starke Bewegungen. Bitcoin fiel unter 90.000 USD; Optionsaktivitäten verstärken laut Analysten die Volatilität.'
-                  : '⚡ The crypto market is experiencing strong movements again. Bitcoin fell below $90,000 as crypto options amplified market volatility.'}
+              <p className="text-xl leading-relaxed flex items-start gap-3">
+                <svg className="w-8 h-8 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span>
+                  {locale === 'de'
+                    ? 'Der Kryptomarkt erlebt erneut starke Bewegungen. Bitcoin fiel unter 90.000 USD; Optionsaktivitäten verstärken laut Analysten die Volatilität.'
+                    : 'The crypto market is experiencing strong movements again. Bitcoin fell below $90,000 as crypto options amplified market volatility.'}
+                </span>
               </p>
             </div>
           </div>
@@ -55,7 +60,9 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
             {/* Market Situation */}
             <div className="card mb-8">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-3xl">📉</span>
+                <svg className="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
+                </svg>
                 <h2 className="text-3xl font-heading font-bold text-gray-900 mb-0">
                   {locale === 'de' ? 'Die aktuelle Marktsituation' : 'The Current Market Situation'}
                 </h2>
@@ -74,8 +81,11 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
 
             {/* Why is Bitcoin Falling */}
             <div className="card mb-8 border-l-4 border-red-500">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                📊 {locale === 'de' ? 'Warum fällt Bitcoin?' : 'Why is Bitcoin Dropping?'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                {locale === 'de' ? 'Warum fällt Bitcoin?' : 'Why is Bitcoin Dropping?'}
               </h2>
 
               <div className="space-y-4">
@@ -119,8 +129,11 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
 
             {/* How Options Affect Crypto */}
             <div className="card mb-8 border-l-4 border-purple-500">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                🎯 {locale === 'de' ? 'Wie wirken Optionen auf die Kryptomärkte?' : 'How Do Options Affect Crypto Markets?'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                {locale === 'de' ? 'Wie wirken Optionen auf die Kryptomärkte?' : 'How Do Options Affect Crypto Markets?'}
               </h2>
 
               <div className="bg-purple-50 rounded-lg p-6 mb-4">
@@ -159,7 +172,9 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
             {/* Statistics Box */}
             <div className="card mb-8 bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-200">
               <h3 className="text-2xl font-heading font-bold text-gray-900 mb-4 flex items-center">
-                <span className="text-3xl mr-3">📈</span>
+                <svg className="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
                 {locale === 'de' ? 'Marktdaten im Überblick' : 'Market Data Overview'}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -188,8 +203,11 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
 
             {/* For German Traders */}
             <div className="card mb-8 bg-yellow-50 border-2 border-yellow-300">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                🇩🇪 {locale === 'de' ? 'Was heißt das für deutsche Trader?' : 'What Does This Mean for German Traders?'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {locale === 'de' ? 'Was heißt das für deutsche Trader?' : 'What Does This Mean for German Traders?'}
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">
@@ -215,8 +233,11 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
 
             {/* Trading Strategies */}
             <div className="card mb-8">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">
-                💡 {locale === 'de' ? 'Strategien für volatile Krypto-Märkte' : 'Strategies for Volatile Crypto Markets'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <svg className="w-10 h-10 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                </svg>
+                {locale === 'de' ? 'Strategien für volatile Krypto-Märkte' : 'Strategies for Volatile Crypto Markets'}
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -342,8 +363,11 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
 
             {/* Risks Warning */}
             <div className="card bg-red-50 border-2 border-red-300">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                ⚠️ {locale === 'de' ? 'Wichtige Risiken bei Krypto-Optionen' : 'Important Risks with Crypto Options'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                {locale === 'de' ? 'Wichtige Risiken bei Krypto-Optionen' : 'Important Risks with Crypto Options'}
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">

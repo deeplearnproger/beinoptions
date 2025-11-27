@@ -20,8 +20,11 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
       <div className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-20">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
-              🚀 {locale === 'de' ? 'Strategie-Guide' : 'Strategy Guide'}
+            <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-6 flex items-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              {locale === 'de' ? 'Strategie-Guide' : 'Strategy Guide'}
             </div>
             <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6 leading-tight">
               {locale === 'de'
@@ -40,7 +43,10 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-white text-primary-700 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-                {locale === 'de' ? '🎯 Jetzt mit Libertex starten' : '🎯 Start with Libertex Now'}
+                <svg className="w-6 h-6 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                {locale === 'de' ? 'Jetzt mit Libertex starten' : 'Start with Libertex Now'}
               </a>
             </div>
           </div>

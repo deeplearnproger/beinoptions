@@ -37,10 +37,15 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
             </div>
 
             <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-6 text-white mb-8">
-              <p className="text-xl leading-relaxed">
-                {locale === 'de'
-                  ? '📈 Die globalen Börsen stiegen zuletzt deutlich, da Anleger hoffen, dass die US-Notenbank Federal Reserve die Zinsen im Dezember senken könnte.'
-                  : '📈 Global markets rose as investors expect the Federal Reserve to cut rates in December.'}
+              <p className="text-xl leading-relaxed flex items-start gap-3">
+                <svg className="w-8 h-8 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+                <span>
+                  {locale === 'de'
+                    ? 'Die globalen Börsen stiegen zuletzt deutlich, da Anleger hoffen, dass die US-Notenbank Federal Reserve die Zinsen im Dezember senken könnte.'
+                    : 'Global markets rose as investors expect the Federal Reserve to cut rates in December.'}
+                </span>
               </p>
             </div>
           </div>
@@ -55,7 +60,9 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
             {/* Introduction */}
             <div className="card mb-8">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-3xl">🏦</span>
+                <svg className="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
                 <h2 className="text-3xl font-heading font-bold text-gray-900 mb-0">
                   {locale === 'de' ? 'Die Marktsituation' : 'The Market Situation'}
                 </h2>
@@ -74,8 +81,11 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
 
             {/* Why Important for Options */}
             <div className="card mb-8 border-l-4 border-blue-500">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                🎯 {locale === 'de' ? 'Warum ist das für Optionen wichtig?' : 'Why Does This Matter for Options?'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                {locale === 'de' ? 'Warum ist das für Optionen wichtig?' : 'Why Does This Matter for Options?'}
               </h2>
               <p className="text-gray-700 leading-relaxed text-lg mb-4">
                 {locale === 'de'
@@ -139,8 +149,11 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
 
             {/* Market Effects */}
             <div className="card mb-8 bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                📊 {locale === 'de' ? 'Sinkende Zinsen führen häufig zu:' : 'Lower Rates Typically Mean:'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                {locale === 'de' ? 'Sinkende Zinsen führen häufig zu:' : 'Lower Rates Typically Mean:'}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white rounded-lg p-5 shadow">
@@ -181,15 +194,20 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
 
             {/* Strategies */}
             <div className="card mb-8">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">
-                💡 {locale === 'de' ? 'Optimale Strategien im Zinssenkungsumfeld' : 'Optimal Strategies in Rate Cut Environment'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <svg className="w-10 h-10 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                </svg>
+                {locale === 'de' ? 'Optimale Strategien im Zinssenkungsumfeld' : 'Optimal Strategies in Rate Cut Environment'}
               </h2>
 
               {/* Bull Strategies */}
               <div className="mb-6">
                 <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-t-lg p-4">
                   <h3 className="text-2xl font-bold text-gray-900 flex items-center">
-                    <span className="text-3xl mr-3">📈</span>
+                    <svg className="w-8 h-8 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
                     {locale === 'de' ? 'Bull-Strategien' : 'Bull Strategies'}
                   </h3>
                 </div>
@@ -224,7 +242,9 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
               <div className="mb-6">
                 <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-t-lg p-4">
                   <h3 className="text-2xl font-bold text-gray-900 flex items-center">
-                    <span className="text-3xl mr-3">⚡</span>
+                    <svg className="w-8 h-8 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
                     {locale === 'de' ? 'Volatilitäts-Strategien (Vorsicht!)' : 'Volatility Strategies (Caution!)'}
                   </h3>
                 </div>
@@ -251,7 +271,9 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
               <div className="mb-6">
                 <div className="bg-gradient-to-r from-blue-100 to-indigo-100 rounded-t-lg p-4">
                   <h3 className="text-2xl font-bold text-gray-900 flex items-center">
-                    <span className="text-3xl mr-3">📅</span>
+                    <svg className="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
                     {locale === 'de' ? 'Calendar Spreads' : 'Calendar Spreads'}
                   </h3>
                 </div>
@@ -272,8 +294,11 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
 
             {/* For German Traders */}
             <div className="card mb-8 bg-yellow-50 border-2 border-yellow-300">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                🇩🇪 {locale === 'de' ? 'Folgen für deutsche Trader' : 'Implications for German Traders'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {locale === 'de' ? 'Folgen für deutsche Trader' : 'Implications for German Traders'}
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">
@@ -300,8 +325,11 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
 
             {/* Timeline */}
             <div className="card mb-8">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">
-                📅 {locale === 'de' ? 'Zeitlicher Ablauf und Trading-Plan' : 'Timeline and Trading Plan'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                {locale === 'de' ? 'Zeitlicher Ablauf und Trading-Plan' : 'Timeline and Trading Plan'}
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -392,8 +420,11 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
 
             {/* Important Note */}
             <div className="card bg-red-50 border-2 border-red-300">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                ⚠️ {locale === 'de' ? 'Wichtige Hinweise' : 'Important Notes'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                {locale === 'de' ? 'Wichtige Hinweise' : 'Important Notes'}
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">

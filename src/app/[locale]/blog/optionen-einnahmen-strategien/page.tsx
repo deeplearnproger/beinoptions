@@ -37,10 +37,15 @@ export default function OptionsIncomeStrategiesPost({ params: { locale } }: { pa
             </div>
 
             <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-6 text-white mb-8">
-              <p className="text-xl leading-relaxed">
-                {locale === 'de'
-                  ? '💰 Finanzen.net präsentiert einen neuen Live-Webinaransatz von Optionsautor und Trader Andrei Anissimov, der zeigt, wie Anleger mit geringem Zeitaufwand regelmäßige Renditen durch Optionen erzielen können.'
-                  : '💰 Finanzen.net published details from a webinar by options trader Andrei Anissimov, showing how investors can generate steady income using options.'}
+              <p className="text-xl leading-relaxed flex items-start gap-3">
+                <svg className="w-8 h-8 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>
+                  {locale === 'de'
+                    ? 'Finanzen.net präsentiert einen neuen Live-Webinaransatz von Optionsautor und Trader Andrei Anissimov, der zeigt, wie Anleger mit geringem Zeitaufwand regelmäßige Renditen durch Optionen erzielen können.'
+                    : 'Finanzen.net published details from a webinar by options trader Andrei Anissimov, showing how investors can generate steady income using options.'}
+                </span>
               </p>
             </div>
           </div>
@@ -55,7 +60,9 @@ export default function OptionsIncomeStrategiesPost({ params: { locale } }: { pa
             {/* Introduction */}
             <div className="card mb-8">
               <div className="flex items-center gap-3 mb-4">
-                <span className="text-3xl">📚</span>
+                <svg className="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+                </svg>
                 <h2 className="text-3xl font-heading font-bold text-gray-900 mb-0">
                   {locale === 'de' ? 'Webinar-Überblick' : 'Webinar Overview'}
                 </h2>
@@ -74,8 +81,11 @@ export default function OptionsIncomeStrategiesPost({ params: { locale } }: { pa
 
             {/* Key Insights */}
             <div className="card mb-8 border-l-4 border-blue-500">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                💡 {locale === 'de' ? 'Zentrale Aussagen des Webinars' : 'Key Insights from the Webinar'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                </svg>
+                {locale === 'de' ? 'Zentrale Aussagen des Webinars' : 'Key Insights from the Webinar'}
               </h2>
 
               <div className="space-y-4">
@@ -119,15 +129,20 @@ export default function OptionsIncomeStrategiesPost({ params: { locale } }: { pa
 
             {/* Main Strategies */}
             <div className="card mb-8">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">
-                📊 {locale === 'de' ? 'Die Haupt-Strategien im Detail' : 'Main Strategies in Detail'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                {locale === 'de' ? 'Die Haupt-Strategien im Detail' : 'Main Strategies in Detail'}
               </h2>
 
               {/* Covered Calls */}
               <div className="mb-8">
                 <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-t-lg p-4">
                   <h3 className="text-2xl font-bold text-gray-900 flex items-center">
-                    <span className="text-3xl mr-3">📈</span>
+                    <svg className="w-8 h-8 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
                     Covered Calls
                   </h3>
                 </div>
@@ -170,7 +185,9 @@ export default function OptionsIncomeStrategiesPost({ params: { locale } }: { pa
               <div className="mb-6">
                 <div className="bg-gradient-to-r from-blue-100 to-indigo-100 rounded-t-lg p-4">
                   <h3 className="text-2xl font-bold text-gray-900 flex items-center">
-                    <span className="text-3xl mr-3">📉</span>
+                    <svg className="w-8 h-8 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
+                    </svg>
                     Cash-Secured Puts
                   </h3>
                 </div>
@@ -212,8 +229,11 @@ export default function OptionsIncomeStrategiesPost({ params: { locale } }: { pa
 
             {/* For German Investors */}
             <div className="card mb-8 bg-yellow-50 border-2 border-yellow-300">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                🇩🇪 {locale === 'de' ? 'Wie können deutsche Anleger profitieren?' : 'How Can German Investors Benefit?'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {locale === 'de' ? 'Wie können deutsche Anleger profitieren?' : 'How Can German Investors Benefit?'}
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">
@@ -239,7 +259,11 @@ export default function OptionsIncomeStrategiesPost({ params: { locale } }: { pa
 
             {/* CTA Section */}
             <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white mb-8 text-center">
-              <div className="text-5xl mb-4">💰</div>
+              <div className="flex justify-center mb-4">
+                <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
               <h3 className="text-3xl font-heading font-bold mb-4">
                 {locale === 'de' ? 'Bereit für Income-Strategien?' : 'Ready for Income Strategies?'}
               </h3>
@@ -289,8 +313,11 @@ export default function OptionsIncomeStrategiesPost({ params: { locale } }: { pa
 
             {/* Important Note */}
             <div className="card bg-red-50 border-2 border-red-300">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                ⚠️ {locale === 'de' ? 'Wichtige Hinweise' : 'Important Notes'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                {locale === 'de' ? 'Wichtige Hinweise' : 'Important Notes'}
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">

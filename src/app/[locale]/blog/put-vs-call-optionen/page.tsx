@@ -37,10 +37,15 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
             </div>
 
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white mb-8">
-              <p className="text-xl leading-relaxed">
-                {locale === 'de'
-                  ? '🎯 Bereit für den Einstieg? Starten Sie jetzt mit Libertex - dem führenden Broker für Options Trading!'
-                  : '🎯 Ready to get started? Start now with Libertex - the leading broker for Options Trading!'}
+              <p className="text-xl leading-relaxed flex items-start gap-3">
+                <svg className="w-8 h-8 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                <span>
+                  {locale === 'de'
+                    ? 'Bereit für den Einstieg? Starten Sie jetzt mit Libertex - dem führenden Broker für Options Trading!'
+                    : 'Ready to get started? Start now with Libertex - the leading broker for Options Trading!'}
+                </span>
               </p>
             </div>
           </div>
@@ -71,8 +76,11 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
 
             {/* Call Options */}
             <div className="card mb-8 border-l-4 border-green-500">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                📈 {locale === 'de' ? 'Call-Optionen: Das Recht zu kaufen' : 'Call Options: The Right to Buy'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                </svg>
+                {locale === 'de' ? 'Call-Optionen: Das Recht zu kaufen' : 'Call Options: The Right to Buy'}
               </h2>
 
               <h3 className="text-2xl font-semibold text-gray-900 mb-3">
@@ -85,8 +93,11 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
               </p>
 
               <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-4">
-                <h4 className="font-bold text-lg text-gray-900 mb-2">
-                  💡 {locale === 'de' ? 'Praktisches Beispiel:' : 'Practical Example:'}
+                <h4 className="font-bold text-lg text-gray-900 mb-2 flex items-center gap-2">
+                  <svg className="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                  </svg>
+                  {locale === 'de' ? 'Praktisches Beispiel:' : 'Practical Example:'}
                 </h4>
                 <p className="text-gray-700 leading-relaxed">
                   {locale === 'de'
@@ -108,8 +119,11 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
 
             {/* Put Options */}
             <div className="card mb-8 border-l-4 border-red-500">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                📉 {locale === 'de' ? 'Put-Optionen: Das Recht zu verkaufen' : 'Put Options: The Right to Sell'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
+                </svg>
+                {locale === 'de' ? 'Put-Optionen: Das Recht zu verkaufen' : 'Put Options: The Right to Sell'}
               </h2>
 
               <h3 className="text-2xl font-semibold text-gray-900 mb-3">
@@ -122,8 +136,11 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
               </p>
 
               <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-4">
-                <h4 className="font-bold text-lg text-gray-900 mb-2">
-                  💡 {locale === 'de' ? 'Praktisches Beispiel:' : 'Practical Example:'}
+                <h4 className="font-bold text-lg text-gray-900 mb-2 flex items-center gap-2">
+                  <svg className="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" />
+                  </svg>
+                  {locale === 'de' ? 'Praktisches Beispiel:' : 'Practical Example:'}
                 </h4>
                 <p className="text-gray-700 leading-relaxed">
                   {locale === 'de'
@@ -145,8 +162,11 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
 
             {/* Comparison Table */}
             <div className="card mb-8">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">
-                {locale === 'de' ? '📊 Direkter Vergleich' : '📊 Direct Comparison'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6 flex items-center gap-3">
+                <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                {locale === 'de' ? 'Direkter Vergleich' : 'Direct Comparison'}
               </h2>
 
               <div className="overflow-x-auto">
@@ -191,7 +211,11 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
 
             {/* CTA Section */}
             <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white mb-8 text-center">
-              <div className="text-5xl mb-4">🚀</div>
+              <div className="flex justify-center mb-4">
+                <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
               <h3 className="text-3xl font-heading font-bold mb-4">
                 {locale === 'de' ? 'Bereit, mit Options Trading zu starten?' : 'Ready to Start Options Trading?'}
               </h3>
@@ -241,8 +265,11 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
 
             {/* When to Use */}
             <div className="card mb-8">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                {locale === 'de' ? '🎯 Wann welche Option nutzen?' : '🎯 When to Use Which Option?'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                {locale === 'de' ? 'Wann welche Option nutzen?' : 'When to Use Which Option?'}
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -290,8 +317,11 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
 
             {/* Risks */}
             <div className="card mb-8 bg-yellow-50 border-2 border-yellow-300">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-                ⚠️ {locale === 'de' ? 'Wichtige Risiken und Hinweise' : 'Important Risks and Notes'}
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 flex items-center gap-3">
+                <svg className="w-10 h-10 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                {locale === 'de' ? 'Wichtige Risiken und Hinweise' : 'Important Risks and Notes'}
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">
@@ -311,8 +341,11 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
 
             {/* Final CTA */}
             <div className="card bg-gradient-to-r from-primary-600 to-primary-700 text-white text-center">
-              <h3 className="text-2xl font-heading font-bold mb-4">
-                {locale === 'de' ? '💪 Starten Sie Ihre Options Trading Reise mit Libertex' : '💪 Start Your Options Trading Journey with Libertex'}
+              <h3 className="text-2xl font-heading font-bold mb-4 flex items-center justify-center gap-3">
+                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clipRule="evenodd" />
+                </svg>
+                {locale === 'de' ? 'Starten Sie Ihre Options Trading Reise mit Libertex' : 'Start Your Options Trading Journey with Libertex'}
               </h3>
               <p className="text-lg mb-6 text-primary-100">
                 {locale === 'de'

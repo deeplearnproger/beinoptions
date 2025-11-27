@@ -20,8 +20,11 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
       <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white py-20">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
-              📚 {locale === 'de' ? 'Teil 1 von 3 | Strategie-Guide' : 'Part 1 of 3 | Strategy Guide'}
+            <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-6 flex items-center gap-2">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+              </svg>
+              {locale === 'de' ? 'Teil 1 von 3 | Strategie-Guide' : 'Part 1 of 3 | Strategy Guide'}
             </div>
             <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6 leading-tight">
               {locale === 'de'
@@ -40,7 +43,10 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-white text-blue-700 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               >
-                {locale === 'de' ? '🚀 Jetzt bei Libertex handeln' : '🚀 Trade with Libertex Now'}
+                <svg className="w-6 h-6 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                {locale === 'de' ? 'Jetzt bei Libertex handeln' : 'Trade with Libertex Now'}
               </a>
             </div>
           </div>
