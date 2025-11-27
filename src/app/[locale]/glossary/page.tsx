@@ -165,7 +165,7 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
                 : 'Over 45 important options trading terms explained simply and clearly. From basics to advanced concepts.'}
             </p>
 
-            {/* Search Bar */}
+            {/* Search Bar with Live Results */}
             <div className="relative max-w-xl mx-auto">
               <input
                 type="text"
@@ -187,6 +187,52 @@ export default function GlossaryPage({ params: { locale } }: { params: { locale:
                   d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
               </svg>
+
+              {/* Live Search Results Dropdown */}
+              {searchTerm.length >= 2 && (
+                <div className="absolute w-full mt-2 bg-white rounded-xl shadow-2xl border-2 border-primary-200 max-h-96 overflow-y-auto z-50">
+                  {filteredTerms.length > 0 ? (
+                    <div className="p-2">
+                      <div className="px-4 py-2 text-sm text-gray-500 font-medium border-b border-gray-200">
+                        {filteredTerms.length} {locale === 'de' ? 'Ergebnisse gefunden' : 'results found'}
+                      </div>
+                      {filteredTerms.slice(0, 8).map((item, index) => (
+                        <a
+                          key={index}
+                          href={`#${item.id}`}
+                          onClick={() => {
+                            setSearchTerm('');
+                            setSelectedCategory(item.category);
+                          }}
+                          className="block px-4 py-3 hover:bg-primary-50 rounded-lg transition-colors cursor-pointer"
+                        >
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="font-semibold text-gray-900">{item.term}</span>
+                            <span className="px-2 py-1 bg-primary-100 text-primary-700 rounded-full text-xs font-medium">
+                              {categories[item.category as keyof typeof categories]}
+                            </span>
+                          </div>
+                          <p className="text-sm text-gray-600 line-clamp-2">{item.definition}</p>
+                        </a>
+                      ))}
+                      {filteredTerms.length > 8 && (
+                        <div className="px-4 py-2 text-sm text-primary-600 font-medium text-center">
+                          {locale === 'de' ? `+ ${filteredTerms.length - 8} weitere Ergebnisse unten` : `+ ${filteredTerms.length - 8} more results below`}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="p-6 text-center">
+                      <svg className="w-12 h-12 text-gray-300 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <p className="text-gray-500">
+                        {locale === 'de' ? 'Keine Begriffe gefunden' : 'No terms found'}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>

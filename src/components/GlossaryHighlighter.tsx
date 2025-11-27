@@ -37,14 +37,16 @@ export default function GlossaryHighlighter({ children, className = '' }: Glossa
           // Add highlighted term with info icon
           const termId = glossaryTermsMap[term];
           result.push(
-            <span key={key++} className="inline-flex items-center gap-1">
+            <span key={key++} className="inline-flex items-center gap-0.5">
               {match[0]}
               <Link
                 href={`/${locale}/glossary#${termId}`}
-                className="inline-flex items-center justify-center w-4 h-4 bg-white/90 hover:bg-white text-primary-600 hover:text-primary-700 rounded-full text-[10px] font-bold border border-primary-300 hover:border-primary-500 transition-all hover:scale-110 shrink-0"
+                className="inline-flex items-center justify-center w-3.5 h-3.5 text-gray-400 hover:text-primary-600 rounded-full text-[9px] transition-colors shrink-0 opacity-60 hover:opacity-100"
                 title={locale === 'de' ? `Begriff im Glossar ansehen: ${match[0]}` : `View in glossary: ${match[0]}`}
               >
-                i
+                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                </svg>
               </Link>
             </span>
           );
@@ -86,12 +88,14 @@ export function GlossaryTerm({ term, children }: GlossaryTermProps) {
   return (
     <Link
       href={`/${locale}/glossary#${termId}`}
-      className="inline-flex items-center gap-1 hover:opacity-80 transition-opacity cursor-pointer"
+      className="inline-flex items-center gap-0.5 hover:opacity-80 transition-opacity cursor-pointer"
       title={locale === 'de' ? `Begriff im Glossar ansehen: ${term}` : `View in glossary: ${term}`}
     >
       {children || term}
-      <span className="inline-flex items-center justify-center w-4 h-4 bg-white/90 text-primary-600 rounded-full text-[10px] font-bold border border-primary-300 shrink-0">
-        i
+      <span className="inline-flex items-center justify-center w-3.5 h-3.5 text-gray-400 hover:text-primary-600 rounded-full transition-colors opacity-60 hover:opacity-100 shrink-0">
+        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+        </svg>
       </span>
     </Link>
   );
