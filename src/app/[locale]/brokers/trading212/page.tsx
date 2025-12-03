@@ -192,8 +192,8 @@ export default function Trading212Page({ params: { locale } }: { params: { local
                 </div>
                 <p className="text-xl text-blue-100 mb-6">
                   {locale === 'de'
-                    ? 'Benutzerfreundlicher Broker mit 0€ Kommission und nur 1€ Mindesteinlage'
-                    : 'User-friendly broker with €0 commission and only €1 minimum deposit'}
+                    ? 'Benutzerfreundlicher Broker mit 0€ Kommission und nur 1€ Mindesteinlage - Options coming soon'
+                    : 'User-friendly broker with €0 commission and only €1 minimum deposit - Options coming soon'}
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <span className="px-4 py-2 bg-green-500 text-white rounded-full font-semibold flex items-center gap-2">
@@ -305,7 +305,7 @@ export default function Trading212Page({ params: { locale } }: { params: { local
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">{locale === 'de' ? 'Optionen verfügbar' : 'Options Available'}</h3>
-                    <p className="text-gray-700">{locale === 'de' ? 'Ja, CFD Options' : 'Yes, CFD Options'}</p>
+                    <p className="text-gray-700">Options coming soon</p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-2">{locale === 'de' ? 'Plattformen' : 'Platforms'}</h3>

@@ -63,15 +63,15 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
       regulation: 'FCA, CySEC',
       fees: locale === 'de' ? '0€ Kommission, enge Spreads' : '€0 commission, tight spreads',
       minDeposit: '1 €',
-      options: locale === 'de' ? 'Ja, CFD Options' : 'Yes, CFD Options',
+      options: locale === 'de' ? 'Options coming soon' : 'Options coming soon',
       rating: 4.6,
       reviews: 1892,
       pros: locale === 'de'
         ? ['Keine Kommissionen', 'Sehr niedrige Mindesteinlage', 'Benutzerfreundliche App', 'Fractional Shares', 'Keine versteckten Gebühren', 'Deutscher Support']
         : ['No commissions', 'Very low minimum deposit', 'User-friendly app', 'Fractional shares', 'No hidden fees', 'German support'],
       cons: locale === 'de'
-        ? ['Keine BaFin-Regulierung', 'Begrenzte Research-Tools', 'Keine MT4/MT5', 'Nur CFD-Handel für Optionen']
-        : ['No BaFin regulation', 'Limited research tools', 'No MT4/MT5', 'CFD options only'],
+        ? ['Keine BaFin-Regulierung', 'Begrenzte Research-Tools', 'Keine MT4/MT5', 'Optionen noch nicht verfügbar']
+        : ['No BaFin regulation', 'Limited research tools', 'No MT4/MT5', 'Options not yet available'],
     },
     {
       name: 'Interactive Brokers',

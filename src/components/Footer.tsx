@@ -14,6 +14,7 @@ export default function Footer() {
   ];
 
   const legalLinks = [
+    { name: t('about'), href: `/${locale}/about` },
     { name: t('impressum'), href: `/${locale}/impressum` },
     { name: t('privacy'), href: `/${locale}/privacy` },
     { name: t('disclaimer'), href: `/${locale}/disclaimer` },
