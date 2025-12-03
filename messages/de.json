@@ -1,12 +1,15 @@
 {
   "nav": {
     "home": "Startseite",
+    "learn": "Lernen",
     "basics": "Grundlagen",
     "strategies": "Strategien",
+    "crypto_options": "Krypto-Optionen",
     "risks": "Risiken & Chancen",
     "regulation": "Regulierung",
     "brokers": "Broker",
     "taxes": "Steuern",
+    "resources": "Ressourcen",
     "glossary": "Glossar",
     "tutorials": "Anleitungen",
     "faq": "FAQ",

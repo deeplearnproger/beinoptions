@@ -9,6 +9,7 @@ export default function Footer() {
   const quickLinks = [
     { name: tNav('basics'), href: `/${locale}/basics` },
     { name: tNav('strategies'), href: `/${locale}/strategies` },
+    { name: tNav('crypto_options'), href: `/${locale}/crypto-options` },
     { name: tNav('brokers'), href: `/${locale}/brokers` },
     { name: tNav('tutorials'), href: `/${locale}/tutorials` },
   ];

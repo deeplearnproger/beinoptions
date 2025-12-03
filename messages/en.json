@@ -1,12 +1,15 @@
 {
   "nav": {
     "home": "Home",
+    "learn": "Learn",
     "basics": "Basics",
     "strategies": "Strategies",
+    "crypto_options": "Crypto Options",
     "risks": "Risks & Opportunities",
     "regulation": "Regulation",
     "brokers": "Brokers",
     "taxes": "Taxes",
+    "resources": "Resources",
     "glossary": "Glossary",
     "tutorials": "Tutorials",
     "faq": "FAQ",
