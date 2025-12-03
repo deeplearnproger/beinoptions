@@ -31,7 +31,7 @@ export default function ArticleSchema({
       name: 'BeInOptions',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://beinoption.de/logo.png',
+        url: 'https://beinoptions.com/logo.png',
       },
     },
     datePublished: datePublished,
