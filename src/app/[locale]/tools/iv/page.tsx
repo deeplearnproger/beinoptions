@@ -361,7 +361,7 @@ export default function IVToolsPage() {
                 market price.
               </p>
               <p className="text-sm text-gray-600">
-                Implied volatility represents the market's expectation of future volatility and is
+                Implied volatility represents the market&apos;s expectation of future volatility and is
                 a key metric for comparing options across different strikes and expirations.
               </p>
             </div>
