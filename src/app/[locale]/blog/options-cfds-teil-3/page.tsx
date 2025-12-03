@@ -77,7 +77,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
             {/* Part 1: Speculation */}
             <div className="card bg-gradient-to-br from-orange-50 to-white mb-8">
               <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">
-                <span className="text-4xl mr-3">📈</span>
+                <svg className="w-12 h-12 text-green-600 inline-block mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                 {locale === 'de' ? 'Spekulation: Auf Marktbewegungen setzen' : 'Speculation: Betting on Market Movements'}
               </h2>
 
@@ -91,14 +91,14 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                 {/* Strategy 1 */}
                 <div className="bg-white rounded-lg p-6 border-2 border-orange-200">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span className="text-3xl">💡</span>
+                    <svg className="w-10 h-10 text-yellow-600 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" /></svg>
                     {locale === 'de' ? 'Strategie 1: Direktionale Spekulation' : 'Strategy 1: Directional Speculation'}
                   </h3>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                     <div className="bg-green-50 rounded-lg p-4 border-2 border-green-200">
                       <h4 className="font-bold text-green-800 mb-2">
-                        📊 {locale === 'de' ? 'Bullische Spekulation (Long)' : 'Bullish Speculation (Long)'}
+                        {locale === 'de' ? 'Bullische Spekulation (Long)' : 'Bullish Speculation (Long)'}
                       </h4>
                       <p className="text-sm text-gray-700 mb-3">
                         {locale === 'de'
@@ -107,19 +107,19 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                       </p>
                       <div className="bg-white rounded p-3 text-sm">
                         <p className="font-semibold text-gray-900 mb-2">
-                          {locale === 'de' ? '✓ Vorgehensweise:' : '✓ Approach:'}
+                          {locale === 'de' ? 'Vorgehensweise:' : 'Approach:'}
                         </p>
                         <ul className="space-y-1 text-gray-700">
-                          <li>• {locale === 'de' ? 'Kaufen Sie einen CFD auf Apple Call-Option' : 'Buy a CFD on Apple call option'}</li>
-                          <li>• {locale === 'de' ? 'Steigt der Aktienkurs, steigt auch Ihr CFD' : 'If stock price rises, your CFD rises too'}</li>
-                          <li>• {locale === 'de' ? 'Schließen Sie mit Gewinn' : 'Close with profit'}</li>
+                          <li>{locale === 'de' ? 'Kaufen Sie einen CFD auf Apple Call-Option' : 'Buy a CFD on Apple call option'}</li>
+                          <li>{locale === 'de' ? 'Steigt der Aktienkurs, steigt auch Ihr CFD' : 'If stock price rises, your CFD rises too'}</li>
+                          <li>{locale === 'de' ? 'Schließen Sie mit Gewinn' : 'Close with profit'}</li>
                         </ul>
                       </div>
                     </div>
 
                     <div className="bg-red-50 rounded-lg p-4 border-2 border-red-200">
                       <h4 className="font-bold text-red-800 mb-2">
-                        📉 {locale === 'de' ? 'Bärische Spekulation (Short)' : 'Bearish Speculation (Short)'}
+                        {locale === 'de' ? 'Bärische Spekulation (Short)' : 'Bearish Speculation (Short)'}
                       </h4>
                       <p className="text-sm text-gray-700 mb-3">
                         {locale === 'de'
@@ -128,12 +128,12 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                       </p>
                       <div className="bg-white rounded p-3 text-sm">
                         <p className="font-semibold text-gray-900 mb-2">
-                          {locale === 'de' ? '✓ Vorgehensweise:' : '✓ Approach:'}
+                          {locale === 'de' ? 'Vorgehensweise:' : 'Approach:'}
                         </p>
                         <ul className="space-y-1 text-gray-700">
-                          <li>• {locale === 'de' ? 'Verkaufen Sie einen CFD auf Tesla Call-Option' : 'Sell a CFD on Tesla call option'}</li>
-                          <li>• {locale === 'de' ? 'Fällt der Aktienkurs, profitieren Sie' : 'If stock price falls, you profit'}</li>
-                          <li>• {locale === 'de' ? 'Decken Sie die Position mit Gewinn' : 'Cover position with profit'}</li>
+                          <li>{locale === 'de' ? 'Verkaufen Sie einen CFD auf Tesla Call-Option' : 'Sell a CFD on Tesla call option'}</li>
+                          <li>{locale === 'de' ? 'Fällt der Aktienkurs, profitieren Sie' : 'If stock price falls, you profit'}</li>
+                          <li>{locale === 'de' ? 'Decken Sie die Position mit Gewinn' : 'Cover position with profit'}</li>
                         </ul>
                       </div>
                     </div>
@@ -141,7 +141,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
 
                   <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4">
                     <p className="text-sm text-gray-800">
-                      <strong>💰 {locale === 'de' ? 'Vorteil bei Libertex:' : 'Advantage at Libertex:'}</strong> {locale === 'de' ? 'Zero-Spreads bedeuten, dass Sie den vollen Gewinn behalten – keine versteckten Kosten schmälern Ihren Profit!' : 'Zero spreads mean you keep the full profit – no hidden costs reduce your profit!'}
+                      <strong>{locale === 'de' ? 'Vorteil bei Libertex:' : 'Advantage at Libertex:'}</strong> {locale === 'de' ? 'Zero-Spreads bedeuten, dass Sie den vollen Gewinn behalten – keine versteckten Kosten schmälern Ihren Profit!' : 'Zero spreads mean you keep the full profit – no hidden costs reduce your profit!'}
                     </p>
                   </div>
                 </div>
@@ -149,7 +149,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                 {/* Strategy 2 */}
                 <div className="bg-white rounded-lg p-6 border-2 border-purple-200">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span className="text-3xl">⚡</span>
+                    <svg className="w-10 h-10 text-yellow-600 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                     {locale === 'de' ? 'Strategie 2: Volatilitäts-Spekulation' : 'Strategy 2: Volatility Speculation'}
                   </h3>
 
@@ -161,7 +161,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
 
                   <div className="bg-purple-50 rounded-lg p-4 mb-4">
                     <h4 className="font-bold text-purple-900 mb-3">
-                      {locale === 'de' ? '📊 Praktisches Beispiel:' : '📊 Practical Example:'}
+                      {locale === 'de' ? 'Praktisches Beispiel:' : 'Practical Example:'}
                     </h4>
                     <div className="space-y-2 text-sm text-gray-700">
                       <p><strong>{locale === 'de' ? 'Szenario:' : 'Scenario:'}</strong> {locale === 'de' ? 'Microsoft kündigt Quartalszahlen an' : 'Microsoft announces quarterly results'}</p>
@@ -175,7 +175,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                 {/* Strategy 3 */}
                 <div className="bg-white rounded-lg p-6 border-2 border-blue-200">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span className="text-3xl">🎯</span>
+                    <svg className="w-10 h-10 text-purple-600 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     {locale === 'de' ? 'Strategie 3: Swing-Trading mit Options CFDs' : 'Strategy 3: Swing Trading with Options CFDs'}
                   </h3>
 
@@ -187,7 +187,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                     <div className="bg-blue-50 rounded p-3 text-center">
-                      <div className="text-2xl mb-2">1️⃣</div>
+                      <div className="inline-flex items-center justify-center w-8 h-8 bg-purple-600 text-white rounded-full font-bold text-lg mb-2">1</div>
                       <div className="text-sm font-semibold text-gray-900 mb-1">
                         {locale === 'de' ? 'Trend erkennen' : 'Identify Trend'}
                       </div>
@@ -196,7 +196,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                       </div>
                     </div>
                     <div className="bg-blue-50 rounded p-3 text-center">
-                      <div className="text-2xl mb-2">2️⃣</div>
+                      <div className="inline-flex items-center justify-center w-8 h-8 bg-purple-600 text-white rounded-full font-bold text-lg mb-2">2</div>
                       <div className="text-sm font-semibold text-gray-900 mb-1">
                         {locale === 'de' ? 'Position eröffnen' : 'Open Position'}
                       </div>
@@ -205,7 +205,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                       </div>
                     </div>
                     <div className="bg-blue-50 rounded p-3 text-center">
-                      <div className="text-2xl mb-2">3️⃣</div>
+                      <div className="inline-flex items-center justify-center w-8 h-8 bg-purple-600 text-white rounded-full font-bold text-lg mb-2">3</div>
                       <div className="text-sm font-semibold text-gray-900 mb-1">
                         {locale === 'de' ? 'Bei Ziel schließen' : 'Close at Target'}
                       </div>
@@ -223,8 +223,8 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-4">
                   {locale === 'de'
-                    ? '🎯 Bereit für professionelles Trading?'
-                    : '🎯 Ready for Professional Trading?'}
+                    ? 'Bereit für professionelles Trading?'
+                    : 'Ready for Professional Trading?'}
                 </h3>
                 <p className="text-purple-100 mb-6 text-lg">
                   {locale === 'de'
@@ -237,7 +237,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                   rel="noopener noreferrer"
                   className="inline-block px-8 py-4 bg-white text-purple-700 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg"
                 >
-                  {locale === 'de' ? 'Jetzt Konto eröffnen →' : 'Open Account Now →'}
+                  {locale === 'de' ? 'Jetzt Konto eröffnen ' : 'Open Account Now '}
                 </a>
               </div>
             </div>
@@ -245,7 +245,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
             {/* Part 2: Hedging */}
             <div className="card bg-gradient-to-br from-green-50 to-white mb-8">
               <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">
-                <span className="text-4xl mr-3">🛡️</span>
+                <svg className="w-12 h-12 text-green-600 inline-block mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                 {locale === 'de' ? 'Hedging: Ihr Portfolio absichern' : 'Hedging: Protecting Your Portfolio'}
               </h2>
 
@@ -259,7 +259,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                 {/* Hedging Strategy 1 */}
                 <div className="bg-white rounded-lg p-6 border-2 border-green-200">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span className="text-3xl">🔒</span>
+                    <svg className="w-10 h-10 text-gray-600 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                     {locale === 'de' ? 'Strategie 1: Portfolio-Absicherung' : 'Strategy 1: Portfolio Protection'}
                   </h3>
 
@@ -271,7 +271,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
 
                   <div className="bg-green-50 rounded-lg p-5 mb-4">
                     <h4 className="font-bold text-green-900 mb-3">
-                      {locale === 'de' ? '📋 Schritt-für-Schritt:' : '📋 Step-by-Step:'}
+                      {locale === 'de' ? 'Schritt-für-Schritt:' : 'Step-by-Step:'}
                     </h4>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
@@ -319,7 +319,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
 
                   <div className="bg-gray-50 rounded-lg p-4">
                     <p className="text-sm text-gray-800">
-                      <strong className="text-green-700">✓ {locale === 'de' ? 'Vorteil:' : 'Advantage:'}</strong> {locale === 'de' ? 'Sie müssen Ihre Aktien nicht verkaufen und können langfristig investiert bleiben.' : 'You don\'t have to sell your stocks and can remain invested long-term.'}
+                      <strong className="text-green-700">{locale === 'de' ? 'Vorteil:' : 'Advantage:'}</strong> {locale === 'de' ? 'Sie müssen Ihre Aktien nicht verkaufen und können langfristig investiert bleiben.' : 'You don\'t have to sell your stocks and can remain invested long-term.'}
                     </p>
                   </div>
                 </div>
@@ -327,7 +327,9 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                 {/* Hedging Strategy 2 */}
                 <div className="bg-white rounded-lg p-6 border-2 border-blue-200">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span className="text-3xl">⚖️</span>
+                    <svg className="w-10 h-10 text-blue-600 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                    </svg>
                     {locale === 'de' ? 'Strategie 2: Einzelaktien-Absicherung' : 'Strategy 2: Individual Stock Protection'}
                   </h3>
 
@@ -339,23 +341,23 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
 
                   <div className="bg-blue-50 rounded-lg p-5">
                     <h4 className="font-bold text-blue-900 mb-3">
-                      {locale === 'de' ? '💼 Beispiel-Szenario:' : '💼 Example Scenario:'}
+                      {locale === 'de' ? 'Beispiel-Szenario:' : 'Example Scenario:'}
                     </h4>
                     <div className="space-y-3 text-sm text-gray-700">
                       <div className="bg-white rounded p-3">
-                        <p><strong>{locale === 'de' ? '📍 Ausgangslage:' : '📍 Starting Point:'}</strong></p>
+                        <p><strong>{locale === 'de' ? 'Ausgangslage:' : 'Starting Point:'}</strong></p>
                         <p>{locale === 'de' ? 'Sie besitzen 100 Tesla-Aktien à 250€ = 25.000€' : 'You own 100 Tesla shares at €250 = €25,000'}</p>
                       </div>
                       <div className="bg-white rounded p-3">
-                        <p><strong>{locale === 'de' ? '⚠️ Situation:' : '⚠️ Situation:'}</strong></p>
+                        <p><strong>{locale === 'de' ? 'Situation:' : 'Situation:'}</strong></p>
                         <p>{locale === 'de' ? 'Tesla veröffentlicht bald Quartalszahlen – potenzielle Enttäuschung erwartet' : 'Tesla releasing quarterly results soon – potential disappointment expected'}</p>
                       </div>
                       <div className="bg-white rounded p-3">
-                        <p><strong>{locale === 'de' ? '🛡️ Absicherung:' : '🛡️ Protection:'}</strong></p>
+                        <p><strong>{locale === 'de' ? 'Absicherung:' : 'Protection:'}</strong></p>
                         <p>{locale === 'de' ? 'Kaufen Sie CFDs auf Tesla Put-Optionen im Wert von ~5.000€' : 'Buy CFDs on Tesla put options worth ~€5,000'}</p>
                       </div>
                       <div className="bg-white rounded p-3 border-2 border-green-500">
-                        <p><strong className="text-green-700">{locale === 'de' ? '✅ Resultat:' : '✅ Result:'}</strong></p>
+                        <p><strong className="text-green-700">{locale === 'de' ? 'Resultat:' : 'Result:'}</strong></p>
                         <p>{locale === 'de' ? 'Fällt Tesla um 20%, verlieren Sie 5.000€ an Aktien, gewinnen aber ~5.000€ mit den Put-CFDs' : 'If Tesla falls 20%, you lose €5,000 in stocks but gain ~€5,000 with put CFDs'}</p>
                       </div>
                     </div>
@@ -365,7 +367,9 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                 {/* Hedging Strategy 3 */}
                 <div className="bg-white rounded-lg p-6 border-2 border-purple-200">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span className="text-3xl">🌐</span>
+                    <svg className="w-10 h-10 text-purple-600 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                     {locale === 'de' ? 'Strategie 3: Währungsrisiko-Absicherung' : 'Strategy 3: Currency Risk Protection'}
                   </h3>
 
@@ -377,7 +381,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
 
                   <div className="bg-purple-50 rounded-lg p-4">
                     <p className="text-sm text-gray-800 mb-3">
-                      <strong>{locale === 'de' ? '📖 Beispiel:' : '📖 Example:'}</strong> {locale === 'de' ? 'Sie halten US-Aktien im Wert von 30.000€. Befürchten Sie eine Dollar-Schwäche? Nutzen Sie CFDs auf EUR/USD Optionen zur Absicherung.' : 'You hold US stocks worth €30,000. Worried about dollar weakness? Use CFDs on EUR/USD options for protection.'}
+                      <strong>{locale === 'de' ? 'Beispiel:' : 'Example:'}</strong> {locale === 'de' ? 'Sie halten US-Aktien im Wert von 30.000€. Befürchten Sie eine Dollar-Schwäche? Nutzen Sie CFDs auf EUR/USD Optionen zur Absicherung.' : 'You hold US stocks worth €30,000. Worried about dollar weakness? Use CFDs on EUR/USD options for protection.'}
                     </p>
                   </div>
                 </div>
@@ -389,8 +393,8 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-4">
                   {locale === 'de'
-                    ? '🛡️ Schützen Sie Ihr Portfolio jetzt'
-                    : '🛡️ Protect Your Portfolio Now'}
+                    ? 'Schützen Sie Ihr Portfolio jetzt'
+                    : 'Protect Your Portfolio Now'}
                 </h3>
                 <p className="text-emerald-100 mb-6 text-lg">
                   {locale === 'de'
@@ -404,7 +408,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                     rel="noopener noreferrer"
                     className="px-8 py-4 bg-white text-emerald-700 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg"
                   >
-                    {locale === 'de' ? 'Jetzt absichern →' : 'Protect Now →'}
+                    {locale === 'de' ? 'Jetzt absichern ' : 'Protect Now '}
                   </a>
                 </div>
               </div>
@@ -425,7 +429,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-gradient-to-br from-blue-50 to-white rounded-lg p-6 border-2 border-blue-200">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span className="text-2xl">✅</span>
+                    <svg className="w-8 h-8 text-green-600 inline-block" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                     {locale === 'de' ? 'Best Practices' : 'Best Practices'}
                   </h3>
                   <ul className="space-y-3 text-gray-700">
@@ -450,7 +454,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
 
                 <div className="bg-gradient-to-br from-red-50 to-white rounded-lg p-6 border-2 border-red-200">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span className="text-2xl">❌</span>
+                    <svg className="w-8 h-8 text-red-600 inline-block" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" /></svg>
                     {locale === 'de' ? 'Häufige Fehler' : 'Common Mistakes'}
                   </h3>
                   <ul className="space-y-3 text-gray-700">
@@ -476,7 +480,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
 
               <div className="mt-6 bg-yellow-50 border-l-4 border-yellow-500 p-6">
                 <div className="flex items-start gap-3">
-                  <div className="text-2xl">⚠️</div>
+                  <svg className="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
                   <div>
                     <h4 className="font-bold text-gray-900 mb-2">
                       {locale === 'de' ? 'Wichtiger Hinweis:' : 'Important Note:'}
@@ -554,7 +558,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
             {/* Series Navigation */}
             <div className="card bg-gradient-to-br from-gray-100 to-white mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {locale === 'de' ? '📖 Diese Serie:' : '📖 This Series:'}
+                {locale === 'de' ? 'Diese Serie:' : 'This Series:'}
               </h3>
               <div className="space-y-3">
                 <Link href={`/${locale}/blog/options-cfds-teil-1`}>
@@ -589,7 +593,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                 </Link>
                 <div className="bg-white rounded-lg p-4 border-2 border-purple-500">
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl">✓</span>
+                    
                     <div>
                       <div className="font-bold text-gray-900">
                         {locale === 'de' ? 'Teil 3: Spekulation & Hedging (Dieser Artikel)' : 'Part 3: Speculation & Hedging (This Article)'}
@@ -606,7 +610,7 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
             {/* Final CTA */}
             <div className="card bg-gradient-to-br from-purple-600 via-indigo-700 to-blue-700 text-white">
               <div className="text-center">
-                <div className="text-5xl mb-4">🚀</div>
+                <svg className="w-16 h-16 text-primary-600 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 <h3 className="text-3xl font-bold mb-4">
                   {locale === 'de'
                     ? 'Setzen Sie Ihr Wissen in die Praxis um!'
@@ -623,12 +627,12 @@ export default function OptionsCFDsPart3Page({ params: { locale } }: { params: {
                   rel="noopener noreferrer"
                   className="inline-block px-10 py-5 bg-white text-purple-700 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
                 >
-                  {locale === 'de' ? '✨ Jetzt kostenloses Konto eröffnen' : '✨ Open Free Account Now'}
+                  {locale === 'de' ? 'Jetzt kostenloses Konto eröffnen' : 'Open Free Account Now'}
                 </a>
                 <p className="text-purple-200 text-sm mt-4">
                   {locale === 'de'
-                    ? '⚡ In nur 2 Minuten startklar | 💯 Über 2.9M zufriedene Trader weltweit | 🎓 Kostenlose Bildungsressourcen'
-                    : '⚡ Ready in just 2 minutes | 💯 Over 2.9M satisfied traders worldwide | 🎓 Free educational resources'}
+                    ? 'In nur 2 Minuten startklar | Über 2.9M zufriedene Trader weltweit | Kostenlose Bildungsressourcen'
+                    : 'Ready in just 2 minutes | Over 2.9M satisfied traders worldwide | Free educational resources'}
                 </p>
               </div>
             </div>

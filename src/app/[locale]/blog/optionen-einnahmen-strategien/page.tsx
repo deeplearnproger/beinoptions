@@ -162,19 +162,19 @@ export default function OptionsIncomeStrategiesPost({ params: { locale } }: { pa
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <h5 className="font-bold text-green-700 mb-2">✅ {locale === 'de' ? 'Vorteile' : 'Advantages'}</h5>
+                      <h5 className="font-bold text-green-700 mb-2">{locale === 'de' ? 'Vorteile' : 'Advantages'}</h5>
                       <ul className="text-sm text-gray-700 space-y-1">
-                        <li>• {locale === 'de' ? 'Regelmäßiges Einkommen' : 'Regular income'}</li>
-                        <li>• {locale === 'de' ? 'Reduziert Verlustrisiko' : 'Reduces loss risk'}</li>
-                        <li>• {locale === 'de' ? 'Ideal für Seitwärtsmärkte' : 'Ideal for sideways markets'}</li>
+                        <li>{locale === 'de' ? 'Regelmäßiges Einkommen' : 'Regular income'}</li>
+                        <li>{locale === 'de' ? 'Reduziert Verlustrisiko' : 'Reduces loss risk'}</li>
+                        <li>{locale === 'de' ? 'Ideal für Seitwärtsmärkte' : 'Ideal for sideways markets'}</li>
                       </ul>
                     </div>
                     <div>
-                      <h5 className="font-bold text-red-700 mb-2">⚠️ {locale === 'de' ? 'Risiken' : 'Risks'}</h5>
+                      <h5 className="font-bold text-red-700 mb-2">{locale === 'de' ? 'Risiken' : 'Risks'}</h5>
                       <ul className="text-sm text-gray-700 space-y-1">
-                        <li>• {locale === 'de' ? 'Begrenztes Gewinnpotenzial' : 'Limited profit potential'}</li>
-                        <li>• {locale === 'de' ? 'Aktien können verkauft werden' : 'Shares can be sold'}</li>
-                        <li>• {locale === 'de' ? 'Verluste bei fallenden Kursen' : 'Losses in falling markets'}</li>
+                        <li>{locale === 'de' ? 'Begrenztes Gewinnpotenzial' : 'Limited profit potential'}</li>
+                        <li>{locale === 'de' ? 'Aktien können verkauft werden' : 'Shares can be sold'}</li>
+                        <li>{locale === 'de' ? 'Verluste bei fallenden Kursen' : 'Losses in falling markets'}</li>
                       </ul>
                     </div>
                   </div>
@@ -207,19 +207,19 @@ export default function OptionsIncomeStrategiesPost({ params: { locale } }: { pa
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <h5 className="font-bold text-green-700 mb-2">✅ {locale === 'de' ? 'Vorteile' : 'Advantages'}</h5>
+                      <h5 className="font-bold text-green-700 mb-2">{locale === 'de' ? 'Vorteile' : 'Advantages'}</h5>
                       <ul className="text-sm text-gray-700 space-y-1">
-                        <li>• {locale === 'de' ? 'Einkommen generieren' : 'Generate income'}</li>
-                        <li>• {locale === 'de' ? 'Aktien günstiger kaufen' : 'Buy shares cheaper'}</li>
-                        <li>• {locale === 'de' ? 'Guter Einstiegspunkt' : 'Good entry point'}</li>
+                        <li>{locale === 'de' ? 'Einkommen generieren' : 'Generate income'}</li>
+                        <li>{locale === 'de' ? 'Aktien günstiger kaufen' : 'Buy shares cheaper'}</li>
+                        <li>{locale === 'de' ? 'Guter Einstiegspunkt' : 'Good entry point'}</li>
                       </ul>
                     </div>
                     <div>
-                      <h5 className="font-bold text-red-700 mb-2">⚠️ {locale === 'de' ? 'Risiken' : 'Risks'}</h5>
+                      <h5 className="font-bold text-red-700 mb-2">{locale === 'de' ? 'Risiken' : 'Risks'}</h5>
                       <ul className="text-sm text-gray-700 space-y-1">
-                        <li>• {locale === 'de' ? 'Kaufverpflichtung möglich' : 'Purchase obligation possible'}</li>
-                        <li>• {locale === 'de' ? 'Kapital muss vorhanden sein' : 'Capital must be available'}</li>
-                        <li>• {locale === 'de' ? 'Verluste bei starkem Fall' : 'Losses in strong decline'}</li>
+                        <li>{locale === 'de' ? 'Kaufverpflichtung möglich' : 'Purchase obligation possible'}</li>
+                        <li>{locale === 'de' ? 'Kapital muss vorhanden sein' : 'Capital must be available'}</li>
+                        <li>{locale === 'de' ? 'Verluste bei starkem Fall' : 'Losses in strong decline'}</li>
                       </ul>
                     </div>
                   </div>
@@ -307,7 +307,7 @@ export default function OptionsIncomeStrategiesPost({ params: { locale } }: { pa
                 {locale === 'de' ? 'Jetzt kostenlos registrieren bei Libertex' : 'Register for free at Libertex now'}
               </a>
               <p className="text-sm text-blue-200 mt-4">
-                {locale === 'de' ? '✓ Nur 100€ Mindesteinlage • ✓ 3 Millionen Nutzer' : '✓ Only €100 minimum deposit • ✓ 3 million users'}
+                {locale === 'de' ? 'Nur 100€ Mindesteinlage - 3 Millionen Nutzer' : 'Only €100 minimum deposit - 3 million users'}
               </p>
             </div>
 
@@ -321,15 +321,15 @@ export default function OptionsIncomeStrategiesPost({ params: { locale } }: { pa
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Keine Garantie:' : 'No Guarantee:'}</strong> {locale === 'de' ? 'Income-Strategien bieten keine garantierten Erträge' : 'Income strategies offer no guaranteed returns'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Verlustrisiko:' : 'Loss Risk:'}</strong> {locale === 'de' ? 'Bei fallenden Märkten können Verluste entstehen' : 'Losses can occur in falling markets'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Bildung erforderlich:' : 'Education Required:'}</strong> {locale === 'de' ? 'Verstehen Sie die Strategien vollständig, bevor Sie sie anwenden' : 'Fully understand the strategies before applying them'}</span>
                 </li>
               </ul>

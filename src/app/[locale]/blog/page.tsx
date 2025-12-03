@@ -167,7 +167,7 @@ export default function BlogPage({ params: { locale } }: { params: { locale: str
       iconBg: 'from-purple-50 to-violet-100',
       iconColor: 'text-purple-600',
       iconPath: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
-      slug: 'volatility-guide',
+      slug: 'understanding-using-volatility',
     },
     {
       title: locale === 'de' ? 'Covered Call: Schritt-für-Schritt' : 'Covered Call: Step-by-Step',
@@ -181,7 +181,7 @@ export default function BlogPage({ params: { locale } }: { params: { locale: str
       iconBg: 'from-green-50 to-emerald-100',
       iconColor: 'text-emerald-600',
       iconPath: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
-      slug: 'covered-call-guide',
+      slug: 'covered-call-step-by-step',
     },
     {
       title: locale === 'de' ? 'Die Griechen verstehen: Delta, Gamma, Theta' : 'Understanding the Greeks: Delta, Gamma, Theta',
@@ -195,7 +195,7 @@ export default function BlogPage({ params: { locale } }: { params: { locale: str
       iconBg: 'from-purple-50 to-violet-100',
       iconColor: 'text-purple-600',
       iconPath: 'M12 14l9-5-9-5-9 5 9 5z M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222',
-      slug: 'greeks-guide',
+      slug: 'understanding-the-greeks',
     },
     {
       title: locale === 'de' ? 'Marktanalyse: DAX Optionen Q1 2025' : 'Market Analysis: DAX Options Q1 2025',

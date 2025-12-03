@@ -84,7 +84,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                 {/* Reason 1 */}
                 <div className="bg-white rounded-lg p-6 border-l-4 border-emerald-500 shadow-sm">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl flex-shrink-0">⚡</div>
+                    <svg className="w-12 h-12 text-yellow-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">
                         1. {locale === 'de' ? 'Hebelwirkung für maximale Effizienz' : 'Leverage for Maximum Efficiency'}
@@ -96,21 +96,21 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                       </p>
                       <ul className="space-y-2 text-gray-700 ml-4">
                         <li className="flex items-start gap-2">
-                          <span className="text-emerald-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Höheres Gewinnpotenzial bei geringerem Kapitaleinsatz' : 'Higher profit potential with lower capital deployment'}</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-emerald-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Bessere Kapitaleffizienz für Ihr Portfolio' : 'Better capital efficiency for your portfolio'}</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-emerald-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Freies Kapital für weitere Investments' : 'Free capital for additional investments'}</span>
                         </li>
                       </ul>
                       <div className="mt-4 bg-emerald-50 rounded-lg p-4">
                         <p className="text-sm text-gray-800">
-                          <strong>{locale === 'de' ? '📊 Beispiel:' : '📊 Example:'}</strong> {locale === 'de' ? 'Mit 1.000€ können Sie Positionen im Wert von 10.000€ oder mehr handeln (je nach Hebel).' : 'With €1,000 you can trade positions worth €10,000 or more (depending on leverage).'}
+                          <strong>{locale === 'de' ? 'Beispiel:' : 'Example:'}</strong> {locale === 'de' ? 'Mit 1.000€ können Sie Positionen im Wert von 10.000€ oder mehr handeln (je nach Hebel).' : 'With €1,000 you can trade positions worth €10,000 or more (depending on leverage).'}
                         </p>
                       </div>
                     </div>
@@ -120,7 +120,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                 {/* Reason 2 */}
                 <div className="bg-white rounded-lg p-6 border-l-4 border-blue-500 shadow-sm">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl flex-shrink-0">💰</div>
+                    <svg className="w-12 h-12 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">
                         2. {locale === 'de' ? 'Niedrige Einstiegshürden' : 'Low Entry Barriers'}
@@ -132,15 +132,15 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                       </p>
                       <ul className="space-y-2 text-gray-700 ml-4">
                         <li className="flex items-start gap-2">
-                          <span className="text-blue-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Mindesteinzahlung ab 100€' : 'Minimum deposit from €100'}</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-blue-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Kleine Positionsgrößen möglich' : 'Small position sizes possible'}</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-blue-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Idealer Einstieg für Anfänger' : 'Ideal entry for beginners'}</span>
                         </li>
                       </ul>
@@ -151,7 +151,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                 {/* Reason 3 */}
                 <div className="bg-white rounded-lg p-6 border-l-4 border-purple-500 shadow-sm">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl flex-shrink-0">📊</div>
+                    <svg className="w-12 h-12 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">
                         3. {locale === 'de' ? 'Bidirektionale Trading-Möglichkeiten' : 'Bidirectional Trading Opportunities'}
@@ -163,7 +163,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                       </p>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="bg-green-50 rounded-lg p-4">
-                          <div className="font-bold text-green-800 mb-2">📈 Long (Kaufen)</div>
+                          <div className="font-bold text-green-800 mb-2">Long (Kaufen)</div>
                           <p className="text-sm text-gray-700">
                             {locale === 'de'
                               ? 'Erwarten Sie steigende Preise? Gehen Sie Long und profitieren Sie vom Aufwärtstrend.'
@@ -171,7 +171,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                           </p>
                         </div>
                         <div className="bg-red-50 rounded-lg p-4">
-                          <div className="font-bold text-red-800 mb-2">📉 Short (Verkaufen)</div>
+                          <div className="font-bold text-red-800 mb-2">Short (Verkaufen)</div>
                           <p className="text-sm text-gray-700">
                             {locale === 'de'
                               ? 'Rechnen Sie mit fallenden Kursen? Gehen Sie Short und profitieren Sie vom Abwärtstrend.'
@@ -186,7 +186,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                 {/* Reason 4 */}
                 <div className="bg-white rounded-lg p-6 border-l-4 border-orange-500 shadow-sm">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl flex-shrink-0">🎯</div>
+                    <svg className="w-12 h-12 text-purple-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">
                         4. {locale === 'de' ? 'Keine Verfallsdaten' : 'No Expiration Dates'}
@@ -198,15 +198,15 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                       </p>
                       <ul className="space-y-2 text-gray-700 ml-4">
                         <li className="flex items-start gap-2">
-                          <span className="text-orange-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Kein Zeitdruck – schließen Sie Ihre Position wann SIE es wollen' : 'No time pressure – close your position when YOU want'}</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-orange-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Keine Sorgen über Zeitwertverlust (Theta)' : 'No worries about time decay (theta)'}</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-orange-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Langfristige Positionen möglich' : 'Long-term positions possible'}</span>
                         </li>
                       </ul>
@@ -221,8 +221,8 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-4">
                   {locale === 'de'
-                    ? '🚀 Bereit, diese Vorteile zu nutzen?'
-                    : '🚀 Ready to Take Advantage?'}
+                    ? 'Bereit, diese Vorteile zu nutzen?'
+                    : 'Ready to Take Advantage?'}
                 </h3>
                 <p className="text-emerald-100 mb-6 text-lg">
                   {locale === 'de'
@@ -235,7 +235,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                   rel="noopener noreferrer"
                   className="inline-block px-8 py-4 bg-white text-emerald-700 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg"
                 >
-                  {locale === 'de' ? 'Kostenloses Konto eröffnen →' : 'Open Free Account →'}
+                  {locale === 'de' ? 'Kostenloses Konto eröffnen ' : 'Open Free Account '}
                 </a>
               </div>
             </div>
@@ -246,7 +246,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                 {/* Reason 5 */}
                 <div className="bg-gradient-to-r from-indigo-50 to-white rounded-lg p-6 border-l-4 border-indigo-500">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl flex-shrink-0">⚙️</div>
+                    <svg className="w-12 h-12 text-gray-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">
                         5. {locale === 'de' ? 'Einfachere Mechanik' : 'Simpler Mechanics'}
@@ -258,19 +258,19 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                       </p>
                       <ul className="space-y-2 text-gray-700 ml-4">
                         <li className="flex items-start gap-2">
-                          <span className="text-indigo-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Keine komplizierten Griechen (Delta, Gamma, Theta, Vega)' : 'No complicated Greeks (Delta, Gamma, Theta, Vega)'}</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-indigo-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Kein Ausübungsrecht-Verfahren' : 'No exercise rights procedure'}</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-indigo-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Konzentration auf Preisbewegungen' : 'Focus on price movements'}</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-indigo-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Schnellere Lernkurve für Einsteiger' : 'Faster learning curve for beginners'}</span>
                         </li>
                       </ul>
@@ -281,7 +281,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                 {/* Reason 6 */}
                 <div className="bg-gradient-to-r from-pink-50 to-white rounded-lg p-6 border-l-4 border-pink-500">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl flex-shrink-0">⚡</div>
+                    <svg className="w-12 h-12 text-yellow-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">
                         6. {locale === 'de' ? 'Schnelle und transparente Ausführung' : 'Fast and Transparent Execution'}
@@ -293,19 +293,19 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                       </p>
                       <ul className="space-y-2 text-gray-700 ml-4">
                         <li className="flex items-start gap-2">
-                          <span className="text-pink-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Blitzschnelle Order-Ausführung in Millisekunden' : 'Lightning-fast order execution in milliseconds'}</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-pink-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Transparente Preisbildung' : 'Transparent pricing'}</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-pink-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? 'Zero-Spreads = keine versteckten Kosten' : 'Zero spreads = no hidden costs'}</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-pink-600 font-bold">✓</span>
+                          
                           <span>{locale === 'de' ? '24/5 Handel möglich' : '24/5 trading possible'}</span>
                         </li>
                       </ul>
@@ -316,7 +316,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                 {/* Reason 7 */}
                 <div className="bg-gradient-to-r from-yellow-50 to-white rounded-lg p-6 border-l-4 border-yellow-500">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl flex-shrink-0">🌍</div>
+                    <svg className="w-12 h-12 text-blue-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">
                         7. {locale === 'de' ? 'Zugang zu globalen Märkten' : 'Access to Global Markets'}
@@ -328,11 +328,11 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                       </p>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                         <div className="bg-white rounded-lg p-3 text-center border border-gray-200">
-                          <div className="text-2xl mb-1">📈</div>
+                          <svg className="w-8 h-8 text-green-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                           <div className="text-sm font-semibold text-gray-900">{locale === 'de' ? 'Aktien' : 'Stocks'}</div>
                         </div>
                         <div className="bg-white rounded-lg p-3 text-center border border-gray-200">
-                          <div className="text-2xl mb-1">📊</div>
+                          <svg className="w-8 h-8 text-blue-600 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                           <div className="text-sm font-semibold text-gray-900">{locale === 'de' ? 'Indizes' : 'Indices'}</div>
                         </div>
                         <div className="bg-white rounded-lg p-3 text-center border border-gray-200">
@@ -450,7 +450,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                     rel="noopener noreferrer"
                     className="px-8 py-4 bg-white text-blue-700 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg"
                   >
-                    {locale === 'de' ? 'Jetzt Konto eröffnen →' : 'Open Account Now →'}
+                    {locale === 'de' ? 'Jetzt Konto eröffnen ' : 'Open Account Now '}
                   </a>
                 </div>
               </div>
@@ -532,7 +532,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
             {/* Series Navigation */}
             <div className="card bg-gradient-to-br from-gray-100 to-white mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {locale === 'de' ? '📖 Diese Serie:' : '📖 This Series:'}
+                {locale === 'de' ? 'Diese Serie:' : 'This Series:'}
               </h3>
               <div className="space-y-3">
                 <Link href={`/${locale}/blog/options-cfds-teil-1`}>
@@ -552,7 +552,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                 </Link>
                 <div className="bg-white rounded-lg p-4 border-2 border-emerald-500">
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl">✓</span>
+                    
                     <div>
                       <div className="font-bold text-gray-900">
                         {locale === 'de' ? 'Teil 2: Warum handeln? (Dieser Artikel)' : 'Part 2: Why Trade? (This Article)'}
@@ -566,7 +566,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                 <Link href={`/${locale}/blog/options-cfds-teil-3`}>
                   <div className="bg-white rounded-lg p-4 border-2 border-gray-300 hover:border-emerald-500 transition-colors cursor-pointer">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl">→</span>
+                      
                       <div>
                         <div className="font-bold text-gray-900">
                           {locale === 'de' ? 'Teil 3: Spekulation & Hedging' : 'Part 3: Speculation & Hedging'}
@@ -584,7 +584,7 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
             {/* Final CTA */}
             <div className="card bg-gradient-to-br from-emerald-600 via-emerald-700 to-green-700 text-white">
               <div className="text-center">
-                <div className="text-5xl mb-4">🚀</div>
+                <svg className="w-16 h-16 text-primary-600 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 <h3 className="text-3xl font-bold mb-4">
                   {locale === 'de'
                     ? 'Starten Sie jetzt mit Libertex!'
@@ -601,12 +601,12 @@ export default function OptionsCFDsPart2Page({ params: { locale } }: { params: {
                   rel="noopener noreferrer"
                   className="inline-block px-10 py-5 bg-white text-emerald-700 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
                 >
-                  {locale === 'de' ? '✨ Kostenloses Konto eröffnen' : '✨ Open Free Account'}
+                  {locale === 'de' ? 'Kostenloses Konto eröffnen' : 'Open Free Account'}
                 </a>
                 <p className="text-emerald-200 text-sm mt-4">
                   {locale === 'de'
-                    ? '⚡ In nur 2 Minuten startklar | 💯 Über 2.9M zufriedene Trader weltweit'
-                    : '⚡ Ready in just 2 minutes | 💯 Over 2.9M satisfied traders worldwide'}
+                    ? 'In nur 2 Minuten startklar | Über 2.9M zufriedene Trader weltweit'
+                    : 'Ready in just 2 minutes | Over 2.9M satisfied traders worldwide'}
                 </p>
               </div>
             </div>

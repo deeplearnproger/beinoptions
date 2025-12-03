@@ -261,7 +261,7 @@ export default function CboeMagnificent10Post({ params: { locale } }: { params: 
                 {locale === 'de' ? 'Jetzt kostenlos registrieren bei Libertex' : 'Register for free at Libertex now'}
               </a>
               <p className="text-sm text-blue-200 mt-4">
-                {locale === 'de' ? '✓ Nur 100€ Mindesteinlage • ✓ CySEC reguliert' : '✓ Only €100 minimum deposit • ✓ CySEC regulated'}
+                {locale === 'de' ? 'Nur 100€ Mindesteinlage - CySEC reguliert' : 'Only €100 minimum deposit - CySEC regulated'}
               </p>
             </div>
 

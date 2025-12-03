@@ -75,8 +75,8 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
               <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mt-4">
                 <p className="text-gray-800 font-medium">
                   {locale === 'de'
-                    ? '💡 Kurz gesagt: Sie profitieren von Preisbewegungen, ohne die komplexen Mechanismen traditioneller Optionen durchlaufen zu müssen.'
-                    : '💡 In short: You profit from price movements without having to go through the complex mechanisms of traditional options.'}
+                    ? 'Kurz gesagt: Sie profitieren von Preisbewegungen, ohne die komplexen Mechanismen traditioneller Optionen durchlaufen zu müssen.'
+                    : 'In short: You profit from price movements without having to go through the complex mechanisms of traditional options.'}
                 </p>
               </div>
             </div>
@@ -86,8 +86,8 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-4">
                   {locale === 'de'
-                    ? '🎯 Bereit für Options CFD Trading?'
-                    : '🎯 Ready for Options CFD Trading?'}
+                    ? 'Bereit für Options CFD Trading?'
+                    : 'Ready for Options CFD Trading?'}
                 </h3>
                 <p className="text-blue-100 mb-6 text-lg">
                   {locale === 'de'
@@ -100,7 +100,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                   rel="noopener noreferrer"
                   className="inline-block px-8 py-4 bg-white text-blue-700 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg"
                 >
-                  {locale === 'de' ? 'Kostenloses Konto eröffnen →' : 'Open Free Account →'}
+                  {locale === 'de' ? 'Kostenloses Konto eröffnen ' : 'Open Free Account '}
                 </a>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
               <div className="space-y-6">
                 <div className="bg-white rounded-lg p-6 border-2 border-blue-200">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span className="text-2xl">1️⃣</span>
+                    <span className="inline-flex items-center justify-center w-8 h-8 bg-blue-600 text-white rounded-full font-bold text-lg">1</span>
                     {locale === 'de' ? 'Position eröffnen' : 'Open Position'}
                   </h3>
                   <p className="text-gray-700">
@@ -126,7 +126,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
 
                 <div className="bg-white rounded-lg p-6 border-2 border-green-200">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span className="text-2xl">2️⃣</span>
+                    <span className="inline-flex items-center justify-center w-8 h-8 bg-blue-600 text-white rounded-full font-bold text-lg">2</span>
                     {locale === 'de' ? 'Hebelwirkung nutzen' : 'Use Leverage'}
                   </h3>
                   <p className="text-gray-700">
@@ -138,7 +138,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
 
                 <div className="bg-white rounded-lg p-6 border-2 border-purple-200">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span className="text-2xl">3️⃣</span>
+                    <span className="inline-flex items-center justify-center w-8 h-8 bg-blue-600 text-white rounded-full font-bold text-lg">3</span>
                     {locale === 'de' ? 'Gewinn/Verlust realisieren' : 'Realize Profit/Loss'}
                   </h3>
                   <p className="text-gray-700">
@@ -151,7 +151,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
 
               <div className="mt-6 bg-yellow-50 border-l-4 border-yellow-500 p-6">
                 <div className="flex items-start gap-3">
-                  <div className="text-2xl">📊</div>
+                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                   <div>
                     <h4 className="font-bold text-gray-900 mb-2">
                       {locale === 'de' ? 'Beispiel:' : 'Example:'}
@@ -168,8 +168,8 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                     </p>
                     <p className="text-gray-700 font-semibold text-green-700">
                       {locale === 'de'
-                        ? '→ Ihr Gewinn: $2.00 pro Kontrakt (multipliziert mit Ihrer Position)'
-                        : '→ Your profit: $2.00 per contract (multiplied by your position)'}
+                        ? 'Ihr Gewinn: $2.00 pro Kontrakt (multipliziert mit Ihrer Position)'
+                        : 'Your profit: $2.00 per contract (multiplied by your position)'}
                     </p>
                   </div>
                 </div>
@@ -184,7 +184,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-gradient-to-br from-green-50 to-white rounded-lg p-6 border-2 border-green-200">
-                  <div className="text-4xl mb-3">⚡</div>
+                  <svg className="w-12 h-12 text-yellow-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {locale === 'de' ? 'Hebelwirkung' : 'Leverage'}
                   </h3>
@@ -196,7 +196,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                 </div>
 
                 <div className="bg-gradient-to-br from-blue-50 to-white rounded-lg p-6 border-2 border-blue-200">
-                  <div className="text-4xl mb-3">💰</div>
+                  <svg className="w-12 h-12 text-green-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {locale === 'de' ? 'Niedrige Einstiegshürde' : 'Low Entry Barrier'}
                   </h3>
@@ -208,7 +208,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                 </div>
 
                 <div className="bg-gradient-to-br from-purple-50 to-white rounded-lg p-6 border-2 border-purple-200">
-                  <div className="text-4xl mb-3">📊</div>
+                  <svg className="w-12 h-12 text-blue-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {locale === 'de' ? 'Bidirektionales Trading' : 'Bidirectional Trading'}
                   </h3>
@@ -220,7 +220,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                 </div>
 
                 <div className="bg-gradient-to-br from-orange-50 to-white rounded-lg p-6 border-2 border-orange-200">
-                  <div className="text-4xl mb-3">🎯</div>
+                  <svg className="w-12 h-12 text-indigo-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {locale === 'de' ? 'Keine Verfallsdaten' : 'No Expiration Dates'}
                   </h3>
@@ -232,7 +232,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                 </div>
 
                 <div className="bg-gradient-to-br from-pink-50 to-white rounded-lg p-6 border-2 border-pink-200">
-                  <div className="text-4xl mb-3">⚙️</div>
+                  <svg className="w-12 h-12 text-gray-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {locale === 'de' ? 'Einfachere Mechanik' : 'Simpler Mechanics'}
                   </h3>
@@ -244,7 +244,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                 </div>
 
                 <div className="bg-gradient-to-br from-indigo-50 to-white rounded-lg p-6 border-2 border-indigo-200">
-                  <div className="text-4xl mb-3">🚀</div>
+                  <svg className="w-12 h-12 text-blue-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {locale === 'de' ? 'Schnelle Ausführung' : 'Fast Execution'}
                   </h3>
@@ -277,7 +277,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                     rel="noopener noreferrer"
                     className="px-8 py-4 bg-white text-emerald-700 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg"
                   >
-                    {locale === 'de' ? 'Jetzt Vorteil sichern →' : 'Secure Advantage Now →'}
+                    {locale === 'de' ? 'Jetzt Vorteil sichern ' : 'Secure Advantage Now '}
                   </a>
                 </div>
               </div>
@@ -312,7 +312,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                         {locale === 'de' ? 'Verfallsdatum' : 'Expiration'}
                       </td>
                       <td className="p-4 text-gray-700">
-                        <span className="text-green-600 font-semibold">✓</span> {locale === 'de' ? 'Kein Verfall' : 'No expiration'}
+                         {locale === 'de' ? 'Kein Verfall' : 'No expiration'}
                       </td>
                       <td className="p-4 text-gray-700">
                         <span className="text-red-600 font-semibold">✗</span> {locale === 'de' ? 'Festes Datum' : 'Fixed date'}
@@ -323,7 +323,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                         {locale === 'de' ? 'Mindestkapital' : 'Minimum Capital'}
                       </td>
                       <td className="p-4 text-gray-700">
-                        <span className="text-green-600 font-semibold">✓</span> {locale === 'de' ? 'Niedrig (ab 100€)' : 'Low (from €100)'}
+                         {locale === 'de' ? 'Niedrig (ab 100€)' : 'Low (from €100)'}
                       </td>
                       <td className="p-4 text-gray-700">
                         <span className="text-orange-600 font-semibold">~</span> {locale === 'de' ? 'Höher' : 'Higher'}
@@ -334,7 +334,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                         {locale === 'de' ? 'Komplexität' : 'Complexity'}
                       </td>
                       <td className="p-4 text-gray-700">
-                        <span className="text-green-600 font-semibold">✓</span> {locale === 'de' ? 'Einfacher' : 'Simpler'}
+                         {locale === 'de' ? 'Einfacher' : 'Simpler'}
                       </td>
                       <td className="p-4 text-gray-700">
                         <span className="text-red-600 font-semibold">✗</span> {locale === 'de' ? 'Komplexer' : 'More complex'}
@@ -345,7 +345,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                         {locale === 'de' ? 'Hebelwirkung' : 'Leverage'}
                       </td>
                       <td className="p-4 text-gray-700">
-                        <span className="text-green-600 font-semibold">✓</span> {locale === 'de' ? 'Flexibel' : 'Flexible'}
+                         {locale === 'de' ? 'Flexibel' : 'Flexible'}
                       </td>
                       <td className="p-4 text-gray-700">
                         <span className="text-orange-600 font-semibold">~</span> {locale === 'de' ? 'Natürlich vorhanden' : 'Naturally present'}
@@ -356,7 +356,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                         {locale === 'de' ? 'Ausführung' : 'Execution'}
                       </td>
                       <td className="p-4 text-gray-700">
-                        <span className="text-green-600 font-semibold">✓</span> {locale === 'de' ? 'Sofort' : 'Instant'}
+                         {locale === 'de' ? 'Sofort' : 'Instant'}
                       </td>
                       <td className="p-4 text-gray-700">
                         <span className="text-orange-600 font-semibold">~</span> {locale === 'de' ? 'Börsenabhängig' : 'Exchange dependent'}
@@ -375,7 +375,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
 
               <div className="bg-red-50 border-l-4 border-red-500 p-6 mb-6">
                 <div className="flex items-start gap-3">
-                  <div className="text-2xl">⚠️</div>
+                  <svg className="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-2">
                       {locale === 'de' ? 'Wichtiger Risikohinweis:' : 'Important Risk Warning:'}
@@ -392,24 +392,24 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span className="text-xl">🎯</span>
+                    <svg className="w-6 h-6 text-purple-600 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     {locale === 'de' ? 'So minimieren Sie Risiken:' : 'How to Minimize Risks:'}
                   </h4>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-green-600 mt-1">•</span>
+                      <span className="text-green-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Nutzen Sie Stop-Loss-Orders' : 'Use stop-loss orders'}</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-green-600 mt-1">•</span>
+                      <span className="text-green-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Starten Sie mit kleinen Positionen' : 'Start with small positions'}</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-green-600 mt-1">•</span>
+                      <span className="text-green-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Diversifizieren Sie Ihr Portfolio' : 'Diversify your portfolio'}</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-green-600 mt-1">•</span>
+                      <span className="text-green-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Bilden Sie sich kontinuierlich weiter' : 'Educate yourself continuously'}</span>
                     </li>
                   </ul>
@@ -417,24 +417,24 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
 
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span className="text-xl">💡</span>
+                    <svg className="w-6 h-6 text-yellow-600 inline-block" fill="currentColor" viewBox="0 0 20 20"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" /></svg>
                     {locale === 'de' ? 'Best Practices:' : 'Best Practices:'}
                   </h4>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-600 mt-1">•</span>
+                      <span className="text-blue-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Nutzen Sie Demo-Konten zum Üben' : 'Use demo accounts to practice'}</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-600 mt-1">•</span>
+                      <span className="text-blue-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Definieren Sie klare Ein- und Ausstiegsregeln' : 'Define clear entry and exit rules'}</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-600 mt-1">•</span>
+                      <span className="text-blue-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Führen Sie ein Trading-Tagebuch' : 'Keep a trading journal'}</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-blue-600 mt-1">•</span>
+                      <span className="text-blue-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Handeln Sie nicht emotional' : 'Don\'t trade emotionally'}</span>
                     </li>
                   </ul>
@@ -445,12 +445,12 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
             {/* Series Navigation */}
             <div className="card bg-gradient-to-br from-gray-100 to-white mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {locale === 'de' ? '📖 Diese Serie:' : '📖 This Series:'}
+                {locale === 'de' ? 'Diese Serie:' : 'This Series:'}
               </h3>
               <div className="space-y-3">
                 <div className="bg-white rounded-lg p-4 border-2 border-blue-500">
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl">✓</span>
+                    
                     <div>
                       <div className="font-bold text-gray-900">
                         {locale === 'de' ? 'Teil 1: Grundlagen (Dieser Artikel)' : 'Part 1: Basics (This Article)'}
@@ -464,7 +464,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                 <Link href={`/${locale}/blog/options-cfds-teil-2`}>
                   <div className="bg-white rounded-lg p-4 border-2 border-gray-300 hover:border-blue-500 transition-colors cursor-pointer">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl">→</span>
+                      
                       <div>
                         <div className="font-bold text-gray-900">
                           {locale === 'de' ? 'Teil 2: Warum handeln?' : 'Part 2: Why Trade?'}
@@ -479,7 +479,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                 <Link href={`/${locale}/blog/options-cfds-teil-3`}>
                   <div className="bg-white rounded-lg p-4 border-2 border-gray-300 hover:border-blue-500 transition-colors cursor-pointer">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl">→</span>
+                      
                       <div>
                         <div className="font-bold text-gray-900">
                           {locale === 'de' ? 'Teil 3: Spekulation & Hedging' : 'Part 3: Speculation & Hedging'}
@@ -497,7 +497,7 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
             {/* Final CTA */}
             <div className="card bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-700 text-white">
               <div className="text-center">
-                <div className="text-5xl mb-4">🚀</div>
+                <svg className="w-16 h-16 text-primary-600 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 <h3 className="text-3xl font-bold mb-4">
                   {locale === 'de'
                     ? 'Starten Sie jetzt mit Options CFDs!'
@@ -514,12 +514,12 @@ export default function OptionsCFDsPart1Page({ params: { locale } }: { params: {
                   rel="noopener noreferrer"
                   className="inline-block px-10 py-5 bg-white text-blue-700 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
                 >
-                  {locale === 'de' ? '✨ Kostenloses Konto eröffnen' : '✨ Open Free Account'}
+                  {locale === 'de' ? 'Kostenloses Konto eröffnen' : 'Open Free Account'}
                 </a>
                 <p className="text-blue-200 text-sm mt-4">
                   {locale === 'de'
-                    ? '⚡ In nur 2 Minuten startklar | 💯 Über 2.9M zufriedene Trader weltweit'
-                    : '⚡ Ready in just 2 minutes | 💯 Over 2.9M satisfied traders worldwide'}
+                    ? 'In nur 2 Minuten startklar | Über 2.9M zufriedene Trader weltweit'
+                    : 'Ready in just 2 minutes | Over 2.9M satisfied traders worldwide'}
                 </p>
               </div>
             </div>

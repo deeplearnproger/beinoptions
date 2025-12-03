@@ -81,7 +81,7 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="text-3xl mb-3">📈</div>
+                  <svg className="w-10 h-10 text-green-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {locale === 'de' ? 'Hebelwirkung' : 'Leverage'}
                   </h3>
@@ -93,7 +93,7 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
                 </div>
 
                 <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="text-3xl mb-3">🛡️</div>
+                  <svg className="w-10 h-10 text-green-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {locale === 'de' ? 'Risikomanagement' : 'Risk Management'}
                   </h3>
@@ -105,7 +105,7 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
                 </div>
 
                 <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="text-3xl mb-3">💰</div>
+                  <svg className="w-10 h-10 text-blue-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {locale === 'de' ? 'Einnahmen generieren' : 'Generate Income'}
                   </h3>
@@ -117,7 +117,7 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
                 </div>
 
                 <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="text-3xl mb-3">🎯</div>
+                  <svg className="w-10 h-10 text-purple-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     {locale === 'de' ? 'Flexibilität' : 'Flexibility'}
                   </h3>
@@ -135,8 +135,8 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-4">
                   {locale === 'de'
-                    ? '🚀 Bereit für Options Trading?'
-                    : '🚀 Ready for Options Trading?'}
+                    ? 'Bereit für Options Trading?'
+                    : 'Ready for Options Trading?'}
                 </h3>
                 <p className="text-primary-100 mb-6 text-lg">
                   {locale === 'de'
@@ -149,7 +149,7 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
                   rel="noopener noreferrer"
                   className="inline-block px-8 py-4 bg-white text-primary-700 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg"
                 >
-                  {locale === 'de' ? 'Kostenloses Konto eröffnen →' : 'Open Free Account →'}
+                  {locale === 'de' ? 'Kostenloses Konto eröffnen ' : 'Open Free Account '}
                 </a>
               </div>
             </div>
@@ -216,7 +216,7 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
               <div className="space-y-6">
                 <div className="bg-white rounded-lg p-6 border-2 border-blue-200">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl">📊</div>
+                    <svg className="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
                         {locale === 'de' ? 'Covered Call' : 'Covered Call'}
@@ -236,7 +236,7 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
 
                 <div className="bg-white rounded-lg p-6 border-2 border-green-200">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl">🛡️</div>
+                    <svg className="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
                         {locale === 'de' ? 'Protective Put' : 'Protective Put'}
@@ -256,7 +256,7 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
 
                 <div className="bg-white rounded-lg p-6 border-2 border-purple-200">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl">⚡</div>
+                    <svg className="w-12 h-12 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
                         {locale === 'de' ? 'Long Straddle' : 'Long Straddle'}
@@ -276,7 +276,7 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
 
                 <div className="bg-white rounded-lg p-6 border-2 border-orange-200">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl">🎯</div>
+                    <svg className="w-12 h-12 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
                         {locale === 'de' ? 'Iron Condor' : 'Iron Condor'}
@@ -301,8 +301,8 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-4">
                   {locale === 'de'
-                    ? '💡 Professionelles Trading beginnt hier'
-                    : '💡 Professional Trading Starts Here'}
+                    ? 'Professionelles Trading beginnt hier'
+                    : 'Professional Trading Starts Here'}
                 </h3>
                 <p className="text-emerald-100 mb-6 text-lg">
                   {locale === 'de'
@@ -316,7 +316,7 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
                     rel="noopener noreferrer"
                     className="px-8 py-4 bg-white text-emerald-700 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg"
                   >
-                    {locale === 'de' ? 'Jetzt Konto eröffnen →' : 'Open Account Now →'}
+                    {locale === 'de' ? 'Jetzt Konto eröffnen ' : 'Open Account Now '}
                   </a>
                 </div>
               </div>
@@ -330,7 +330,7 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
 
               <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
                 <div className="flex items-start gap-3">
-                  <div className="text-2xl">⚠️</div>
+                  <svg className="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-2">
                       {locale === 'de' ? 'Wichtig zu beachten:' : 'Important to Note:'}
@@ -347,24 +347,24 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span className="text-xl">✅</span>
+                    <svg className="w-6 h-6 text-green-600 inline-block" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                     {locale === 'de' ? 'Best Practices' : 'Best Practices'}
                   </h4>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-primary-600 mt-1">•</span>
+                      <span className="text-primary-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Definieren Sie Ihr Risiko vor jedem Trade' : 'Define your risk before each trade'}</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-primary-600 mt-1">•</span>
+                      <span className="text-primary-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Verwenden Sie Stop-Loss-Orders' : 'Use stop-loss orders'}</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-primary-600 mt-1">•</span>
+                      <span className="text-primary-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Diversifizieren Sie Ihr Portfolio' : 'Diversify your portfolio'}</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-primary-600 mt-1">•</span>
+                      <span className="text-primary-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Handeln Sie nur Strategien, die Sie verstehen' : 'Only trade strategies you understand'}</span>
                     </li>
                   </ul>
@@ -372,24 +372,24 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
 
                 <div className="bg-gray-50 rounded-lg p-6">
                   <h4 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span className="text-xl">❌</span>
+                    <svg className="w-6 h-6 text-red-600 inline-block" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" /></svg>
                     {locale === 'de' ? 'Häufige Fehler' : 'Common Mistakes'}
                   </h4>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start gap-2">
-                      <span className="text-red-600 mt-1">•</span>
+                      <span className="text-red-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Zu großes Risiko pro Trade' : 'Too much risk per trade'}</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-red-600 mt-1">•</span>
+                      <span className="text-red-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Optionen bis zum Verfall halten' : 'Holding options until expiration'}</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-red-600 mt-1">•</span>
+                      <span className="text-red-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Komplexe Strategien ohne Verständnis' : 'Complex strategies without understanding'}</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-red-600 mt-1">•</span>
+                      <span className="text-red-600 mt-1">-</span>
                       <span>{locale === 'de' ? 'Emotionales Trading' : 'Emotional trading'}</span>
                     </li>
                   </ul>
@@ -473,7 +473,7 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
             {/* Final CTA */}
             <div className="card bg-gradient-to-br from-primary-600 via-primary-700 to-indigo-700 text-white">
               <div className="text-center">
-                <div className="text-5xl mb-4">🚀</div>
+                <svg className="w-16 h-16 text-primary-600 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 <h3 className="text-3xl font-bold mb-4">
                   {locale === 'de'
                     ? 'Starten Sie jetzt Ihre Trading-Karriere!'
@@ -490,12 +490,12 @@ export default function OptionsTradingGuidePage({ params: { locale } }: { params
                   rel="noopener noreferrer"
                   className="inline-block px-10 py-5 bg-white text-primary-700 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
                 >
-                  {locale === 'de' ? '✨ Kostenloses Konto eröffnen' : '✨ Open Free Account'}
+                  {locale === 'de' ? 'Kostenloses Konto eröffnen' : 'Open Free Account'}
                 </a>
                 <p className="text-primary-200 text-sm mt-4">
                   {locale === 'de'
-                    ? '⚡ In nur 2 Minuten startklar | 💯 Über 2.9M zufriedene Trader weltweit'
-                    : '⚡ Ready in just 2 minutes | 💯 Over 2.9M satisfied traders worldwide'}
+                    ? 'In nur 2 Minuten startklar | Über 2.9M zufriedene Trader weltweit'
+                    : 'Ready in just 2 minutes | Over 2.9M satisfied traders worldwide'}
                 </p>
               </div>
             </div>

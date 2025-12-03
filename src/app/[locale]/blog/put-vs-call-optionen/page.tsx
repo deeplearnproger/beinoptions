@@ -107,7 +107,7 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
               </div>
 
               <h4 className="font-semibold text-lg text-gray-900 mb-2">
-                {locale === 'de' ? '✅ Vorteile von Call-Optionen:' : '✅ Advantages of Call Options:'}
+                {locale === 'de' ? 'Vorteile von Call-Optionen:' : 'Advantages of Call Options:'}
               </h4>
               <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-700">
                 <li>{locale === 'de' ? 'Unbegrenztes Gewinnpotenzial (theoretisch)' : 'Unlimited profit potential (theoretically)'}</li>
@@ -150,7 +150,7 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
               </div>
 
               <h4 className="font-semibold text-lg text-gray-900 mb-2">
-                {locale === 'de' ? '✅ Vorteile von Put-Optionen:' : '✅ Advantages of Put Options:'}
+                {locale === 'de' ? 'Vorteile von Put-Optionen:' : 'Advantages of Put Options:'}
               </h4>
               <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-700">
                 <li>{locale === 'de' ? 'Profitieren von fallenden Märkten' : 'Profit from falling markets'}</li>
@@ -254,12 +254,15 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
                 href="https://libertex.com/de/signup"
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="inline-block bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+                className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl"
               >
-                {locale === 'de' ? '🎯 Jetzt kostenlos registrieren bei Libertex' : '🎯 Register for free at Libertex now'}
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {locale === 'de' ? 'Jetzt kostenlos registrieren bei Libertex' : 'Register for free at Libertex now'}
               </a>
               <p className="text-sm text-blue-200 mt-4">
-                {locale === 'de' ? '✓ Nur 100€ Mindesteinlage • ✓ CySEC reguliert • ✓ 3 Millionen Nutzer weltweit' : '✓ Only €100 minimum deposit • ✓ CySEC regulated • ✓ 3 million users worldwide'}
+                {locale === 'de' ? 'Nur 100€ Mindesteinlage - CySEC reguliert - 3 Millionen Nutzer weltweit' : 'Only €100 minimum deposit - CySEC regulated - 3 million users worldwide'}
               </p>
             </div>
 
@@ -279,15 +282,15 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
                   </h4>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
-                      <span className="text-green-600 mr-2">→</span>
+                      <span className="text-green-600 mr-2">▸</span>
                       <span>{locale === 'de' ? 'Sie erwarten steigende Kurse' : 'You expect rising prices'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-green-600 mr-2">→</span>
+                      <span className="text-green-600 mr-2">▸</span>
                       <span>{locale === 'de' ? 'Sie von einem Durchbruch profitieren wollen' : 'You want to profit from a breakout'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-green-600 mr-2">→</span>
+                      <span className="text-green-600 mr-2">▸</span>
                       <span>{locale === 'de' ? 'Sie Hebelwirkung für Long-Positionen nutzen möchten' : 'You want to use leverage for long positions'}</span>
                     </li>
                   </ul>
@@ -299,15 +302,15 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
                   </h4>
                   <ul className="space-y-2 text-gray-700">
                     <li className="flex items-start">
-                      <span className="text-red-600 mr-2">→</span>
+                      <span className="text-red-600 mr-2">▸</span>
                       <span>{locale === 'de' ? 'Sie erwarten fallende Kurse' : 'You expect falling prices'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-red-600 mr-2">→</span>
+                      <span className="text-red-600 mr-2">▸</span>
                       <span>{locale === 'de' ? 'Sie Ihr Portfolio absichern wollen' : 'You want to hedge your portfolio'}</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-red-600 mr-2">→</span>
+                      <span className="text-red-600 mr-2">▸</span>
                       <span>{locale === 'de' ? 'Sie von Marktkrisen profitieren möchten' : 'You want to profit from market crises'}</span>
                     </li>
                   </ul>
@@ -325,15 +328,15 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">
-                  <span className="text-yellow-600 mr-2 text-xl">•</span>
+                  <span className="text-yellow-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Zeitverfall:' : 'Time Decay:'}</strong> {locale === 'de' ? 'Optionen verlieren mit der Zeit an Wert (Theta)' : 'Options lose value over time (Theta)'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-600 mr-2 text-xl">•</span>
+                  <span className="text-yellow-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Totalverlust möglich:' : 'Total loss possible:'}</strong> {locale === 'de' ? 'Sie können die gesamte Prämie verlieren' : 'You can lose the entire premium'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-yellow-600 mr-2 text-xl">•</span>
+                  <span className="text-yellow-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Volatilität:' : 'Volatility:'}</strong> {locale === 'de' ? 'Hohe Schwankungen können Ihre Position beeinflussen' : 'High fluctuations can affect your position'}</span>
                 </li>
               </ul>
@@ -358,7 +361,7 @@ export default function PutVsCallPost({ params: { locale } }: { params: { locale
                 rel="noopener noreferrer sponsored"
                 className="inline-block bg-white text-primary-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-xl"
               >
-                {locale === 'de' ? '→ Jetzt bei Libertex registrieren' : '→ Register at Libertex now'}
+                {locale === 'de' ? 'Jetzt bei Libertex registrieren' : 'Register at Libertex now'}
               </a>
             </div>
 

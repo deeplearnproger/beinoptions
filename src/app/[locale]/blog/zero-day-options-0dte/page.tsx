@@ -237,7 +237,7 @@ export default function ZeroDayOptionsPost({ params: { locale } }: { params: { l
                 {locale === 'de' ? 'Jetzt kostenlos registrieren bei Libertex' : 'Register for free at Libertex now'}
               </a>
               <p className="text-sm text-blue-200 mt-4">
-                {locale === 'de' ? '✓ Nur 100€ Mindesteinlage • ✓ 3 Millionen Nutzer weltweit' : '✓ Only €100 minimum deposit • ✓ 3 million users worldwide'}
+                {locale === 'de' ? 'Nur 100€ Mindesteinlage - 3 Millionen Nutzer weltweit' : 'Only €100 minimum deposit - 3 million users worldwide'}
               </p>
             </div>
 
@@ -251,19 +251,19 @@ export default function ZeroDayOptionsPost({ params: { locale } }: { params: { l
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Extremer Zeitverfall:' : 'Extreme Time Decay:'}</strong> {locale === 'de' ? 'Der gesamte Theta-Verfall passiert innerhalb von Stunden' : 'The entire Theta decay happens within hours'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Hohes Totalverlustrisiko:' : 'High Total Loss Risk:'}</strong> {locale === 'de' ? 'Kleine Fehleinschätzungen können zum Totalverlust führen' : 'Small misjudgments can lead to total loss'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Liquiditätsrisiko:' : 'Liquidity Risk:'}</strong> {locale === 'de' ? 'Nicht alle Strikes haben ausreichende Liquidität' : 'Not all strikes have sufficient liquidity'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Nur für Erfahrene:' : 'For Experienced Only:'}</strong> {locale === 'de' ? '0DTE-Trading erfordert fundierte Kenntnisse und Erfahrung' : '0DTE trading requires solid knowledge and experience'}</span>
                 </li>
               </ul>

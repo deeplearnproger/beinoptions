@@ -254,7 +254,7 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
                       : 'Buy Call AND Put with same strike. Profit from large movements in both directions.'}
                   </p>
                   <div className="text-xs text-green-700">
-                    ✓ {locale === 'de' ? 'Gut bei hoher erwarteter Volatilität' : 'Good for high expected volatility'}
+                    {locale === 'de' ? 'Gut bei hoher erwarteter Volatilität' : 'Good for high expected volatility'}
                   </div>
                 </div>
 
@@ -271,7 +271,7 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
                       : 'Hedge your Bitcoin position with Put options. Protection against further price losses.'}
                   </p>
                   <div className="text-xs text-blue-700">
-                    ✓ {locale === 'de' ? 'Portfolio-Absicherung' : 'Portfolio hedging'}
+                    {locale === 'de' ? 'Portfolio-Absicherung' : 'Portfolio hedging'}
                   </div>
                 </div>
 
@@ -288,7 +288,7 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
                       : 'Buy a Put, sell a Put with lower strike. Limits costs and profit.'}
                   </p>
                   <div className="text-xs text-purple-700">
-                    ✓ {locale === 'de' ? 'Bearish, aber kosteneffizient' : 'Bearish but cost-efficient'}
+                    {locale === 'de' ? 'Bearish, aber kosteneffizient' : 'Bearish but cost-efficient'}
                   </div>
                 </div>
 
@@ -305,7 +305,7 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
                       : 'Sell Puts when IV is high. Profit from IV crush. For experienced traders only!'}
                   </p>
                   <div className="text-xs text-orange-700">
-                    ⚠️ {locale === 'de' ? 'Hohes Risiko' : 'High risk'}
+                    {locale === 'de' ? 'Hohes Risiko' : 'High risk'}
                   </div>
                 </div>
               </div>
@@ -357,7 +357,7 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
                 {locale === 'de' ? 'Jetzt kostenlos registrieren bei Libertex' : 'Register for free at Libertex now'}
               </a>
               <p className="text-sm text-blue-200 mt-4">
-                {locale === 'de' ? '✓ Nur 100€ Mindesteinlage • ✓ Über 70 Kryptowährungen' : '✓ Only €100 minimum deposit • ✓ Over 70 cryptocurrencies'}
+                {locale === 'de' ? 'Nur 100€ Mindesteinlage - Über 70 Kryptowährungen' : 'Only €100 minimum deposit - Over 70 cryptocurrencies'}
               </p>
             </div>
 
@@ -371,19 +371,19 @@ export default function BitcoinOptionsVolatilityPost({ params: { locale } }: { p
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Extreme Volatilität:' : 'Extreme Volatility:'}</strong> {locale === 'de' ? 'Kryptomärkte sind wesentlich volatiler als traditionelle Märkte' : 'Crypto markets are much more volatile than traditional markets'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Totalverlustrisiko:' : 'Total Loss Risk:'}</strong> {locale === 'de' ? 'Der komplette Einsatz kann verloren gehen' : 'The entire investment can be lost'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Liquiditätsrisiken:' : 'Liquidity Risks:'}</strong> {locale === 'de' ? 'In volatilen Phasen kann die Liquidität stark sinken' : 'In volatile phases, liquidity can drop significantly'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Nur für Erfahrene:' : 'For Experienced Only:'}</strong> {locale === 'de' ? 'Krypto-Derivate sind nur für sehr erfahrene Trader geeignet' : 'Crypto derivatives are only suitable for very experienced traders'}</span>
                 </li>
               </ul>

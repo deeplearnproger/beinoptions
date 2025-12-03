@@ -157,7 +157,7 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white rounded-lg p-5 shadow">
-                  <div className="text-3xl mb-3 text-center">📈</div>
+                  <svg className="w-10 h-10 text-green-600 mb-3 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                   <h4 className="font-bold text-gray-900 mb-2 text-center">
                     {locale === 'de' ? 'Mehr Risikoappetit' : 'Higher Risk Appetite'}
                   </h4>
@@ -168,7 +168,7 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
                   </p>
                 </div>
                 <div className="bg-white rounded-lg p-5 shadow">
-                  <div className="text-3xl mb-3 text-center">💰</div>
+                  <svg className="w-10 h-10 text-green-600 mb-3 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                   <h4 className="font-bold text-gray-900 mb-2 text-center">
                     {locale === 'de' ? 'Niedrigeren Prämien' : 'Lower Premiums'}
                   </h4>
@@ -179,7 +179,7 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
                   </p>
                 </div>
                 <div className="bg-white rounded-lg p-5 shadow">
-                  <div className="text-3xl mb-3 text-center">🚀</div>
+                  <svg className="w-10 h-10 text-blue-600 mb-3 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                   <h4 className="font-bold text-gray-900 mb-2 text-center">
                     {locale === 'de' ? 'Höheren Aktienkursen' : 'Higher Stock Prices'}
                   </h4>
@@ -251,7 +251,7 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
                 <div className="border-2 border-purple-200 rounded-b-lg p-6">
                   <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded mb-4">
                     <p className="text-gray-700 text-sm mb-0">
-                      <strong>⚠️ {locale === 'de' ? 'Wichtiger Hinweis:' : 'Important Note:'}</strong> {locale === 'de' ? 'Nach Fed-Entscheidungen kann die IV schnell fallen. Vermeiden Sie den Kauf teurer Optionen kurz vor FOMC-Meetings!' : 'After Fed decisions, IV can drop quickly. Avoid buying expensive options shortly before FOMC meetings!'}
+                      <strong>{locale === 'de' ? 'Wichtiger Hinweis:' : 'Important Note:'}</strong> {locale === 'de' ? 'Nach Fed-Entscheidungen kann die IV schnell fallen. Vermeiden Sie den Kauf teurer Optionen kurz vor FOMC-Meetings!' : 'After Fed decisions, IV can drop quickly. Avoid buying expensive options shortly before FOMC meetings!'}
                     </p>
                   </div>
                   <div className="space-y-3">
@@ -370,7 +370,7 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
 
             {/* CTA Section */}
             <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white mb-8 text-center">
-              <div className="text-5xl mb-4">📈</div>
+              <svg className="w-16 h-16 text-green-600 mb-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
               <h3 className="text-3xl font-heading font-bold mb-4">
                 {locale === 'de' ? 'Bereit für professionelles Options-Trading?' : 'Ready for Professional Options Trading?'}
               </h3>
@@ -414,7 +414,7 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
                 {locale === 'de' ? 'Jetzt kostenlos registrieren bei Libertex' : 'Register for free at Libertex now'}
               </a>
               <p className="text-sm text-blue-200 mt-4">
-                {locale === 'de' ? '✓ Nur 100€ Mindesteinlage • ✓ 3 Millionen Nutzer' : '✓ Only €100 minimum deposit • ✓ 3 million users'}
+                {locale === 'de' ? 'Nur 100€ Mindesteinlage - 3 Millionen Nutzer' : 'Only €100 minimum deposit - 3 million users'}
               </p>
             </div>
 
@@ -428,15 +428,15 @@ export default function FedRateCutOptionsPost({ params: { locale } }: { params: 
               </h2>
               <ul className="space-y-3 text-gray-700 text-lg">
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Keine Garantie:' : 'No Guarantee:'}</strong> {locale === 'de' ? 'Fed-Entscheidungen sind unvorhersehbar und können anders ausfallen als erwartet' : 'Fed decisions are unpredictable and may turn out differently than expected'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'IV-Crush-Risiko:' : 'IV Crush Risk:'}</strong> {locale === 'de' ? 'Optionen können auch bei richtiger Richtungswette Verluste machen, wenn IV stark fällt' : 'Options can lose money even with correct directional bets if IV drops sharply'}</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="text-red-600 mr-2 text-xl">•</span>
+                  <span className="text-red-600 mr-2 text-xl">▸</span>
                   <span><strong>{locale === 'de' ? 'Risikomanagement:' : 'Risk Management:'}</strong> {locale === 'de' ? 'Setzen Sie nie mehr als 2-5% Ihres Kapitals auf eine einzelne Position' : 'Never risk more than 2-5% of your capital on a single position'}</span>
                 </li>
               </ul>
