@@ -10,7 +10,10 @@
       "Bash(src/app/[locale]/blog/bitcoin-optionen-volatilitaet/page.tsx )",
       "Bash(src/app/[locale]/blog/optionen-einnahmen-strategien/page.tsx )",
       "Bash(src/app/[locale]/blog/fed-zinssenkung-optionen/page.tsx)",
-      "Bash(src/app/[locale]/blog/options-cfds-teil-2/page.tsx)"
+      "Bash(src/app/[locale]/blog/options-cfds-teil-2/page.tsx)",
+      "Bash(ls:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)"
     ],
     "deny": [],
     "ask": []
