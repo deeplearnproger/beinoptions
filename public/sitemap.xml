@@ -1,67 +1,389 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- Homepage -->
   <url>
     <loc>https://beinoptions.com/de</loc>
-    <lastmod>2025-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en"/>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://beinoptions.com/en</loc>
-    <lastmod>2025-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en"/>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Main Pages -->
+  <!-- Main Learning Pages - German -->
+  <url>
+    <loc>https://beinoptions.com/de/options-beginners-guide</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/options-beginners-guide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/options-beginners-guide"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://beinoptions.com/de/basics</loc>
-    <lastmod>2025-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/basics"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/basics"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/greeks-explained</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/greeks-explained"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/greeks-explained"/>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://beinoptions.com/de/strategies</loc>
-    <lastmod>2025-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/strategies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/strategies"/>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://beinoptions.com/de/brokers</loc>
-    <lastmod>2025-11-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://beinoptions.com/de/glossary</loc>
-    <lastmod>2025-11-27</lastmod>
+    <loc>https://beinoptions.com/de/options-mistakes</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/options-mistakes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/options-mistakes"/>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://beinoptions.com/de/taxes</loc>
-    <lastmod>2025-11-27</lastmod>
+    <loc>https://beinoptions.com/de/crypto-options</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/crypto-options"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/crypto-options"/>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://beinoptions.com/de/crypto-options</loc>
-    <lastmod>2025-11-27</lastmod>
+    <loc>https://beinoptions.com/de/risks</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/risks"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/risks"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/regulation</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/regulation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/regulation"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/taxes</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/taxes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/taxes"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Main Learning Pages - English -->
+  <url>
+    <loc>https://beinoptions.com/en/options-beginners-guide</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/options-beginners-guide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/options-beginners-guide"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/basics</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/basics"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/basics"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/greeks-explained</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/greeks-explained"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/greeks-explained"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/strategies</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/strategies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/strategies"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/options-mistakes</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/options-mistakes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/options-mistakes"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/crypto-options</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/crypto-options"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/crypto-options"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/risks</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/risks"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/risks"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/regulation</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/regulation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/regulation"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/taxes</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/taxes"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/taxes"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tools Pages -->
+  <url>
+    <loc>https://beinoptions.com/de/tools</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/tools"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/tools</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/tools"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/tools"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/tools/payoff</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/tools/payoff"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/tools/payoff"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/tools/payoff</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/tools/payoff"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/tools/payoff"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/tools/pl</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/tools/pl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/tools/pl"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/tools/pl</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/tools/pl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/tools/pl"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/tools/iv</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/tools/iv"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/tools/iv"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/tools/iv</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/tools/iv"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/tools/iv"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Brokers -->
+  <url>
+    <loc>https://beinoptions.com/de/brokers</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/brokers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/brokers"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/brokers</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/brokers"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/brokers"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/brokers/libertex</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/brokers/avatrade</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/brokers/plus500</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/brokers/interactive-brokers</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/brokers/degiro</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/brokers/trading212</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/brokers/consorsbank</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/brokers/lynx-broker</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/brokers/traderepublic</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Resources -->
+  <url>
+    <loc>https://beinoptions.com/de/glossary</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/glossary"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/glossary"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/glossary</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/glossary"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/glossary"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/tutorials</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/tutorials"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/tutorials"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/tutorials</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/tutorials"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/tutorials"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/faq</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/faq"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/faq</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/faq"/>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://beinoptions.com/de/about</loc>
-    <lastmod>2025-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/about"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/about"/>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Blog Posts -->
+  <!-- Blog -->
   <url>
     <loc>https://beinoptions.com/de/blog</loc>
-    <lastmod>2025-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/blog"/>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/blog"/>
+    <lastmod>2025-12-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -102,41 +424,23 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Broker Pages -->
+  <!-- Legal Pages -->
   <url>
-    <loc>https://beinoptions.com/de/brokers/libertex</loc>
+    <loc>https://beinoptions.com/de/impressum</loc>
     <lastmod>2025-11-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://beinoptions.com/de/brokers/avatrade</loc>
+    <loc>https://beinoptions.com/de/privacy</loc>
     <lastmod>2025-11-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://beinoptions.com/de/brokers/plus500</loc>
+    <loc>https://beinoptions.com/de/disclaimer</loc>
     <lastmod>2025-11-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://beinoptions.com/de/brokers/interactive-brokers</loc>
-    <lastmod>2025-11-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://beinoptions.com/de/brokers/degiro</loc>
-    <lastmod>2025-11-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://beinoptions.com/de/brokers/trading212</loc>
-    <lastmod>2025-11-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
