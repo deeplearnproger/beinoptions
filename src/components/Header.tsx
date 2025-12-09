@@ -170,7 +170,7 @@ export default function Header() {
 
             {/* Learn Dropdown */}
             <div
-              className="relative"
+              className="relative group"
               onMouseEnter={() => setLearnDropdownOpen(true)}
               onMouseLeave={() => setLearnDropdownOpen(false)}
             >
@@ -188,24 +188,28 @@ export default function Header() {
 
               {/* Dropdown Menu */}
               {learnDropdownOpen && (
-                <div className="absolute left-0 top-full mt-2 w-72 bg-white rounded-xl shadow-xl border border-gray-200 py-2 animate-fadeIn">
-                  {learnItems.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-start gap-3 px-4 py-3 hover:bg-primary-50 transition-colors group"
-                    >
-                      <div className="flex-shrink-0 text-gray-400 group-hover:text-primary-600 transition-colors mt-0.5">
-                        {item.icon}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-sm font-medium text-gray-900 group-hover:text-primary-600 transition-colors">
-                          {item.name}
+                <div className="absolute left-0 top-full pt-2 w-72">
+                  {/* Invisible bridge to prevent gap */}
+                  <div className="absolute -top-2 left-0 right-0 h-4"></div>
+                  <div className="bg-white rounded-xl shadow-xl border border-gray-200 py-2 animate-fadeIn max-h-[70vh] overflow-y-auto">
+                    {learnItems.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="flex items-start gap-3 px-4 py-3 hover:bg-primary-50 transition-colors group/item"
+                      >
+                        <div className="flex-shrink-0 text-gray-400 group-hover/item:text-primary-600 transition-colors mt-0.5">
+                          {item.icon}
                         </div>
-                        <div className="text-xs text-gray-500 mt-0.5">{item.description}</div>
-                      </div>
-                    </Link>
-                  ))}
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-medium text-gray-900 group-hover/item:text-primary-600 transition-colors">
+                            {item.name}
+                          </div>
+                          <div className="text-xs text-gray-500 mt-0.5">{item.description}</div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -231,7 +235,7 @@ export default function Header() {
 
             {/* Resources Dropdown */}
             <div
-              className="relative"
+              className="relative group"
               onMouseEnter={() => setResourcesDropdownOpen(true)}
               onMouseLeave={() => setResourcesDropdownOpen(false)}
             >
@@ -249,24 +253,28 @@ export default function Header() {
 
               {/* Dropdown Menu */}
               {resourcesDropdownOpen && (
-                <div className="absolute left-0 top-full mt-2 w-72 bg-white rounded-xl shadow-xl border border-gray-200 py-2 animate-fadeIn">
-                  {resourcesItems.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-start gap-3 px-4 py-3 hover:bg-primary-50 transition-colors group"
-                    >
-                      <div className="flex-shrink-0 text-gray-400 group-hover:text-primary-600 transition-colors mt-0.5">
-                        {item.icon}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="text-sm font-medium text-gray-900 group-hover:text-primary-600 transition-colors">
-                          {item.name}
+                <div className="absolute right-0 top-full pt-2 w-72">
+                  {/* Invisible bridge to prevent gap */}
+                  <div className="absolute -top-2 left-0 right-0 h-4"></div>
+                  <div className="bg-white rounded-xl shadow-xl border border-gray-200 py-2 animate-fadeIn">
+                    {resourcesItems.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="flex items-start gap-3 px-4 py-3 hover:bg-primary-50 transition-colors group/item"
+                      >
+                        <div className="flex-shrink-0 text-gray-400 group-hover/item:text-primary-600 transition-colors mt-0.5">
+                          {item.icon}
                         </div>
-                        <div className="text-xs text-gray-500 mt-0.5">{item.description}</div>
-                      </div>
-                    </Link>
-                  ))}
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-medium text-gray-900 group-hover/item:text-primary-600 transition-colors">
+                            {item.name}
+                          </div>
+                          <div className="text-xs text-gray-500 mt-0.5">{item.description}</div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
