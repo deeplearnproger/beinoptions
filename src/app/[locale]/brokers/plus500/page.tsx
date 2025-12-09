@@ -99,8 +99,8 @@ export default function Plus500Page({ params: { locale } }: { params: { locale: 
         : 'Pay only the spread, no additional fees',
     },
     {
-      iconBg: 'from-blue-50 to-indigo-100',
-      iconColor: 'text-indigo-600',
+      iconBg: 'from-blue-50 to-cyan-100',
+      iconColor: 'text-blue-600',
       iconPath: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z',
       title: locale === 'de' ? 'Börsennotiert' : 'Publicly Traded',
       description: locale === 'de'
@@ -108,8 +108,8 @@ export default function Plus500Page({ params: { locale } }: { params: { locale: 
         : 'LSE-listed with highest transparency standards',
     },
     {
-      iconBg: 'from-purple-50 to-violet-100',
-      iconColor: 'text-purple-600',
+      iconBg: 'from-cyan-50 to-blue-100',
+      iconColor: 'text-cyan-600',
       iconPath: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
       title: locale === 'de' ? 'Mobile Excellence' : 'Mobile Excellence',
       description: locale === 'de'
@@ -165,7 +165,7 @@ export default function Plus500Page({ params: { locale } }: { params: { locale: 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-700 via-cyan-600 to-teal-600 text-white py-20">
+      <div className="bg-gradient-to-br from-blue-700 via-blue-600 to-cyan-600 text-white py-20">
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <Link
@@ -181,6 +181,9 @@ export default function Plus500Page({ params: { locale } }: { params: { locale: 
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-4">
+                  <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl p-3">
+                    <img src="/logos/plus500.jpg" alt="Plus500 Logo" className="w-full h-full object-contain" />
+                  </div>
                   <div>
                     <h1 className="text-4xl md:text-5xl font-heading font-bold mb-2">Plus500</h1>
                     <div className="flex items-center gap-3">
@@ -348,7 +351,7 @@ export default function Plus500Page({ params: { locale } }: { params: { locale: 
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                      <svg className="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-cyan-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {locale === 'de' ? 'Transparenz' : 'Transparency'}

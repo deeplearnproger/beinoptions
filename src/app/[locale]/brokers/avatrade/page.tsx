@@ -170,6 +170,9 @@ export default function AvaTradeP({ params: { locale } }: { params: { locale: st
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-4">
+                  <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl p-3">
+                    <img src="/logos/avatrade.png" alt="AvaTrade Logo" className="w-full h-full object-contain" />
+                  </div>
                   <div>
                     <h1 className="text-4xl md:text-5xl font-heading font-bold mb-2">AvaTrade</h1>
                     <div className="flex items-center gap-3">

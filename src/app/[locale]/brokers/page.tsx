@@ -2,154 +2,177 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function BrokersPage({ params: { locale } }: { params: { locale: string } }) {
   const t = useTranslations('brokers');
   const [sortBy, setSortBy] = useState<'rating' | 'fees'>('rating');
+  const isGerman = locale === 'de';
 
   const brokers = [
     {
       name: 'Libertex',
       slug: 'libertex',
+      logo: '/logos/libertex.png',
       regulation: 'CySEC',
-      fees: locale === 'de' ? 'Nur Kommission, Zero-Spread' : 'Commission only, Zero-Spread',
+      fees: isGerman ? 'Nur Kommission, Zero-Spread' : 'Commission only, Zero-Spread',
       minDeposit: '100 €',
-      options: locale === 'de' ? 'Ja, über 300 CFDs' : 'Yes, over 300 CFDs',
+      options: isGerman ? 'Ja, über 300 CFDs' : 'Yes, over 300 CFDs',
       rating: 4.9,
       reviews: 2847,
-      pros: locale === 'de'
+      badge: isGerman ? 'Top Empfehlung' : 'Top Pick',
+      badgeColor: 'from-amber-400 to-orange-500',
+      pros: isGerman
         ? ['Zero-Spread Trading', 'Sehr schnelle Ausführung', 'Benutzerfreundliche Plattform', 'Über 350 Instrumente', 'MT4/MT5 + eigene Plattform', 'Social Trading', '40+ internationale Auszeichnungen']
         : ['Zero-Spread Trading', 'Fast execution', 'User-friendly platform', 'Over 350 instruments', 'MT4/MT5 + proprietary platform', 'Social Trading', '40+ international awards'],
-      cons: locale === 'de'
+      cons: isGerman
         ? ['Keine BaFin-Regulierung', 'Hauptsächlich CFD-Handel']
         : ['No BaFin regulation', 'Mainly CFD trading'],
     },
     {
       name: 'AvaTrade',
       slug: 'avatrade',
+      logo: '/logos/avatrade.png',
       regulation: 'CBI, ASIC, FSA, FSCA',
-      fees: locale === 'de' ? 'Variable Spreads, keine Kommission' : 'Variable spreads, no commission',
+      fees: isGerman ? 'Variable Spreads, keine Kommission' : 'Variable spreads, no commission',
       minDeposit: '100 €',
-      options: locale === 'de' ? 'Ja, AvaOptions Plattform' : 'Yes, AvaOptions platform',
+      options: isGerman ? 'Ja, AvaOptions Plattform' : 'Yes, AvaOptions platform',
       rating: 4.7,
       reviews: 1534,
-      pros: locale === 'de'
+      badge: isGerman ? 'Beste Options-Plattform' : 'Best Options Platform',
+      badgeColor: 'from-violet-500 to-purple-600',
+      pros: isGerman
         ? ['Dedizierte AvaOptions Plattform', 'MT4/MT5 + AvaTradeGO', 'Multi-reguliert weltweit', 'Umfangreiche Bildungsressourcen', 'Copy Trading verfügbar', 'Deutscher Kundenservice']
         : ['Dedicated AvaOptions platform', 'MT4/MT5 + AvaTradeGO', 'Multi-regulated globally', 'Comprehensive educational resources', 'Copy trading available', 'German customer service'],
-      cons: locale === 'de'
+      cons: isGerman
         ? ['Inaktivitätsgebühr nach 3 Monaten', 'Keine BaFin-Regulierung', 'Spreads höher als bei ECN-Brokern']
         : ['Inactivity fee after 3 months', 'No BaFin regulation', 'Spreads higher than ECN brokers'],
     },
     {
       name: 'Plus500',
       slug: 'plus500',
+      logo: '/logos/plus500.jpg',
       regulation: 'FCA, CySEC, ASIC, FMA',
-      fees: locale === 'de' ? 'Spread-basiert, keine Kommission' : 'Spread-based, no commission',
+      fees: isGerman ? 'Spread-basiert, keine Kommission' : 'Spread-based, no commission',
       minDeposit: '100 €',
-      options: locale === 'de' ? 'Ja, Options CFDs' : 'Yes, Options CFDs',
+      options: isGerman ? 'Ja, Options CFDs' : 'Yes, Options CFDs',
       rating: 4.5,
       reviews: 2156,
-      pros: locale === 'de'
+      badge: isGerman ? 'Börsennotiert' : 'Public Company',
+      badgeColor: 'from-blue-500 to-indigo-600',
+      pros: isGerman
         ? ['Sehr benutzerfreundliche Plattform', 'Börsennotiertes Unternehmen', 'Keine Kommissionen', 'Gute mobile App', 'Schnelle Kontoeröffnung', 'Deutscher Support']
         : ['Very user-friendly platform', 'Publicly traded company', 'No commissions', 'Good mobile app', 'Fast account opening', 'German support'],
-      cons: locale === 'de'
+      cons: isGerman
         ? ['Nur CFD-Handel', 'Keine MT4/MT5', 'Inaktivitätsgebühr', 'Begrenzte Research-Tools']
         : ['CFD trading only', 'No MT4/MT5', 'Inactivity fee', 'Limited research tools'],
     },
     {
       name: 'Trading212',
       slug: 'trading212',
+      logo: '/logos/trading212.png',
       regulation: 'FCA, CySEC',
-      fees: locale === 'de' ? '0€ Kommission, enge Spreads' : '€0 commission, tight spreads',
+      fees: isGerman ? '0€ Kommission, enge Spreads' : '€0 commission, tight spreads',
       minDeposit: '1 €',
-      options: locale === 'de' ? 'Options coming soon' : 'Options coming soon',
+      options: isGerman ? 'Options coming soon' : 'Options coming soon',
       rating: 4.6,
       reviews: 1892,
-      pros: locale === 'de'
+      pros: isGerman
         ? ['Keine Kommissionen', 'Sehr niedrige Mindesteinlage', 'Benutzerfreundliche App', 'Fractional Shares', 'Keine versteckten Gebühren', 'Deutscher Support']
         : ['No commissions', 'Very low minimum deposit', 'User-friendly app', 'Fractional shares', 'No hidden fees', 'German support'],
-      cons: locale === 'de'
+      cons: isGerman
         ? ['Keine BaFin-Regulierung', 'Begrenzte Research-Tools', 'Keine MT4/MT5', 'Optionen noch nicht verfügbar']
         : ['No BaFin regulation', 'Limited research tools', 'No MT4/MT5', 'Options not yet available'],
     },
     {
       name: 'Interactive Brokers',
       slug: 'interactive-brokers',
+      logo: '/logos/interactive-brokers.webp',
       regulation: 'BaFin, SEC, FCA',
-      fees: locale === 'de' ? 'ab 0,65 € pro Kontrakt' : 'from €0.65 per contract',
+      fees: isGerman ? 'ab 0,65 € pro Kontrakt' : 'from €0.65 per contract',
       minDeposit: '0 €',
-      options: locale === 'de' ? 'Ja, umfangreich' : 'Yes, comprehensive',
+      options: isGerman ? 'Ja, umfangreich' : 'Yes, comprehensive',
       rating: 4.8,
       reviews: 1823,
-      pros: locale === 'de'
+      badge: isGerman ? 'Für Profis' : 'For Professionals',
+      badgeColor: 'from-emerald-500 to-teal-600',
+      pros: isGerman
         ? ['Niedrige Gebühren', 'Große Produktauswahl', 'Professionelle Plattform']
         : ['Low fees', 'Wide product range', 'Professional platform'],
-      cons: locale === 'de'
+      cons: isGerman
         ? ['Komplex für Anfänger', 'Inaktivitätsgebühr unter 100.000$']
         : ['Complex for beginners', 'Inactivity fee under $100,000'],
     },
     {
       name: 'TradeRepublic',
       slug: 'traderepublic',
+      logo: '/logos/traderepublic.png',
       regulation: 'BaFin',
-      fees: locale === 'de' ? '1 € pro Trade' : '€1 per trade',
+      fees: isGerman ? '1 € pro Trade' : '€1 per trade',
       minDeposit: '0 €',
-      options: locale === 'de' ? 'Eingeschränkt' : 'Limited',
+      options: isGerman ? 'Eingeschränkt' : 'Limited',
       rating: 4.2,
       reviews: 892,
-      pros: locale === 'de'
+      badge: isGerman ? 'Deutsche App' : 'German App',
+      badgeColor: 'from-red-500 to-rose-600',
+      pros: isGerman
         ? ['Sehr einfache Bedienung', 'Deutsche App', 'Kostenlose Depotführung']
         : ['Very easy to use', 'German app', 'Free custody'],
-      cons: locale === 'de'
+      cons: isGerman
         ? ['Begrenzte Optionsauswahl', 'Nur mobil optimiert', 'Keine komplexen Strategien']
         : ['Limited options selection', 'Mobile only', 'No complex strategies'],
     },
     {
       name: 'Consorsbank',
       slug: 'consorsbank',
+      logo: '/logos/consorsbank.png',
       regulation: 'BaFin',
-      fees: locale === 'de' ? 'ab 4,95 € + 0,25% vom Ordervolumen' : 'from €4.95 + 0.25% of order volume',
+      fees: isGerman ? 'ab 4,95 € + 0,25% vom Ordervolumen' : 'from €4.95 + 0.25% of order volume',
       minDeposit: '0 €',
-      options: locale === 'de' ? 'Ja, gut' : 'Yes, good',
+      options: isGerman ? 'Ja, gut' : 'Yes, good',
       rating: 4.3,
       reviews: 654,
-      pros: locale === 'de'
+      badge: isGerman ? 'Deutsche Bank' : 'German Bank',
+      badgeColor: 'from-slate-600 to-slate-800',
+      pros: isGerman
         ? ['Deutsche Bank', 'Umfangreicher Support', 'Trader-Ausbildung']
         : ['German bank', 'Comprehensive support', 'Trader education'],
-      cons: locale === 'de'
+      cons: isGerman
         ? ['Höhere Gebühren', 'Weniger moderne Plattform']
         : ['Higher fees', 'Less modern platform'],
     },
     {
       name: 'LYNX Broker',
       slug: 'lynx-broker',
+      logo: '/logos/lynx.jpeg',
       regulation: 'BaFin, AFM',
-      fees: locale === 'de' ? 'ab 2 € pro Kontrakt' : 'from €2 per contract',
+      fees: isGerman ? 'ab 2 € pro Kontrakt' : 'from €2 per contract',
       minDeposit: '0 €',
-      options: locale === 'de' ? 'Ja, umfangreich' : 'Yes, comprehensive',
+      options: isGerman ? 'Ja, umfangreich' : 'Yes, comprehensive',
       rating: 4.5,
       reviews: 1247,
-      pros: locale === 'de'
+      pros: isGerman
         ? ['Deutscher Support', 'Interactive Brokers Technologie', 'Gute Bildungsressourcen']
         : ['German support', 'Interactive Brokers technology', 'Good educational resources'],
-      cons: locale === 'de'
+      cons: isGerman
         ? ['Höhere Gebühren als IB direkt', 'Mindestaktivität erforderlich']
         : ['Higher fees than IB direct', 'Minimum activity required'],
     },
     {
       name: 'DEGIRO',
       slug: 'degiro',
+      logo: '/logos/degiro.svg',
       regulation: 'BaFin, AFM',
-      fees: locale === 'de' ? 'ab 0,75 € pro Kontrakt' : 'from €0.75 per contract',
+      fees: isGerman ? 'ab 0,75 € pro Kontrakt' : 'from €0.75 per contract',
       minDeposit: '0 €',
-      options: locale === 'de' ? 'Ja, mittel' : 'Yes, medium',
+      options: isGerman ? 'Ja, mittel' : 'Yes, medium',
       rating: 4.1,
       reviews: 567,
-      pros: locale === 'de'
+      pros: isGerman
         ? ['Niedrige Gebühren', 'Benutzerfreundlich', 'EU-reguliert']
         : ['Low fees', 'User-friendly', 'EU-regulated'],
-      cons: locale === 'de'
+      cons: isGerman
         ? ['Begrenzte Optionsstrategien', 'Kein telefonischer Support']
         : ['Limited options strategies', 'No phone support'],
     },
@@ -160,278 +183,453 @@ export default function BrokersPage({ params: { locale } }: { params: { locale: 
     return a.name.localeCompare(b.name);
   });
 
+  const stats = [
+    { value: '9', label: isGerman ? 'Broker verglichen' : 'Brokers Compared' },
+    { value: '100+', label: isGerman ? 'Stunden Recherche' : 'Hours of Research' },
+    { value: '2025', label: isGerman ? 'Aktualisiert' : 'Updated' },
+  ];
+
   return (
     <>
-      <div className="bg-gradient-to-br from-primary-50 to-white py-16">
-        <div className="container-custom">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}></div>
+        </div>
+
+        <div className="container-custom py-16 md:py-24 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="section-title mb-6">{t('title')}</h1>
-            <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              {locale === 'de'
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 px-4 py-2 rounded-full text-sm font-medium mb-8">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              {isGerman ? 'Unabhängiger Vergleich' : 'Independent Comparison'}
+            </div>
+
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              {isGerman ? 'Die besten Broker' : 'Best Brokers'}
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
+                {isGerman ? 'für Optionshandel' : 'for Options Trading'}
+              </span>
+            </h1>
+
+            <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+              {isGerman
                 ? 'Finden Sie den passenden Broker für Ihren Optionshandel in Deutschland. Vergleichen Sie Gebühren, Regulierung und Leistungen.'
                 : 'Find the right broker for your options trading in Germany. Compare fees, regulation and services.'}
             </p>
-          </div>
-        </div>
-      </div>
 
-      <div className="container-custom py-16">
-        <div className="max-w-7xl mx-auto">
-          {/* Sort Controls */}
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-heading font-bold text-gray-900">
-              {t('comparison')}
-            </h2>
-            <div className="flex items-center space-x-2">
-              <span className="text-sm text-gray-600">
-                {locale === 'de' ? 'Sortieren nach:' : 'Sort by:'}
-              </span>
-              <button
-                onClick={() => setSortBy('rating')}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  sortBy === 'rating'
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {t('rating')}
-              </button>
-              <button
-                onClick={() => setSortBy('fees')}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  sortBy === 'fees'
-                    ? 'bg-primary-600 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {t('fees')}
-              </button>
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</div>
+                  <div className="text-xs md:text-sm text-slate-400">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
+        </div>
 
-          {/* Broker Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12 items-stretch">
-            {sortedBrokers.map((broker, index) => (
-              <Link
-                key={index}
-                href={broker.slug ? `/${locale}/brokers/${broker.slug}` : '#'}
-                className={`card hover:shadow-xl transition-all transform hover:-translate-y-1 flex flex-col ${
-                  broker.slug ? 'cursor-pointer' : 'cursor-default'
-                }`}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-heading font-bold text-gray-900 mb-1">
-                      {broker.name}
-                    </h3>
-                    {broker.reviews && (
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <div className="flex items-center">
-                          {[...Array(5)].map((_, i) => (
-                            <svg
-                              key={i}
-                              className={`w-4 h-4 ${
-                                i < Math.floor(broker.rating) ? 'text-yellow-400' : 'text-gray-300'
-                              }`}
-                              fill="currentColor"
-                              viewBox="0 0 20 20"
-                            >
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                            </svg>
-                          ))}
+        {/* Wave Divider */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+          </svg>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <div className="bg-white py-16">
+        <div className="container-custom">
+          <div className="max-w-7xl mx-auto">
+            {/* Sort Controls */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                  {t('comparison')}
+                </h2>
+                <p className="text-gray-600 mt-1">
+                  {isGerman ? '9 Broker im Detail verglichen' : '9 brokers compared in detail'}
+                </p>
+              </div>
+              <div className="flex items-center gap-2 bg-gray-100 p-1 rounded-xl">
+                <button
+                  onClick={() => setSortBy('rating')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                    sortBy === 'rating'
+                      ? 'bg-white text-gray-900 shadow-sm'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                    {t('rating')}
+                  </span>
+                </button>
+                <button
+                  onClick={() => setSortBy('fees')}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                    sortBy === 'fees'
+                      ? 'bg-white text-gray-900 shadow-sm'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+                    </svg>
+                    {t('fees')}
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            {/* Broker Cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+              {sortedBrokers.map((broker, index) => (
+                <Link
+                  key={index}
+                  href={broker.slug ? `/${locale}/brokers/${broker.slug}` : '#'}
+                  className={`group relative rounded-2xl transition-all duration-300 overflow-hidden bg-white ${
+                    broker.slug ? 'cursor-pointer' : 'cursor-default'
+                  } ${
+                    index === 0 && sortBy === 'rating'
+                      ? 'ring-2 ring-amber-400 shadow-lg shadow-amber-100 hover:shadow-xl hover:shadow-amber-200'
+                      : index === 1 && sortBy === 'rating'
+                      ? 'ring-2 ring-slate-400 shadow-lg shadow-slate-100 hover:shadow-xl hover:shadow-slate-200'
+                      : 'border border-gray-200 hover:border-gray-300 hover:shadow-xl'
+                  }`}
+                >
+                  {/* Top Badge */}
+                  {broker.badge && (
+                    <div className={`absolute top-0 right-0 bg-gradient-to-r ${broker.badgeColor} text-white text-xs font-bold px-4 py-1.5 rounded-bl-xl shadow-lg`}>
+                      {broker.badge}
+                    </div>
+                  )}
+
+                  {/* Rank Badge for Top 3 */}
+                  {index < 3 && sortBy === 'rating' && (
+                    <div className={`absolute top-4 left-4 w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold shadow-lg ${
+                      index === 0 ? 'bg-gradient-to-br from-amber-400 to-amber-600 ring-2 ring-amber-300/50' :
+                      index === 1 ? 'bg-gradient-to-br from-slate-400 to-slate-600 ring-2 ring-slate-300/50' :
+                      'bg-gradient-to-br from-orange-400 to-orange-600'
+                    }`}>
+                      <span className="text-lg">#{index + 1}</span>
+                    </div>
+                  )}
+
+                  <div className="p-6 relative">
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-5">
+                      <div className={`flex items-center gap-4 ${index < 3 && sortBy === 'rating' ? 'ml-14' : ''}`}>
+                        {/* Logo */}
+                        {broker.logo && (
+                          <div className="w-16 h-16 bg-white rounded-xl border border-gray-100 flex items-center justify-center p-2 flex-shrink-0 shadow-sm">
+                            <Image
+                              src={broker.logo}
+                              alt={`${broker.name} logo`}
+                              width={48}
+                              height={48}
+                              className="object-contain max-h-12"
+                            />
+                          </div>
+                        )}
+                        <div>
+                          <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
+                            {broker.name}
+                          </h3>
+                          {broker.reviews && (
+                            <div className="flex items-center gap-2 mt-1">
+                              <div className="flex items-center">
+                                {[...Array(5)].map((_, i) => (
+                                  <svg
+                                    key={i}
+                                    className={`w-4 h-4 ${
+                                      i < Math.floor(broker.rating) ? 'text-amber-400' : 'text-gray-200'
+                                    }`}
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                  >
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                  </svg>
+                                ))}
+                              </div>
+                              <span className="text-sm font-semibold text-gray-700">{broker.rating}</span>
+                              <span className="text-sm text-gray-400">({broker.reviews.toLocaleString()})</span>
+                            </div>
+                          )}
                         </div>
-                        <span className="font-medium">{broker.rating}</span>
-                        <span className="text-gray-400">•</span>
-                        <span>{broker.reviews.toLocaleString()} {locale === 'de' ? 'Bewertungen' : 'reviews'}</span>
+                      </div>
+                      <div className="flex flex-col items-end">
+                        <div className="text-3xl font-bold text-gray-900">{broker.rating}</div>
+                        <div className="text-xs text-gray-500 uppercase tracking-wide">{isGerman ? 'Bewertung' : 'Rating'}</div>
+                      </div>
+                    </div>
+
+                    {/* Info Grid */}
+                    <div className="grid grid-cols-2 gap-3 mb-5">
+                      <div className="bg-gray-50 rounded-xl p-3">
+                        <div className="text-xs text-gray-500 mb-1">{t('regulation')}</div>
+                        <div className="font-semibold text-gray-900 text-sm">{broker.regulation}</div>
+                      </div>
+                      <div className="bg-gray-50 rounded-xl p-3">
+                        <div className="text-xs text-gray-500 mb-1">{t('min_deposit')}</div>
+                        <div className="font-semibold text-gray-900 text-sm">{broker.minDeposit}</div>
+                      </div>
+                      <div className="bg-gray-50 rounded-xl p-3">
+                        <div className="text-xs text-gray-500 mb-1">{t('fees')}</div>
+                        <div className="font-semibold text-gray-900 text-sm">{broker.fees}</div>
+                      </div>
+                      <div className="bg-gray-50 rounded-xl p-3">
+                        <div className="text-xs text-gray-500 mb-1">{t('options')}</div>
+                        <div className="font-semibold text-gray-900 text-sm">{broker.options}</div>
+                      </div>
+                    </div>
+
+                    {/* Pros & Cons */}
+                    <div className="grid grid-cols-2 gap-4 mb-5">
+                      <div>
+                        <h4 className="text-xs font-bold text-emerald-600 uppercase tracking-wide mb-2 flex items-center gap-1">
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                          </svg>
+                          {isGerman ? 'Vorteile' : 'Pros'}
+                        </h4>
+                        <ul className="space-y-1">
+                          {broker.pros.slice(0, 3).map((pro, i) => (
+                            <li key={i} className="text-xs text-gray-600 flex items-start gap-1.5">
+                              <span className="text-emerald-500 mt-0.5">+</span>
+                              <span>{pro}</span>
+                            </li>
+                          ))}
+                          {broker.pros.length > 3 && (
+                            <li className="text-xs text-gray-400">+{broker.pros.length - 3} {isGerman ? 'weitere' : 'more'}</li>
+                          )}
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="text-xs font-bold text-red-500 uppercase tracking-wide mb-2 flex items-center gap-1">
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                          </svg>
+                          {isGerman ? 'Nachteile' : 'Cons'}
+                        </h4>
+                        <ul className="space-y-1">
+                          {broker.cons.map((con, i) => (
+                            <li key={i} className="text-xs text-gray-600 flex items-start gap-1.5">
+                              <span className="text-red-400 mt-0.5">-</span>
+                              <span>{con}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* CTA */}
+                    {broker.slug && (
+                      <div className="pt-4 border-t border-gray-100">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-gray-500">
+                            {isGerman ? 'Vollständige Bewertung lesen' : 'Read full review'}
+                          </span>
+                          <div className="flex items-center gap-2 text-primary-600 font-semibold group-hover:gap-3 transition-all">
+                            <span>{isGerman ? 'Details' : 'Details'}</span>
+                            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     )}
                   </div>
-                  <div className="flex items-center bg-gradient-to-br from-yellow-400 to-yellow-500 text-white px-4 py-2 rounded-full shadow-lg">
-                    <span className="text-xl mr-1">★</span>
-                    <span className="font-bold text-lg">{broker.rating}</span>
+                </Link>
+              ))}
+            </div>
+
+            {/* Selection Guide */}
+            <section className="mb-16">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  {isGerman ? 'So wählen Sie den richtigen Broker' : 'How to Choose the Right Broker'}
+                </h2>
+                <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                  {isGerman
+                    ? 'Der beste Broker hängt von Ihren individuellen Anforderungen ab.'
+                    : 'The best broker depends on your individual requirements.'}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-100 hover:shadow-lg transition-shadow">
+                  <div className="w-14 h-14 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-amber-200">
+                    <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
                   </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    {isGerman ? 'Top-Empfehlung' : 'Top Recommendation'}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    {isGerman
+                      ? 'Zero-Spread Trading, schnelle Ausführung und moderne Plattform mit über 350 Instrumenten.'
+                      : 'Zero-Spread Trading, fast execution and modern platform with over 350 instruments.'}
+                  </p>
+                  <Link href={`/${locale}/brokers/libertex`} className="inline-flex items-center text-sm font-semibold text-amber-600 hover:text-amber-700">
+                    Libertex <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+                  </Link>
                 </div>
 
-                <div className="space-y-3 mb-4">
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">{t('regulation')}:</span>
-                    <span className="font-medium text-gray-900">{broker.regulation}</span>
+                <div className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-6 border border-emerald-100 hover:shadow-lg transition-shadow">
+                  <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-emerald-200">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
                   </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">{t('fees')}:</span>
-                    <span className="font-medium text-gray-900">{broker.fees}</span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">{t('min_deposit')}:</span>
-                    <span className="font-medium text-gray-900">{broker.minDeposit}</span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-600">{t('options')}:</span>
-                    <span className="font-medium text-gray-900">{broker.options}</span>
-                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    {isGerman ? 'Für Anfänger' : 'For Beginners'}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    {isGerman
+                      ? 'Einfache Bedienung, guter Support und Bildungsressourcen sind wichtiger als die niedrigsten Gebühren.'
+                      : 'Easy operation, good support and educational resources are more important than the lowest fees.'}
+                  </p>
+                  <span className="inline-flex items-center text-sm font-semibold text-emerald-600">
+                    TradeRepublic, Consorsbank
+                  </span>
                 </div>
 
-                <div className="pt-4 border-t border-gray-200 flex-grow">
-                  <div className="mb-3">
-                    <h4 className="text-sm font-semibold text-financial-green mb-2">
-                      {locale === 'de' ? 'Vorteile:' : 'Pros:'}
-                    </h4>
-                    <ul className="space-y-1">
-                      {broker.pros.map((pro, i) => (
-                        <li key={i} className="text-sm text-gray-700 flex items-start">
-                          <span className="text-financial-green mr-2">+</span>
-                          {pro}
-                        </li>
-                      ))}
-                    </ul>
+                <div className="bg-gradient-to-br from-indigo-50 to-violet-50 rounded-2xl p-6 border border-indigo-100 hover:shadow-lg transition-shadow">
+                  <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-indigo-200">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-financial-red mb-2">
-                      {locale === 'de' ? 'Nachteile:' : 'Cons:'}
-                    </h4>
-                    <ul className="space-y-1">
-                      {broker.cons.map((con, i) => (
-                        <li key={i} className="text-sm text-gray-700 flex items-start">
-                          <span className="text-financial-red mr-2">-</span>
-                          {con}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    {isGerman ? 'Für Aktive Trader' : 'For Active Traders'}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    {isGerman
+                      ? 'Niedrige Gebühren, professionelle Tools und große Produktauswahl sind entscheidend.'
+                      : 'Low fees, professional tools and wide product range are crucial.'}
+                  </p>
+                  <span className="inline-flex items-center text-sm font-semibold text-indigo-600">
+                    Libertex, Interactive Brokers, LYNX
+                  </span>
                 </div>
 
-                {broker.slug && (
-                  <div className="mt-auto pt-4 border-t border-gray-200">
-                    <div className="flex items-center justify-center gap-2 text-primary-600 font-semibold group-hover:gap-3 transition-all">
-                      <span>{locale === 'de' ? 'Details ansehen' : 'View Details'}</span>
-                      <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <div className="bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl p-6 border border-slate-200 hover:shadow-lg transition-shadow">
+                  <div className="w-14 h-14 bg-gradient-to-br from-slate-600 to-slate-800 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-slate-300">
+                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    {isGerman ? 'Für Sicherheitsbewusste' : 'For Security-Conscious'}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    {isGerman
+                      ? 'BaFin-Regulierung, deutsche Bank und umfassende Einlagensicherung stehen im Vordergrund.'
+                      : 'BaFin regulation, German bank and comprehensive deposit insurance are paramount.'}
+                  </p>
+                  <span className="inline-flex items-center text-sm font-semibold text-slate-600">
+                    Consorsbank, LYNX Broker
+                  </span>
+                </div>
+              </div>
+            </section>
+
+            {/* Important Notes */}
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {isGerman ? 'Wichtige Hinweise' : 'Important Notes'}
+                  </h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                    </div>
-                  </div>
-                )}
-              </Link>
-            ))}
-          </div>
-
-          {/* Selection Guide */}
-          <div className="bg-gradient-to-br from-primary-50 to-blue-50 rounded-2xl p-8">
-            <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">
-              {locale === 'de' ? 'So wählen Sie den richtigen Broker' : 'How to Choose the Right Broker'}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-50 to-amber-100 rounded-lg flex items-center justify-center mb-3">
-                  <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
+                      <span>
+                        {isGerman
+                          ? 'Alle genannten Broker sind reguliert und bieten Einlagensicherung'
+                          : 'All mentioned brokers are regulated and offer deposit insurance'}
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>
+                        {isGerman
+                          ? 'Gebühren können sich ändern - prüfen Sie die aktuellen Konditionen auf der Broker-Website'
+                          : 'Fees may change - check current conditions on the broker website'}
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <svg className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span>
+                        {isGerman
+                          ? 'Für Optionshandel ist oft eine Eignungsprüfung erforderlich'
+                          : 'Options trading often requires a suitability assessment'}
+                      </span>
+                    </li>
+                  </ul>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {locale === 'de' ? 'Top-Empfehlung' : 'Top Recommendation'}
-                </h3>
-                <p className="text-sm text-gray-700 mb-3">
-                  {locale === 'de'
-                    ? 'Zero-Spread Trading, schnelle Ausführung und moderne Plattform mit über 350 Instrumenten. Ideal für alle Trader-Level.'
-                    : 'Zero-Spread Trading, fast execution and modern platform with over 350 instruments. Ideal for all trader levels.'}
-                </p>
-                <p className="text-sm font-medium text-primary-600">
-                  → Libertex
-                </p>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg flex items-center justify-center mb-3">
-                  <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {locale === 'de' ? 'Für Anfänger' : 'For Beginners'}
-                </h3>
-                <p className="text-sm text-gray-700 mb-3">
-                  {locale === 'de'
-                    ? 'Einfache Bedienung, guter Support und Bildungsressourcen sind wichtiger als die niedrigsten Gebühren.'
-                    : 'Easy operation, good support and educational resources are more important than the lowest fees.'}
-                </p>
-                <p className="text-sm font-medium text-primary-600">
-                  → TradeRepublic, Consorsbank
-                </p>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg flex items-center justify-center mb-3">
-                  <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {locale === 'de' ? 'Für Aktive Trader' : 'For Active Traders'}
-                </h3>
-                <p className="text-sm text-gray-700 mb-3">
-                  {locale === 'de'
-                    ? 'Niedrige Gebühren, professionelle Tools und große Produktauswahl sind entscheidend.'
-                    : 'Low fees, professional tools and wide product range are crucial.'}
-                </p>
-                <p className="text-sm font-medium text-primary-600">
-                  → Libertex, Interactive Brokers, LYNX
-                </p>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg flex items-center justify-center mb-3">
-                  <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  {locale === 'de' ? 'Für Sicherheitsbewusste' : 'For Security-Conscious'}
-                </h3>
-                <p className="text-sm text-gray-700 mb-3">
-                  {locale === 'de'
-                    ? 'BaFin-Regulierung, deutsche Bank und umfassende Einlagensicherung stehen im Vordergrund.'
-                    : 'BaFin regulation, German bank and comprehensive deposit insurance are paramount.'}
-                </p>
-                <p className="text-sm font-medium text-primary-600">
-                  → Consorsbank, LYNX Broker
-                </p>
               </div>
             </div>
           </div>
-
-          {/* Important Notes */}
-          <div className="mt-12 bg-blue-50 border-l-4 border-primary-600 rounded-lg p-6">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">
-              {locale === 'de' ? 'Wichtige Hinweise' : 'Important Notes'}
-            </h3>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex items-start">
-                <span className="text-primary-600 mr-2">•</span>
-                <span>
-                  {locale === 'de'
-                    ? 'Alle genannten Broker sind reguliert und bieten Einlagensicherung'
-                    : 'All mentioned brokers are regulated and offer deposit insurance'}
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary-600 mr-2">•</span>
-                <span>
-                  {locale === 'de'
-                    ? 'Gebühren können sich ändern - prüfen Sie die aktuellen Konditionen auf der Broker-Website'
-                    : 'Fees may change - check current conditions on the broker website'}
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary-600 mr-2">•</span>
-                <span>
-                  {locale === 'de'
-                    ? 'Für Optionshandel ist oft eine Eignungsprüfung erforderlich'
-                    : 'Options trading often requires a suitability assessment'}
-                </span>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-r from-primary-600 to-primary-700 py-16">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {isGerman
+                ? 'Bereit zum Trading?'
+                : 'Ready to Start Trading?'}
+            </h2>
+            <p className="text-xl opacity-90 mb-8">
+              {isGerman
+                ? 'Lernen Sie die Grundlagen des Optionshandels, bevor Sie Ihr Konto eröffnen.'
+                : 'Learn the basics of options trading before opening your account.'}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href={`/${locale}/options-beginners-guide`}
+                className="bg-white text-primary-700 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
+              >
+                {isGerman ? 'Anfänger-Guide lesen' : 'Read Beginners Guide'}
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+              <Link
+                href={`/${locale}/strategies`}
+                className="bg-primary-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-primary-400 transition-colors"
+              >
+                {isGerman ? 'Strategien entdecken' : 'Discover Strategies'}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -99,8 +99,8 @@ export default function Trading212Page({ params: { locale } }: { params: { local
         : '€0 commission on all trades, only tight spreads',
     },
     {
-      iconBg: 'from-blue-50 to-indigo-100',
-      iconColor: 'text-indigo-600',
+      iconBg: 'from-cyan-50 to-teal-100',
+      iconColor: 'text-cyan-600',
       iconPath: 'M13 10V3L4 14h7v7l9-11h-7z',
       title: locale === 'de' ? 'Nur 1€ Mindesteinlage' : 'Only €1 Minimum Deposit',
       description: locale === 'de'
@@ -108,8 +108,8 @@ export default function Trading212Page({ params: { locale } }: { params: { local
         : 'Start with minimal capital - perfect for beginners',
     },
     {
-      iconBg: 'from-purple-50 to-violet-100',
-      iconColor: 'text-purple-600',
+      iconBg: 'from-teal-50 to-cyan-100',
+      iconColor: 'text-teal-600',
       iconPath: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
       title: locale === 'de' ? 'Top Mobile App' : 'Top Mobile App',
       description: locale === 'de'
@@ -165,7 +165,7 @@ export default function Trading212Page({ params: { locale } }: { params: { local
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white py-20">
+      <div className="bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-500 text-white py-20">
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <Link
@@ -181,6 +181,9 @@ export default function Trading212Page({ params: { locale } }: { params: { local
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
               <div className="flex-1">
                 <div className="flex items-center gap-4 mb-4">
+                  <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-xl p-3">
+                    <img src="/logos/trading212.png" alt="Trading212 Logo" className="w-full h-full object-contain" />
+                  </div>
                   <div>
                     <h1 className="text-4xl md:text-5xl font-heading font-bold mb-2">Trading212</h1>
                     <div className="flex items-center gap-3">
@@ -213,7 +216,7 @@ export default function Trading212Page({ params: { locale } }: { params: { local
 
               <div className="bg-white text-gray-900 rounded-2xl p-8 shadow-2xl min-w-[300px]">
                 <div className="text-center mb-6">
-                  <div className="text-6xl font-bold text-indigo-600 mb-2">{stats.trustScore}</div>
+                  <div className="text-6xl font-bold text-cyan-600 mb-2">{stats.trustScore}</div>
                   <div className="text-lg font-semibold text-gray-700">Trust Score</div>
                   <div className="text-sm text-gray-500">{locale === 'de' ? 'Sehr gut' : 'Very Good'}</div>
                 </div>
@@ -221,7 +224,7 @@ export default function Trading212Page({ params: { locale } }: { params: { local
                   href="https://www.trading212.com/de/cfd"
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="block w-full px-6 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-xl font-bold text-center hover:from-indigo-600 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
+                  className="block w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded-xl font-bold text-center hover:from-cyan-600 hover:to-teal-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -250,7 +253,7 @@ export default function Trading212Page({ params: { locale } }: { params: { local
                 onClick={() => setSelectedTab(tab)}
                 className={`px-6 py-4 font-semibold transition-colors border-b-2 whitespace-nowrap ${
                   selectedTab === tab
-                    ? 'text-indigo-600 border-indigo-600'
+                    ? 'text-cyan-600 border-cyan-600'
                     : 'text-gray-600 border-transparent hover:text-gray-900'
                 }`}
               >
@@ -315,7 +318,7 @@ export default function Trading212Page({ params: { locale } }: { params: { local
               </div>
 
               {/* Why Trading212 */}
-              <div className="card bg-gradient-to-br from-indigo-50 to-purple-50">
+              <div className="card bg-gradient-to-br from-cyan-50 to-teal-50">
                 <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">
                   {locale === 'de' ? 'Warum Trading212?' : 'Why Trading212?'}
                 </h2>
@@ -348,7 +351,7 @@ export default function Trading212Page({ params: { locale } }: { params: { local
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                      <svg className="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-5 h-5 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                       {locale === 'de' ? 'Transparenz' : 'Transparency'}
@@ -376,11 +379,11 @@ export default function Trading212Page({ params: { locale } }: { params: { local
               </div>
 
               {/* CTA */}
-              <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white text-center">
+              <div className="bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-500 rounded-2xl p-8 text-white text-center">
                 <h2 className="text-3xl font-heading font-bold mb-4">
                   {locale === 'de' ? 'Bereit zum Traden?' : 'Ready to Trade?'}
                 </h2>
-                <p className="text-xl mb-8 text-indigo-100">
+                <p className="text-xl mb-8 text-cyan-100">
                   {locale === 'de'
                     ? 'Starten Sie jetzt mit nur 1€ - keine Kommissionen, keine versteckten Gebühren'
                     : 'Start now with just €1 - no commissions, no hidden fees'}
@@ -389,11 +392,11 @@ export default function Trading212Page({ params: { locale } }: { params: { local
                   href="https://www.trading212.com/de/cfd"
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="inline-block px-8 py-4 bg-white text-indigo-600 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-xl"
+                  className="inline-block px-8 py-4 bg-white text-cyan-600 rounded-xl font-bold hover:bg-gray-100 transition-all shadow-xl"
                 >
                   {locale === 'de' ? 'Jetzt kostenlos registrieren' : 'Register for free now'}
                 </a>
-                <p className="text-sm text-indigo-100 mt-4">
+                <p className="text-sm text-cyan-100 mt-4">
                   {locale === 'de' ? '✓ Nur 1€ Mindesteinlage • ✓ 0€ Kommission • ✓ Deutscher Support' : '✓ Only €1 minimum deposit • ✓ €0 commission • ✓ German support'}
                 </p>
               </div>
