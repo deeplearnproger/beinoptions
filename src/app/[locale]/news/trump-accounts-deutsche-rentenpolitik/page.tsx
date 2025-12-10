@@ -310,7 +310,7 @@ export default function TrumpAccountsNewsPage({ params: { locale } }: { params: 
                     rel="noopener noreferrer"
                     className="text-primary-600 hover:text-primary-800 underline flex items-center gap-1"
                   >
-                    onvista.de: Kolumne von Stefan Riße - "Trump wird zum Vorbild für deutsche Rentenpolitik"
+                    onvista.de: Kolumne von Stefan Riße - &ldquo;Trump wird zum Vorbild für deutsche Rentenpolitik&rdquo;
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
@@ -324,7 +324,7 @@ export default function TrumpAccountsNewsPage({ params: { locale } }: { params: 
                     rel="noopener noreferrer"
                     className="text-primary-600 hover:text-primary-800 underline flex items-center gap-1"
                   >
-                    Handelsblatt: Kommentar - "Trump wird zum rentenpolitischen Vorbild für Deutschland"
+                    Handelsblatt: Kommentar - &ldquo;Trump wird zum rentenpolitischen Vorbild für Deutschland&rdquo;
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
