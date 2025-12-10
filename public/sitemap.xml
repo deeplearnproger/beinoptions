@@ -140,6 +140,30 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://beinoptions.com/de/risk-management</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/risk-management"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/risk-management"/>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/iv-guide</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/iv-guide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/iv-guide"/>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/learning-path</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/learning-path"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/learning-path"/>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://beinoptions.com/de/crypto-options</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/crypto-options"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/crypto-options"/>
@@ -289,6 +313,30 @@
     <loc>https://beinoptions.com/en/trading-journal</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/trading-journal"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/trading-journal"/>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/risk-management</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/risk-management"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/risk-management"/>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/iv-guide</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/iv-guide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/iv-guide"/>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/learning-path</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/learning-path"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/learning-path"/>
     <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

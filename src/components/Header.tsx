@@ -90,6 +90,12 @@ export default function Header() {
       title: locale === 'de' ? 'Praxis & Lernen' : 'Practice & Learning',
       items: [
         {
+          name: locale === 'de' ? 'Lernpfad' : 'Learning Path',
+          href: `/${locale}/learning-path`,
+          description: locale === 'de' ? '4-Wochen Plan' : '4-Week plan',
+          isMain: true,
+        },
+        {
           name: 'Paper Trading',
           href: `/${locale}/paper-trading`,
           description: locale === 'de' ? 'Risikofrei üben' : 'Practice risk-free',
@@ -104,16 +110,26 @@ export default function Header() {
           href: `/${locale}/options-mistakes`,
           description: locale === 'de' ? '10 Fehler vermeiden' : '10 mistakes to avoid',
         },
-        {
-          name: t('risks'),
-          href: `/${locale}/risks`,
-          description: locale === 'de' ? 'Risikomanagement' : 'Risk management',
-        },
       ],
     },
     {
-      title: locale === 'de' ? 'Wissen & Regulierung' : 'Knowledge & Regulation',
+      title: locale === 'de' ? 'Risiko & Wissen' : 'Risk & Knowledge',
       items: [
+        {
+          name: locale === 'de' ? 'Risikomanagement' : 'Risk Management',
+          href: `/${locale}/risk-management`,
+          description: locale === 'de' ? '8 goldene Regeln' : '8 golden rules',
+        },
+        {
+          name: 'IV Guide',
+          href: `/${locale}/iv-guide`,
+          description: locale === 'de' ? 'Implied Volatility' : 'Implied Volatility',
+        },
+        {
+          name: t('risks'),
+          href: `/${locale}/risks`,
+          description: locale === 'de' ? 'Risikohinweise' : 'Risk disclosure',
+        },
         {
           name: t('crypto_options'),
           href: `/${locale}/crypto-options`,
@@ -215,14 +231,14 @@ export default function Header() {
 
               {/* Mega Menu Dropdown */}
               {learnDropdownOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[900px]">
+                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2">
                   {/* Invisible bridge to prevent gap */}
                   <div className="absolute -top-2 left-0 right-0 h-4"></div>
-                  <div className="bg-white rounded-xl shadow-xl border border-gray-200 p-6 animate-fadeIn">
-                    <div className="grid grid-cols-5 gap-4">
+                  <div className="bg-white rounded-xl shadow-xl border border-gray-200 p-5 animate-fadeIn">
+                    <div className="flex gap-8">
                       {learnCategories.map((category) => (
-                        <div key={category.title}>
-                          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                        <div key={category.title} className="min-w-[150px]">
+                          <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3 whitespace-nowrap">
                             {category.title}
                           </h3>
                           <div className="space-y-1">
