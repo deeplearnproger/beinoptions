@@ -79,11 +79,26 @@ export default function Header() {
           href: `/${locale}/spreads-guide`,
           description: locale === 'de' ? 'Bull & Bear Spreads' : 'Bull & Bear Spreads',
         },
+        {
+          name: 'Butterfly',
+          href: `/${locale}/butterfly-strategy`,
+          description: locale === 'de' ? 'Fortgeschrittene Strategie' : 'Advanced strategy',
+        },
       ],
     },
     {
-      title: locale === 'de' ? 'Wissen & Risiko' : 'Knowledge & Risk',
+      title: locale === 'de' ? 'Praxis & Lernen' : 'Practice & Learning',
       items: [
+        {
+          name: 'Paper Trading',
+          href: `/${locale}/paper-trading`,
+          description: locale === 'de' ? 'Risikofrei üben' : 'Practice risk-free',
+        },
+        {
+          name: 'Trading Journal',
+          href: `/${locale}/trading-journal`,
+          description: locale === 'de' ? 'Erfolg dokumentieren' : 'Document success',
+        },
         {
           name: locale === 'de' ? 'Trading Fehler' : 'Trading Mistakes',
           href: `/${locale}/options-mistakes`,
@@ -94,6 +109,11 @@ export default function Header() {
           href: `/${locale}/risks`,
           description: locale === 'de' ? 'Risikomanagement' : 'Risk management',
         },
+      ],
+    },
+    {
+      title: locale === 'de' ? 'Wissen & Regulierung' : 'Knowledge & Regulation',
+      items: [
         {
           name: t('crypto_options'),
           href: `/${locale}/crypto-options`,
@@ -195,11 +215,11 @@ export default function Header() {
 
               {/* Mega Menu Dropdown */}
               {learnDropdownOpen && (
-                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[700px]">
+                <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[900px]">
                   {/* Invisible bridge to prevent gap */}
                   <div className="absolute -top-2 left-0 right-0 h-4"></div>
                   <div className="bg-white rounded-xl shadow-xl border border-gray-200 p-6 animate-fadeIn">
-                    <div className="grid grid-cols-3 gap-6">
+                    <div className="grid grid-cols-5 gap-4">
                       {learnCategories.map((category) => (
                         <div key={category.title}>
                           <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
