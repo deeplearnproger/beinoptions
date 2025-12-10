@@ -343,6 +343,16 @@ export default function Header() {
             >
               {t('blog')}
             </Link>
+
+            <Link
+              href={`/${locale}/news`}
+              className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md transition-all flex items-center gap-1"
+            >
+              {t('news')}
+              <span className="inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white bg-red-500 rounded-full">
+                {locale === 'de' ? 'Neu' : 'New'}
+              </span>
+            </Link>
           </div>
 
           {/* Language Switcher & Mobile Menu Button */}
@@ -454,6 +464,17 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('blog')}
+            </Link>
+
+            <Link
+              href={`/${locale}/news`}
+              className="flex items-center gap-2 px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 rounded-md transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('news')}
+              <span className="inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-white bg-red-500 rounded-full">
+                {locale === 'de' ? 'Neu' : 'New'}
+              </span>
             </Link>
           </div>
         )}

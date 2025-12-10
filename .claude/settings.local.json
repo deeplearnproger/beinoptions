@@ -14,7 +14,9 @@
       "Bash(ls:*)",
       "Bash(curl:*)",
       "Bash(pkill:*)",
-      "Bash(convert:*)"
+      "Bash(convert:*)",
+      "WebFetch(domain:www.onvista.de)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []
