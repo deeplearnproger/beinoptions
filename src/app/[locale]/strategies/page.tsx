@@ -73,8 +73,9 @@ export default function StrategiesPage({ params: { locale } }: { params: { local
       description: isGerman
         ? 'Verkaufen Sie Puts auf Aktien, die Sie gerne besitzen würden. Erhalten Sie Prämie während Sie auf einen guten Einstiegspreis warten.'
         : 'Sell puts on stocks you would like to own. Get paid while waiting for a good entry price.',
+      href: `/${locale}/cash-secured-put`,
       risk: isGerman ? 'Mittel' : 'Medium',
-      hasPage: false,
+      hasPage: true,
     },
     {
       title: 'Iron Condor',
@@ -88,8 +89,9 @@ export default function StrategiesPage({ params: { locale } }: { params: { local
       description: isGerman
         ? 'Verkaufen Sie eine Option und kaufen Sie eine günstigere als Schutz. Begrenzte Gewinne, begrenztes Risiko.'
         : 'Sell one option and buy a cheaper one for protection. Limited profit, limited risk.',
+      href: `/${locale}/spreads-guide`,
       risk: isGerman ? 'Niedrig-Mittel' : 'Low-Medium',
-      hasPage: false,
+      hasPage: true,
     },
   ];
 
@@ -97,34 +99,38 @@ export default function StrategiesPage({ params: { locale } }: { params: { local
     {
       title: 'Bull Call Spread',
       description: t('bull_spread_desc'),
+      href: `/${locale}/spreads-guide`,
       risk: isGerman ? 'Niedrig-Mittel' : 'Low-Medium',
       market: isGerman ? 'Bullish' : 'Bullish',
-      hasPage: false,
+      hasPage: true,
     },
     {
       title: 'Bear Put Spread',
       description: t('bear_spread_desc'),
+      href: `/${locale}/spreads-guide`,
       risk: isGerman ? 'Niedrig-Mittel' : 'Low-Medium',
       market: isGerman ? 'Bearish' : 'Bearish',
-      hasPage: false,
+      hasPage: true,
     },
     {
       title: 'Long Call',
       description: isGerman
         ? 'Kaufen Sie einen Call, wenn Sie erwarten, dass der Kurs steigt. Unbegrenztes Gewinnpotential, begrenztes Risiko.'
         : 'Buy a call when you expect the price to rise. Unlimited profit potential, limited risk.',
+      href: `/${locale}/long-call-put`,
       risk: isGerman ? 'Mittel' : 'Medium',
       market: isGerman ? 'Bullish' : 'Bullish',
-      hasPage: false,
+      hasPage: true,
     },
     {
       title: 'Long Put',
       description: isGerman
         ? 'Kaufen Sie einen Put, wenn Sie erwarten, dass der Kurs fällt. Profitieren Sie von fallenden Kursen.'
         : 'Buy a put when you expect the price to fall. Profit from falling prices.',
+      href: `/${locale}/long-call-put`,
       risk: isGerman ? 'Mittel' : 'Medium',
       market: isGerman ? 'Bearish' : 'Bearish',
-      hasPage: false,
+      hasPage: true,
     },
   ];
 
@@ -355,7 +361,10 @@ export default function StrategiesPage({ params: { locale } }: { params: { local
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {directionalStrategies.map((strategy, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 border border-gray-200">
+                <div
+                  key={index}
+                  className={`bg-white rounded-xl p-6 border border-gray-200 ${strategy.hasPage ? 'hover:border-blue-300 hover:shadow-md transition-all' : ''}`}
+                >
                   <div className="flex items-start justify-between mb-3">
                     <h3 className="text-lg font-bold text-gray-900">{strategy.title}</h3>
                     <div className="flex items-center gap-2">
@@ -369,9 +378,25 @@ export default function StrategiesPage({ params: { locale } }: { params: { local
                       <span className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded-full">
                         {strategy.risk}
                       </span>
+                      {strategy.hasPage && (
+                        <span className="text-xs px-2 py-1 bg-primary-100 text-primary-700 rounded-full">
+                          Guide
+                        </span>
+                      )}
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm">{strategy.description}</p>
+                  <p className="text-gray-600 text-sm mb-4">{strategy.description}</p>
+                  {strategy.hasPage && strategy.href && (
+                    <Link
+                      href={strategy.href}
+                      className="inline-flex items-center text-blue-600 text-sm font-medium hover:text-blue-700"
+                    >
+                      {isGerman ? 'Vollständiger Guide' : 'Full Guide'}
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>

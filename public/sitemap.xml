@@ -92,6 +92,30 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://beinoptions.com/de/cash-secured-put</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/cash-secured-put"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/cash-secured-put"/>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/long-call-put</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/long-call-put"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/long-call-put"/>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/de/spreads-guide</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/spreads-guide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/spreads-guide"/>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://beinoptions.com/de/crypto-options</loc>
     <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/crypto-options"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/crypto-options"/>
@@ -194,6 +218,30 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/iron-condor-strategy"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/iron-condor-strategy"/>
     <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/cash-secured-put</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/cash-secured-put"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/cash-secured-put"/>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/long-call-put</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/long-call-put"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/long-call-put"/>
+    <lastmod>2025-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://beinoptions.com/en/spreads-guide</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://beinoptions.com/de/spreads-guide"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beinoptions.com/en/spreads-guide"/>
+    <lastmod>2025-12-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
