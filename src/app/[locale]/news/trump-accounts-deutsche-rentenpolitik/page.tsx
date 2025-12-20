@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { generateMetadata as genMeta } from '@/components/seo/SEOHead';
+import Giscus from '@/components/Giscus';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   return genMeta({
@@ -438,6 +439,9 @@ export default function TrumpAccountsNewsPage({ params: { locale } }: { params: 
               </button>
             </div>
           </div>
+
+          {/* Giscus Comments */}
+          <Giscus />
         </div>
       </div>
 
