@@ -34,3 +34,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Claude Code settings (local)
+.claude/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Internal documentation (not for public)
+SETUP.md
+OPTIONS_TOOLKIT_*.md
+
+# Examples (development only)
+examples/
+__tests__/

@@ -1,8 +1,0 @@
-# Strategy: Iron Condor
-# Underlying Price: 100
-
-Leg,Type,Position,Quantity,Strike,Premium,Expiry (days)
-1,put,long,1,90,1.0,30
-2,put,short,1,95,2.5,30
-3,call,short,1,105,2.5,30
-4,call,long,1,110,1.0,30

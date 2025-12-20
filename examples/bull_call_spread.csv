@@ -1,6 +1,0 @@
-# Strategy: Bull Call Spread
-# Underlying Price: 100
-
-Leg,Type,Position,Quantity,Strike,Premium,Expiry (days)
-1,call,long,1,100,4.0,30
-2,call,short,1,110,1.5,30

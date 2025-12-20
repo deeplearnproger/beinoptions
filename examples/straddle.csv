@@ -1,6 +1,0 @@
-# Strategy: Long Straddle
-# Underlying Price: 100
-
-Leg,Type,Position,Quantity,Strike,Premium,Expiry (days)
-1,call,long,1,100,4.0,30
-2,put,long,1,100,4.0,30
