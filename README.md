@@ -4,7 +4,7 @@ A bilingual (German/English) educational platform about options trading, built w
 
 ## Live Demo
 
-[https://beinoption.de](https://beinoption.de)
+[https://beinoptions.com](https://beinoptions.com)
 
 ## Features
 
@@ -51,8 +51,8 @@ src/
 │   ├── news/           # Financial news
 │   └── blog/           # Educational articles
 ├── components/         # React components
-├── lib/               # Utilities and helpers
-└── messages/          # i18n translations (de.json, en.json)
+├── lib/                # Utilities and helpers
+└── messages/           # i18n translations (de.json, en.json)
 ```
 
 ## Environment Variables
@@ -61,7 +61,7 @@ Create a `.env.local` file:
 
 ```env
 NEXT_PUBLIC_GA_MEASUREMENT_ID=your-google-analytics-id
-NEXT_PUBLIC_SITE_URL=https://beinoption.de
+NEXT_PUBLIC_SITE_URL=https://beinoptions.com
 ```
 
 ## License
@@ -70,4 +70,4 @@ All rights reserved.
 
 ## Author
 
-BeInOptions Team
+BeInOptions Team - [https://beinoptions.com](https://beinoptions.com)

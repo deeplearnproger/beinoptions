@@ -51,3 +51,10 @@ OPTIONS_TOOLKIT_*.md
 # Examples (development only)
 examples/
 __tests__/
+
+# Internal documentation
+public/favicon-info.md
+public/README-AI.md
+
+# Test config (tests removed)
+vitest.config.ts
