@@ -15,6 +15,62 @@ export default function NewsPage({ params: { locale } }: { params: { locale: str
   const t = useTranslations('blog');
 
   const newsArticles = [
+    // New articles with What Happened / Why It Matters / Options format
+    {
+      title: locale === 'de'
+        ? 'EZB: Geopolitischer Stresstest für 110 Großbanken'
+        : 'ECB: Geopolitical Stress Test for 110 Major Banks',
+      excerpt: locale === 'de'
+        ? 'Die EZB kündigt für 2026 einen Reverse-Stresstest zu geopolitischen Risiken an. Banken müssen Extrem-Szenarien modellieren. Was bedeutet das für Bankaktien und Put-Strategien?'
+        : 'ECB announces reverse stress test on geopolitical risks for 2026. Banks must model extreme scenarios. What does this mean for bank stocks and put strategies?',
+      category: locale === 'de' ? 'Zentralbank' : 'Central Bank',
+      date: '2025-12-20',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '5 Min.' : '5 min',
+      iconBg: 'from-blue-50 to-indigo-100',
+      iconColor: 'text-blue-600',
+      iconPath: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
+      slug: 'ecb-stresstest-banken-geopolitik',
+      isNew: true,
+      tags: ['ECB', 'Banks', 'Stress Test'],
+    },
+    {
+      title: locale === 'de'
+        ? 'USA: Stärkere Aufsicht über Proxy Advisors'
+        : 'USA: Stronger Oversight of Proxy Advisors',
+      excerpt: locale === 'de'
+        ? 'Executive Order zur verschärften Aufsicht über Proxy-Berater. Auswirkungen auf Corporate Governance, ESG-Abstimmungen und Event-Trading mit Optionen während der Proxy Season.'
+        : 'Executive order for enhanced oversight of proxy advisors. Impact on corporate governance, ESG votes, and event trading with options during proxy season.',
+      category: locale === 'de' ? 'Regulierung' : 'Regulation',
+      date: '2025-12-20',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '5 Min.' : '5 min',
+      iconBg: 'from-red-50 to-orange-100',
+      iconColor: 'text-red-600',
+      iconPath: 'M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3',
+      slug: 'usa-proxy-advisors-aufsicht',
+      isNew: true,
+      tags: ['USA', 'Regulation', 'ESG'],
+    },
+    {
+      title: locale === 'de'
+        ? 'EU: €90 Mrd. Ukraine-Kredit über gemeinsame Anleihen'
+        : 'EU: €90bn Ukraine Loan via Joint Borrowing',
+      excerpt: locale === 'de'
+        ? 'Märkte begrüßen EU-Entscheidung für gemeinsame Verschuldung statt Beschlagnahmung russischer Assets. Auswirkungen auf EU-Anleihen, Renditen und zinssensitive Sektoren.'
+        : 'Markets welcome EU choice for joint debt over seizing Russian assets. Impact on EU bonds, yields, and rate-sensitive sectors.',
+      category: locale === 'de' ? 'EU Politik' : 'EU Policy',
+      date: '2025-12-20',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '5 Min.' : '5 min',
+      iconBg: 'from-blue-50 to-yellow-100',
+      iconColor: 'text-blue-600',
+      iconPath: 'M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9',
+      slug: 'eu-ukraine-kredit-anleihen',
+      isNew: true,
+      tags: ['EU', 'Bonds', 'Ukraine'],
+    },
+    // Previous articles
     {
       title: locale === 'de'
         ? 'Europäische Märkte zeigen wenig Bewegung - Deutsche Börse im Plus'
@@ -30,7 +86,7 @@ export default function NewsPage({ params: { locale } }: { params: { locale: str
       iconColor: 'text-blue-600',
       iconPath: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
       slug: 'europaeische-maerkte-deutsche-boerse',
-      isNew: true,
+      isNew: false,
     },
     {
       title: locale === 'de'

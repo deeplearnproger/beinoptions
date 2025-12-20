@@ -309,8 +309,179 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
         </div>
       </section>
 
-      {/* Featured Strategy Guides */}
+      {/* Why We're #1 - USP Section */}
       <section className="py-20 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+              {isGerman ? '#1 Options-Bildungsplattform in Deutschland' : '#1 Options Education Platform in Germany'}
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {isGerman ? 'Warum BeInOptions?' : 'Why BeInOptions?'}
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              {isGerman
+                ? 'Die führende deutschsprachige Plattform für Options-Education. Hier ist, was uns auszeichnet.'
+                : 'The leading German-language platform for options education. Here\'s what sets us apart.'}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* USP 1 - Expert Content */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-indigo-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
+              <div className="relative bg-white rounded-2xl p-8 border border-gray-100 shadow-lg h-full">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary-500 to-indigo-600 rounded-xl flex items-center justify-center text-white mb-6">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {isGerman ? 'Experten-Content' : 'Expert Content'}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {isGerman
+                    ? 'Alle Inhalte werden von erfahrenen Tradern erstellt und regelmäßig aktualisiert. Praxisnah, verständlich und auf den deutschen Markt zugeschnitten.'
+                    : 'All content is created by experienced traders and regularly updated. Practical, understandable and tailored to the German market.'}
+                </p>
+              </div>
+            </div>
+
+            {/* USP 2 - 100% Free */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
+              <div className="relative bg-white rounded-2xl p-8 border border-gray-100 shadow-lg h-full">
+                <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center text-white mb-6">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {isGerman ? '100% Kostenlos' : '100% Free'}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {isGerman
+                    ? 'Keine versteckten Kosten, keine Abonnements. Alle Guides, Tools und Ressourcen sind komplett kostenlos zugänglich.'
+                    : 'No hidden costs, no subscriptions. All guides, tools and resources are completely free to access.'}
+                </p>
+              </div>
+            </div>
+
+            {/* USP 3 - German Focus */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
+              <div className="relative bg-white rounded-2xl p-8 border border-gray-100 shadow-lg h-full">
+                <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center text-white mb-6">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {isGerman ? 'Made in Germany' : 'Made in Germany'}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {isGerman
+                    ? 'Speziell für den deutschen Markt: Steuertipps, BaFin-konforme Broker, Euro-Beispiele und deutsche Rechtslage.'
+                    : 'Specifically for the German market: tax tips, BaFin-compliant brokers, Euro examples and German legal situation.'}
+                </p>
+              </div>
+            </div>
+
+            {/* USP 4 - Interactive Tools */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-violet-500 to-purple-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
+              <div className="relative bg-white rounded-2xl p-8 border border-gray-100 shadow-lg h-full">
+                <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center text-white mb-6">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {isGerman ? 'Interaktive Tools' : 'Interactive Tools'}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {isGerman
+                    ? 'Professionelle Rechner und Visualisierungen: Payoff-Diagramme, IV-Analyse, P/L-Simulation - direkt im Browser nutzbar.'
+                    : 'Professional calculators and visualizations: payoff diagrams, IV analysis, P/L simulation - usable directly in the browser.'}
+                </p>
+              </div>
+            </div>
+
+            {/* USP 5 - Structured Learning */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-pink-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
+              <div className="relative bg-white rounded-2xl p-8 border border-gray-100 shadow-lg h-full">
+                <div className="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl flex items-center justify-center text-white mb-6">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {isGerman ? 'Strukturiertes Lernen' : 'Structured Learning'}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {isGerman
+                    ? 'Klarer Lernpfad vom Anfänger zum fortgeschrittenen Trader. Schritt-für-Schritt Guides mit praktischen Beispielen.'
+                    : 'Clear learning path from beginner to advanced trader. Step-by-step guides with practical examples.'}
+                </p>
+              </div>
+            </div>
+
+            {/* USP 6 - Community */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity" />
+              <div className="relative bg-white rounded-2xl p-8 border border-gray-100 shadow-lg h-full">
+                <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center text-white mb-6">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {isGerman ? 'Aktive Community' : 'Active Community'}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {isGerman
+                    ? 'Tauschen Sie sich mit anderen Tradern aus. Diskutieren Sie Strategien und lernen Sie von der Community.'
+                    : 'Connect with other traders. Discuss strategies and learn from the community.'}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Trust Indicators */}
+          <div className="mt-16 pt-12 border-t border-gray-200">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-4xl font-bold text-primary-600 mb-2">10K+</div>
+                <div className="text-gray-600">{isGerman ? 'Monatliche Leser' : 'Monthly Readers'}</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-primary-600 mb-2">50+</div>
+                <div className="text-gray-600">{isGerman ? 'Detaillierte Guides' : 'Detailed Guides'}</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-primary-600 mb-2">4.9</div>
+                <div className="text-gray-600 flex items-center justify-center gap-1">
+                  <svg className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  {isGerman ? 'Bewertung' : 'Rating'}
+                </div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-primary-600 mb-2">2024</div>
+                <div className="text-gray-600">{isGerman ? 'Gegründet' : 'Founded'}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Strategy Guides */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-100">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
