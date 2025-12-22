@@ -148,6 +148,9 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${inter.variable} ${poppins.variable}`}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
         <GoogleAnalytics />
         <script
           type="application/ld+json"
