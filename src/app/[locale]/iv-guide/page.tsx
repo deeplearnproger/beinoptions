@@ -17,10 +17,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? 'Umfassender Guide zur Implied Volatility: IV Rank, IV Percentile, Volatility Crush, und wie Sie IV für bessere Trading-Entscheidungen nutzen.'
       : 'Comprehensive guide to Implied Volatility: IV Rank, IV Percentile, Volatility Crush, and how to use IV for better trading decisions.',
     alternates: {
-      canonical: `https://beinoption.com/${locale}/iv-guide`,
+      canonical: `https://beinoptions.com/${locale}/iv-guide`,
       languages: {
-        'de': 'https://beinoption.com/de/iv-guide',
-        'en': 'https://beinoption.com/en/iv-guide',
+        'de': 'https://beinoptions.com/de/iv-guide',
+        'en': 'https://beinoptions.com/en/iv-guide',
       },
     },
   };

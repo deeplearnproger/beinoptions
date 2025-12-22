@@ -17,10 +17,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? 'Strukturierter 4-Wochen-Plan zum Options-Trading: Von den Grundlagen bis zu fortgeschrittenen Strategien. Schritt-für-Schritt zum erfolgreichen Trader.'
       : 'Structured 4-week plan to options trading: From basics to advanced strategies. Step-by-step guide to becoming a successful trader.',
     alternates: {
-      canonical: `https://beinoption.com/${locale}/learning-path`,
+      canonical: `https://beinoptions.com/${locale}/learning-path`,
       languages: {
-        'de': 'https://beinoption.com/de/learning-path',
-        'en': 'https://beinoption.com/en/learning-path',
+        'de': 'https://beinoptions.com/de/learning-path',
+        'en': 'https://beinoptions.com/en/learning-path',
       },
     },
   };
