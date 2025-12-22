@@ -72,7 +72,7 @@ export default function EUUkraineLoanPage({ params: { locale } }: { params: { lo
       {/* Hero Image */}
       <div className="relative h-64 md:h-96 bg-slate-200">
         <Image
-          src="https://images.unsplash.com/photo-1519974719765-e6559eac2575?q=80&w=1200"
+          src="https://images.unsplash.com/photo-1589262804704-c5aa9e6def89?q=80&w=1200"
           alt={isGerman ? 'EU-Flaggen Brüssel' : 'EU Flags Brussels'}
           fill
           className="object-cover"

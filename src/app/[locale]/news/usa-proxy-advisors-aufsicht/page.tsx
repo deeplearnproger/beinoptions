@@ -72,8 +72,8 @@ export default function ProxyAdvisorsPage({ params: { locale } }: { params: { lo
       {/* Hero Image */}
       <div className="relative h-64 md:h-96 bg-slate-200">
         <Image
-          src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=1200"
-          alt={isGerman ? 'US Capitol Washington DC' : 'US Capitol Washington DC'}
+          src="https://images.unsplash.com/photo-1501466044931-62695aada8e9?q=80&w=1200"
+          alt={isGerman ? 'US Capitol Washington DC mit Spiegelung' : 'US Capitol Washington DC with reflection'}
           fill
           className="object-cover"
           priority
