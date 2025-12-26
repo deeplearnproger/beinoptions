@@ -284,7 +284,7 @@ export default function BTCETHExpiryPage({ params: { locale } }: { params: { loc
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="https://coinjournal.net" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 underline">
-                    CoinJournal: "Markets calm as $4.3B in BTC and ETH options expire"
+                    CoinJournal: &quot;Markets calm as $4.3B in BTC and ETH options expire&quot;
                   </a>
                 </li>
                 <li>

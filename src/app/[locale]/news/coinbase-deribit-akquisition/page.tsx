@@ -389,7 +389,7 @@ export default function CoinbaseDeribitPage({ params: { locale } }: { params: { 
                 </li>
                 <li>
                   <a href="https://insights.deribit.com" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 underline">
-                    Deribit Insights: "Deribit to Join Coinbase"
+                    Deribit Insights: &quot;Deribit to Join Coinbase&quot;
                   </a>
                 </li>
                 <li>

@@ -282,7 +282,7 @@ export default function BitcoinDeribitExpiryPage({ params: { locale } }: { param
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="https://www.coindesk.com" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 underline">
-                    CoinDesk: "Bitcoin slips below $88,000 as traders brace for $28.5B Deribit options expiry"
+                    CoinDesk: &quot;Bitcoin slips below $88,000 as traders brace for $28.5B Deribit options expiry&quot;
                   </a>
                 </li>
                 <li>

@@ -296,7 +296,7 @@ export default function BinanceETHOptionsPage({ params: { locale } }: { params: 
               <ul className="space-y-2 text-sm">
                 <li>
                   <a href="https://www.coindesk.com" target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 underline">
-                    CoinDesk: "Binance opens up ways for users to generate income using ETH options"
+                    CoinDesk: &quot;Binance opens up ways for users to generate income using ETH options&quot;
                   </a>
                 </li>
               </ul>
