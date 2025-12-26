@@ -11,6 +11,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: locale === 'de'
       ? 'Trump unterzeichnet Executive Order zur verschärften Aufsicht über Proxy-Berater. Auswirkungen auf Corporate Governance und Options-Strategien.'
       : 'Trump signs executive order for enhanced oversight of proxy advisors. Impact on corporate governance and options strategies.',
+    canonical: `https://beinoptions.com/${locale}/news/usa-proxy-advisors-aufsicht`,
+    keywords: ['Proxy Advisors', 'ESG', 'Corporate Governance', 'USA', 'Regulation', 'Trump', 'Options', 'Event Trading'],
+    type: 'article',
+    publishedTime: '2025-12-20T10:00:00Z',
+    modifiedTime: '2025-12-20T10:00:00Z',
+    author: 'BeInOptions Team',
+    section: 'Regulation',
+    locale,
   });
 }
 

@@ -10,6 +10,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: locale === 'de'
       ? 'Europäische Börsen zeigen wenig Bewegung am US-Feiertag. Deutsche Börse steigt nach Übernahmeangebot für Allfunds. Auswirkungen auf Optionshändler.'
       : 'European markets show little movement on US holiday. Deutsche Börse rises after Allfunds acquisition offer. Impact on options traders.',
+    canonical: `https://beinoptions.com/${locale}/news/maerkte-europa-thanksgiving-deutsche-boerse`,
+    keywords: ['DAX', 'Deutsche Börse', 'Allfunds', 'Thanksgiving', 'M&A', 'European Markets', 'Options'],
+    type: 'article',
+    publishedTime: '2025-11-28T10:00:00Z',
+    modifiedTime: '2025-11-28T10:00:00Z',
+    author: 'BeInOptions Team',
+    section: 'Markets',
+    locale,
   });
 }
 

@@ -10,6 +10,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: locale === 'de'
       ? 'Analyse der aktuellen Marktlage in Europa: DAX, Deutsche Börse und was Optionshändler beachten sollten.'
       : 'Analysis of current market conditions in Europe: DAX, Deutsche Börse and what options traders should consider.',
+    canonical: `https://beinoptions.com/${locale}/news/europaeische-maerkte-deutsche-boerse`,
+    keywords: ['DAX', 'Deutsche Börse', 'European Markets', 'Germany', 'Stock Market', 'Options', 'Europe'],
+    type: 'article',
+    publishedTime: '2025-12-10T10:00:00Z',
+    modifiedTime: '2025-12-10T10:00:00Z',
+    author: 'BeInOptions Team',
+    section: 'Markets',
+    locale,
   });
 }
 

@@ -15,7 +15,117 @@ export default function NewsPage({ params: { locale } }: { params: { locale: str
   const t = useTranslations('blog');
 
   const newsArticles = [
-    // New articles with What Happened / Why It Matters / Options format
+    // Newest articles - December 21
+    {
+      title: locale === 'de'
+        ? 'Bitcoin fällt vor $28,5 Mrd. Deribit Options-Verfall'
+        : 'Bitcoin Slips Ahead of $28.5B Deribit Options Expiry',
+      excerpt: locale === 'de'
+        ? 'Bitcoin fiel unter $88.000 vor einem massiven Deribit Options-Verfall. Große Verfälle lösen oft Volatilitätsspitzen aus – ähnlich wie bei SPX-Verfällen.'
+        : 'Bitcoin dipped below $88,000 ahead of a massive Deribit options expiry. Large expiries often trigger volatility spikes – similar to SPX expirations.',
+      category: 'Crypto Options',
+      date: '2025-12-23',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '5 Min.' : '5 min',
+      iconBg: 'from-red-50 to-orange-100',
+      iconColor: 'text-red-600',
+      iconPath: 'M13 17h8m0 0V9m0 8l-8-8-4 4-6-6',
+      slug: 'bitcoin-28-5b-deribit-options-verfall',
+      isNew: true,
+      tags: ['Deribit', 'Bitcoin', 'Expiry', 'Volatility'],
+    },
+    {
+      title: locale === 'de'
+        ? 'Binance öffnet ETH Options Income-Strategien für alle'
+        : 'Binance Opens ETH Options Income Strategies to All Users',
+      excerpt: locale === 'de'
+        ? 'Binance erweitert Zugang zu ETH Options-basierten Income-Strategien. Ein Zeichen für die Mainstream-Adoption – ähnlich wie Covered-Call-ETFs bei Aktien.'
+        : 'Binance expands access to ETH options-based income strategies. A sign of mainstream adoption – similar to covered call ETFs in stocks.',
+      category: 'Crypto Options',
+      date: '2025-12-23',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '5 Min.' : '5 min',
+      iconBg: 'from-yellow-50 to-amber-100',
+      iconColor: 'text-yellow-600',
+      iconPath: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+      slug: 'binance-eth-options-income-strategien',
+      isNew: true,
+      tags: ['Binance', 'ETH', 'Income', 'Strategies'],
+    },
+    {
+      title: locale === 'de'
+        ? 'Märkte ruhig bei $4,3 Mrd. BTC & ETH Options-Verfall'
+        : 'Markets Stay Calm as $4.3B BTC & ETH Options Expire',
+      excerpt: locale === 'de'
+        ? '"Ruhige Verfälle" sind kein Nichtereignis – sie können große strukturelle Signale sein und die nächste Bewegung vorbereiten.'
+        : '"Quiet expiries" are not a non-event – they can be major structural signals that set up the next move.',
+      category: 'Crypto Options',
+      date: '2025-12-23',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '4 Min.' : '4 min',
+      iconBg: 'from-green-50 to-teal-100',
+      iconColor: 'text-green-600',
+      iconPath: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+      slug: 'btc-eth-options-verfall-4-3b',
+      isNew: true,
+      tags: ['BTC', 'ETH', 'Expiry', 'Max Pain'],
+    },
+    // December 22 articles (no longer new)
+    {
+      title: locale === 'de'
+        ? 'Coinbase kauft Deribit: Was es für Krypto-Optionen bedeutet'
+        : 'Coinbase Acquires Deribit: What It Means for Crypto Options',
+      excerpt: locale === 'de'
+        ? '$2,9 Mrd. Deal könnte den globalen Krypto-Derivatemarkt neu gestalten. Auswirkungen auf Liquidität, Regulierung und institutionelle Beteiligung an Krypto-Optionen.'
+        : '$2.9B deal could reshape global crypto derivatives. Implications for liquidity, regulation, and institutional participation in crypto options.',
+      category: 'Crypto Options',
+      date: '2025-12-22',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '6 Min.' : '6 min',
+      iconBg: 'from-orange-50 to-amber-100',
+      iconColor: 'text-orange-600',
+      iconPath: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
+      slug: 'coinbase-deribit-akquisition',
+      isNew: false,
+      tags: ['Coinbase', 'Deribit', 'Crypto', 'M&A'],
+    },
+    {
+      title: locale === 'de'
+        ? 'Deribit BTC Options OI erreicht Rekord $42,5 Mrd.'
+        : 'Deribit Bitcoin Options OI Hits Record $42.5B',
+      excerpt: locale === 'de'
+        ? 'Rekord-Open-Interest signalisiert massive Positionierung. Was das für Volatilität und Marktbewegungen rund um Verfallstermine bedeutet.'
+        : 'Record open interest signals massive positioning. What this means for volatility and market movements around expiries.',
+      category: 'Crypto Options',
+      date: '2025-12-22',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '5 Min.' : '5 min',
+      iconBg: 'from-amber-50 to-yellow-100',
+      iconColor: 'text-amber-600',
+      iconPath: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+      slug: 'deribit-btc-options-rekord-oi',
+      isNew: false,
+      tags: ['Deribit', 'Bitcoin', 'Open Interest', 'IV'],
+    },
+    {
+      title: locale === 'de'
+        ? 'CME Bitcoin Options erklärt: Institutioneller Flow & Daten'
+        : 'CME Bitcoin Options Explained: Institutional Flow & Data',
+      excerpt: locale === 'de'
+        ? 'CME ist der regulierte Standard für institutionelle Krypto-Derivate. Volume, Open Interest und was es für Trader bedeutet.'
+        : 'CME is the regulated standard for institutional crypto derivatives. Volume, open interest, and what it means for traders.',
+      category: 'Crypto Options',
+      date: '2025-12-22',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '5 Min.' : '5 min',
+      iconBg: 'from-blue-50 to-indigo-100',
+      iconColor: 'text-blue-600',
+      iconPath: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
+      slug: 'cme-bitcoin-options-institutionell',
+      isNew: false,
+      tags: ['CME', 'Bitcoin', 'Institutional', 'Regulation'],
+    },
+    // December 20 articles (no longer new)
     {
       title: locale === 'de'
         ? 'EZB: Geopolitischer Stresstest für 110 Großbanken'
@@ -31,7 +141,7 @@ export default function NewsPage({ params: { locale } }: { params: { locale: str
       iconColor: 'text-blue-600',
       iconPath: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
       slug: 'ecb-stresstest-banken-geopolitik',
-      isNew: true,
+      isNew: false,
       tags: ['ECB', 'Banks', 'Stress Test'],
     },
     {
@@ -49,7 +159,7 @@ export default function NewsPage({ params: { locale } }: { params: { locale: str
       iconColor: 'text-red-600',
       iconPath: 'M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3',
       slug: 'usa-proxy-advisors-aufsicht',
-      isNew: true,
+      isNew: false,
       tags: ['USA', 'Regulation', 'ESG'],
     },
     {
@@ -67,7 +177,7 @@ export default function NewsPage({ params: { locale } }: { params: { locale: str
       iconColor: 'text-blue-600',
       iconPath: 'M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9',
       slug: 'eu-ukraine-kredit-anleihen',
-      isNew: true,
+      isNew: false,
       tags: ['EU', 'Bonds', 'Ukraine'],
     },
     // Previous articles

@@ -11,6 +11,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: locale === 'de'
       ? 'Die EU finanziert Ukraine-Hilfe über gemeinsame Kreditaufnahme statt Beschlagnahmung russischer Vermögenswerte. Auswirkungen auf Anleihen und Optionen.'
       : 'EU funds Ukraine aid via joint borrowing instead of seizing Russian assets. Impact on bonds and options.',
+    canonical: `https://beinoptions.com/${locale}/news/eu-ukraine-kredit-anleihen`,
+    keywords: ['EU', 'Ukraine', 'Bonds', 'Joint Borrowing', 'Europe', 'Interest Rates', 'Fixed Income', 'Options'],
+    type: 'article',
+    publishedTime: '2025-12-20T10:00:00Z',
+    modifiedTime: '2025-12-20T10:00:00Z',
+    author: 'BeInOptions Team',
+    section: 'EU Policy',
+    locale,
   });
 }
 

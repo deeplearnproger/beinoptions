@@ -11,6 +11,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: locale === 'de'
       ? 'Die EZB kündigt Reverse-Stresstest zu geopolitischen Risiken für 110 große Eurozone-Banken an. Was bedeutet das für Bankaktien und Optionen?'
       : 'ECB announces reverse stress test on geopolitical risks for 110 major eurozone banks. What does this mean for bank stocks and options?',
+    canonical: `https://beinoptions.com/${locale}/news/ecb-stresstest-banken-geopolitik`,
+    keywords: ['ECB', 'EZB', 'Stress Test', 'Banks', 'Geopolitical Risk', 'Bank Stocks', 'Options', 'Eurozone'],
+    type: 'article',
+    publishedTime: '2025-12-20T10:00:00Z',
+    modifiedTime: '2025-12-20T10:00:00Z',
+    author: 'BeInOptions Team',
+    section: 'Central Bank',
+    locale,
   });
 }
 

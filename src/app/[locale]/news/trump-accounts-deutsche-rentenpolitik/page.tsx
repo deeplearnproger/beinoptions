@@ -10,6 +10,14 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: locale === 'de'
       ? 'Die USA starten mit „Trump-Accounts" ein innovatives Frühstart-Modell für die Altersvorsorge. Was bedeutet das für deutsche Anleger und den Optionsmarkt?'
       : 'The US launches "Trump Accounts" - an innovative early-start model for retirement. What does this mean for German investors and the options market?',
+    canonical: `https://beinoptions.com/${locale}/news/trump-accounts-deutsche-rentenpolitik`,
+    keywords: ['Trump Accounts', 'Pension', 'Retirement', 'Germany', 'USA', 'Investment', 'ETF', 'Long-term Investing'],
+    type: 'article',
+    publishedTime: '2025-12-07T10:00:00Z',
+    modifiedTime: '2025-12-07T10:00:00Z',
+    author: 'BeInOptions Team',
+    section: 'Pension Policy',
+    locale,
   });
 }
 
