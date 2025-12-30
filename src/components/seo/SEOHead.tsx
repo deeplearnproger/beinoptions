@@ -17,7 +17,7 @@ interface SEOHeadProps {
 
 const SITE_NAME = 'BeInOptions';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://beinoptions.com';
-const DEFAULT_OG_IMAGE = `${SITE_URL}/images/og-default.jpg`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`;
 
 export function generateMetadata({
   title,

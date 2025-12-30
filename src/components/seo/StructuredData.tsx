@@ -127,7 +127,7 @@ export function ArticleSchema({
     '@type': 'Article',
     headline: title,
     description: description,
-    image: image || `${SITE_URL}/images/og-default.jpg`,
+    image: image || `${SITE_URL}/og-image.png`,
     datePublished: publishedTime,
     dateModified: modifiedTime || publishedTime,
     author: {
