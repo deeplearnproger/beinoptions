@@ -67,6 +67,7 @@ export function ToolTutorial({ toolName, steps, onComplete, storageKey }: ToolTu
 
   const completedKey = storageKey || `tutorial_${toolName}_completed`;
   const stepKey = `tutorial_${toolName}_step`;
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setMounted(true);
@@ -82,6 +83,11 @@ export function ToolTutorial({ toolName, steps, onComplete, storageKey }: ToolTu
         setCurrentStep(step);
       }
     }
+    // Check if mobile
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, [completedKey, stepKey, steps.length]);
 
   // Save current step when it changes
@@ -91,7 +97,7 @@ export function ToolTutorial({ toolName, steps, onComplete, storageKey }: ToolTu
     }
   }, [currentStep, isActive, stepKey]);
 
-  const calculatePosition = useCallback((targetSelector?: string, position?: string) => {
+  const calculatePosition = useCallback((targetSelector?: string, position?: string, shouldScroll?: boolean) => {
     if (!targetSelector || position === 'center') {
       setTooltipPosition({
         top: window.innerHeight / 2 - 150,
@@ -113,6 +119,26 @@ export function ToolTutorial({ toolName, steps, onComplete, storageKey }: ToolTu
 
     const rect = element.getBoundingClientRect();
     setHighlightRect(rect);
+
+    // Auto-scroll to element if not fully visible (only on step change)
+    if (shouldScroll) {
+      const isMobileView = window.innerWidth < 768;
+      const tooltipHeightEstimate = isMobileView ? window.innerHeight * 0.45 : 300;
+      const visibleTop = 0;
+      const visibleBottom = window.innerHeight - tooltipHeightEstimate;
+
+      if (rect.top < 80 || rect.bottom > visibleBottom) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+        // Recalculate position after scroll animation
+        setTimeout(() => {
+          const newRect = element.getBoundingClientRect();
+          setHighlightRect(newRect);
+        }, 400);
+      }
+    }
 
     const tooltipWidth = 380;
     const tooltipHeight = 280;
@@ -149,10 +175,11 @@ export function ToolTutorial({ toolName, steps, onComplete, storageKey }: ToolTu
 
   useEffect(() => {
     if (isActive && steps[currentStep]) {
-      calculatePosition(steps[currentStep].targetSelector, steps[currentStep].position);
+      // Initial calculation with auto-scroll
+      calculatePosition(steps[currentStep].targetSelector, steps[currentStep].position, true);
 
       const handleResize = () => {
-        calculatePosition(steps[currentStep].targetSelector, steps[currentStep].position);
+        calculatePosition(steps[currentStep].targetSelector, steps[currentStep].position, false);
       };
 
       window.addEventListener('resize', handleResize);
@@ -311,8 +338,12 @@ export function ToolTutorial({ toolName, steps, onComplete, storageKey }: ToolTu
           {/* Tooltip */}
           {tooltipPosition && (
             <div
-              className="fixed z-[10000] w-[380px] bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden"
-              style={{
+              className={`fixed z-[10000] bg-white shadow-2xl border border-gray-200 overflow-hidden ${
+                isMobile
+                  ? 'bottom-0 left-0 right-0 w-full rounded-t-xl'
+                  : 'w-[380px] rounded-xl'
+              }`}
+              style={isMobile ? undefined : {
                 top: tooltipPosition.top,
                 left: tooltipPosition.left,
               }}
@@ -350,7 +381,7 @@ export function ToolTutorial({ toolName, steps, onComplete, storageKey }: ToolTu
               </div>
 
               {/* Content */}
-              <div className="px-4 py-3 flex flex-col gap-2 max-h-[50vh] overflow-y-auto">
+              <div className={`px-4 py-3 flex flex-col gap-2 overflow-y-auto ${isMobile ? 'max-h-[35vh]' : 'max-h-[50vh]'}`}>
                 <p className="text-gray-700 text-sm leading-relaxed">{step.description}</p>
 
                 {/* Theory Block */}
@@ -547,7 +578,7 @@ export function usePayoffTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Ergebnis analysieren',
       description: 'Das Payoff-Diagramm zeigt Ihren Gewinn/Verlust bei verschiedenen Aktienkursen.',
       targetSelector: '.recharts-wrapper',
-      position: 'top',
+      position: 'bottom',
       theory: 'Wo die Linie über 0 ist = Gewinn. Wo sie unter 0 ist = Verlust. Der Break-Even-Punkt ist wo sie die 0-Linie kreuzt.',
       tip: 'Bewegen Sie die Maus über das Diagramm für genaue Werte bei jedem Preis.',
     },
@@ -673,7 +704,7 @@ export function usePayoffTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Analyze the Result',
       description: 'The payoff diagram shows your profit/loss at different stock prices.',
       targetSelector: '.recharts-wrapper',
-      position: 'top',
+      position: 'bottom',
       theory: 'Where the line is above 0 = profit. Where it\'s below 0 = loss. The break-even point is where it crosses the 0 line.',
       tip: 'Hover over the chart for exact values at each price.',
     },
@@ -749,7 +780,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Einstiegspreis',
       description: 'Das war der Aktienkurs, als Sie die Position eröffnet haben.',
       targetSelector: '#underlying-price',
-      position: 'right',
+      position: 'bottom',
       action: 'Geben Sie 100 ein - Ihr Einstiegskurs.',
     },
     {
@@ -757,7 +788,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Aktueller Kurs',
       description: 'Hier geben Sie ein, wo die Aktie JETZT steht.',
       targetSelector: '#current-price',
-      position: 'right',
+      position: 'bottom',
       action: 'Ändern Sie den Wert auf 105 und beobachten Sie die P/L-Änderung.',
     },
     {
@@ -765,7 +796,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Volatilität verstehen',
       description: 'IV (Implizite Volatilität) beeinflusst den Optionspreis massiv.',
       targetSelector: '#volatility',
-      position: 'right',
+      position: 'bottom',
       theory: 'Hohe IV = teure Optionen. Nach Earnings fällt die IV oft stark ("IV Crush") und Optionen verlieren Wert.',
       action: 'Erhöhen Sie die IV auf 40% und sehen Sie, wie der Optionswert steigt.',
       tip: 'IV Crush kann Ihre profitable Position ruinieren. Achten Sie auf Earnings-Termine.',
@@ -775,7 +806,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Die Greeks',
       description: 'Greeks zeigen, wie sensibel Ihre Position auf verschiedene Faktoren reagiert.',
       targetSelector: '.space-y-3 button:nth-child(2)',
-      position: 'right',
+      position: 'bottom',
       theory: 'Delta = Preisbewegung. Theta = Täglicher Zeitverfall. Vega = Volatilitätssensitivität.',
       action: 'Klicken Sie auf "Greeks anzeigen".',
       tip: 'Theta ist bei kurzlaufenden Optionen Ihr größter Feind (als Käufer) oder bester Freund (als Verkäufer).',
@@ -786,7 +817,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Ihr Ergebnis: P/L Übersicht',
       description: 'Hier sehen Sie Ihren aktuellen Gewinn oder Verlust basierend auf den eingegebenen Parametern.',
       targetSelector: '.grid.grid-cols-2.gap-4',
-      position: 'top',
+      position: 'bottom',
       theory: 'Total P/L zeigt den absoluten Gewinn/Verlust in Dollar. P/L % zeigt die prozentuale Rendite bezogen auf Ihren Kapitaleinsatz (die gezahlte Prämie).',
       tip: 'Grüne Zahlen = Gewinn, Rote Zahlen = Verlust. Das ist Ihr aktueller "Paper Profit" - realisiert erst beim Verkauf.',
     },
@@ -795,7 +826,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Netto-Prämie verstehen',
       description: 'Die Netto-Prämie zeigt, wie viel Kapital Sie insgesamt für die Strategie eingesetzt haben.',
       targetSelector: '.bg-blue-50.border.border-blue-200',
-      position: 'top',
+      position: 'bottom',
       theory: 'Positiv = Sie haben Prämie gezahlt (Debit-Strategie). Negativ = Sie haben Prämie erhalten (Credit-Strategie). Bei Credit-Strategien ist dies Ihr maximaler Gewinn.',
       tip: 'Debit-Strategien brauchen Kursbewegung um profitabel zu sein. Credit-Strategien profitieren von Zeitverfall.',
     },
@@ -804,7 +835,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Greeks im Detail',
       description: 'Jetzt verstehen Sie, was die Greeks für IHRE Position bedeuten.',
       targetSelector: '.bg-white.rounded-lg.shadow-sm.p-6:has(.grid.grid-cols-2.md\\:grid-cols-4)',
-      position: 'top',
+      position: 'bottom',
       theory: 'Delta: Wie viel $ gewinnen/verlieren Sie pro $1 Kursbewegung. Theta: Wie viel $ verlieren Sie pro Tag durch Zeitverfall. Gamma: Wie schnell ändert sich Ihr Delta. Vega: Wie viel $ gewinnen/verlieren Sie pro 1% IV-Änderung.',
       tip: 'Achten Sie besonders auf Theta bei Positionen mit weniger als 30 Tagen bis zum Verfall - der Zeitverfall beschleunigt sich exponentiell.',
     },
@@ -813,7 +844,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Das P/L Diagramm lesen',
       description: 'Das Diagramm visualisiert Ihren Gewinn/Verlust über verschiedene Aktienkurse.',
       targetSelector: '.recharts-wrapper',
-      position: 'top',
+      position: 'bottom',
       theory: 'Die Kurve zeigt nicht nur den Verfall, sondern auch den AKTUELLEN Wert Ihrer Position. Der Unterschied zum Payoff-Diagramm: Hier ist Zeitwert eingerechnet.',
       tip: 'Vergleichen Sie die aktuelle Kurve mit der Verfallslinie - die Differenz ist Ihr verbleibender Zeitwert.',
     },
@@ -838,7 +869,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Entry Price',
       description: 'This was the stock price when you opened the position.',
       targetSelector: '#underlying-price',
-      position: 'right',
+      position: 'bottom',
       action: 'Enter 100 - your entry price.',
     },
     {
@@ -846,7 +877,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Current Price',
       description: 'Here you enter where the stock is NOW.',
       targetSelector: '#current-price',
-      position: 'right',
+      position: 'bottom',
       action: 'Change the value to 105 and watch the P/L change.',
     },
     {
@@ -854,7 +885,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Understanding Volatility',
       description: 'IV (Implied Volatility) massively affects option prices.',
       targetSelector: '#volatility',
-      position: 'right',
+      position: 'bottom',
       theory: 'High IV = expensive options. After earnings, IV often drops sharply ("IV Crush") and options lose value.',
       action: 'Increase IV to 40% and see how option value rises.',
       tip: 'IV Crush can ruin your profitable position. Watch for earnings dates.',
@@ -864,7 +895,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'The Greeks',
       description: 'Greeks show how sensitive your position is to various factors.',
       targetSelector: '.space-y-3 button:nth-child(2)',
-      position: 'right',
+      position: 'bottom',
       theory: 'Delta = Price movement. Theta = Daily time decay. Vega = Volatility sensitivity.',
       action: 'Click "Show Greeks".',
       tip: 'Theta is your biggest enemy (as buyer) or best friend (as seller) on short-dated options.',
@@ -875,7 +906,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Your Result: P/L Summary',
       description: 'Here you see your current profit or loss based on the parameters you entered.',
       targetSelector: '.grid.grid-cols-2.gap-4',
-      position: 'top',
+      position: 'bottom',
       theory: 'Total P/L shows absolute profit/loss in dollars. P/L % shows percentage return based on your capital invested (premium paid).',
       tip: 'Green numbers = Profit, Red numbers = Loss. This is your current "paper profit" - only realized when you sell.',
     },
@@ -884,7 +915,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Understanding Net Premium',
       description: 'Net premium shows how much capital you invested in the strategy.',
       targetSelector: '.bg-blue-50.border.border-blue-200',
-      position: 'top',
+      position: 'bottom',
       theory: 'Positive = You paid premium (debit strategy). Negative = You received premium (credit strategy). For credit strategies, this is your maximum profit.',
       tip: 'Debit strategies need price movement to be profitable. Credit strategies profit from time decay.',
     },
@@ -893,7 +924,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Greeks in Detail',
       description: 'Now you understand what the Greeks mean for YOUR specific position.',
       targetSelector: '.bg-white.rounded-lg.shadow-sm.p-6:has(.grid.grid-cols-2.md\\:grid-cols-4)',
-      position: 'top',
+      position: 'bottom',
       theory: 'Delta: How many $ you gain/lose per $1 price move. Theta: How many $ you lose per day to time decay. Gamma: How fast your Delta changes. Vega: How many $ you gain/lose per 1% IV change.',
       tip: 'Pay special attention to Theta on positions with less than 30 days to expiration - time decay accelerates exponentially.',
     },
@@ -902,7 +933,7 @@ export function usePLTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Reading the P/L Chart',
       description: 'The chart visualizes your profit/loss across different stock prices.',
       targetSelector: '.recharts-wrapper',
-      position: 'top',
+      position: 'bottom',
       theory: 'The curve shows not just expiration value, but the CURRENT value of your position. The difference from payoff diagram: time value is included here.',
       tip: 'Compare the current curve with the expiration line - the difference is your remaining time value.',
     },
@@ -976,7 +1007,7 @@ export function useIVTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Preis vs. Theoretischer Wert',
       description: 'Vergleichen Sie den Marktpreis mit dem theoretischen Preis.',
       targetSelector: '.bg-gradient-to-r.from-green-50.to-emerald-50',
-      position: 'top',
+      position: 'bottom',
       theory: 'Marktpreis > Theoretisch = Option ist "teuer" (hohe IV). Marktpreis < Theoretisch = Option ist "günstig" (niedrige IV).',
       tip: 'Günstige Optionen sind nicht automatisch gute Käufe! Niedrige IV kann bedeuten, dass der Markt wenig Bewegung erwartet.',
     },
@@ -1045,7 +1076,7 @@ export function useIVTutorialSteps(isGerman: boolean): TutorialStep[] {
       title: 'Price vs. Theoretical Value',
       description: 'Compare the market price with the theoretical price.',
       targetSelector: '.bg-gradient-to-r.from-green-50.to-emerald-50',
-      position: 'top',
+      position: 'bottom',
       theory: 'Market price > Theoretical = Option is "expensive" (high IV). Market price < Theoretical = Option is "cheap" (low IV).',
       tip: 'Cheap options aren\'t automatically good buys! Low IV might mean the market expects little movement.',
     },
