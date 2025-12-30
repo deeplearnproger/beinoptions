@@ -2,10 +2,12 @@
 
 import React, { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { useTranslations, useLocale } from 'next-intl';
 import { useOptionsStore, createNewLeg } from '@/lib/store/options-store';
 import { OptionLegInput } from '@/components/options/OptionLegInput';
 import { PayoffChart } from '@/components/options/PayoffChart';
 import { StrategyPresets } from '@/components/options/StrategyPresets';
+import { ToolTutorial, usePayoffTutorialSteps } from '@/components/options/ToolTutorial';
 import {
   calculateMaxProfitLoss,
   getNetPremium,
@@ -21,6 +23,9 @@ import {
 import { decodeStrategyFromURL } from '@/lib/options/utils';
 
 export default function PayoffCalculatorPage() {
+  const t = useTranslations('tools');
+  const locale = useLocale();
+  const tutorialSteps = usePayoffTutorialSteps(locale === 'de');
   const searchParams = useSearchParams();
   const strategy = useOptionsStore((state) => state.strategy);
   const addLeg = useOptionsStore((state) => state.addLeg);
@@ -90,9 +95,9 @@ export default function PayoffCalculatorPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Payoff Calculator</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('payoff.title')}</h1>
           <p className="text-gray-600">
-            Build multi-leg options strategies and visualize payoff at expiration
+            {t('payoff.description')}
           </p>
         </div>
 
@@ -101,12 +106,12 @@ export default function PayoffCalculatorPage() {
           <div className="lg:col-span-1 space-y-6">
             {/* Strategy Info */}
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Strategy</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('payoff.strategy.title')}</h2>
 
               <div className="space-y-4">
                 <div>
                   <label htmlFor="strategy-name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Name
+                    {t('payoff.strategy.name')}
                   </label>
                   <input
                     id="strategy-name"
@@ -119,7 +124,7 @@ export default function PayoffCalculatorPage() {
 
                 <div>
                   <label htmlFor="underlying-price" className="block text-sm font-medium text-gray-700 mb-1">
-                    Underlying Price ($)
+                    {t('payoff.strategy.underlyingPrice')}
                   </label>
                   <input
                     id="underlying-price"
@@ -149,7 +154,7 @@ export default function PayoffCalculatorPage() {
                 disabled={strategy.legs.length >= 6}
                 className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
-                Add Leg ({strategy.legs.length}/6)
+                {t('payoff.actions.addLeg')} ({strategy.legs.length}/6)
               </button>
 
               <button
@@ -157,7 +162,7 @@ export default function PayoffCalculatorPage() {
                 disabled={strategy.legs.length === 0}
                 className="w-full px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
-                Export CSV
+                {t('payoff.actions.exportCSV')}
               </button>
 
               <button
@@ -165,14 +170,14 @@ export default function PayoffCalculatorPage() {
                 disabled={strategy.legs.length === 0}
                 className="w-full px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
-                Share Link
+                {t('payoff.actions.shareLink')}
               </button>
 
               <button
                 onClick={reset}
                 className="w-full px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300"
               >
-                Reset
+                {t('payoff.actions.reset')}
               </button>
             </div>
           </div>
@@ -181,16 +186,16 @@ export default function PayoffCalculatorPage() {
           <div className="lg:col-span-2 space-y-6">
             {/* Option Legs */}
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Option Legs</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('payoff.legs.title')}</h2>
 
               {strategy.legs.length === 0 ? (
                 <div className="text-center py-8">
-                  <p className="text-gray-500 mb-4">No legs added yet</p>
+                  <p className="text-gray-500 mb-4">{t('payoff.legs.noLegs')}</p>
                   <button
                     onClick={handleAddLeg}
                     className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
                   >
-                    Add First Leg
+                    {t('payoff.legs.addFirst')}
                   </button>
                 </div>
               ) : (
@@ -208,7 +213,7 @@ export default function PayoffCalculatorPage() {
               {/* Validation Errors */}
               {hasErrors && (
                 <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
-                  <p className="text-sm font-medium text-red-800 mb-1">Validation Errors:</p>
+                  <p className="text-sm font-medium text-red-800 mb-1">{t('payoff.legs.validationErrors')}</p>
                   <ul className="list-disc list-inside text-sm text-red-700">
                     {validationErrors.map((error, index) => (
                       <li key={index}>{error.message}</li>
@@ -221,27 +226,27 @@ export default function PayoffCalculatorPage() {
             {/* Payoff Summary */}
             {strategy.legs.length > 0 && !hasErrors && (
               <div className="bg-white rounded-lg shadow-sm p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">Summary</h2>
+                <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('payoff.summary.title')}</h2>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="text-center p-3 bg-blue-50 rounded-lg">
-                    <p className="text-xs text-blue-600 mb-1">Net Premium</p>
+                    <p className="text-xs text-blue-600 mb-1">{t('payoff.summary.netPremium')}</p>
                     <p className={`text-lg font-semibold ${netPremium >= 0 ? 'text-green-700' : 'text-red-700'}`}>
                       {formatCurrency(netPremium)}
                     </p>
                     <p className="text-xs text-gray-500 mt-1">
-                      {netPremium >= 0 ? 'Credit' : 'Debit'}
+                      {netPremium >= 0 ? t('payoff.summary.credit') : t('payoff.summary.debit')}
                     </p>
                   </div>
                   <div className="text-center p-3 bg-green-50 rounded-lg">
-                    <p className="text-xs text-green-600 mb-1">Max Profit</p>
+                    <p className="text-xs text-green-600 mb-1">{t('payoff.summary.maxProfit')}</p>
                     <p className="text-lg font-semibold text-green-700">
-                      {maxProfit === null ? 'Unlimited' : formatCurrency(maxProfit)}
+                      {maxProfit === null ? t('payoff.summary.unlimited') : formatCurrency(maxProfit)}
                     </p>
                   </div>
                   <div className="text-center p-3 bg-red-50 rounded-lg">
-                    <p className="text-xs text-red-600 mb-1">Max Loss</p>
+                    <p className="text-xs text-red-600 mb-1">{t('payoff.summary.maxLoss')}</p>
                     <p className="text-lg font-semibold text-red-700">
-                      {maxLoss === null ? 'Unlimited' : formatCurrency(maxLoss)}
+                      {maxLoss === null ? t('payoff.summary.unlimited') : formatCurrency(maxLoss)}
                     </p>
                   </div>
                 </div>
@@ -251,13 +256,20 @@ export default function PayoffCalculatorPage() {
             {/* Payoff Chart */}
             {strategy.legs.length > 0 && !hasErrors && (
               <div className="bg-white rounded-lg shadow-sm p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">Payoff Diagram</h2>
+                <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('payoff.chart.title')}</h2>
                 <PayoffChart />
               </div>
             )}
           </div>
         </div>
       </div>
+
+      {/* Interactive Tutorial */}
+      <ToolTutorial
+        toolName="payoff"
+        steps={tutorialSteps}
+        storageKey="tutorial_payoff_completed"
+      />
     </div>
   );
 }

@@ -270,6 +270,141 @@
     "register": "Handelsregister: HRB 12345 B, Amtsgericht Berlin",
     "vat": "USt-IdNr.: DE123456789"
   },
+  "tools": {
+    "iv": {
+      "title": "Implizite Volatilität Tools",
+      "description": "Berechnen Sie die implizite Volatilität aus Marktpreisen und theoretische Optionswerte",
+      "solver": {
+        "title": "IV-Rechner",
+        "description": "Geben Sie den Marktpreis ein, um die implizite Volatilität zu berechnen",
+        "result": "Implizite Volatilität",
+        "method": "Methode",
+        "iterations": "Iterationen",
+        "enterParams": "Parameter eingeben, um IV zu berechnen"
+      },
+      "calculator": {
+        "title": "Preisrechner",
+        "description": "Geben Sie die implizite Volatilität ein, um den theoretischen Optionspreis zu berechnen",
+        "result": "Theoretischer Preis",
+        "basedOn": "Basierend auf dem Black-Scholes-Modell",
+        "enterParams": "Parameter eingeben, um den Preis zu berechnen"
+      },
+      "about": {
+        "title": "Über IV-Tools",
+        "solverTitle": "IV-Rechner",
+        "solverDesc1": "Der IV-Rechner verwendet die Newton-Raphson-Methode mit Bisektions-Fallback, um die implizite Volatilität zu finden, die den theoretischen Black-Scholes-Preis dem Marktpreis entspricht.",
+        "solverDesc2": "Die implizite Volatilität repräsentiert die Markterwartung der zukünftigen Volatilität und ist eine Schlüsselkennzahl für den Vergleich von Optionen über verschiedene Strikes und Laufzeiten hinweg.",
+        "calcTitle": "Preisrechner",
+        "calcDesc1": "Der Preisrechner verwendet die Black-Scholes-Formel zur Berechnung theoretischer Optionspreise bei gegebener impliziter Volatilität.",
+        "calcDesc2": "Nutzen Sie dies, um faire Werte zu schätzen, fehlbewertete Optionen zu identifizieren oder zu verstehen, wie sich Volatilitätsänderungen auf Optionspreise auswirken."
+      },
+      "note": {
+        "title": "Wichtiger Hinweis",
+        "content": "Diese Tools verwenden das Black-Scholes-Modell, das europäische Optionen, konstante Volatilität und keine Transaktionskosten voraussetzt. Reale Marktpreise können aufgrund von vorzeitigen Ausübungsprämien (amerikanische Optionen), Volatilitäts-Smile/Skew und anderen Faktoren abweichen."
+      }
+    },
+    "pl": {
+      "title": "P/L-Simulator",
+      "description": "Berechnen Sie den aktuellen Gewinn/Verlust mit Black-Scholes-Preisbildung und Greeks",
+      "strategy": {
+        "title": "Strategie",
+        "name": "Name",
+        "entryPrice": "Einstiegspreis ($)",
+        "currentPrice": "Aktueller Preis ($)"
+      },
+      "marketParams": {
+        "title": "Marktparameter",
+        "impliedVolatility": "Implizite Volatilität (%)",
+        "riskFreeRate": "Risikoloser Zinssatz (%)",
+        "dividendYield": "Dividendenrendite (%)"
+      },
+      "legs": {
+        "title": "Options-Legs",
+        "noLegs": "Noch keine Legs hinzugefügt",
+        "addFirst": "Erstes Leg hinzufügen",
+        "validationErrors": "Validierungsfehler:"
+      },
+      "actions": {
+        "addLeg": "Leg hinzufügen",
+        "showGreeks": "Greeks anzeigen",
+        "hideGreeks": "Greeks ausblenden",
+        "exportResults": "Ergebnisse exportieren",
+        "reset": "Zurücksetzen"
+      },
+      "results": {
+        "currentPL": "Aktueller P/L",
+        "totalPL": "Gesamt-P/L",
+        "plPercent": "P/L %",
+        "netPremium": "Netto-Prämie (Anfangskosten/-kredit)"
+      },
+      "chart": {
+        "title": "P/L vs. Preis"
+      }
+    },
+    "payoff": {
+      "title": "Payoff-Rechner",
+      "description": "Erstellen Sie Multi-Leg-Optionsstrategien und visualisieren Sie den Payoff bei Verfall",
+      "strategy": {
+        "title": "Strategie",
+        "name": "Name",
+        "underlyingPrice": "Basiswertpreis ($)"
+      },
+      "legs": {
+        "title": "Options-Legs",
+        "noLegs": "Noch keine Legs hinzugefügt",
+        "addFirst": "Erstes Leg hinzufügen",
+        "validationErrors": "Validierungsfehler:"
+      },
+      "actions": {
+        "addLeg": "Leg hinzufügen",
+        "exportCSV": "CSV exportieren",
+        "shareLink": "Link teilen",
+        "reset": "Zurücksetzen"
+      },
+      "summary": {
+        "title": "Zusammenfassung",
+        "netPremium": "Netto-Prämie",
+        "credit": "Kredit",
+        "debit": "Debit",
+        "maxProfit": "Max. Gewinn",
+        "maxLoss": "Max. Verlust",
+        "unlimited": "Unbegrenzt"
+      },
+      "chart": {
+        "title": "Payoff-Diagramm"
+      }
+    },
+    "common": {
+      "optionType": "Optionstyp",
+      "call": "Call",
+      "put": "Put",
+      "spotPrice": "Kassakurs ($)",
+      "strike": "Strike ($)",
+      "daysToExpiry": "Tage bis Verfall",
+      "marketPrice": "Marktpreis ($)",
+      "riskFreeRate": "Risikoloser Zinssatz (%)",
+      "dividendYield": "Dividendenrendite (%)",
+      "impliedVolatility": "Implizite Volatilität (%)",
+      "error": "Fehler"
+    },
+    "tutorial": {
+      "startTutorial": "Tutorial",
+      "skipTutorial": "Überspringen",
+      "step": "Schritt",
+      "of": "von",
+      "previous": "Zurück",
+      "next": "Weiter",
+      "done": "Erledigt",
+      "finish": "Fertig",
+      "theory": "Theorie",
+      "tryIt": "Jetzt ausprobieren",
+      "yourTurn": "Ihre Aufgabe",
+      "proTip": "Tipp",
+      "welcomeTitle": "Erste Schritte",
+      "welcomeDescription": "Lernen Sie dieses Tool in wenigen Minuten kennen.",
+      "letsGo": "Starten"
+    }
+  },
   "libertexBanner": {
     "badge": "Top-Broker 2025",
     "banner1": {

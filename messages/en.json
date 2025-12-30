@@ -270,6 +270,142 @@
     "register": "Commercial Register: HRB 12345 B, District Court Berlin",
     "vat": "VAT ID: DE123456789"
   },
+  "tools": {
+    "iv": {
+      "title": "Implied Volatility Tools",
+      "description": "Calculate implied volatility from market prices and theoretical option values",
+      "solver": {
+        "title": "IV Solver",
+        "description": "Input market price to calculate implied volatility",
+        "result": "Implied Volatility",
+        "method": "Method",
+        "iterations": "Iterations",
+        "enterParams": "Enter parameters to calculate IV"
+      },
+      "calculator": {
+        "title": "Price Calculator",
+        "description": "Input implied volatility to calculate theoretical option price",
+        "result": "Theoretical Price",
+        "basedOn": "Based on Black-Scholes model",
+        "enterParams": "Enter parameters to calculate price"
+      },
+      "about": {
+        "title": "About IV Tools",
+        "solverTitle": "IV Solver",
+        "solverDesc1": "The IV Solver uses Newton-Raphson method with bisection fallback to find the implied volatility that makes the Black-Scholes theoretical price equal to the market price.",
+        "solverDesc2": "Implied volatility represents the market's expectation of future volatility and is a key metric for comparing options across different strikes and expirations.",
+        "calcTitle": "Price Calculator",
+        "calcDesc1": "The Price Calculator uses the Black-Scholes formula to compute theoretical option prices given an implied volatility input.",
+        "calcDesc2": "Use this to estimate fair values, identify mispriced options, or understand how volatility changes affect option prices."
+      },
+      "note": {
+        "title": "Important Note",
+        "content": "These tools use the Black-Scholes model which assumes European-style options, constant volatility, and no transaction costs. Real market prices may differ due to early exercise premiums (American options), volatility smile/skew, and other factors."
+      }
+    },
+    "pl": {
+      "title": "P/L Simulator",
+      "description": "Calculate current profit/loss using Black-Scholes pricing with Greeks",
+      "strategy": {
+        "title": "Strategy",
+        "name": "Name",
+        "entryPrice": "Entry Price ($)",
+        "currentPrice": "Current Price ($)"
+      },
+      "marketParams": {
+        "title": "Market Parameters",
+        "impliedVolatility": "Implied Volatility (%)",
+        "riskFreeRate": "Risk-Free Rate (%)",
+        "dividendYield": "Dividend Yield (%)"
+      },
+      "legs": {
+        "title": "Option Legs",
+        "noLegs": "No legs added yet",
+        "addFirst": "Add First Leg",
+        "validationErrors": "Validation Errors:"
+      },
+      "actions": {
+        "addLeg": "Add Leg",
+        "showGreeks": "Show Greeks",
+        "hideGreeks": "Hide Greeks",
+        "exportResults": "Export Results",
+        "reset": "Reset"
+      },
+      "results": {
+        "currentPL": "Current P/L",
+        "totalPL": "Total P/L",
+        "plPercent": "P/L %",
+        "netPremium": "Net Premium (Initial Cost/Credit)"
+      },
+      "chart": {
+        "title": "P/L vs Price"
+      }
+    },
+    "payoff": {
+      "title": "Payoff Calculator",
+      "description": "Build multi-leg options strategies and visualize payoff at expiration",
+      "strategy": {
+        "title": "Strategy",
+        "name": "Name",
+        "underlyingPrice": "Underlying Price ($)"
+      },
+      "legs": {
+        "title": "Option Legs",
+        "noLegs": "No legs added yet",
+        "addFirst": "Add First Leg",
+        "validationErrors": "Validation Errors:"
+      },
+      "actions": {
+        "addLeg": "Add Leg",
+        "exportCSV": "Export CSV",
+        "shareLink": "Share Link",
+        "reset": "Reset"
+      },
+      "summary": {
+        "title": "Summary",
+        "netPremium": "Net Premium",
+        "credit": "Credit",
+        "debit": "Debit",
+        "maxProfit": "Max Profit",
+        "maxLoss": "Max Loss",
+        "unlimited": "Unlimited"
+      },
+      "chart": {
+        "title": "Payoff Diagram"
+      }
+    },
+    "common": {
+      "optionType": "Option Type",
+      "call": "Call",
+      "put": "Put",
+      "spotPrice": "Spot Price ($)",
+      "strike": "Strike ($)",
+      "daysToExpiry": "Days to Expiry",
+      "marketPrice": "Market Price ($)",
+      "riskFreeRate": "Risk-Free Rate (%)",
+      "dividendYield": "Dividend Yield (%)",
+      "impliedVolatility": "Implied Volatility (%)",
+      "error": "Error"
+    },
+    "tutorial": {
+      "startTutorial": "Start Tutorial",
+      "skipTutorial": "Skip",
+      "step": "Step",
+      "of": "of",
+      "previous": "Previous",
+      "next": "Next",
+      "done": "Done",
+      "finish": "Finish",
+      "theory": "Theory",
+      "tryIt": "Try it now",
+      "yourTurn": "Your turn!",
+      "proTip": "Pro Tip",
+      "welcomeTitle": "New here? 👋",
+      "welcomeDescription": "Learn this tool in 2 minutes - interactive and hands-on!",
+      "letsGo": "Let's go",
+      "greatJob": "Great job!"
+    }
+  },
   "libertexBanner": {
     "badge": "Top Broker 2025",
     "banner1": {

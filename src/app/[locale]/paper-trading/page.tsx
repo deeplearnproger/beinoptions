@@ -38,7 +38,7 @@ export default function PaperTradingPage({ params: { locale } }: { params: { loc
     },
     {
       name: 'Thinkorswim (TD Ameritrade)',
-      logo: '/logos/thinkorswim.png',
+      logo: '/logos/thinkorswim-td-ameritrade.png',
       description: isGerman
         ? 'Die Profi-Plattform für Optionshandel. PaperMoney-Funktion mit $100.000 virtuellem Kapital.'
         : 'The professional platform for options trading. PaperMoney feature with $100,000 virtual capital.',
@@ -52,7 +52,7 @@ export default function PaperTradingPage({ params: { locale } }: { params: { loc
       cons: isGerman
         ? ['Nur für US-Residenten', 'Steile Lernkurve']
         : ['US residents only', 'Steep learning curve'],
-      link: 'https://www.tdameritrade.com/tools-and-platforms/thinkorswim.html',
+      link: 'https://www.schwab.com/trading/thinkorswim',
       external: true,
     },
     {
@@ -106,7 +106,7 @@ export default function PaperTradingPage({ params: { locale } }: { params: { loc
       cons: isGerman
         ? ['Begrenzte Options-Funktionen', 'Kein echter Broker']
         : ['Limited options features', 'Not a real broker'],
-      link: 'https://www.tradingview.com/paper-trading/',
+      link: 'https://www.tradingview.com/',
       external: true,
     },
   ];

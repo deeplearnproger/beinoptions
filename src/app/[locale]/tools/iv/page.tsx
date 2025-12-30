@@ -1,11 +1,17 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 import { impliedVol, type IVParams } from '@/lib/options/implied-volatility';
 import { bsPrice } from '@/lib/options/black-scholes';
 import { formatPercent } from '@/lib/options/utils';
+import { ToolTutorial, useIVTutorialSteps } from '@/components/options/ToolTutorial';
 
 export default function IVToolsPage() {
+  const t = useTranslations('tools');
+  const locale = useLocale();
+  const tutorialSteps = useIVTutorialSteps(locale === 'de');
+
   // IV Solver inputs
   const [solverInputs, setSolverInputs] = useState<IVParams>({
     type: 'call',
@@ -69,39 +75,39 @@ export default function IVToolsPage() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Implied Volatility Tools</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('iv.title')}</h1>
           <p className="text-gray-600">
-            Calculate implied volatility from market prices and theoretical option values
+            {t('iv.description')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* IV Solver */}
           <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">IV Solver</h2>
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('iv.solver.title')}</h2>
             <p className="text-sm text-gray-600 mb-6">
-              Input market price to calculate implied volatility
+              {t('iv.solver.description')}
             </p>
 
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Option Type
+                  {t('common.optionType')}
                 </label>
                 <select
                   value={solverInputs.type}
                   onChange={(e) => handleSolverChange('type', e.target.value as 'call' | 'put')}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  <option value="call">Call</option>
-                  <option value="put">Put</option>
+                  <option value="call">{t('common.call')}</option>
+                  <option value="put">{t('common.put')}</option>
                 </select>
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Spot Price ($)
+                    {t('common.spotPrice')}
                   </label>
                   <input
                     type="number"
@@ -115,7 +121,7 @@ export default function IVToolsPage() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Strike ($)
+                    {t('common.strike')}
                   </label>
                   <input
                     type="number"
@@ -130,7 +136,7 @@ export default function IVToolsPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Days to Expiry
+                  {t('common.daysToExpiry')}
                 </label>
                 <input
                   type="number"
@@ -146,7 +152,7 @@ export default function IVToolsPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Market Price ($)
+                  {t('common.marketPrice')}
                 </label>
                 <input
                   type="number"
@@ -163,7 +169,7 @@ export default function IVToolsPage() {
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Risk-Free Rate (%)
+                    {t('common.riskFreeRate')}
                   </label>
                   <input
                     type="number"
@@ -178,7 +184,7 @@ export default function IVToolsPage() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Dividend Yield (%)
+                    {t('common.dividendYield')}
                   </label>
                   <input
                     type="number"
@@ -197,52 +203,52 @@ export default function IVToolsPage() {
             <div className="mt-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-lg">
               {ivResult.error ? (
                 <>
-                  <p className="text-sm font-medium text-red-800 mb-1">Error</p>
+                  <p className="text-sm font-medium text-red-800 mb-1">{t('common.error')}</p>
                   <p className="text-red-700">{ivResult.error}</p>
                 </>
               ) : ivResult.impliedVol !== null ? (
                 <>
-                  <p className="text-sm text-blue-600 mb-1">Implied Volatility</p>
+                  <p className="text-sm text-blue-600 mb-1">{t('iv.solver.result')}</p>
                   <p className="text-3xl font-bold text-blue-900">
                     {formatPercent(ivResult.impliedVol * 100, 2)}
                   </p>
                   <div className="mt-3 flex items-center justify-between text-xs text-blue-700">
-                    <span>Method: {ivResult.method}</span>
-                    <span>Iterations: {ivResult.iterations}</span>
+                    <span>{t('iv.solver.method')}: {ivResult.method}</span>
+                    <span>{t('iv.solver.iterations')}: {ivResult.iterations}</span>
                   </div>
                 </>
               ) : (
-                <p className="text-sm text-gray-600">Enter parameters to calculate IV</p>
+                <p className="text-sm text-gray-600">{t('iv.solver.enterParams')}</p>
               )}
             </div>
           </div>
 
           {/* Price Calculator (reverse) */}
           <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Price Calculator</h2>
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('iv.calculator.title')}</h2>
             <p className="text-sm text-gray-600 mb-6">
-              Input implied volatility to calculate theoretical option price
+              {t('iv.calculator.description')}
             </p>
 
             <div className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Option Type
+                  {t('common.optionType')}
                 </label>
                 <select
                   value={calcInputs.type}
                   onChange={(e) => handleCalcChange('type', e.target.value as 'call' | 'put')}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  <option value="call">Call</option>
-                  <option value="put">Put</option>
+                  <option value="call">{t('common.call')}</option>
+                  <option value="put">{t('common.put')}</option>
                 </select>
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Spot Price ($)
+                    {t('common.spotPrice')}
                   </label>
                   <input
                     type="number"
@@ -256,7 +262,7 @@ export default function IVToolsPage() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Strike ($)
+                    {t('common.strike')}
                   </label>
                   <input
                     type="number"
@@ -271,7 +277,7 @@ export default function IVToolsPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Days to Expiry
+                  {t('common.daysToExpiry')}
                 </label>
                 <input
                   type="number"
@@ -285,7 +291,7 @@ export default function IVToolsPage() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Implied Volatility (%)
+                  {t('common.impliedVolatility')}
                 </label>
                 <input
                   type="number"
@@ -303,7 +309,7 @@ export default function IVToolsPage() {
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Risk-Free Rate (%)
+                    {t('common.riskFreeRate')}
                   </label>
                   <input
                     type="number"
@@ -316,7 +322,7 @@ export default function IVToolsPage() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Dividend Yield (%)
+                    {t('common.dividendYield')}
                   </label>
                   <input
                     type="number"
@@ -333,16 +339,16 @@ export default function IVToolsPage() {
             <div className="mt-6 p-4 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg">
               {theoreticalPrice !== null ? (
                 <>
-                  <p className="text-sm text-green-600 mb-1">Theoretical Price</p>
+                  <p className="text-sm text-green-600 mb-1">{t('iv.calculator.result')}</p>
                   <p className="text-3xl font-bold text-green-900">
                     ${theoreticalPrice.toFixed(2)}
                   </p>
                   <p className="mt-3 text-xs text-green-700">
-                    Based on Black-Scholes model
+                    {t('iv.calculator.basedOn')}
                   </p>
                 </>
               ) : (
-                <p className="text-sm text-gray-600">Enter parameters to calculate price</p>
+                <p className="text-sm text-gray-600">{t('iv.calculator.enterParams')}</p>
               )}
             </div>
           </div>
@@ -350,45 +356,45 @@ export default function IVToolsPage() {
 
         {/* Information Section */}
         <div className="mt-8 bg-white rounded-lg shadow-sm p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">About IV Tools</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('iv.about.title')}</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">IV Solver</h3>
+              <h3 className="text-lg font-medium text-gray-900 mb-2">{t('iv.about.solverTitle')}</h3>
               <p className="text-sm text-gray-600 mb-2">
-                The IV Solver uses Newton-Raphson method with bisection fallback to find the
-                implied volatility that makes the Black-Scholes theoretical price equal to the
-                market price.
+                {t('iv.about.solverDesc1')}
               </p>
               <p className="text-sm text-gray-600">
-                Implied volatility represents the market&apos;s expectation of future volatility and is
-                a key metric for comparing options across different strikes and expirations.
+                {t('iv.about.solverDesc2')}
               </p>
             </div>
 
             <div>
-              <h3 className="text-lg font-medium text-gray-900 mb-2">Price Calculator</h3>
+              <h3 className="text-lg font-medium text-gray-900 mb-2">{t('iv.about.calcTitle')}</h3>
               <p className="text-sm text-gray-600 mb-2">
-                The Price Calculator uses the Black-Scholes formula to compute theoretical option
-                prices given an implied volatility input.
+                {t('iv.about.calcDesc1')}
               </p>
               <p className="text-sm text-gray-600">
-                Use this to estimate fair values, identify mispriced options, or understand how
-                volatility changes affect option prices.
+                {t('iv.about.calcDesc2')}
               </p>
             </div>
           </div>
 
           <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-            <p className="text-sm font-medium text-yellow-800 mb-1">Important Note</p>
+            <p className="text-sm font-medium text-yellow-800 mb-1">{t('iv.note.title')}</p>
             <p className="text-sm text-yellow-700">
-              These tools use the Black-Scholes model which assumes European-style options,
-              constant volatility, and no transaction costs. Real market prices may differ due to
-              early exercise premiums (American options), volatility smile/skew, and other factors.
+              {t('iv.note.content')}
             </p>
           </div>
         </div>
       </div>
+
+      {/* Interactive Tutorial */}
+      <ToolTutorial
+        toolName="iv"
+        steps={tutorialSteps}
+        storageKey="tutorial_iv_completed"
+      />
     </div>
   );
 }

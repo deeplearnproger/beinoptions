@@ -1,11 +1,13 @@
 'use client';
 
 import React, { useMemo, useState } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 import { useOptionsStore, createNewLeg } from '@/lib/store/options-store';
 import { OptionLegInput } from '@/components/options/OptionLegInput';
 import { PLChart } from '@/components/options/PLChart';
 import { GreeksDisplay } from '@/components/options/GreeksDisplay';
 import { StrategyPresets } from '@/components/options/StrategyPresets';
+import { ToolTutorial, usePLTutorialSteps } from '@/components/options/ToolTutorial';
 import { calculateStrategyPL } from '@/lib/options/pl-simulator';
 import { validateStrategy } from '@/lib/options/strategies';
 import {
@@ -17,6 +19,10 @@ import {
 } from '@/lib/options/utils';
 
 export default function PLSimulatorPage() {
+  const t = useTranslations('tools');
+  const locale = useLocale();
+  const tutorialSteps = usePLTutorialSteps(locale === 'de');
+
   const strategy = useOptionsStore((state) => state.strategy);
   const addLeg = useOptionsStore((state) => state.addLeg);
   const removeLeg = useOptionsStore((state) => state.removeLeg);
@@ -76,9 +82,9 @@ export default function PLSimulatorPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">P/L Simulator</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('pl.title')}</h1>
           <p className="text-gray-600">
-            Calculate current profit/loss using Black-Scholes pricing with Greeks
+            {t('pl.description')}
           </p>
         </div>
 
@@ -87,12 +93,12 @@ export default function PLSimulatorPage() {
           <div className="lg:col-span-1 space-y-6">
             {/* Strategy Info */}
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Strategy</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('pl.strategy.title')}</h2>
 
               <div className="space-y-4">
                 <div>
                   <label htmlFor="strategy-name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Name
+                    {t('pl.strategy.name')}
                   </label>
                   <input
                     id="strategy-name"
@@ -105,7 +111,7 @@ export default function PLSimulatorPage() {
 
                 <div>
                   <label htmlFor="underlying-price" className="block text-sm font-medium text-gray-700 mb-1">
-                    Entry Price ($)
+                    {t('pl.strategy.entryPrice')}
                   </label>
                   <input
                     id="underlying-price"
@@ -123,7 +129,7 @@ export default function PLSimulatorPage() {
 
                 <div>
                   <label htmlFor="current-price" className="block text-sm font-medium text-gray-700 mb-1">
-                    Current Price ($)
+                    {t('pl.strategy.currentPrice')}
                   </label>
                   <input
                     id="current-price"
@@ -140,12 +146,12 @@ export default function PLSimulatorPage() {
 
             {/* Market Parameters */}
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Market Parameters</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('pl.marketParams.title')}</h2>
 
               <div className="space-y-4">
                 <div>
                   <label htmlFor="volatility" className="block text-sm font-medium text-gray-700 mb-1">
-                    Implied Volatility (%)
+                    {t('pl.marketParams.impliedVolatility')}
                   </label>
                   <input
                     id="volatility"
@@ -161,7 +167,7 @@ export default function PLSimulatorPage() {
 
                 <div>
                   <label htmlFor="risk-free-rate" className="block text-sm font-medium text-gray-700 mb-1">
-                    Risk-Free Rate (%)
+                    {t('pl.marketParams.riskFreeRate')}
                   </label>
                   <input
                     id="risk-free-rate"
@@ -177,7 +183,7 @@ export default function PLSimulatorPage() {
 
                 <div>
                   <label htmlFor="dividend-yield" className="block text-sm font-medium text-gray-700 mb-1">
-                    Dividend Yield (%)
+                    {t('pl.marketParams.dividendYield')}
                   </label>
                   <input
                     id="dividend-yield"
@@ -205,14 +211,14 @@ export default function PLSimulatorPage() {
                 disabled={strategy.legs.length >= 6}
                 className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
-                Add Leg ({strategy.legs.length}/6)
+                {t('pl.actions.addLeg')} ({strategy.legs.length}/6)
               </button>
 
               <button
                 onClick={toggleGreeks}
                 className="w-full px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
               >
-                {showGreeks ? 'Hide' : 'Show'} Greeks
+                {showGreeks ? t('pl.actions.hideGreeks') : t('pl.actions.showGreeks')}
               </button>
 
               <button
@@ -220,14 +226,14 @@ export default function PLSimulatorPage() {
                 disabled={!plResults}
                 className="w-full px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
-                Export Results
+                {t('pl.actions.exportResults')}
               </button>
 
               <button
                 onClick={reset}
                 className="w-full px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300"
               >
-                Reset
+                {t('pl.actions.reset')}
               </button>
             </div>
           </div>
@@ -236,16 +242,16 @@ export default function PLSimulatorPage() {
           <div className="lg:col-span-2 space-y-6">
             {/* Option Legs */}
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Option Legs</h2>
+              <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('pl.legs.title')}</h2>
 
               {strategy.legs.length === 0 ? (
                 <div className="text-center py-8">
-                  <p className="text-gray-500 mb-4">No legs added yet</p>
+                  <p className="text-gray-500 mb-4">{t('pl.legs.noLegs')}</p>
                   <button
                     onClick={handleAddLeg}
                     className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
                   >
-                    Add First Leg
+                    {t('pl.legs.addFirst')}
                   </button>
                 </div>
               ) : (
@@ -263,7 +269,7 @@ export default function PLSimulatorPage() {
               {/* Validation Errors */}
               {hasErrors && (
                 <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
-                  <p className="text-sm font-medium text-red-800 mb-1">Validation Errors:</p>
+                  <p className="text-sm font-medium text-red-800 mb-1">{t('pl.legs.validationErrors')}</p>
                   <ul className="list-disc list-inside text-sm text-red-700">
                     {validationErrors.map((error, index) => (
                       <li key={index}>{error.message}</li>
@@ -276,16 +282,16 @@ export default function PLSimulatorPage() {
             {/* P/L Summary */}
             {plResults && !hasErrors && (
               <div className="bg-white rounded-lg shadow-sm p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">Current P/L</h2>
+                <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('pl.results.currentPL')}</h2>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-600 mb-1">Total P/L</p>
+                    <p className="text-sm text-gray-600 mb-1">{t('pl.results.totalPL')}</p>
                     <p className={`text-2xl font-bold ${getPLColor(plResults.totalPL)}`}>
                       {formatCurrency(plResults.totalPL)}
                     </p>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-600 mb-1">P/L %</p>
+                    <p className="text-sm text-gray-600 mb-1">{t('pl.results.plPercent')}</p>
                     <p className={`text-2xl font-bold ${getPLColor(plResults.totalPLPercent)}`}>
                       {formatPercent(plResults.totalPLPercent)}
                     </p>
@@ -293,7 +299,7 @@ export default function PLSimulatorPage() {
                 </div>
 
                 <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                  <p className="text-xs text-blue-600 mb-1">Net Premium (Initial Cost/Credit)</p>
+                  <p className="text-xs text-blue-600 mb-1">{t('pl.results.netPremium')}</p>
                   <p className={`text-lg font-semibold ${plResults.netPremium >= 0 ? 'text-green-700' : 'text-red-700'}`}>
                     {formatCurrency(plResults.netPremium)}
                   </p>
@@ -311,13 +317,20 @@ export default function PLSimulatorPage() {
             {/* P/L Chart */}
             {plResults && !hasErrors && (
               <div className="bg-white rounded-lg shadow-sm p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">P/L vs Price</h2>
+                <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('pl.chart.title')}</h2>
                 <PLChart currentPrice={currentPrice} />
               </div>
             )}
           </div>
         </div>
       </div>
+
+      {/* Interactive Tutorial */}
+      <ToolTutorial
+        toolName="pl"
+        steps={tutorialSteps}
+        storageKey="tutorial_pl_completed"
+      />
     </div>
   );
 }
