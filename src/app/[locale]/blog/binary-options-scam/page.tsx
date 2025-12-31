@@ -1,20 +1,50 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { generateMetadata as genMeta } from '@/components/seo/SEOHead';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://beinoptions.com';
 
   return genMeta({
     title: locale === 'de'
-      ? 'Binäre Optionen – Betrug oder seriös? Die unbequeme Wahrheit'
-      : 'Binary Options – Scam or Legit? The Uncomfortable Truth',
+      ? 'Binäre Optionen – Betrug oder seriös? Die unbequeme Wahrheit 2025'
+      : 'Binary Options – Scam or Legit Trading? The Uncomfortable Truth 2025',
     description: locale === 'de'
-      ? 'Binäre Optionen sind eines der umstrittensten Finanzprodukte. Erfahren Sie, warum sie in der EU verboten wurden und wie Sie sich vor Betrug schützen können.'
-      : 'Binary options are one of the most controversial financial products. Learn why they were banned in the EU and how to protect yourself from scams.',
+      ? 'Binäre Optionen Betrug erkennen: Warum sie in der EU verboten sind, wie die Masche funktioniert und wie Sie sich schützen. Ehrliche Analyse ohne Marketing.'
+      : 'Binary options scam exposed: Why they are banned in the EU, how the scheme works, and how to protect yourself. Honest analysis without marketing hype.',
     keywords: locale === 'de'
-      ? ['binäre optionen', 'binary options betrug', 'binary options scam', 'ESMA verbot', 'binäre optionen warnung', 'trading betrug', 'BaFin warnung']
-      : ['binary options', 'binary options scam', 'binary options fraud', 'ESMA ban', 'binary options warning', 'trading scam', 'options fraud'],
+      ? [
+          'binäre optionen',
+          'binäre optionen betrug',
+          'binäre optionen seriös',
+          'binary options scam',
+          'binäre optionen erfahrungen',
+          'binäre optionen warnung',
+          'binäre optionen verboten',
+          'ESMA verbot binäre optionen',
+          'trading betrug',
+          'BaFin warnung',
+          'geld verloren trading',
+          'binäre optionen abzocke',
+          'broker betrug',
+          'auszahlung verweigert',
+        ]
+      : [
+          'binary options',
+          'binary options scam',
+          'binary options fraud',
+          'are binary options legit',
+          'binary options banned',
+          'binary options warning',
+          'ESMA ban binary options',
+          'trading scam',
+          'binary options reviews',
+          'lost money binary options',
+          'binary options withdrawal problems',
+          'broker scam',
+          'guaranteed profits scam',
+        ],
     canonical: `${baseUrl}/${locale}/blog/binary-options-scam`,
     ogImage: `${baseUrl}/images/blog/binary-options-scam-hero.png`,
     type: 'article',
@@ -26,9 +56,59 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   });
 }
 
+// FAQ data for schema
+const getFAQs = (locale: string) => [
+  {
+    question: locale === 'de'
+      ? 'Sind binäre Optionen Betrug?'
+      : 'Are binary options a scam?',
+    answer: locale === 'de'
+      ? 'Binäre Optionen sind in der EU für Privatanleger verboten, weil sie ein extrem hohes Verlustrisiko haben und viele Anbieter betrügerische Praktiken anwenden. Die Plattform ist oft dein direkter Gegenspieler – dein Verlust ist deren Gewinn.'
+      : 'Binary options are banned in the EU for retail investors because they carry extremely high loss risks and many providers use fraudulent practices. The platform is often your direct counterparty – your loss is their profit.',
+  },
+  {
+    question: locale === 'de'
+      ? 'Warum sind binäre Optionen in der EU verboten?'
+      : 'Why are binary options banned in the EU?',
+    answer: locale === 'de'
+      ? 'Die ESMA hat binäre Optionen 2018 verboten wegen: extrem hohem Verlustrisiko (74-89% verlieren Geld), systematischer Täuschung durch Anbieter, fehlender Transparenz und strukturellen Interessenkonflikten.'
+      : 'ESMA banned binary options in 2018 due to: extremely high loss risk (74-89% lose money), systematic deception by providers, lack of transparency, and structural conflicts of interest.',
+  },
+  {
+    question: locale === 'de'
+      ? 'Kann ich mein Geld von einer binären Optionen Plattform zurückbekommen?'
+      : 'Can I get my money back from a binary options platform?',
+    answer: locale === 'de'
+      ? 'Leider ist es sehr schwierig, Geld von unseriösen Plattformen zurückzubekommen, besonders wenn sie offshore operieren. Wenden Sie sich an Ihre Bank für eine Rückbuchung oder an die BaFin/Verbraucherschutz.'
+      : 'Unfortunately, it is very difficult to recover money from fraudulent platforms, especially those operating offshore. Contact your bank for a chargeback or reach out to financial regulators and consumer protection agencies.',
+  },
+  {
+    question: locale === 'de'
+      ? 'Was sind sichere Alternativen zu binären Optionen?'
+      : 'What are safe alternatives to binary options?',
+    answer: locale === 'de'
+      ? 'Regulierte Alternativen sind: klassische börsengehandelte Optionen, regulierte CFDs bei EU-Brokern, ETFs und Aktien für langfristige Investments. Wichtig: Nur bei regulierten Anbietern handeln.'
+      : 'Regulated alternatives include: traditional exchange-traded options, regulated CFDs with EU brokers, ETFs and stocks for long-term investments. Important: Only trade with regulated providers.',
+  },
+  {
+    question: locale === 'de'
+      ? 'Wie erkenne ich einen Trading-Betrug?'
+      : 'How do I recognize a trading scam?',
+    answer: locale === 'de'
+      ? 'Warnsignale sind: garantierte Gewinne, aggressive Verkäufer, Druck mehr einzuzahlen, Probleme bei Auszahlungen, unrealistische Erfolgsquoten, fehlende EU-Regulierung und Offshore-Firmensitz.'
+      : 'Warning signs include: guaranteed profits, aggressive salespeople, pressure to deposit more, withdrawal problems, unrealistic success rates, lack of EU regulation, and offshore company registration.',
+  },
+];
+
 export default function BinaryOptionsScamPage({ params: { locale } }: { params: { locale: string } }) {
+  const faqs = getFAQs(locale);
+
   return (
-    <div className="min-h-screen bg-slate-50">
+    <>
+      {/* FAQ Schema for SEO */}
+      <FAQSchema faqs={faqs} />
+
+      <div className="min-h-screen bg-slate-50">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 text-white py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -228,6 +308,15 @@ export default function BinaryOptionsScamPage({ params: { locale } }: { params: 
                 <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm">2</span>
                 {locale === 'de' ? '„Garantierte Gewinne" = 100 % Scam' : '"Guaranteed profits" = 100% scam'}
               </h3>
+              <div className="mb-4 rounded-xl overflow-hidden">
+                <Image
+                  src="/images/blog/binary-options-guaranteed-profits.png"
+                  alt={locale === 'de' ? 'Falsche Gewinnversprechen' : 'False profit promises'}
+                  width={600}
+                  height={300}
+                  className="w-full h-auto"
+                />
+              </div>
               <p className="text-slate-700 mb-4">
                 {locale === 'de'
                   ? 'Seriöse Finanzmärkte kennen keine Garantien.'
@@ -261,6 +350,15 @@ export default function BinaryOptionsScamPage({ params: { locale } }: { params: 
                 <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm">3</span>
                 {locale === 'de' ? 'Manipulierte Software' : 'Manipulated software'}
               </h3>
+              <div className="mb-4 rounded-xl overflow-hidden">
+                <Image
+                  src="/images/blog/binary-options-fake-data.png"
+                  alt={locale === 'de' ? 'Gefälschte Marktdaten' : 'Fake market data'}
+                  width={600}
+                  height={300}
+                  className="w-full h-auto"
+                />
+              </div>
               <p className="text-slate-700 mb-4">
                 {locale === 'de' ? 'Viele binäre Optionen Plattformen:' : 'Many binary options platforms:'}
               </p>
@@ -291,6 +389,15 @@ export default function BinaryOptionsScamPage({ params: { locale } }: { params: 
                 <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm">4</span>
                 {locale === 'de' ? 'Einzahlen ist leicht – auszahlen fast unmöglich' : 'Depositing is easy – withdrawing is almost impossible'}
               </h3>
+              <div className="mb-4 rounded-xl overflow-hidden">
+                <Image
+                  src="/images/blog/binary-options-withdrawal-blocked.png"
+                  alt={locale === 'de' ? 'Blockierte Auszahlung' : 'Blocked withdrawal'}
+                  width={600}
+                  height={300}
+                  className="w-full h-auto"
+                />
+              </div>
               <p className="text-slate-700 mb-3">
                 {locale === 'de' ? 'Typische Probleme:' : 'Typical issues:'}
               </p>
@@ -323,6 +430,15 @@ export default function BinaryOptionsScamPage({ params: { locale } }: { params: 
                 <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm">5</span>
                 {locale === 'de' ? 'Aggressive Verkäufer & Fake-Coaches' : 'Aggressive salespeople & fake coaches'}
               </h3>
+              <div className="mb-4 rounded-xl overflow-hidden">
+                <Image
+                  src="/images/blog/binary-options-aggressive-sales.png"
+                  alt={locale === 'de' ? 'Aggressive Verkaufstaktiken' : 'Aggressive sales tactics'}
+                  width={600}
+                  height={300}
+                  className="w-full h-auto"
+                />
+              </div>
               <p className="text-slate-700 mb-3">
                 {locale === 'de' ? 'Nach der Registrierung:' : 'After registration:'}
               </p>
@@ -612,6 +728,28 @@ export default function BinaryOptionsScamPage({ params: { locale } }: { params: 
             </div>
           </section>
 
+          {/* FAQ Section */}
+          <section className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+              {locale === 'de' ? 'Häufig gestellte Fragen' : 'Frequently Asked Questions'}
+            </h2>
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white rounded-xl border border-slate-200 p-5">
+                  <h3 className="font-bold text-slate-900 mb-3 flex items-start gap-3">
+                    <span className="w-6 h-6 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center flex-shrink-0 text-sm font-bold">
+                      {index + 1}
+                    </span>
+                    {faq.question}
+                  </h3>
+                  <p className="text-slate-700 pl-9">
+                    {faq.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
           {/* Related Articles */}
           <section className="mb-8">
             <h3 className="text-xl font-bold text-slate-900 mb-6">
@@ -671,6 +809,7 @@ export default function BinaryOptionsScamPage({ params: { locale } }: { params: 
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
