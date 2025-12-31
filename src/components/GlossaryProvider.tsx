@@ -14,7 +14,7 @@ export default function GlossaryProvider() {
     const createGlossaryLink = (term: string, termId: string): HTMLElement => {
       const link = document.createElement('a');
       link.href = `/${locale}/glossary#${termId}`;
-      link.className = 'text-gray-700 no-underline border-b border-gray-300 hover:text-primary-600 hover:border-primary-600 transition-colors cursor-pointer';
+      link.className = 'glossary-term-link';
       link.title = locale === 'de' ? `Begriff im Glossar ansehen: ${term}` : `View in glossary: ${term}`;
       link.textContent = term;
 
