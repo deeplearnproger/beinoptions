@@ -118,8 +118,8 @@ export default function Trading212ClientPage({ params }: Props) {
       iconPath: 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
       title: locale === 'de' ? 'Top Mobile App' : 'Top Mobile App',
       description: locale === 'de'
-        ? 'Preisgekrönte App mit 4.7★ Rating im App Store'
-        : 'Award-winning app with 4.7★ rating in App Store',
+        ? 'Preisgekrönte App mit 4.7 Rating im App Store'
+        : 'Award-winning app with 4.7 rating in App Store',
     },
     {
       iconBg: 'from-yellow-50 to-amber-100',
@@ -402,7 +402,7 @@ export default function Trading212ClientPage({ params }: Props) {
                   {locale === 'de' ? 'Jetzt kostenlos registrieren' : 'Register for free now'}
                 </a>
                 <p className="text-sm text-cyan-100 mt-4">
-                  {locale === 'de' ? '✓ Nur 1€ Mindesteinlage • ✓ 0€ Kommission • ✓ Deutscher Support' : '✓ Only €1 minimum deposit • ✓ €0 commission • ✓ German support'}
+                  {locale === 'de' ? 'Nur 1€ Mindesteinlage - 0€ Kommission - Deutscher Support' : 'Only €1 minimum deposit - €0 commission - German support'}
                 </p>
               </div>
             </div>
@@ -474,8 +474,11 @@ export default function Trading212ClientPage({ params }: Props) {
                   <h4 className="font-semibold text-gray-900 mb-2">{review.title}</h4>
                   <p className="text-gray-700 mb-3">{review.text}</p>
                   <div className="flex items-center gap-4 text-sm text-gray-500">
-                    <button className="hover:text-gray-700">
-                      👍 {locale === 'de' ? 'Hilfreich' : 'Helpful'} ({review.helpful})
+                    <button className="hover:text-gray-700 flex items-center gap-1">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+                      </svg>
+                      {locale === 'de' ? 'Hilfreich' : 'Helpful'} ({review.helpful})
                     </button>
                   </div>
                 </div>
@@ -499,16 +502,16 @@ export default function Trading212ClientPage({ params }: Props) {
                     <h3 className="font-semibold text-gray-900 mb-3">{locale === 'de' ? 'Verfügbare Plattformen' : 'Available Platforms'}</h3>
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-2">✓</span>
+                        <svg className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                         <span>{locale === 'de' ? 'Web-Plattform' : 'Web platform'}</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-2">✓</span>
-                        <span>iOS App (4.7★)</span>
+                        <svg className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                        <span>iOS App (4.7)</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-2">✓</span>
-                        <span>Android App (4.6★)</span>
+                        <svg className="w-5 h-5 text-green-600 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                        <span>Android App (4.6)</span>
                       </li>
                     </ul>
                   </div>

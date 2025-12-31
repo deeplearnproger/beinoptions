@@ -11,8 +11,8 @@ export async function generateMetadata({
       : 'Options Trading Broker Comparison Germany 2025';
   const description =
     locale === 'de'
-      ? 'Die besten Broker für Optionshandel in Deutschland im Vergleich. ✓ Detaillierte Tests ✓ Echte Erfahrungen ✓ Niedrige Gebühren ✓ BaFin-reguliert. Interactive Brokers, DEGIRO, Trade Republic und mehr.'
-      : 'Compare the best brokers for options trading in Germany. ✓ Detailed reviews ✓ Real experiences ✓ Low fees ✓ BaFin-regulated. Interactive Brokers, DEGIRO, Trade Republic and more.';
+      ? 'Die besten Broker für Optionshandel in Deutschland im Vergleich. Detaillierte Tests - Echte Erfahrungen - Niedrige Gebühren - BaFin-reguliert. Interactive Brokers, DEGIRO, Trade Republic und mehr.'
+      : 'Compare the best brokers for options trading in Germany. Detailed reviews - Real experiences - Low fees - BaFin-regulated. Interactive Brokers, DEGIRO, Trade Republic and more.';
 
   return {
     title,

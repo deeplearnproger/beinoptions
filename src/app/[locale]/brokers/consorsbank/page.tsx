@@ -637,15 +637,15 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
                     <p className="text-gray-600 mb-4">{locale === 'de' ? 'Professionelle Desktop-Plattform' : 'Professional desktop platform'}</p>
                     <ul className="space-y-2 text-sm text-gray-700">
                       <li className="flex items-center gap-2">
-                        <span className="text-green-600">✓</span>
+                        <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                         {locale === 'de' ? 'Übersichtliche Benutzeroberfläche' : 'Clear user interface'}
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="text-green-600">✓</span>
+                        <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                         {locale === 'de' ? 'Realtime-Kurse' : 'Real-time quotes'}
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="text-green-600">✓</span>
+                        <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                         {locale === 'de' ? 'Watchlists & Alerts' : 'Watchlists & alerts'}
                       </li>
                     </ul>
@@ -661,15 +661,15 @@ export default function ConsorsbankPage({ params: { locale } }: { params: { loca
                     <p className="text-gray-600 mb-4">{locale === 'de' ? 'Banking & Trading unterwegs' : 'Banking & trading on the go'}</p>
                     <ul className="space-y-2 text-sm text-gray-700">
                       <li className="flex items-center gap-2">
-                        <span className="text-green-600">✓</span>
+                        <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                         iOS & Android
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="text-green-600">✓</span>
+                        <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                         {locale === 'de' ? 'Trading & Banking integriert' : 'Trading & banking integrated'}
                       </li>
                       <li className="flex items-center gap-2">
-                        <span className="text-green-600">✓</span>
+                        <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                         {locale === 'de' ? 'Biometrischer Login' : 'Biometric login'}
                       </li>
                     </ul>
