@@ -3,13 +3,26 @@ import Link from 'next/link';
 import { generateMetadata as genMeta } from '@/components/seo/SEOHead';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://beinoptions.com';
+
   return genMeta({
     title: locale === 'de'
-      ? 'Binäre Optionen – Betrug oder seriös? Die unbequeme Wahrheit | BeInOptions'
-      : 'Binary Options – Scam or Legit? The Uncomfortable Truth | BeInOptions',
+      ? 'Binäre Optionen – Betrug oder seriös? Die unbequeme Wahrheit'
+      : 'Binary Options – Scam or Legit? The Uncomfortable Truth',
     description: locale === 'de'
       ? 'Binäre Optionen sind eines der umstrittensten Finanzprodukte. Erfahren Sie, warum sie in der EU verboten wurden und wie Sie sich vor Betrug schützen können.'
       : 'Binary options are one of the most controversial financial products. Learn why they were banned in the EU and how to protect yourself from scams.',
+    keywords: locale === 'de'
+      ? ['binäre optionen', 'binary options betrug', 'binary options scam', 'ESMA verbot', 'binäre optionen warnung', 'trading betrug', 'BaFin warnung']
+      : ['binary options', 'binary options scam', 'binary options fraud', 'ESMA ban', 'binary options warning', 'trading scam', 'options fraud'],
+    canonical: `${baseUrl}/${locale}/blog/binary-options-scam`,
+    ogImage: `${baseUrl}/images/blog/binary-options-scam-hero.png`,
+    type: 'article',
+    publishedTime: '2025-12-31T00:00:00Z',
+    modifiedTime: '2025-12-31T00:00:00Z',
+    author: 'BeInOptions Research Team',
+    section: locale === 'de' ? 'Risikowarnung' : 'Risk Warning',
+    locale,
   });
 }
 

@@ -3,13 +3,26 @@ import Link from 'next/link';
 import { generateMetadata as genMeta } from '@/components/seo/SEOHead';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://beinoptions.com';
+
   return genMeta({
     title: locale === 'de'
-      ? 'Optionen einfach erklärt – Der ultimative Einsteiger-Guide | BeInOptions'
-      : 'Options Explained Simply – The Ultimate Beginner\'s Guide | BeInOptions',
+      ? 'Optionen einfach erklärt – Der ultimative Einsteiger-Guide'
+      : 'Options Explained Simply – The Ultimate Beginner\'s Guide',
     description: locale === 'de'
       ? 'Optionen verständlich erklärt mit praktischen Beispielen. Lernen Sie Call- und Put-Optionen Schritt für Schritt. Der perfekte Einstieg für Anfänger.'
       : 'Options explained simply with practical examples. Learn Call and Put options step by step. The perfect introduction for beginners.',
+    keywords: locale === 'de'
+      ? ['optionen erklärt', 'optionen für anfänger', 'call option', 'put option', 'optionen lernen', 'optionshandel grundlagen', 'was sind optionen']
+      : ['options explained', 'options for beginners', 'call option', 'put option', 'learn options', 'options trading basics', 'what are options'],
+    canonical: `${baseUrl}/${locale}/blog/options-explained-simply`,
+    ogImage: `${baseUrl}/images/blog/options-explained-hero.png`,
+    type: 'article',
+    publishedTime: '2025-12-31T00:00:00Z',
+    modifiedTime: '2025-12-31T00:00:00Z',
+    author: 'BeInOptions Education Team',
+    section: locale === 'de' ? 'Einsteiger-Guide' : 'Beginner Guide',
+    locale,
   });
 }
 
