@@ -1,14 +1,29 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+
 interface TrustpilotReviewsProps {
   locale: string;
 }
 
-// Real reviews from Trustpilot - manually updated
+// Real reviews from Trustpilot - https://www.trustpilot.com/review/www.beinoptions.com
 const reviews = {
-  score: 4.0,
+  score: 5.0,
   totalReviews: 4,
   items: [
+    {
+      author: 'Natalia',
+      rating: 5,
+      date: '2024-12-28',
+      title: {
+        de: 'Die Seite wirkt seriös und durchdacht',
+        en: 'The site looks professional and well thought out',
+      },
+      text: {
+        de: 'Ich habe lange nach verständlichen Infos zu Optionenhandel in Deutschland gesucht und bin hier fündig geworden. Ohne Marketing-Gerede, dafür mit relevanten Informationen und aktuellen Themen. Die Seite wirkt seriös und durchdacht, schaue definitiv wieder vorbei.',
+        en: 'I was looking for understandable information about options trading in Germany for a long time and found it here. No marketing talk, but relevant information and current topics. The site looks professional and well thought out, will definitely visit again.',
+      },
+    },
     {
       author: 'Julie',
       rating: 5,
@@ -20,6 +35,32 @@ const reviews = {
       text: {
         de: 'Sehr gute Plattform, wenn man etwas über Optionen lernen möchte. Klare Anleitungen und viele interessante Neuigkeiten.',
         en: 'Very good platform if you want to learn about options. Clear guide and a lot of interesting news.',
+      },
+    },
+    {
+      author: 'Daria C',
+      rating: 5,
+      date: '2024-12-26',
+      title: {
+        de: 'Info über Optionen in Deutschland',
+        en: 'Info about options in Germany',
+      },
+      text: {
+        de: 'Ich habe Info über Optionen in DE gesucht, bin auf diese Webseite gelandet. Gut für Anfänger wie ich selbst, alle nötige Infos sind da, auch News oder Strategien. Habe auch P/L Simulator ausprobiert, wirklich cool, auch wenn etwas mehr Anleitung hilfreich wäre. Insgesamt top, ich habe keine echte Alternative gefunden!',
+        en: 'I was looking for info about options in Germany and landed on this website. Good for beginners like myself, all necessary info is there, also news and strategies. Also tried the P/L Simulator, really cool, even if a bit more guidance would be helpful. Overall top, I haven\'t found a real alternative!',
+      },
+    },
+    {
+      author: 'Ant Cherk',
+      rating: 5,
+      date: '2024-12-03',
+      title: {
+        de: 'Eine wirklich hilfreiche Website rund um Optionen',
+        en: 'A really helpful website about options',
+      },
+      text: {
+        de: 'Eine wirklich hilfreiche Website rund um Optionen. Besonders die Informationen zu Regulierung und Besteuerung sind übersichtlich und verständlich erklärt. Sehr nützlich sind auch der Rechner und das Broker-Ranking. Zudem ist der Support ausgesprochen freundlich. Klare Empfehlung.',
+        en: 'A really helpful website about options. Especially the information on regulation and taxation is clearly and understandably explained. The calculator and broker ranking are also very useful. In addition, the support is extremely friendly. Clear recommendation.',
       },
     },
   ],
@@ -48,7 +89,16 @@ function StarRating({ rating, size = 'md' }: { rating: number; size?: 'sm' | 'md
   );
 }
 
-export default function TrustpilotReviews({ locale }: TrustpilotReviewsProps) {
+// Single review card component
+function ReviewCard({
+  review,
+  locale,
+  isActive
+}: {
+  review: typeof reviews.items[0];
+  locale: string;
+  isActive: boolean;
+}) {
   const formatDate = (dateStr: string) => {
     const date = new Date(dateStr);
     return date.toLocaleDateString(locale === 'de' ? 'de-DE' : 'en-US', {
@@ -57,6 +107,58 @@ export default function TrustpilotReviews({ locale }: TrustpilotReviewsProps) {
       day: 'numeric',
     });
   };
+
+  return (
+    <div
+      className={`absolute inset-0 bg-white rounded-xl p-6 border border-gray-200 transition-all duration-500 ${
+        isActive
+          ? 'opacity-100 translate-x-0 scale-100'
+          : 'opacity-0 translate-x-8 scale-95 pointer-events-none'
+      }`}
+    >
+      {/* Stars */}
+      <div className="mb-4">
+        <StarRating rating={review.rating} />
+      </div>
+
+      {/* Title */}
+      <h4 className="font-bold text-gray-900 mb-2 text-lg">
+        {locale === 'de' ? review.title.de : review.title.en}
+      </h4>
+
+      {/* Text */}
+      <p className="text-gray-600 mb-4 leading-relaxed min-h-[72px]">
+        {locale === 'de' ? review.text.de : review.text.en}
+      </p>
+
+      {/* Author & Date */}
+      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+        <div className="flex items-center gap-2">
+          <div className="w-8 h-8 rounded-full bg-[#00b67a] flex items-center justify-center text-white font-bold text-sm">
+            {review.author.charAt(0)}
+          </div>
+          <span className="font-medium text-gray-900">{review.author}</span>
+        </div>
+        <span className="text-sm text-gray-400">{formatDate(review.date)}</span>
+      </div>
+    </div>
+  );
+}
+
+export default function TrustpilotReviews({ locale }: TrustpilotReviewsProps) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Auto-rotate reviews every 5 seconds
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % reviews.items.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isPaused]);
 
   return (
     <div className="py-16 bg-white">
@@ -95,74 +197,38 @@ export default function TrustpilotReviews({ locale }: TrustpilotReviewsProps) {
             </div>
           </div>
 
-          {/* Reviews Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            {reviews.items.map((review, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-[#00b67a] hover:shadow-lg transition-all"
-              >
-                {/* Stars */}
-                <div className="mb-4">
-                  <StarRating rating={review.rating} />
-                </div>
+          {/* Review Carousel */}
+          <div className="mb-10">
+            <div
+              className="relative h-[280px] max-w-lg mx-auto"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+            >
+              {reviews.items.map((review, index) => (
+                <ReviewCard
+                  key={index}
+                  review={review}
+                  locale={locale}
+                  isActive={index === activeIndex}
+                />
+              ))}
+            </div>
 
-                {/* Title */}
-                <h4 className="font-bold text-gray-900 mb-2 text-lg">
-                  {locale === 'de' ? review.title.de : review.title.en}
-                </h4>
-
-                {/* Text */}
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {locale === 'de' ? review.text.de : review.text.en}
-                </p>
-
-                {/* Author & Date */}
-                <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-full bg-[#00b67a] flex items-center justify-center text-white font-bold text-sm">
-                      {review.author.charAt(0)}
-                    </div>
-                    <span className="font-medium text-gray-900">{review.author}</span>
-                  </div>
-                  <span className="text-sm text-gray-400">{formatDate(review.date)}</span>
-                </div>
-              </div>
-            ))}
-
-            {/* Placeholder cards for visual balance if few reviews */}
-            {reviews.items.length < 3 && (
-              <>
-                <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border border-dashed border-gray-300 flex flex-col items-center justify-center text-center min-h-[250px]">
-                  <div className="w-12 h-12 rounded-full bg-[#00b67a]/10 flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-[#00b67a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                    </svg>
-                  </div>
-                  <p className="text-gray-600 font-medium mb-2">
-                    {locale === 'de' ? 'Ihre Meinung zählt!' : 'Your opinion matters!'}
-                  </p>
-                  <p className="text-sm text-gray-400">
-                    {locale === 'de' ? 'Teilen Sie Ihre Erfahrung' : 'Share your experience'}
-                  </p>
-                </div>
-                {reviews.items.length < 2 && (
-                  <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 border border-dashed border-gray-300 flex flex-col items-center justify-center text-center min-h-[250px]">
-                    <div className="w-12 h-12 rounded-full bg-[#00b67a]/10 flex items-center justify-center mb-4">
-                      <svg className="w-6 h-6 text-[#00b67a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                      </svg>
-                    </div>
-                    <p className="text-gray-600 font-medium mb-2">
-                      {locale === 'de' ? 'Werden Sie Teil der Community' : 'Join the community'}
-                    </p>
-                    <p className="text-sm text-gray-400">
-                      {locale === 'de' ? 'Helfen Sie anderen Tradern' : 'Help other traders'}
-                    </p>
-                  </div>
-                )}
-              </>
-            )}
+            {/* Dots Indicator */}
+            <div className="flex items-center justify-center gap-2 mt-6">
+              {reviews.items.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveIndex(index)}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    index === activeIndex
+                      ? 'bg-[#00b67a] w-8'
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to review ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
 
           {/* CTA Buttons */}
