@@ -28,9 +28,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
 export default function BinaryOptionsScamPage({ params: { locale } }: { params: { locale: string } }) {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-slate-50">
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-slate-800 via-slate-900 to-gray-900 text-white py-24 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 text-white py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <Image
             src="/images/blog/binary-options-scam-hero.png"
@@ -41,687 +41,634 @@ export default function BinaryOptionsScamPage({ params: { locale } }: { params: 
           />
         </div>
         <div className="container-custom relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-3 py-1 bg-red-500/20 text-red-300 rounded text-sm font-medium border border-red-500/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <span className="px-4 py-1.5 bg-red-500/20 text-red-300 rounded-full text-sm font-medium border border-red-500/30">
                 {locale === 'de' ? 'Risikowarnung' : 'Risk Warning'}
               </span>
-              <span className="px-3 py-1 bg-white/10 text-gray-300 rounded text-sm">
-                {locale === 'de' ? '12 Min. Lesezeit' : '12 min read'}
+              <span className="px-3 py-1 bg-white/10 text-gray-300 rounded-full text-sm">
+                {locale === 'de' ? '10 Min. Lesezeit' : '10 min read'}
               </span>
             </div>
-            <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               {locale === 'de'
                 ? 'Binäre Optionen – Betrug oder seriöses Trading?'
                 : 'Binary Options – Scam or Legit Trading?'}
             </h1>
-            <p className="text-xl text-gray-300 mb-6 leading-relaxed max-w-3xl">
+            <p className="text-xl md:text-2xl text-gray-300 mb-4">
               {locale === 'de'
-                ? 'Eine sachliche Analyse eines der umstrittensten Finanzprodukte. Warum die EU-Regulierungsbehörden zum Verbot gegriffen haben und was Anleger wissen müssen.'
-                : 'An objective analysis of one of the most controversial financial products. Why EU regulators resorted to a ban and what investors need to know.'}
+                ? 'Die unbequeme Wahrheit'
+                : 'The Uncomfortable Truth'}
             </p>
-            <div className="flex items-center gap-4 text-sm text-gray-400">
-              <span>BeInOptions Research Team</span>
-              <span className="w-1 h-1 bg-gray-500 rounded-full"></span>
-              <time>31. Dezember 2025</time>
-            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Main Content */}
-      <div className="container-custom py-16">
-        <div className="max-w-4xl mx-auto">
-          <article className="prose prose-lg max-w-none">
+      <div className="container-custom py-12 md:py-16">
+        <div className="max-w-3xl mx-auto">
 
-            {/* Key Takeaways */}
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-8 mb-12">
-              <h2 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-                <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-                {locale === 'de' ? 'Zusammenfassung' : 'Key Takeaways'}
-              </h2>
-              <ul className="space-y-3 text-slate-700">
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+          {/* Short Version / Summary Box */}
+          <div className="bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-200 rounded-2xl p-6 md:p-8 mb-12">
+            <h2 className="text-lg font-bold text-red-900 mb-4">
+              {locale === 'de' ? 'Kurzfassung:' : 'Short version:'}
+            </h2>
+            <p className="text-slate-700 leading-relaxed mb-4">
+              {locale === 'de'
+                ? 'Binäre Optionen gelten heute als eines der umstrittensten Finanzprodukte der Welt. Für viele Anleger endete der Einstieg nicht mit schnellen Gewinnen – sondern mit Totalverlust, gesperrten Konten und leeren Versprechen.'
+                : 'Binary options are now considered one of the most controversial financial products in the world. For many investors, getting started did not end with quick profits – but with total losses, frozen accounts, and empty promises.'}
+            </p>
+            <p className="text-slate-700 leading-relaxed">
+              {locale === 'de'
+                ? 'In diesem Artikel erklären wir ehrlich, verständlich und ohne Marketing-Blabla, warum binäre Optionen fast immer mit Betrug verbunden sind, wie die Masche funktioniert und worauf du achten musst, um nicht Opfer eines Scams zu werden.'
+                : 'In this article, we explain honestly, clearly, and without marketing hype why binary options are almost always linked to scams, how the scheme works, and what you need to watch out for to avoid becoming a victim.'}
+            </p>
+          </div>
+
+          {/* Why This Article Matters */}
+          <section className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+              {locale === 'de' ? 'Warum dieser Artikel wichtig ist' : 'Why this article matters'}
+            </h2>
+            <p className="text-slate-700 mb-6">
+              {locale === 'de'
+                ? 'Jeden Monat suchen tausende Menschen bei Google nach:'
+                : 'Every month, thousands of people search on Google for:'}
+            </p>
+            <div className="bg-slate-100 rounded-xl p-6 mb-6">
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
-                  <span>{locale === 'de'
-                    ? 'Binäre Optionen sind seit 2018 in der EU für Privatanleger verboten'
-                    : 'Binary options have been banned for retail investors in the EU since 2018'}</span>
+                  <span className="text-slate-700 font-medium">
+                    {locale === 'de' ? '„Binäre Optionen seriös?"' : '"Are binary options legit?"'}
+                  </span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
-                  <span>{locale === 'de'
-                    ? 'Studien zeigen: 74-89% der Privatanleger verlieren ihr eingesetztes Kapital'
-                    : 'Studies show: 74-89% of retail investors lose their invested capital'}</span>
+                  <span className="text-slate-700 font-medium">
+                    {locale === 'de' ? '„Binäre Optionen Betrug?"' : '"Binary options scam?"'}
+                  </span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                <li className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
-                  <span>{locale === 'de'
-                    ? 'Viele Anbieter operieren aus unregulierten Offshore-Jurisdiktionen'
-                    : 'Many providers operate from unregulated offshore jurisdictions'}</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  <span>{locale === 'de'
-                    ? 'Regulierte Alternativen wie klassische Optionen bieten transparentere Strukturen'
-                    : 'Regulated alternatives like traditional options offer more transparent structures'}</span>
+                  <span className="text-slate-700 font-medium">
+                    {locale === 'de' ? '„Geld verloren – was tun?"' : '"Lost money – what can I do?"'}
+                  </span>
                 </li>
               </ul>
             </div>
+            <p className="text-slate-700 mb-4">
+              {locale === 'de'
+                ? 'Das ist kein Zufall. Binäre Optionen wurden in der EU nicht ohne Grund verboten.'
+                : 'This is no coincidence. Binary options were banned in the EU for a reason.'}
+            </p>
+            <p className="text-slate-700 mb-6">
+              {locale === 'de'
+                ? 'Trotzdem tauchen immer neue Plattformen auf – oft aggressiv beworben auf Social Media, mit Influencern, Luxusautos und „garantierten Gewinnen".'
+                : 'Yet new platforms keep appearing – often aggressively promoted on social media, featuring influencers, luxury cars, and so-called "guaranteed profits."'}
+            </p>
+            <p className="text-xl font-bold text-slate-900">
+              {locale === 'de' ? 'Zeit für Klartext.' : 'Time for plain truth.'}
+            </p>
+          </section>
 
-            {/* Hero Image */}
-            <figure className="mb-12">
-              <div className="rounded-xl overflow-hidden shadow-lg">
-                <Image
-                  src="/images/blog/binary-options-scam-hero.png"
-                  alt={locale === 'de' ? 'Binäre Optionen Risikoanalyse' : 'Binary Options Risk Analysis'}
-                  width={1200}
-                  height={600}
-                  className="w-full h-auto"
-                />
-              </div>
-              <figcaption className="text-center text-sm text-gray-500 mt-3">
-                {locale === 'de'
-                  ? 'Binäre Optionen: Ein Finanzprodukt mit strukturellen Interessenkonflikten'
-                  : 'Binary options: A financial product with structural conflicts of interest'}
-              </figcaption>
-            </figure>
+          {/* What Are Binary Options */}
+          <section className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+              {locale === 'de' ? 'Was sind binäre Optionen – ganz kurz erklärt' : 'What are binary options – explained very briefly'}
+            </h2>
+            <p className="text-slate-700 mb-6">
+              {locale === 'de'
+                ? 'Bei binären Optionen wettest du darauf, ob ein Kurs steigt oder fällt – meist innerhalb von Sekunden oder Minuten.'
+                : 'With binary options, you bet on whether a price will go up or down – often within seconds or minutes.'}
+            </p>
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 mb-6">
+              <ul className="space-y-4">
+                <li className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                    <span className="text-slate-600 font-bold">1</span>
+                  </div>
+                  <span className="text-slate-700">
+                    {locale === 'de' ? 'Ergebnis nur JA oder NEIN' : 'Only YES or NO'}
+                  </span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                    <span className="text-slate-600 font-bold">2</span>
+                  </div>
+                  <span className="text-slate-700">
+                    {locale === 'de' ? 'Gewinn oder Totalverlust' : 'Profit or total loss'}
+                  </span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center flex-shrink-0">
+                    <span className="text-slate-600 font-bold">3</span>
+                  </div>
+                  <span className="text-slate-700">
+                    {locale === 'de' ? 'Keine echten Aktien, kein Besitz, kein Markt' : 'No real stocks, no ownership, no real market'}
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <p className="text-slate-700">
+              {locale === 'de'
+                ? 'Das klingt simpel. Genau das ist das Problem.'
+                : 'It sounds simple. That\'s exactly the problem.'}
+            </p>
+          </section>
 
-            {/* Introduction */}
-            <section className="mb-12">
-              <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                {locale === 'de'
-                  ? 'Binäre Optionen gehören zu den kontroversesten Finanzinstrumenten der vergangenen Dekade. Was ursprünglich als vereinfachte Form des Optionshandels vermarktet wurde, hat sich für die überwiegende Mehrheit der Privatanleger als verlustreiches Unterfangen erwiesen. Die Europäische Wertpapier- und Marktaufsichtsbehörde (ESMA) hat 2018 ein EU-weites Verbot für den Vertrieb an Privatanleger erlassen – eine Maßnahme, die auf umfangreichen Untersuchungen und Verbraucherbeschwerden basierte.'
-                  : 'Binary options are among the most controversial financial instruments of the past decade. What was originally marketed as a simplified form of options trading has proven to be a loss-making venture for the vast majority of retail investors. The European Securities and Markets Authority (ESMA) issued an EU-wide ban on marketing to retail investors in 2018 – a measure based on extensive investigations and consumer complaints.'}
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                {locale === 'de'
-                  ? 'Dieser Artikel analysiert die Mechanismen hinter binären Optionen, erklärt die regulatorischen Bedenken und zeigt auf, warum dieses Produkt für die meisten Anleger ungeeignet ist.'
-                  : 'This article analyzes the mechanisms behind binary options, explains the regulatory concerns, and shows why this product is unsuitable for most investors.'}
-              </p>
-            </section>
-
-            {/* What Are Binary Options */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-heading font-bold text-gray-900 mb-6">
-                {locale === 'de' ? 'Definition und Funktionsweise' : 'Definition and Mechanics'}
+          {/* Why Binary Options Are So Often a Scam */}
+          <section className="mb-12">
+            <div className="flex items-center gap-3 mb-8">
+              <svg className="w-8 h-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+                {locale === 'de' ? 'Warum binäre Optionen so oft Betrug sind' : 'Why binary options are so often a scam'}
               </h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                {locale === 'de'
-                  ? 'Bei binären Optionen handelt es sich um Finanzderivate mit einem binären Auszahlungsprofil: Der Anleger erhält entweder einen festen Betrag oder verliert seinen gesamten Einsatz. Die Entscheidung basiert darauf, ob ein Basiswert (z.B. ein Währungspaar, Index oder Rohstoff) zu einem bestimmten Zeitpunkt über oder unter einem festgelegten Kurs notiert.'
-                  : 'Binary options are financial derivatives with a binary payout profile: the investor either receives a fixed amount or loses their entire stake. The decision is based on whether an underlying asset (e.g., a currency pair, index, or commodity) is trading above or below a specified price at a particular time.'}
-              </p>
+            </div>
 
-              <div className="bg-gray-50 rounded-xl p-6 mb-6">
-                <h3 className="font-bold text-gray-900 mb-4">
-                  {locale === 'de' ? 'Charakteristische Merkmale' : 'Characteristic Features'}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-white rounded-lg p-4 border border-gray-200">
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      {locale === 'de' ? 'Laufzeiten' : 'Duration'}
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      {locale === 'de'
-                        ? 'Typischerweise zwischen 30 Sekunden und wenigen Stunden – deutlich kürzer als bei klassischen Optionen'
-                        : 'Typically between 30 seconds and a few hours – significantly shorter than traditional options'}
-                    </p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 border border-gray-200">
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      {locale === 'de' ? 'Auszahlungsstruktur' : 'Payout Structure'}
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      {locale === 'de'
-                        ? 'Feste Rendite (meist 70-90%) bei Gewinn, Totalverlust bei Verlust'
-                        : 'Fixed return (usually 70-90%) on win, total loss on loss'}
-                    </p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 border border-gray-200">
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      {locale === 'de' ? 'Marktmodell' : 'Market Model'}
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      {locale === 'de'
-                        ? 'In der Regel OTC-Handel direkt gegen den Anbieter, nicht an regulierten Börsen'
-                        : 'Usually OTC trading directly against the provider, not on regulated exchanges'}
-                    </p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 border border-gray-200">
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      {locale === 'de' ? 'Basiswerte' : 'Underlying Assets'}
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      {locale === 'de'
-                        ? 'Währungspaare, Aktienindizes, Rohstoffe, Kryptowährungen'
-                        : 'Currency pairs, stock indices, commodities, cryptocurrencies'}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-amber-50 border-l-4 border-amber-500 p-6">
-                <h4 className="font-bold text-gray-900 mb-2">
-                  {locale === 'de' ? 'Mathematischer Nachteil' : 'Mathematical Disadvantage'}
-                </h4>
-                <p className="text-gray-700">
-                  {locale === 'de'
-                    ? 'Bei einer typischen Auszahlung von 80% und einem Totalverlust bei falscher Prognose benötigt ein Anleger eine Trefferquote von über 55%, um langfristig profitabel zu sein. Studien zeigen jedoch, dass die durchschnittliche Trefferquote bei etwa 50% liegt – was mathematisch zu systematischen Verlusten führt.'
-                    : 'With a typical payout of 80% and total loss on wrong prediction, an investor needs a hit rate of over 55% to be profitable long-term. However, studies show that the average hit rate is around 50% – which mathematically leads to systematic losses.'}
-                </p>
-              </div>
-            </section>
-
-            {/* Structural Problems */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-heading font-bold text-gray-900 mb-6">
-                {locale === 'de' ? 'Strukturelle Probleme des Geschäftsmodells' : 'Structural Problems of the Business Model'}
-              </h2>
-
-              {/* Problem 1 */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                  <span className="flex items-center justify-center w-8 h-8 bg-slate-800 text-white rounded-full text-sm font-bold">1</span>
-                  {locale === 'de' ? 'Interessenkonflikt durch Market-Maker-Modell' : 'Conflict of Interest Through Market-Maker Model'}
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  {locale === 'de'
-                    ? 'Bei den meisten Anbietern binärer Optionen handelt der Kunde nicht an einer neutralen Börse, sondern direkt gegen den Anbieter. Dieses sogenannte B-Book-Modell bedeutet:'
-                    : 'With most binary options providers, the customer does not trade on a neutral exchange but directly against the provider. This so-called B-Book model means:'}
-                </p>
-                <ul className="space-y-2 text-gray-700 mb-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Der Verlust des Kunden ist der Gewinn des Anbieters' : 'The customer\'s loss is the provider\'s profit'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Kein wirtschaftliches Interesse an profitablen Kunden' : 'No economic interest in profitable customers'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Potenzielle Anreize zur Kursmanipulation' : 'Potential incentives for price manipulation'}</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Problem 2 with Image */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                  <span className="flex items-center justify-center w-8 h-8 bg-slate-800 text-white rounded-full text-sm font-bold">2</span>
-                  {locale === 'de' ? 'Intransparente Preisbildung' : 'Non-Transparent Price Formation'}
-                </h3>
-                <div className="float-right ml-6 mb-4 w-72">
-                  <div className="rounded-lg overflow-hidden shadow-md">
-                    <Image
-                      src="/images/blog/binary-options-fake-data.png"
-                      alt={locale === 'de' ? 'Analyse der Preisdaten' : 'Price Data Analysis'}
-                      width={300}
-                      height={200}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <p className="text-xs text-gray-500 mt-2 text-center">
-                    {locale === 'de' ? 'Preisdatenanalyse' : 'Price data analysis'}
-                  </p>
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  {locale === 'de'
-                    ? 'Untersuchungen von Regulierungsbehörden haben gezeigt, dass einige Anbieter binärer Optionen Kursdaten manipulieren oder mit zeitlicher Verzögerung anzeigen. Diese Praktiken umfassen:'
-                    : 'Investigations by regulatory authorities have shown that some binary options providers manipulate price data or display it with time delays. These practices include:'}
-                </p>
-                <ul className="space-y-2 text-gray-700 mb-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Verwendung von nicht-marktüblichen Kursdaten' : 'Use of non-market price data'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Geringfügige Kursanpassungen zum Nachteil des Kunden' : 'Minor price adjustments to the customer\'s disadvantage'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Verzögerte Orderausführung bei günstigen Kursen' : 'Delayed order execution at favorable prices'}</span>
-                  </li>
-                </ul>
-                <p className="text-gray-700 leading-relaxed clear-both">
-                  {locale === 'de'
-                    ? 'Da der Ausgang einer binären Option oft von minimalen Kursbewegungen abhängt, können selbst kleine Manipulationen erhebliche Auswirkungen auf das Ergebnis haben.'
-                    : 'Since the outcome of a binary option often depends on minimal price movements, even small manipulations can have significant effects on the result.'}
-                </p>
-              </div>
-
-              {/* Problem 3 with Image */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                  <span className="flex items-center justify-center w-8 h-8 bg-slate-800 text-white rounded-full text-sm font-bold">3</span>
-                  {locale === 'de' ? 'Irreführende Werbepraktiken' : 'Misleading Advertising Practices'}
-                </h3>
-                <div className="float-left mr-6 mb-4 w-72">
-                  <div className="rounded-lg overflow-hidden shadow-md">
-                    <Image
-                      src="/images/blog/binary-options-guaranteed-profits.png"
-                      alt={locale === 'de' ? 'Beispiel irreführender Werbung' : 'Example of misleading advertising'}
-                      width={300}
-                      height={200}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <p className="text-xs text-gray-500 mt-2 text-center">
-                    {locale === 'de' ? 'Typische Werbeversprechen' : 'Typical advertising promises'}
-                  </p>
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  {locale === 'de'
-                    ? 'Ein wesentlicher Kritikpunkt der Regulierungsbehörden betrifft die Marketingpraktiken vieler Anbieter. Typische irreführende Aussagen umfassen:'
-                    : 'A major criticism from regulatory authorities concerns the marketing practices of many providers. Typical misleading statements include:'}
-                </p>
-                <ul className="space-y-2 text-gray-700 mb-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Unrealistische Gewinnversprechen („90% Erfolgsquote")' : 'Unrealistic profit promises ("90% success rate")'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Verharmlosung der Risiken' : 'Downplaying of risks'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Suggerierten „automatisierte Trading-Systeme" mit garantierten Gewinnen' : 'Suggested "automated trading systems" with guaranteed profits'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Gefälschte Testimonials und Erfolgsgeschichten' : 'Fake testimonials and success stories'}</span>
-                  </li>
-                </ul>
-                <p className="text-gray-700 leading-relaxed clear-both">
-                  {locale === 'de'
-                    ? 'Es ist wichtig zu verstehen: Kein seriöses Finanzprodukt kann Gewinne garantieren. Derartige Versprechen sind ein eindeutiges Warnsignal.'
-                    : 'It is important to understand: No legitimate financial product can guarantee profits. Such promises are a clear warning sign.'}
-                </p>
-              </div>
-
-              {/* Problem 4 with Image */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                  <span className="flex items-center justify-center w-8 h-8 bg-slate-800 text-white rounded-full text-sm font-bold">4</span>
-                  {locale === 'de' ? 'Auszahlungsprobleme' : 'Withdrawal Problems'}
-                </h3>
-                <div className="float-right ml-6 mb-4 w-72">
-                  <div className="rounded-lg overflow-hidden shadow-md">
-                    <Image
-                      src="/images/blog/binary-options-withdrawal-blocked.png"
-                      alt={locale === 'de' ? 'Blockierte Auszahlung' : 'Blocked withdrawal'}
-                      width={300}
-                      height={200}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <p className="text-xs text-gray-500 mt-2 text-center">
-                    {locale === 'de' ? 'Häufig gemeldetes Problem' : 'Frequently reported issue'}
-                  </p>
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  {locale === 'de'
-                    ? 'Beschwerden bei Verbraucherschutzbehörden zeigen ein wiederkehrendes Muster bei unseriösen Anbietern:'
-                    : 'Complaints to consumer protection authorities show a recurring pattern with unscrupulous providers:'}
-                </p>
-                <ul className="space-y-2 text-gray-700 mb-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Einzahlungen werden schnell und unkompliziert akzeptiert' : 'Deposits are accepted quickly and easily'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Auszahlungsanfragen werden verzögert oder blockiert' : 'Withdrawal requests are delayed or blocked'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Nachträgliche Gebühren oder Bedingungen werden eingeführt' : 'Additional fees or conditions are introduced afterwards'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Konten werden nach Gewinnen ohne Erklärung gesperrt' : 'Accounts are blocked after profits without explanation'}</span>
-                  </li>
-                </ul>
-                <p className="text-gray-700 leading-relaxed clear-both">
-                  {locale === 'de'
-                    ? 'Die BaFin und andere Aufsichtsbehörden haben zahlreiche Warnungen zu spezifischen Anbietern veröffentlicht, die solche Praktiken anwenden.'
-                    : 'BaFin and other supervisory authorities have published numerous warnings about specific providers that engage in such practices.'}
-                </p>
-              </div>
-
-              {/* Problem 5 with Image */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                  <span className="flex items-center justify-center w-8 h-8 bg-slate-800 text-white rounded-full text-sm font-bold">5</span>
-                  {locale === 'de' ? 'Aggressive Vertriebsmethoden' : 'Aggressive Sales Methods'}
-                </h3>
-                <div className="float-left mr-6 mb-4 w-72">
-                  <div className="rounded-lg overflow-hidden shadow-md">
-                    <Image
-                      src="/images/blog/binary-options-aggressive-sales.png"
-                      alt={locale === 'de' ? 'Vertriebsdruck' : 'Sales pressure'}
-                      width={300}
-                      height={200}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <p className="text-xs text-gray-500 mt-2 text-center">
-                    {locale === 'de' ? 'Psychologischer Verkaufsdruck' : 'Psychological sales pressure'}
-                  </p>
-                </div>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  {locale === 'de'
-                    ? 'Viele Anbieter setzen auf aggressive Vertriebsstrukturen mit geschulten „Account Managern", die Kunden zu weiteren Einzahlungen drängen:'
-                    : 'Many providers rely on aggressive sales structures with trained "account managers" who pressure customers to make additional deposits:'}
-                </p>
-                <ul className="space-y-2 text-gray-700 mb-4">
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Häufige, unaufgeforderte Telefonanrufe' : 'Frequent, unsolicited phone calls'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Psychologische Drucktaktiken und emotionale Manipulation' : 'Psychological pressure tactics and emotional manipulation'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Künstliche Dringlichkeit („Dieses Angebot gilt nur heute")' : 'Artificial urgency ("This offer is only valid today")'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Versprechen, Verluste durch weitere Einzahlungen auszugleichen' : 'Promises to offset losses through additional deposits'}</span>
-                  </li>
-                </ul>
-                <p className="text-gray-700 leading-relaxed clear-both">
-                  {locale === 'de'
-                    ? 'Diese Call-Center befinden sich häufig in Ländern außerhalb der EU-Jurisdiktion, was eine rechtliche Verfolgung erschwert.'
-                    : 'These call centers are often located in countries outside EU jurisdiction, making legal prosecution difficult.'}
-                </p>
-              </div>
-            </section>
-
-            {/* Regulatory Response */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-heading font-bold text-gray-900 mb-6">
-                {locale === 'de' ? 'Regulatorische Maßnahmen' : 'Regulatory Response'}
-              </h2>
-
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
-                <h3 className="font-bold text-gray-900 mb-4">
-                  {locale === 'de' ? 'EU-Verbot seit 2018' : 'EU Ban Since 2018'}
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  {locale === 'de'
-                    ? 'Die Europäische Wertpapier- und Marktaufsichtsbehörde (ESMA) hat am 2. Juli 2018 ein Verbot für die Vermarktung, den Vertrieb und den Verkauf von binären Optionen an Kleinanleger erlassen. Die Begründung umfasst:'
-                    : 'The European Securities and Markets Authority (ESMA) issued a ban on the marketing, distribution, and sale of binary options to retail investors on July 2, 2018. The reasoning includes:'}
-                </p>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-1">1.</span>
-                    <span>{locale === 'de' ? 'Inhärent negative erwartete Rendite für Anleger' : 'Inherently negative expected return for investors'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-1">2.</span>
-                    <span>{locale === 'de' ? 'Struktureller Interessenkonflikt zwischen Anbieter und Kunde' : 'Structural conflict of interest between provider and customer'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-1">3.</span>
-                    <span>{locale === 'de' ? 'Komplexität der Produkte im Verhältnis zur Zielgruppe' : 'Complexity of products relative to target audience'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600 mt-1">4.</span>
-                    <span>{locale === 'de' ? 'Dokumentierte hohe Verlustquoten bei Privatanlegern' : 'Documented high loss rates among retail investors'}</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="font-bold text-gray-900 mb-4">
-                  {locale === 'de' ? 'Warum das Problem fortbesteht' : 'Why the Problem Persists'}
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  {locale === 'de'
-                    ? 'Trotz des EU-Verbots sind binäre Optionen nicht vollständig vom Markt verschwunden:'
-                    : 'Despite the EU ban, binary options have not completely disappeared from the market:'}
-                </p>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Anbieter operieren aus Offshore-Jurisdiktionen (z.B. Marshall-Inseln, St. Vincent)' : 'Providers operate from offshore jurisdictions (e.g., Marshall Islands, St. Vincent)'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Marketing über Social Media umgeht traditionelle Werberegulierung' : 'Marketing via social media bypasses traditional advertising regulation'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Influencer-Partnerschaften erreichen junge, unerfahrene Anleger' : 'Influencer partnerships reach young, inexperienced investors'}</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-slate-400 mt-1">—</span>
-                    <span>{locale === 'de' ? 'Rebranding als „Trading-Kurse" oder „Signaldienste"' : 'Rebranding as "trading courses" or "signal services"'}</span>
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-            {/* Risk Assessment */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-heading font-bold text-gray-900 mb-6">
-                {locale === 'de' ? 'Risikoeinschätzung' : 'Risk Assessment'}
-              </h2>
-
-              <div className="bg-red-50 border border-red-200 rounded-xl p-6 mb-6">
-                <h3 className="font-bold text-gray-900 mb-4">
-                  {locale === 'de' ? 'Besonders risikobehaftete Anlegergruppen' : 'Particularly High-Risk Investor Groups'}
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="bg-white rounded-lg p-4 border border-red-100">
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      {locale === 'de' ? 'Einsteiger' : 'Beginners'}
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      {locale === 'de'
-                        ? 'Mangelndes Verständnis für Marktmechanismen und Risikomanagement'
-                        : 'Lack of understanding of market mechanisms and risk management'}
-                    </p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 border border-red-100">
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      {locale === 'de' ? 'Finanziell Belastete' : 'Financially Stressed'}
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      {locale === 'de'
-                        ? 'Hoffnung auf schnelle Lösung finanzieller Probleme führt zu irrationalen Entscheidungen'
-                        : 'Hope for quick solution to financial problems leads to irrational decisions'}
-                    </p>
-                  </div>
-                  <div className="bg-white rounded-lg p-4 border border-red-100">
-                    <h4 className="font-semibold text-gray-900 mb-2">
-                      {locale === 'de' ? 'Suchtgefährdete' : 'Addiction-Prone'}
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      {locale === 'de'
-                        ? 'Glücksspiel-ähnliche Mechaniken können Suchtverhalten auslösen'
-                        : 'Gambling-like mechanics can trigger addictive behavior'}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-amber-50 border-l-4 border-amber-500 p-6">
-                <h4 className="font-bold text-gray-900 mb-2">
-                  {locale === 'de' ? 'Statistik zur Verlustquote' : 'Loss Rate Statistics'}
-                </h4>
-                <p className="text-gray-700">
-                  {locale === 'de'
-                    ? 'Laut ESMA-Untersuchungen verlieren zwischen 74% und 89% aller Privatanleger bei binären Optionen Geld. Diese Quote ist systematisch höher als bei anderen Derivaten, was auf die ungünstige Auszahlungsstruktur zurückzuführen ist.'
-                    : 'According to ESMA investigations, between 74% and 89% of all retail investors lose money on binary options. This rate is systematically higher than with other derivatives, which is due to the unfavorable payout structure.'}
-                </p>
-              </div>
-            </section>
-
-            {/* Alternatives */}
-            <section className="mb-12">
-              <h2 className="text-2xl font-heading font-bold text-gray-900 mb-6">
-                {locale === 'de' ? 'Regulierte Alternativen' : 'Regulated Alternatives'}
-              </h2>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                {locale === 'de'
-                  ? 'Für Anleger, die sich für derivative Finanzinstrumente interessieren, gibt es regulierte Alternativen mit transparenteren Strukturen:'
-                  : 'For investors interested in derivative financial instruments, there are regulated alternatives with more transparent structures:'}
-              </p>
-
-              <div className="space-y-4">
-                <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                  <h3 className="font-bold text-gray-900 mb-2">
-                    {locale === 'de' ? 'Klassische Optionen (Börsengehandelt)' : 'Traditional Options (Exchange-Traded)'}
-                  </h3>
-                  <p className="text-gray-700 mb-3">
-                    {locale === 'de'
-                      ? 'Standardisierte Kontrakte, die an regulierten Börsen wie Eurex oder CBOE gehandelt werden. Transparente Preisbildung durch Angebot und Nachfrage.'
-                      : 'Standardized contracts traded on regulated exchanges like Eurex or CBOE. Transparent pricing through supply and demand.'}
-                  </p>
-                  <Link href={`/${locale}/blog/put-vs-call-optionen`} className="text-green-700 font-medium hover:underline">
-                    {locale === 'de' ? 'Mehr über klassische Optionen erfahren' : 'Learn more about traditional options'} →
-                  </Link>
-                </div>
-
-                <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-                  <h3 className="font-bold text-gray-900 mb-2">
-                    {locale === 'de' ? 'Regulierte CFDs' : 'Regulated CFDs'}
-                  </h3>
-                  <p className="text-gray-700 mb-3">
-                    {locale === 'de'
-                      ? 'Bei EU-regulierten Brokern mit Hebelbeschränkungen und Negativsaldo-Schutz. Unterliegen strengen Aufsichtsregeln.'
-                      : 'With EU-regulated brokers with leverage restrictions and negative balance protection. Subject to strict supervisory rules.'}
-                  </p>
-                  <Link href={`/${locale}/blog/options-cfds-teil-1`} className="text-blue-700 font-medium hover:underline">
-                    {locale === 'de' ? 'Options-CFDs verstehen' : 'Understanding Options CFDs'} →
-                  </Link>
-                </div>
-
-                <div className="bg-purple-50 border border-purple-200 rounded-xl p-6">
-                  <h3 className="font-bold text-gray-900 mb-2">
-                    {locale === 'de' ? 'Langfristige Anlagestrategien' : 'Long-Term Investment Strategies'}
-                  </h3>
-                  <p className="text-gray-700">
-                    {locale === 'de'
-                      ? 'ETFs, Aktien und andere Anlageformen, die auf langfristigen Vermögensaufbau statt kurzfristige Spekulation setzen.'
-                      : 'ETFs, stocks, and other investment forms that focus on long-term wealth building rather than short-term speculation.'}
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Conclusion */}
-            <section className="mb-12">
-              <div className="bg-slate-800 text-white rounded-xl p-8">
-                <h2 className="text-2xl font-heading font-bold mb-6">
-                  {locale === 'de' ? 'Fazit' : 'Conclusion'}
-                </h2>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  {locale === 'de'
-                    ? 'Binäre Optionen kombinieren ein mathematisch ungünstiges Auszahlungsprofil mit strukturellen Interessenkonflikten und operativen Risiken durch unregulierte Anbieter. Das EU-weite Verbot für Privatanleger ist die logische Konsequenz dieser Faktoren.'
-                    : 'Binary options combine a mathematically unfavorable payout profile with structural conflicts of interest and operational risks from unregulated providers. The EU-wide ban for retail investors is the logical consequence of these factors.'}
-                </p>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  {locale === 'de'
-                    ? 'Anleger, die an derivativen Finanzinstrumenten interessiert sind, sollten sich auf regulierte Märkte und etablierte Produkte konzentrieren, bei denen Preisbildung und Risiken transparent sind.'
-                    : 'Investors interested in derivative financial instruments should focus on regulated markets and established products where pricing and risks are transparent.'}
-                </p>
-                <div className="border-t border-slate-700 pt-6">
-                  <p className="text-slate-400 text-sm">
-                    {locale === 'de'
-                      ? 'Dieser Artikel dient ausschließlich Informationszwecken und stellt keine Anlageberatung dar. Bei Anlageentscheidungen sollten Sie stets professionellen Rat einholen.'
-                      : 'This article is for informational purposes only and does not constitute investment advice. Always seek professional advice when making investment decisions.'}
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Related Articles */}
-            <section className="mb-8">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">
-                {locale === 'de' ? 'Weiterführende Artikel' : 'Further Reading'}
+            {/* Scam Reason 1 */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 mb-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm">1</span>
+                {locale === 'de' ? 'Du spielst gegen die Plattform' : 'You are trading against the platform'}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <Link href={`/${locale}/blog/options-cfds-teil-1`} className="group">
-                  <div className="bg-white rounded-lg p-5 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all h-full">
-                    <div className="text-xs text-blue-600 font-medium mb-2">
-                      {locale === 'de' ? 'GRUNDLAGEN' : 'BASICS'}
-                    </div>
-                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                      {locale === 'de' ? 'Options CFDs verstehen (Teil 1)' : 'Understanding Options CFDs (Part 1)'}
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      {locale === 'de' ? 'Einführung in regulierte Derivate' : 'Introduction to regulated derivatives'}
-                    </p>
-                  </div>
-                </Link>
-                <Link href={`/${locale}/blog/put-vs-call-optionen`} className="group">
-                  <div className="bg-white rounded-lg p-5 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all h-full">
-                    <div className="text-xs text-blue-600 font-medium mb-2">
-                      {locale === 'de' ? 'STRATEGIE' : 'STRATEGY'}
-                    </div>
-                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                      {locale === 'de' ? 'Put vs Call Optionen' : 'Put vs Call Options'}
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      {locale === 'de' ? 'Klassische Optionen erklärt' : 'Traditional options explained'}
-                    </p>
-                  </div>
-                </Link>
-                <Link href={`/${locale}/blog/understanding-the-greeks`} className="group">
-                  <div className="bg-white rounded-lg p-5 border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all h-full">
-                    <div className="text-xs text-blue-600 font-medium mb-2">
-                      {locale === 'de' ? 'FORTGESCHRITTEN' : 'ADVANCED'}
-                    </div>
-                    <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                      {locale === 'de' ? 'Die Griechen verstehen' : 'Understanding the Greeks'}
-                    </h4>
-                    <p className="text-sm text-gray-600">
-                      {locale === 'de' ? 'Delta, Gamma, Theta erklärt' : 'Delta, Gamma, Theta explained'}
-                    </p>
-                  </div>
-                </Link>
-              </div>
-            </section>
+              <p className="text-slate-700 mb-4">
+                {locale === 'de' ? 'In den meisten Fällen:' : 'In most cases:'}
+              </p>
+              <ul className="space-y-2 text-slate-700 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'Die Plattform ist dein direkter Gegenspieler' : 'The platform is your direct counterparty'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'Dein Verlust = deren Gewinn' : 'Your loss = their profit'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'Kurse können manipuliert oder verzögert angezeigt werden' : 'Prices can be manipulated or shown with delays'}</span>
+                </li>
+              </ul>
+              <p className="text-slate-900 font-semibold">
+                {locale === 'de' ? '→ Interessenkonflikt pur' : 'A pure conflict of interest'}
+              </p>
+            </div>
 
-            {/* Author & Date */}
-            <div className="pt-8 border-t border-gray-200">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">BO</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-gray-900">BeInOptions Research Team</p>
-                    <p className="text-sm text-gray-500">
-                      {locale === 'de' ? 'Marktanalyse & Bildung' : 'Market Analysis & Education'}
-                    </p>
-                  </div>
-                </div>
-                <div className="text-right">
-                  <p className="text-sm text-gray-500">
-                    {locale === 'de' ? 'Veröffentlicht' : 'Published'}
-                  </p>
-                  <time className="text-sm font-medium text-gray-700">31. Dezember 2025</time>
-                </div>
+            {/* Scam Reason 2 */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 mb-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm">2</span>
+                {locale === 'de' ? '„Garantierte Gewinne" = 100 % Scam' : '"Guaranteed profits" = 100% scam'}
+              </h3>
+              <p className="text-slate-700 mb-4">
+                {locale === 'de'
+                  ? 'Seriöse Finanzmärkte kennen keine Garantien.'
+                  : 'Serious financial markets offer no guarantees.'}
+              </p>
+              <p className="text-slate-700 mb-3">
+                {locale === 'de' ? 'Wenn du hörst:' : 'If you hear:'}
+              </p>
+              <ul className="space-y-2 text-slate-700 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? '„90 % Erfolgsquote"' : '"90% success rate"'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? '„Risikofrei"' : '"Risk-free trading"'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? '„Unser Analyst handelt für dich"' : '"Our analyst trades for you"'}</span>
+                </li>
+              </ul>
+              <p className="text-xl font-bold text-red-600">
+                {locale === 'de' ? '→ Lauf. Sofort.' : 'Run. Immediately.'}
+              </p>
+            </div>
+
+            {/* Scam Reason 3 */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 mb-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm">3</span>
+                {locale === 'de' ? 'Manipulierte Software' : 'Manipulated software'}
+              </h3>
+              <p className="text-slate-700 mb-4">
+                {locale === 'de' ? 'Viele binäre Optionen Plattformen:' : 'Many binary options platforms:'}
+              </p>
+              <ul className="space-y-2 text-slate-700 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'nutzen keine echten Marktdaten' : 'do not use real market data'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'verändern Kurse minimal' : 'slightly adjust prices'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'sorgen dafür, dass du knapp verlierst' : 'make sure you lose by a tiny margin'}</span>
+                </li>
+              </ul>
+              <p className="text-slate-700">
+                {locale === 'de'
+                  ? 'Für den Nutzer unsichtbar – aber entscheidend.'
+                  : 'Invisible to the user – but decisive.'}
+              </p>
+            </div>
+
+            {/* Scam Reason 4 */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 mb-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm">4</span>
+                {locale === 'de' ? 'Einzahlen ist leicht – auszahlen fast unmöglich' : 'Depositing is easy – withdrawing is almost impossible'}
+              </h3>
+              <p className="text-slate-700 mb-3">
+                {locale === 'de' ? 'Typische Probleme:' : 'Typical issues:'}
+              </p>
+              <ul className="space-y-2 text-slate-700 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'endlose Verifizierungen' : 'endless verification processes'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'neue „Gebühren" vor Auszahlung' : 'new "fees" before withdrawal'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'Kontosperrung nach Gewinnen' : 'account blocks after winning trades'}</span>
+                </li>
+              </ul>
+              <div className="bg-slate-100 rounded-xl p-4">
+                <p className="text-slate-700 italic">
+                  {locale === 'de'
+                    ? 'Viele Betroffene berichten: „Ich konnte einzahlen – aber nie wieder abheben."'
+                    : 'Many victims report: "I could deposit money – but never withdraw it."'}
+                </p>
               </div>
             </div>
-          </article>
+
+            {/* Scam Reason 5 */}
+            <div className="bg-white rounded-2xl border border-slate-200 p-6 mb-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm">5</span>
+                {locale === 'de' ? 'Aggressive Verkäufer & Fake-Coaches' : 'Aggressive salespeople & fake coaches'}
+              </h3>
+              <p className="text-slate-700 mb-3">
+                {locale === 'de' ? 'Nach der Registrierung:' : 'After registration:'}
+              </p>
+              <ul className="space-y-2 text-slate-700 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'ständige Anrufe' : 'constant phone calls'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'Druck, mehr Geld einzuzahlen' : 'pressure to deposit more money'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'emotionale Manipulation („Letzte Chance!")' : 'emotional manipulation ("Last chance!")'}</span>
+                </li>
+              </ul>
+              <p className="text-slate-700">
+                {locale === 'de'
+                  ? 'Oft sitzen diese „Berater" außerhalb der EU.'
+                  : 'These "advisers" are often located outside the EU.'}
+              </p>
+            </div>
+          </section>
+
+          {/* EU Ban Section */}
+          <section className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+              {locale === 'de' ? 'EU-Verbot – und warum es trotzdem weitergeht' : 'EU ban – and why it still continues'}
+            </h2>
+            <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6 mb-6">
+              <p className="text-slate-700 mb-4">
+                {locale === 'de'
+                  ? 'Die europäische Finanzaufsicht hat binäre Optionen für Privatanleger verboten.'
+                  : 'European financial regulators banned binary options for retail investors.'}
+              </p>
+              <p className="text-slate-700 mb-3 font-semibold">
+                {locale === 'de' ? 'Warum?' : 'Why?'}
+              </p>
+              <ul className="space-y-2 text-slate-700">
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>{locale === 'de' ? 'extrem hohes Verlustrisiko' : 'extremely high risk of losses'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>{locale === 'de' ? 'systematische Täuschung' : 'systematic deception'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>{locale === 'de' ? 'keine Transparenz' : 'lack of transparency'}</span>
+                </li>
+              </ul>
+            </div>
+            <p className="text-slate-700 mb-3">
+              {locale === 'de' ? 'Doch viele Anbieter:' : 'Yet many providers:'}
+            </p>
+            <ul className="space-y-2 text-slate-700">
+              <li className="flex items-start gap-2">
+                <span className="text-slate-400 mt-1">—</span>
+                <span>{locale === 'de' ? 'sitzen offshore' : 'operate offshore'}</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-slate-400 mt-1">—</span>
+                <span>{locale === 'de' ? 'umgehen Regeln' : 'bypass regulations'}</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-slate-400 mt-1">—</span>
+                <span>{locale === 'de' ? 'targetieren gezielt Anfänger' : 'deliberately target beginners'}</span>
+              </li>
+            </ul>
+          </section>
+
+          {/* Who Binary Options Are Not Suitable For */}
+          <section className="mb-12">
+            <div className="bg-red-50 border border-red-200 rounded-2xl p-6">
+              <h2 className="text-xl font-bold text-red-900 mb-4 flex items-center gap-2">
+                <svg className="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                </svg>
+                {locale === 'de' ? 'Für wen binäre Optionen nicht geeignet sind' : 'Who binary options are not suitable for'}
+              </h2>
+              <p className="text-slate-700 mb-4 font-semibold">
+                {locale === 'de' ? 'Kurz gesagt: für fast alle.' : 'Short answer: almost everyone.'}
+              </p>
+              <p className="text-slate-700 mb-3">
+                {locale === 'de' ? 'Besonders gefährlich für:' : 'Especially dangerous for:'}
+              </p>
+              <ul className="space-y-2 text-slate-700 mb-4">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'Anfänger' : 'beginners'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'Menschen unter finanziellem Druck' : 'people under financial pressure'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">—</span>
+                  <span>{locale === 'de' ? 'Nutzer ohne Markterfahrung' : 'users without market experience'}</span>
+                </li>
+              </ul>
+              <p className="text-slate-700">
+                {locale === 'de'
+                  ? 'Das schnelle „Alles oder Nichts"-Prinzip wirkt wie Glücksspiel – nicht wie Investieren.'
+                  : 'The fast "all or nothing" principle feels like gambling – not investing.'}
+              </p>
+            </div>
+          </section>
+
+          {/* Better Alternatives */}
+          <section className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+              <svg className="w-7 h-7 text-emerald-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              {locale === 'de' ? 'Gibt es bessere Alternativen?' : 'Are there better alternatives?'}
+            </h2>
+            <p className="text-xl font-semibold text-slate-900 mb-4">
+              {locale === 'de'
+                ? 'Ja. Und sie sind reguliert, transparenter und fairer:'
+                : 'Yes. And they are regulated, more transparent, and fairer:'}
+            </p>
+            <div className="space-y-4 mb-6">
+              <Link href={`/${locale}/blog/put-vs-call-optionen`} className="block group">
+                <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-5 transition-all group-hover:shadow-md group-hover:border-emerald-300">
+                  <h3 className="font-bold text-emerald-900 mb-1 group-hover:text-emerald-700">
+                    {locale === 'de' ? 'Klassische Optionen' : 'Traditional options'}
+                  </h3>
+                  <p className="text-sm text-slate-600">
+                    {locale === 'de' ? 'Börsengehandelt, transparent, reguliert' : 'Exchange-traded, transparent, regulated'}
+                  </p>
+                </div>
+              </Link>
+              <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
+                <h3 className="font-bold text-blue-900 mb-1">
+                  {locale === 'de' ? 'Langfristige Investments' : 'Long-term investments'}
+                </h3>
+                <p className="text-sm text-slate-600">
+                  {locale === 'de' ? 'ETFs, Aktien, strukturierte Produkte' : 'ETFs, stocks, structured products'}
+                </p>
+              </div>
+              <Link href={`/${locale}/blog/options-cfds-teil-1`} className="block group">
+                <div className="bg-purple-50 border border-purple-200 rounded-xl p-5 transition-all group-hover:shadow-md group-hover:border-purple-300">
+                  <h3 className="font-bold text-purple-900 mb-1 group-hover:text-purple-700">
+                    {locale === 'de' ? 'Strukturierte Produkte mit klaren Regeln' : 'Structured products with clear rules'}
+                  </h3>
+                  <p className="text-sm text-slate-600">
+                    {locale === 'de' ? 'Bei regulierten Brokern mit Einlagenschutz' : 'With regulated brokers and deposit protection'}
+                  </p>
+                </div>
+              </Link>
+            </div>
+            <p className="text-slate-700 font-semibold">
+              {locale === 'de'
+                ? 'Wichtig: Verstehen, was man handelt. Kein Blindflug.'
+                : 'Important: Understand what you trade. No blind bets.'}
+            </p>
+          </section>
+
+          {/* Why Still Tempting */}
+          <section className="mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+              {locale === 'de' ? 'Warum binäre Optionen trotzdem so verführerisch sind' : 'Why binary options are still so tempting'}
+            </h2>
+            <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="bg-amber-50 rounded-xl p-4 text-center">
+                <svg className="w-8 h-8 mx-auto mb-2 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <p className="text-sm text-amber-900 font-medium">
+                  {locale === 'de' ? 'schnelle Ergebnisse' : 'fast results'}
+                </p>
+              </div>
+              <div className="bg-amber-50 rounded-xl p-4 text-center">
+                <svg className="w-8 h-8 mx-auto mb-2 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+                <p className="text-sm text-amber-900 font-medium">
+                  {locale === 'de' ? 'einfache Erklärung' : 'simple explanations'}
+                </p>
+              </div>
+              <div className="bg-amber-50 rounded-xl p-4 text-center">
+                <svg className="w-8 h-8 mx-auto mb-2 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+                <p className="text-sm text-amber-900 font-medium">
+                  {locale === 'de' ? 'emotionale Trigger' : 'emotional triggers'}
+                </p>
+              </div>
+              <div className="bg-amber-50 rounded-xl p-4 text-center">
+                <svg className="w-8 h-8 mx-auto mb-2 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p className="text-sm text-amber-900 font-medium">
+                  {locale === 'de' ? 'Hoffnung auf „schnelles Geld"' : 'hope of "quick money"'}
+                </p>
+              </div>
+            </div>
+            <p className="text-slate-700 font-semibold">
+              {locale === 'de'
+                ? 'Genau darauf bauen Scam-Plattformen.'
+                : 'That\'s exactly what scam platforms rely on.'}
+            </p>
+          </section>
+
+          {/* Conclusion */}
+          <section className="mb-12">
+            <div className="bg-gradient-to-br from-slate-800 to-slate-900 text-white rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <svg className="w-8 h-8 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                </svg>
+                <h2 className="text-2xl font-bold">
+                  {locale === 'de' ? 'Fazit: Binäre Optionen = hohes Betrugsrisiko' : 'Conclusion: Binary options = high scam risk'}
+                </h2>
+              </div>
+              <p className="text-gray-300 mb-4">
+                {locale === 'de'
+                  ? 'Binäre Optionen sind kein schneller Weg zur finanziellen Freiheit.'
+                  : 'Binary options are not a shortcut to financial freedom.'}
+              </p>
+              <p className="text-lg font-semibold text-white mb-6">
+                {locale === 'de'
+                  ? 'Für die meisten sind sie ein direkter Weg zum Verlust.'
+                  : 'For most people, they are a direct path to losses.'}
+              </p>
+              <p className="text-gray-300 mb-3">
+                {locale === 'de' ? 'Wenn etwas:' : 'If something:'}
+              </p>
+              <ul className="space-y-2 text-gray-300 mb-6">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-1">—</span>
+                  <span>{locale === 'de' ? 'zu einfach klingt' : 'sounds too simple'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-1">—</span>
+                  <span>{locale === 'de' ? 'unrealistische Gewinne verspricht' : 'promises unrealistic profits'}</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 mt-1">—</span>
+                  <span>{locale === 'de' ? 'Druck aufbaut' : 'creates pressure'}</span>
+                </li>
+              </ul>
+              <p className="text-white">
+                {locale === 'de'
+                  ? '…ist es meist keine Investition, sondern ein Geschäftsmodell gegen dich.'
+                  : '…it\'s usually not an investment, but a business model against you.'}
+              </p>
+            </div>
+          </section>
+
+          {/* Call to Action */}
+          <section className="mb-12">
+            <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center">
+              <p className="text-lg text-slate-700 mb-4">
+                {locale === 'de' ? 'Bitte:' : 'Please:'}
+              </p>
+              <div className="space-y-2 text-slate-900 font-semibold text-lg mb-6">
+                <p>{locale === 'de' ? 'Informiere dich.' : 'Educate yourself.'}</p>
+                <p>{locale === 'de' ? 'Stelle Fragen.' : 'Ask questions.'}</p>
+                <p>{locale === 'de' ? 'Und vor allem: Schütze dein Geld.' : 'And above all: protect your money.'}</p>
+              </div>
+              <div className="border-t border-emerald-200 pt-6 mt-6">
+                <p className="text-slate-700 mb-4">
+                  {locale === 'de'
+                    ? 'Wenn du willst, erklären wir dir auf dieser Seite:'
+                    : 'If you want, we explain on this site:'}
+                </p>
+                <ul className="space-y-1 text-slate-700 mb-6">
+                  <li>{locale === 'de' ? '• seriöse Alternativen' : '• serious alternatives'}</li>
+                  <li>{locale === 'de' ? '• echte Optionen verständlich' : '• real options, clearly explained'}</li>
+                  <li>{locale === 'de' ? '• ohne leere Versprechen' : '• without empty promises'}</li>
+                </ul>
+                <p className="text-xl font-bold text-emerald-900">
+                  {locale === 'de'
+                    ? 'Denn Wissen ist der einzige echte Vorteil am Markt.'
+                    : 'Because knowledge is the only real edge in the market.'}
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Related Articles */}
+          <section className="mb-8">
+            <h3 className="text-xl font-bold text-slate-900 mb-6">
+              {locale === 'de' ? 'Weiterführende Artikel' : 'Further Reading'}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link href={`/${locale}/blog/options-cfds-teil-1`} className="group">
+                <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all h-full">
+                  <div className="text-xs text-blue-600 font-medium mb-2">
+                    {locale === 'de' ? 'GRUNDLAGEN' : 'BASICS'}
+                  </div>
+                  <h4 className="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                    {locale === 'de' ? 'Options CFDs verstehen' : 'Understanding Options CFDs'}
+                  </h4>
+                  <p className="text-sm text-slate-600">
+                    {locale === 'de' ? 'Einführung in regulierte Derivate' : 'Introduction to regulated derivatives'}
+                  </p>
+                </div>
+              </Link>
+              <Link href={`/${locale}/blog/put-vs-call-optionen`} className="group">
+                <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all h-full">
+                  <div className="text-xs text-blue-600 font-medium mb-2">
+                    {locale === 'de' ? 'STRATEGIE' : 'STRATEGY'}
+                  </div>
+                  <h4 className="font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+                    {locale === 'de' ? 'Put vs Call Optionen' : 'Put vs Call Options'}
+                  </h4>
+                  <p className="text-sm text-slate-600">
+                    {locale === 'de' ? 'Klassische Optionen erklärt' : 'Traditional options explained'}
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </section>
+
+          {/* Author & Date */}
+          <div className="pt-8 border-t border-slate-200">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-slate-800 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">BO</span>
+                </div>
+                <div>
+                  <p className="font-medium text-slate-900">BeInOptions Research Team</p>
+                  <p className="text-sm text-slate-500">
+                    {locale === 'de' ? 'Marktanalyse & Bildung' : 'Market Analysis & Education'}
+                  </p>
+                </div>
+              </div>
+              <div className="text-right">
+                <p className="text-sm text-slate-500">
+                  {locale === 'de' ? 'Veröffentlicht' : 'Published'}
+                </p>
+                <time className="text-sm font-medium text-slate-700">31. Dezember 2025</time>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
