@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 
 export default function Footer() {
@@ -34,8 +35,20 @@ export default function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">B</span>
+              <div className="relative">
+                {/* Christmas Hat */}
+                <div className="absolute -top-3 -right-3 z-20 w-9 h-9 rotate-[15deg]">
+                  <Image
+                    src="/logos/christmas-hat.png"
+                    alt="Christmas Hat"
+                    width={36}
+                    height={36}
+                    className="object-contain drop-shadow-md"
+                  />
+                </div>
+                <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">B</span>
+                </div>
               </div>
               <div className="font-heading font-bold text-xl text-white flex items-baseline">
                 <span>Be</span>
