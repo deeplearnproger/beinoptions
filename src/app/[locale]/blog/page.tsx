@@ -16,6 +16,34 @@ export default function BlogPage({ params: { locale } }: { params: { locale: str
 
   const blogPosts = [
     {
+      title: locale === 'de' ? 'Optionen erklärt, als wärst du 5 Jahre alt' : 'Options Explained Like You\'re 5 Years Old',
+      excerpt: locale === 'de'
+        ? 'Optionen verständlich erklärt mit dem Eis-Beispiel. Lernen Sie Call- und Put-Optionen ohne komplizierte Fachbegriffe. Der perfekte Einstieg für Anfänger.'
+        : 'Options explained simply with the ice cream example. Learn Call and Put options without complicated jargon. The perfect introduction for beginners.',
+      category: t('strategy_guides'),
+      date: '2025-12-31',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '8 Min.' : '8 min',
+      iconBg: 'from-amber-50 to-orange-100',
+      iconColor: 'text-amber-600',
+      iconPath: 'M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253',
+      slug: 'options-explained-simply',
+    },
+    {
+      title: locale === 'de' ? 'Binäre Optionen – Betrug oder seriöses Trading? Die unbequeme Wahrheit' : 'Binary Options – Scam or Legit Trading? The Uncomfortable Truth',
+      excerpt: locale === 'de'
+        ? 'Binäre Optionen gelten als eines der umstrittensten Finanzprodukte. Erfahren Sie, warum sie in der EU verboten wurden, wie die Betrugsmaschen funktionieren und wie Sie sich schützen können.'
+        : 'Binary options are now considered one of the most controversial financial products. Learn why they were banned in the EU, how scams work, and how to protect yourself.',
+      category: t('news'),
+      date: '2025-12-31',
+      author: 'BeInOptions Team',
+      readTime: locale === 'de' ? '12 Min.' : '12 min',
+      iconBg: 'from-red-50 to-red-100',
+      iconColor: 'text-red-600',
+      iconPath: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z',
+      slug: 'binary-options-scam',
+    },
+    {
       title: locale === 'de' ? 'Zero-Day-Options werden zum Trend: Warum kurzfristige Strategien den Markt bewegen' : 'Zero-Day Options Are Booming: Why Short-Term Strategies Move the Market',
       excerpt: locale === 'de'
         ? 'An den US-Märkten steigt die Popularität von Optionen mit extrem kurzer Laufzeit – sogenannten Zero-Day-Options (0DTE). Diese Instrumente ermöglichen schnelle Reaktionen auf Marktbewegungen.'
@@ -242,10 +270,10 @@ export default function BlogPage({ params: { locale } }: { params: { locale: str
   ];
 
   const categories = [
-    { name: t('strategy_guides'), count: 8 },
+    { name: t('strategy_guides'), count: 9 },
     { name: t('market_analysis'), count: 3 },
     { name: t('trader_stories'), count: 1 },
-    { name: t('news'), count: 4 },
+    { name: t('news'), count: 5 },
   ];
 
   return (
