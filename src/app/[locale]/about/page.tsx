@@ -1,6 +1,8 @@
 import { generateMetadata as genMeta } from '@/components/seo/SEOHead';
 import ArticleSchema from '@/components/seo/ArticleSchema';
 import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
+import TrustpilotReviews from '@/components/TrustpilotReviews';
+import TrustpilotBanner from '@/components/TrustpilotBanner';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   return genMeta({
@@ -154,6 +156,9 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
         </div>
       </div>
 
+      {/* Trustpilot Reviews */}
+      <TrustpilotReviews locale={locale} />
+
       {/* Values */}
       <div className="bg-gray-50 py-16">
         <div className="container-custom">
@@ -276,6 +281,9 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
           </div>
         </div>
       </div>
+
+      {/* Trustpilot Review Banner */}
+      <TrustpilotBanner locale={locale} />
 
       {/* CTA */}
       <div className="bg-gradient-to-br from-primary-600 via-blue-600 to-indigo-600 py-16">
