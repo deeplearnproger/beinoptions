@@ -4,13 +4,27 @@ import { generateMetadata as genMeta } from '@/components/seo/SEOHead';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   return genMeta({
-    title: locale === 'de' ? 'Optionshandel in Deutschland' : 'Options Trading in Germany',
+    title: locale === 'de' ? 'BeInOptions - Optionshandel lernen & Broker Vergleich' : 'BeInOptions - Learn Options Trading & Broker Comparison',
     description: locale === 'de'
-      ? 'Ihr umfassender Leitfaden für erfolgreiches Options-Trading in Deutschland. Strategien, Steuern, Broker und mehr.'
-      : 'Your comprehensive guide to successful options trading in Germany. Strategies, taxes, brokers and more.',
+      ? 'BeInOptions (Be In Options) - Optionen handeln lernen: Strategien wie Covered Call & Iron Condor, Broker Vergleich, Steuern & Tools. Kostenlos für Anfänger!'
+      : 'BeInOptions (Be In Options) - Learn options trading: Strategies like Covered Call & Iron Condor, broker comparison, taxes & tools. Free for beginners!',
     keywords: locale === 'de'
-      ? ['Optionshandel', 'Optionen', 'Trading', 'Deutschland', 'BaFin', 'Broker', 'Steuern']
-      : ['options trading', 'options', 'trading', 'Germany', 'BaFin', 'broker', 'taxes'],
+      ? [
+          'BeInOptions', 'Be In Options', 'beinoptions',
+          'Optionshandel lernen', 'Optionen für Anfänger', 'Optionen handeln Deutschland',
+          'Call Put Option erklärt', 'Covered Call Strategie', 'Iron Condor Strategie',
+          'beste Options Broker', 'Interactive Brokers Deutschland', 'LYNX Broker Optionen',
+          'Optionen Steuern Deutschland', 'Options Rechner', 'Optionen Gewinn berechnen',
+          'implizite Volatilität', 'Options Greeks Delta Gamma',
+        ]
+      : [
+          'BeInOptions', 'Be In Options', 'beinoptions',
+          'learn options trading', 'options for beginners', 'how to trade options',
+          'call put option explained', 'covered call strategy', 'iron condor strategy',
+          'best options broker Europe', 'Interactive Brokers options', 'options broker comparison',
+          'options taxes Germany', 'options calculator', 'options profit loss calculator',
+          'implied volatility', 'options Greeks explained', 'options trading guide',
+        ],
   });
 }
 

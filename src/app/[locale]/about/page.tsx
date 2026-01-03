@@ -8,11 +8,11 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   return genMeta({
     title: locale === 'de' ? 'Über uns - BeInOptions' : 'About Us - BeInOptions',
     description: locale === 'de'
-      ? 'Erfahren Sie mehr über BeInOptions - Ihre umfassende Ressource für Optionshandel in Deutschland mit Fokus auf Bildung, Transparenz und Vertrauen.'
-      : 'Learn more about BeInOptions - Your comprehensive resource for options trading in Germany with focus on education, transparency and trust.',
+      ? 'Erfahren Sie mehr über BeInOptions (Be In Options) - Ihre umfassende Ressource für Optionshandel in Deutschland mit Fokus auf Bildung, Transparenz und Vertrauen.'
+      : 'Learn more about BeInOptions (Be In Options) - Your comprehensive resource for options trading in Germany with focus on education, transparency and trust.',
     keywords: locale === 'de'
-      ? ['Über BeInOptions', 'Optionshandel Deutschland', 'Trading Bildung', 'Broker Vergleich']
-      : ['About BeInOptions', 'Options trading Germany', 'Trading education', 'Broker comparison'],
+      ? ['BeInOptions', 'Be In Options', 'beinoptions', 'Über BeInOptions', 'Optionshandel Deutschland', 'Trading Bildung', 'Broker Vergleich']
+      : ['BeInOptions', 'Be In Options', 'beinoptions', 'About BeInOptions', 'Options trading Germany', 'Trading education', 'Broker comparison'],
   });
 }
 
