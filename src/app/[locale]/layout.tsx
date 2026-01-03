@@ -224,7 +224,18 @@ export default async function LocaleLayout({
       locale === 'de'
         ? 'Ihr umfassender Leitfaden für erfolgreiches Options-Trading in Deutschland. Strategien, Steuern, Broker und mehr.'
         : 'Your comprehensive guide to successful options trading in Germany. Strategies, taxes, brokers and more.',
-    sameAs: [],
+    // Add your social media links here when available:
+    // sameAs: [
+    //   'https://twitter.com/BeInOptions',
+    //   'https://www.youtube.com/@BeInOptions',
+    //   'https://www.linkedin.com/company/beinoptions',
+    // ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'info@beinoptions.com',
+      contactType: 'customer service',
+      availableLanguage: ['German', 'English'],
+    },
   };
 
   const websiteSchema = {
@@ -238,13 +249,10 @@ export default async function LocaleLayout({
         ? 'Ihr umfassender Leitfaden für erfolgreiches Options-Trading in Deutschland.'
         : 'Your comprehensive guide to successful options trading in Germany.',
     inLanguage: locale === 'de' ? 'de-DE' : 'en-US',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://beinoptions.com/{locale}/search?q={search_term_string}'.replace('{locale}', locale),
-      },
-      'query-input': 'required name=search_term_string',
+    publisher: {
+      '@type': 'Organization',
+      name: 'BeInOptions',
+      url: 'https://beinoptions.com',
     },
   };
 
