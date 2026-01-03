@@ -5,6 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date();
 
   // Define all your routes
+  // Note: /privacy, /impressum, /disclaimer are excluded (they have noindex)
   const routes = [
     '',
     '/basics',
@@ -19,9 +20,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
     '/news',
     '/about',
-    '/privacy',
-    '/impressum',
-    '/disclaimer',
     // Strategy and learning pages
     '/greeks-explained',
     '/options-beginners-guide',
